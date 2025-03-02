@@ -1,4 +1,4 @@
-# [0014. 标识符](https://github.com/Tdahuyou/html-css-js/tree/main/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6)
+# [0014. 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6)
 
 
 <!-- region:toc -->

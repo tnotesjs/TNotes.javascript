@@ -1,4 +1,4 @@
-# [0105. background](https://github.com/Tdahuyou/html-css-js/tree/main/0105.%20background)
+# [0105. background](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background)
 
 <!-- region:toc -->
 - [1. ⏰ background-* 忘记哪个就找些 demo 来看看，并汇总到 demos.* 中。](#1--background--忘记哪个就找些-demo-来看看并汇总到-demos-中)

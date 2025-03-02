@@ -1,4 +1,4 @@
-# [0004. const 关键字](https://github.com/Tdahuyou/html-css-js/tree/main/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97)
+# [0004. const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97)
 
 <!-- region:toc -->
 - [1. 📒 const 关键字](#1--const-关键字)

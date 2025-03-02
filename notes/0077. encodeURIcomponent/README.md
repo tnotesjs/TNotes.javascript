@@ -1,4 +1,4 @@
-# [0077. encodeURIcomponent](https://github.com/Tdahuyou/html-css-js/tree/main/0077.%20encodeURIcomponent)
+# [0077. encodeURIcomponent](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0077.%20encodeURIcomponent)
 
 
 ## 🤖 AI - 一个带有空格等非法字符的字符串如何编码为合法的 url

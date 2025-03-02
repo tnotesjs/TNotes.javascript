@@ -1,4 +1,4 @@
-# [0012. 条件语句 - 练习](https://github.com/Tdahuyou/html-css-js/tree/main/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0)
+# [0012. 条件语句 - 练习](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0)
 
 <!-- region:toc -->
 - [1. 💻 练习.1 - 判断数字是否是三位数，是否能被 13 整除](#1--练习1---判断数字是否是三位数是否能被-13-整除)

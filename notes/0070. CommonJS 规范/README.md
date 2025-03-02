@@ -1,4 +1,4 @@
-# [0070. CommonJS 规范](https://github.com/Tdahuyou/html-css-js/tree/main/0070.%20CommonJS%20%E8%A7%84%E8%8C%83)
+# [0070. CommonJS 规范](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0070.%20CommonJS%20%E8%A7%84%E8%8C%83)
 
 
 <!-- region:toc -->

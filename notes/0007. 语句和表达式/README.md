@@ -1,4 +1,4 @@
-# [0007. 语句和表达式](https://github.com/Tdahuyou/html-css-js/tree/main/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+# [0007. 语句和表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F)
 
 <!-- region:toc -->
 - [1. 📒 表达式（Expression）和语句（Statement）](#1--表达式expression和语句statement)

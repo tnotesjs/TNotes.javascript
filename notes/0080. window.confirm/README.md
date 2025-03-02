@@ -1,4 +1,4 @@
-# [0080. window.confirm](https://github.com/Tdahuyou/html-css-js/tree/main/0080.%20window.confirm)
+# [0080. window.confirm](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm)
 
 <!-- region:toc -->
 - [1. 🔗 mdn - window.confirm](#1--mdn---windowconfirm)

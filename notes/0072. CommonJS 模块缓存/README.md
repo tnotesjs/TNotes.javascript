@@ -1,4 +1,4 @@
-# [0072. CommonJS 模块缓存](https://github.com/Tdahuyou/html-css-js/tree/main/0072.%20CommonJS%20%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98)
+# [0072. CommonJS 模块缓存](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0072.%20CommonJS%20%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98)
 
 
 <!-- region:toc -->

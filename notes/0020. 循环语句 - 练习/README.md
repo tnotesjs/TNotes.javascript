@@ -1,4 +1,4 @@
-# [0020. 循环语句 - 练习](https://github.com/Tdahuyou/html-css-js/tree/main/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0)
+# [0020. 循环语句 - 练习](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0)
 
 
 <!-- region:toc -->
@@ -372,4 +372,3 @@ while (true) {
 console.log('==============游戏结束==============')
 console.log(`系统：${pcScore}分，玩家：${playerScore}分`)
 ```
-

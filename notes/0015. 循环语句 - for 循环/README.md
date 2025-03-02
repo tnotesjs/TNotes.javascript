@@ -1,4 +1,4 @@
-# [0015. 循环语句 - for 循环](https://github.com/Tdahuyou/html-css-js/tree/main/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF)
+# [0015. 循环语句 - for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF)
 
 
 <!-- region:toc -->
@@ -102,5 +102,3 @@ for (;;) {
 - 初学阶段，不必纠结到底应该用哪个，只要能够把逻辑给实现了就行。等有了一定的撸代码经验之后，在遇到一些场景时，你会很自然地想到优先使用什么写法来实现。比如：
   - 使用 `for` 循环当你知道确切的迭代次数，或者需要遍历数组/列表时。
   - 使用 `while` 循环当循环次数不确定，或者需要等待某个条件满足时。
-
-

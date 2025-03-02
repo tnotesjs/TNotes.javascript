@@ -1,4 +1,4 @@
-# [0037. 防抖、节流](https://github.com/Tdahuyou/html-css-js/tree/main/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81)
+# [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81)
 
 
 <!-- region:toc -->
@@ -211,4 +211,3 @@ element.addEventListener('drag', throttle(handleDrag, 100));
 ```
 
 - ![](assets/2024-12-31-17-38-06.png)
-

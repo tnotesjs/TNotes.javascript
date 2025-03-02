@@ -1,4 +1,4 @@
-# [0016. 循环语句 - while 循环](https://github.com/Tdahuyou/html-css-js/tree/main/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF)
+# [0016. 循环语句 - while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF)
 
 
 <!-- region:toc -->
@@ -90,5 +90,3 @@ while (true) {
 // 这是一个无限循环，因为循环条件总是为真。
 // 因此，这段程序将一直输出 "Hello, world"。
 ```
-
-
