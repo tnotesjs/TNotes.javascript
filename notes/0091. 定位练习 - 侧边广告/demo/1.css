@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.page {
+  width: 100%;
+}
+
+.adv {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background: url(./r_dj.png) no-repeat;
+  width: 165px;
+  height: 250px;
+  margin-top: -125px;
+  text-align: right;
+  padding-top: 145px;
+  z-index: 1;
+}
+.adv .qr-code {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #d7a356;
+}

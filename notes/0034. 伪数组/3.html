@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>类数组</title>
+  </head>
+  <body>
+    <h3>h3 1</h3>
+    <h3>h3 2</h3>
+    <h3>h3 3</h3>
+    <script>
+      // arguments对象
+      function args() {
+        return arguments
+      }
+      var arrayLike = args('a', 'b')
+
+      console.group('arguments')
+      console.log('arrayLike[0]', arrayLike[0]) // 'a'
+      console.log('arrayLike.length', arrayLike.length) // 2
+      console.log('Array.isArray(arrayLike)', Array.isArray(arrayLike)) // false
+      console.groupEnd()
+
+      // DOM 元素集
+      var elts = document.getElementsByTagName('h3')
+
+      console.group('DOM 元素集')
+      console.log('elts.length', elts.length) // 3
+      console.log('Array.isArray(elts)', Array.isArray(elts)) // false
+      console.groupEnd()
+
+      // 字符串
+      console.group('字符串')
+      console.log('abc'[1]) // 'b'
+      console.log('abc'.length) // 3
+      console.log(Array.isArray('abc')) // false
+      console.groupEnd()
+    </script>
+  </body>
+</html>

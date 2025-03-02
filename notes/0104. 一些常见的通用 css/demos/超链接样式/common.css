@@ -1,0 +1,6 @@
+a {
+  /* 去掉默认的下划线 */
+  text-decoration: none;
+  /* 继承父元素颜色 */
+  color: inherit;
+}

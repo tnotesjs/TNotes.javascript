@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用区块来隔离上下文</title>
+</head>
+<body>
+    <script>
+        {
+            // 这是 A 的代码
+            let x = 1;
+            console.log('x =>', x)
+        }
+
+        {
+            // 这是 B 的代码
+            let x = 2;
+            console.log('x =>', x)
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+可以使用区块来隔离上下文
+写起来非常简单，只需要把需要隔离的部分加上大括号即可。
+
+比如，我们想把 A 和 B 的代码隔离开来，就可以使用区块来隔离上下文。
+
+A 可能是其他人写的代码。
+B 可能是你自己写的代码。
+
+你在写 B 的时候，不希望被 A 影响，并且对 A 也没有任何依赖。
+-->

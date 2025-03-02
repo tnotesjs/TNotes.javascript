@@ -1,0 +1,26 @@
+<!-- 
+clip-path: url(1.svg#c1);
+使用 SVG 來做 clip-path
+
+注意：
+需要使用服务的方式（比如 open with live server）来打开 html，否则会导致 1.svg 找不到。
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip Path Demo</title>
+    <style>
+      .clipped {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        clip-path: url(1.svg#c1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clipped"></div>
+  </body>
+</html>

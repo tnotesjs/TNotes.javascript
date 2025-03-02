@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clip Path Demo</title>
+    <style>
+      .github-clip {
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(to bottom, #666666, #000000); /* 渐变色 灰到黑 */
+        clip-path: url(github.svg#github-clip);
+      }
+
+      .vite-clip {
+        width: 410px;
+        height: 410px;
+        background: linear-gradient(to bottom, #666666, #000000); /* 渐变色 灰到黑 */
+        clip-path: url(vite.svg#vite-clip);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="github-clip"></div>
+    <div class="vite-clip"></div>
+  </body>
+</html>

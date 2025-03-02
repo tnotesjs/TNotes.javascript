@@ -1,0 +1,24 @@
+<!-- 
+clip-path: inset(10px 20px 30px 40px round 10px);
+- 参数分别表示上、右、下、左的内边距，可以是长度单位或百分比。
+- `round` 关键字后跟一个值，表示圆角的半径。
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .rect {
+        width: 200px;
+        height: 100px;
+        background-color: yellow;
+        clip-path: inset(10px 20px 30px 40px round 10px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rect"></div>
+  </body>
+</html>

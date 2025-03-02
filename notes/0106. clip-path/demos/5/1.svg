@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- 
+  这里的 #c1 准备用来裁剪，后续会在 5.svg 中被引用。
+  它是不可见的，仅仅是一个裁剪的路径。
+  这里的路径是一个圆形。
+  -->
+  <defs>
+    <clipPath id="c1">
+      <circle cx="50" cy="50" r="40" />
+    </clipPath>
+  </defs>
+  <!-- 
+  如果你想要预览路径，可以把下面的注释去掉。
+  红色的描边儿就是裁剪的路径。
+  -->
+  <circle cx="50" cy="50" r="40" stroke="red" stroke-width="2" fill="blue" />
+</svg>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo</title>
+  </head>
+  <body>
+    <select multiple>
+      <option value="item_1">item-1</option>
+      <option value="item_2">item-2</option>
+      <option value="item_3">item-3</option>
+      <option value="item_4">item-4</option>
+      <option value="item_5">item-5</option>
+      <option value="item_6">item-6</option>
+      <option value="item_7">item-7</option>
+      <option value="item_8">item-8</option>
+      <option value="item_9">item-9</option>
+      <option value="item_10">item-10</option>
+    </select>
+    <h1>选中的所有值</h1>
+    <h2 class="selected_vals"></h2>
+    <script>
+      const select = document.querySelector('select');
+      const selected_vals = document.querySelector('.selected_vals');
+      select.addEventListener('change', (e) => {
+        const selectedOptions = Array.from(e.target.selectedOptions);
+        const selectedValues = selectedOptions.map((option) => option.value);
+        selected_vals.textContent = selectedValues.join(', ');
+      });
+    </script>
+  </body>
+</html>

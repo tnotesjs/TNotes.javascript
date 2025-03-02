@@ -1,0 +1,18 @@
+/* 爱恨法则  Love  Hate   LVHA */
+
+/* 未访问过的超链接 */
+a:link {
+  color: green;
+}
+/* 已访问过的超链接 */
+a:visited {
+  color: gray;
+}
+/* 鼠标移入的元素 */
+a:hover {
+  color: orange;
+}
+/* 鼠标按下的元素 */
+a:active {
+  color: red;
+}

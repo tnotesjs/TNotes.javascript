@@ -1,0 +1,23 @@
+<!-- 
+clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+参数是顶点的坐标列表，每个坐标由 x 和 y 组成，可以是百分比或长度单位。
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .polygon {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="polygon"></div>
+  </body>
+</html>

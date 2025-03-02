@@ -1,0 +1,17 @@
+.img-container {
+  width: 100px;
+  background-color: black;
+}
+
+.img-container img {
+  opacity: 0.7;
+  width: 100%;
+
+  /* 去除底部间隙的多种做法 */
+  /* vertical-align: bottom; */
+  /* vertical-align: top; */
+  /* vertical-align: middle; */
+  /* 或者使用其他 vertical-align 值也可 */
+  display: block;
+  /* 把图片设置为块元素也可以去掉底部的间隙 */
+}

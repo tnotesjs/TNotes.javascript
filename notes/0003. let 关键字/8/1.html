@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Var Example</title>
+  </head>
+  <body>
+    <ul id="var-list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <script>
+      var listItems = document.querySelectorAll('#var-list li')
+      for (var i = 0; i < listItems.length; i++) {
+        // 错误写法
+        listItems[i].addEventListener('click', function () {
+          alert('Item ' + (i + 1) + ' clicked')
+        })
+
+        // 正确写法1
+        // ;(function (currentIndex) {
+        //   listItems[currentIndex].addEventListener('click', function () {
+        //     alert('Item ' + (currentIndex + 1) + ' clicked')
+        //   })
+        // })(i)
+
+        // 正确写法还有很多种，这里介绍的是其中一种使用 IIFE 的方法
+      }
+    </script>
+  </body>
+</html>
+<!--
+需求：点击第几个 li 就弹出几。
+
+这是一个经典的“闭包陷阱”问题。
+
+如果使用的是这种错误的写法，无论点击哪个 li，最终都会提示是第 6 个被点击了。
+循环中的事件处理函数引用了变量 i，当点击事件触发时，所有函数访问的 i 都是循环结束后的最终值 6，导致所有事件都显示相同的索引值。
+正确的做法是确保每次循环迭代时创建一个新的作用域来保存当前的 i 值。可以通过立即执行函数表达式（IIFE）来实现这一点。
+虽然问题能够解决，不过写起来会感觉很别扭。
+-->

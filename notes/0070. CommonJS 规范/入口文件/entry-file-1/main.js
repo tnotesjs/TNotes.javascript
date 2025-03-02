@@ -1,0 +1,1 @@
+console.log('./entry-file-1/main.js called')

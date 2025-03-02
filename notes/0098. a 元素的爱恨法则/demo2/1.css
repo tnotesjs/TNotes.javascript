@@ -1,0 +1,49 @@
+/* #region 不做修改 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  margin-top: 30px;
+  text-align: center;
+}
+.nav a {
+  display: inline-block;
+  padding: 7px;
+  border-radius: 5px;
+}
+/* #endregion 不做修改 */
+
+/* #region 题目区域 */
+/*
+需求描述：设置超链接的样式：
+鼠标移入时背景色为 green
+鼠标按下时背景色为 red 文字色为 white
+访问过的超链接背景色为 gray
+未访问过的超链接背景色为 orange
+*/
+.nav a:link {
+  background-color: orange;
+}
+
+.nav a:visited {
+  background-color: gray;
+}
+
+.nav a:hover {
+  background-color: green;
+}
+
+.nav a:active {
+  background-color: red;
+  color: white;
+}
+
+/* #endregion 题目区域 */

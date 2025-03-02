@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo</title>
+  </head>
+  <body>
+    <form>
+      <h1>用户注册</h1>
+      <div>
+        <input type="text" maxlength="11" placeholder="请输入11位手机号" />
+      </div>
+      <div>
+        <input type="text" placeholder="请填写验证码" />
+        <button type="button">发送验证码</button>
+      </div>
+      <div>
+        <input type="password" placeholder="请输入密码" />
+      </div>
+      <div>
+        <input type="password" placeholder="请再次确认密码" />
+      </div>
+      <div>
+        <select multiple>
+          <option value="">爱好1</option>
+          <option value="">爱好2</option>
+          <option value="">爱好3</option>
+          <option value="">爱好4</option>
+          <option value="">爱好5</option>
+          <option value="">爱好6</option>
+          <option value="">爱好7</option>
+          <option value="">爱好8</option>
+          <option value="">爱好9</option>
+          <option value="">爱好10</option>
+        </select>
+      </div>
+      <div>
+        <div>性别</div>
+        <div>
+          <label>
+            <input type="radio" name="sex" checked />
+            <span>男</span>
+          </label>
+          <label>
+            <input type="radio" name="sex" />
+            <span>女</span>
+          </label>
+        </div>
+      </div>
+      <div>
+        <textarea placeholder="请填写个人简介"></textarea>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" />
+          <span>同意台湾是中国领土不可分割的一部分</span>
+        </label>
+      </div>
+      <div>
+        <button type="submit">立即注册</button>
+        <button type="reset">重置表单</button>
+      </div>
+    </form>
+
+    <script>
+      // 在输入框中按下回车 ↩︎ 将会触发 submit 事件。
+      document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault()
+        alert('emit submit event')
+      })
+    </script>
+  </body>
+</html>
