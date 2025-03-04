@@ -923,9 +923,13 @@
 
 ## 12. prettier
 
-- [x] [0113. singleQuote](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20singleQuote/README.md) <!-- [locale](./notes/0113.%20singleQuote/README.md) -->  
-  - [1. 💻 demos.1 - singleQuote - 使用单引号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20singleQuote/README.md#1--demos1---singlequote---使用单引号)
-  - singleQuote 默认值是 false，表示格式化后默认使用的是双引号，如果你想要使用单引号，可以将 singleQuote 设置为 true。
+- [x] [0112. semi](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20semi/README.md) <!-- [locale](./notes/0112.%20semi/README.md) -->  
+  - [1. 💻 demos.1 - semi - 配置 js 语句结尾是否加分号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20semi/README.md#1--demos1---semi---配置-js-语句结尾是否加分号)
+  - semi 默认值为 true，表示格式化之后，语句结尾会自动加上分号。如果你想要让代码看起来更简洁一些，想要把语句结尾的分号给去掉，可以将 semi 配置给手动设置为 false。
+  
+
+- [x] [0113. 学习 prettier 基本配置字段的书写](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md) <!-- [locale](./notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md) -->  
+  - [1. 💻 demos.1 - `singleQuote` - 使用单引号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#1--demos1---singlequote---使用单引号)
   
 
 - [x] [0114. tabWidth](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0114.%20tabWidth/README.md) <!-- [locale](./notes/0114.%20tabWidth/README.md) -->  
@@ -1077,13 +1081,4 @@
 
 - [ ] [0104. 一些常见的通用 css](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README.md) <!-- [locale](./notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README.md) -->  
   - [1. ⏰ 从语雀搬运笔记](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README.md#1--从语雀搬运笔记)
-  
-
-
-
-## ⏰ pending
-
-- [ ] [0112. semi](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20semi/README.md) <!-- [locale](./notes/0112.%20semi/README.md) -->  
-  - [1. 💻 demos.1 - semi - 配置 js 语句结尾是否加分号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20semi/README.md#1--demos1---semi---配置-js-语句结尾是否加分号)
-  - semi 默认值为 true，表示格式化之后，语句结尾会自动加上分号。如果你想要让代码看起来更简洁一些，想要把语句结尾的分号给去掉，可以将 semi 配置给手动设置为 false。
   
