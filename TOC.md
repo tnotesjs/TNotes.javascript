@@ -904,7 +904,69 @@
   - [1. 📒 type 属性](https://tdahuyou.github.io/TNotes.html-css-js/notes/0111.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E5%B1%9E%E6%80%A7/README#1--type-属性)
   
 
-## 12. ⏰ html-css
+## 12. prettier
+
+- [x] [0113. singleQuote](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20singleQuote/README) <!-- [locale](./notes/0113.%20singleQuote/README) -->  
+  - [1. 💻 demos.1 - singleQuote - 使用单引号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20singleQuote/README#1--demos1---singlequote---使用单引号)
+  - singleQuote 默认值是 false，表示格式化后默认使用的是双引号，如果你想要使用单引号，可以将 singleQuote 设置为 true。
+  
+
+- [x] [0114. tabWidth](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20tabWidth/README) <!-- [locale](./notes/0114.%20tabWidth/README) -->  
+  - [1. 💻 demos.1 - 缩进配置 tabWidth](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20tabWidth/README#1--demos1---缩进配置-tabwidth)
+  - 通过 tabWidth 来配置宽度。
+  - 创建了一个简单的 demos 环境（一个用于测试的 .js 文件，一个用于填写 prettier 的配置文件），测试 prettier 的配置效果。后续可以快速测试一些简单的配置字段效果。
+  
+  
+
+- [x] [0115. 在 VSCode 的 settings.json 中书写 prettier 配置](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20%E5%9C%A8%20VSCode%20%E7%9A%84%20settings.json%20%E4%B8%AD%E4%B9%A6%E5%86%99%20prettier%20%E9%85%8D%E7%BD%AE/README) <!-- [locale](./notes/0115.%20%E5%9C%A8%20VSCode%20%E7%9A%84%20settings.json%20%E4%B8%AD%E4%B9%A6%E5%86%99%20prettier%20%E9%85%8D%E7%BD%AE/README) -->  
+  - [1. 💻 demos.1 - 将 prettier 配置信息写到项目根目录中的 .vscode/settings.json 文件中](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20%E5%9C%A8%20VSCode%20%E7%9A%84%20settings.json%20%E4%B8%AD%E4%B9%A6%E5%86%99%20prettier%20%E9%85%8D%E7%BD%AE/README#1--demos1---将-prettier-配置信息写到项目根目录中的-vscodesettingsjson-文件中)
+  
+
+## 13. eslint
+
+- [x] [0116. eslint 是什么？](https://tdahuyou.github.io/TNotes.html-css-js/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README) <!-- [locale](./notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README) -->  
+  - [1. 🔗 links](https://tdahuyou.github.io/TNotes.html-css-js/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README#1--links)
+  - [2. 📒 eslint 简介](https://tdahuyou.github.io/TNotes.html-css-js/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README#2--eslint-简介)
+  - [3. 📒 eslint 的一些主要功能和用途](https://tdahuyou.github.io/TNotes.html-css-js/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README#3--eslint-的一些主要功能和用途)
+  - [4. 💻 demo - 基础示例 - 尝试添加规则：程序中的引号必须使用单引号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README#4--demo---基础示例---尝试添加规则程序中的引号必须使用单引号)
+  
+
+- [ ] [0117. eslint 的配置文件的命名](https://tdahuyou.github.io/TNotes.html-css-js/notes/0117.%20eslint%20%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D/README) <!-- [locale](./notes/0117.%20eslint%20%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D/README) -->  
+  - [1. 🔗 官方文档 > Configuration File](https://tdahuyou.github.io/TNotes.html-css-js/notes/0117.%20eslint%20%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D/README#1--官方文档--configuration-file)
+  - [2. 📒 eslint 的配置文件名称的更多写法](https://tdahuyou.github.io/TNotes.html-css-js/notes/0117.%20eslint%20%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D/README#2--eslint-的配置文件名称的更多写法)
+  
+
+- [ ] [0118. VSCode 中的 eslint 插件](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README) <!-- [locale](./notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README) -->  
+  - [1. 🔗 vscode marketplace eslint](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#1--vscode-marketplace-eslint)
+  - [2. 📒 VS Code ESLint extension 简介](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#2--vs-code-eslint-extension-简介)
+  - [3. 📒 主要功能](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#3--主要功能)
+  - [4. 📒 安装与设置](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#4--安装与设置)
+  - [5. 📒 常见配置](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#5--常见配置)
+  - [6. 📒 常见的初始配置流程](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#6--常见的初始配置流程)
+  - [7. 📒 常见问题](https://tdahuyou.github.io/TNotes.html-css-js/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6/README#7--常见问题)
+  
+
+- [ ] [0119. 使用 no-unused-vars 配置规则：未使用的变量报错](https://tdahuyou.github.io/TNotes.html-css-js/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99/README) <!-- [locale](./notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99/README) -->  
+  - [1. 🔗 eslint 官方文档 > no-unused-vars](https://tdahuyou.github.io/TNotes.html-css-js/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99/README#1--eslint-官方文档--no-unused-vars)
+  - [2. 📒 `no-unused-vars` 简介](https://tdahuyou.github.io/TNotes.html-css-js/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99/README#2--no-unused-vars-简介)
+  - [3. 💻 demo - `'no-unused-vars': 'error'`](https://tdahuyou.github.io/TNotes.html-css-js/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99/README#3--demo---no-unused-vars-error)
+  - [4. 📒 忽略模式概述](https://tdahuyou.github.io/TNotes.html-css-js/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99/README#4--忽略模式概述)
+  
+
+- [ ] [0120. eslint 配置格式](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README) <!-- [locale](./notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README) -->  
+  - [1. 📒 eslint 的配置文件都有哪些格式？](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README#1--eslint-的配置文件都有哪些格式)
+  - [2. 💻 `.eslintrc.js` (JavaScript)](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README#2--eslintrcjs-javascript)
+  - [3. 💻 `.eslintrc.json` (JSON)](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README#3--eslintrcjson-json)
+  - [4. 💻 `.eslintrc.yaml` 或 `.eslintrc.yml` (YAML)](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README#4--eslintrcyaml-或-eslintrcyml-yaml)
+  - [5. 💻 `.eslintrc.cjs` (CommonJS)](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README#5--eslintrccjs-commonjs)
+  - [6. 💻 包管理器配置文件（如 `package.json`）](https://tdahuyou.github.io/TNotes.html-css-js/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README#6--包管理器配置文件如-packagejson)
+  
+
+- [ ] [0121. 忽略文件 .eslintignore](https://tdahuyou.github.io/TNotes.html-css-js/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README) <!-- [locale](./notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README) -->  
+  - [1. 📒 忽略文件 `.eslintignore` 简介](https://tdahuyou.github.io/TNotes.html-css-js/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README#1--忽略文件-eslintignore-简介)
+  
+
+## 14. ⏰ html-css
 
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://tdahuyou.github.io/TNotes.html-css-js/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README) <!-- [locale](./notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README) -->  
   - [1. ⏰ 从语雀搬运笔记](https://tdahuyou.github.io/TNotes.html-css-js/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README#1--从语雀搬运笔记)
@@ -998,4 +1060,13 @@
 
 - [ ] [0104. 一些常见的通用 css](https://tdahuyou.github.io/TNotes.html-css-js/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README) <!-- [locale](./notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README) -->  
   - [1. ⏰ 从语雀搬运笔记](https://tdahuyou.github.io/TNotes.html-css-js/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README#1--从语雀搬运笔记)
+  
+
+
+
+## ⏰ pending
+
+- [ ] [0112. semi](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20semi/README) <!-- [locale](./notes/0112.%20semi/README) -->  
+  - [1. 💻 demos.1 - semi - 配置 js 语句结尾是否加分号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20semi/README#1--demos1---semi---配置-js-语句结尾是否加分号)
+  - semi 默认值为 true，表示格式化之后，语句结尾会自动加上分号。如果你想要让代码看起来更简洁一些，想要把语句结尾的分号给去掉，可以将 semi 配置给手动设置为 false。
   
