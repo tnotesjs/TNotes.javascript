@@ -1075,14 +1075,14 @@
 
 ## 15. 🈳
 
-- [ ] [0112. xxx](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20xxx/README.md) <!-- [locale](./notes/0112.%20xxx/README.md) -->  
+- [ ] [0112. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20__empty__/README.md) <!-- [locale](./notes/0112.%20__empty__/README.md) -->  
   
   
   
 
-- [ ] [0114. xxx](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0114.%20xxx/README.md) <!-- [locale](./notes/0114.%20xxx/README.md) -->  
+- [ ] [0114. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0114.%20__empty__/README.md) <!-- [locale](./notes/0114.%20__empty__/README.md) -->  
 
-- [ ] [0115. xxx](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0115.%20xxx/README.md) <!-- [locale](./notes/0115.%20xxx/README.md) -->  
+- [ ] [0115. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0115.%20__empty__/README.md) <!-- [locale](./notes/0115.%20__empty__/README.md) -->  
   
   
   

@@ -1057,14 +1057,14 @@
 
 ## 15. 🈳
 
-- [ ] [0112. xxx](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20xxx/README) <!-- [locale](./notes/0112.%20xxx/README) -->  
+- [ ] [0112. __empty__](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20__empty__/README) <!-- [locale](./notes/0112.%20__empty__/README) -->  
   
   
   
 
-- [ ] [0114. xxx](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20xxx/README) <!-- [locale](./notes/0114.%20xxx/README) -->  
+- [ ] [0114. __empty__](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20__empty__/README) <!-- [locale](./notes/0114.%20__empty__/README) -->  
 
-- [ ] [0115. xxx](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20xxx/README) <!-- [locale](./notes/0115.%20xxx/README) -->  
+- [ ] [0115. __empty__](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20__empty__/README) <!-- [locale](./notes/0115.%20__empty__/README) -->  
   
   
   
