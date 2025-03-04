@@ -906,24 +906,13 @@
 
 ## 12. prettier
 
-- [x] [0112. semi](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20semi/README) <!-- [locale](./notes/0112.%20semi/README) -->  
-  - [1. 💻 demos.1 - semi - 配置 js 语句结尾是否加分号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20semi/README#1--demos1---semi---配置-js-语句结尾是否加分号)
-  - semi 默认值为 true，表示格式化之后，语句结尾会自动加上分号。如果你想要让代码看起来更简洁一些，想要把语句结尾的分号给去掉，可以将 semi 配置给手动设置为 false。
-  
-
 - [x] [0113. 学习 prettier 基本配置字段的书写](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README) <!-- [locale](./notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README) -->  
-  - [1. 💻 demos.1 - `singleQuote` - 使用单引号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#1--demos1---singlequote---使用单引号)
-  
-
-- [x] [0114. tabWidth](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20tabWidth/README) <!-- [locale](./notes/0114.%20tabWidth/README) -->  
-  - [1. 💻 demos.1 - 缩进配置 tabWidth](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20tabWidth/README#1--demos1---缩进配置-tabwidth)
-  - 通过 tabWidth 来配置宽度。
-  - 创建了一个简单的 demos 环境（一个用于测试的 .js 文件，一个用于填写 prettier 的配置文件），测试 prettier 的配置效果。后续可以快速测试一些简单的配置字段效果。
-  
-  
-
-- [x] [0115. 在 VSCode 的 settings.json 中书写 prettier 配置](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20%E5%9C%A8%20VSCode%20%E7%9A%84%20settings.json%20%E4%B8%AD%E4%B9%A6%E5%86%99%20prettier%20%E9%85%8D%E7%BD%AE/README) <!-- [locale](./notes/0115.%20%E5%9C%A8%20VSCode%20%E7%9A%84%20settings.json%20%E4%B8%AD%E4%B9%A6%E5%86%99%20prettier%20%E9%85%8D%E7%BD%AE/README) -->  
-  - [1. 💻 demos.1 - 将 prettier 配置信息写到项目根目录中的 .vscode/settings.json 文件中](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20%E5%9C%A8%20VSCode%20%E7%9A%84%20settings.json%20%E4%B8%AD%E4%B9%A6%E5%86%99%20prettier%20%E9%85%8D%E7%BD%AE/README#1--demos1---将-prettier-配置信息写到项目根目录中的-vscodesettingsjson-文件中)
+  - [1. 📒 认识一些常见的基本配置字段](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#1--认识一些常见的基本配置字段)
+  - [2. 💻 demos.1 - `singleQuote` - 使用单引号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#2--demos1---singlequote---使用单引号)
+  - [3. 💻 demos.2 - `semi` - 配置 js 语句结尾是否加分号](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#3--demos2---semi---配置-js-语句结尾是否加分号)
+  - [4. 💻 demos.3 - 缩进配置 `tabWidth`](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#4--demos3---缩进配置-tabwidth)
+  - [5. 📒 将 prettier 配置的书写位置](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#5--将-prettier-配置的书写位置)
+  - [6. 💻 demos.4 - 将 prettier 配置写到项目根目录中的 `.vscode/settings.json` 文件中](https://tdahuyou.github.io/TNotes.html-css-js/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README#6--demos4---将-prettier-配置写到项目根目录中的-vscodesettingsjson-文件中)
   
 
 ## 13. eslint
@@ -1064,4 +1053,19 @@
 
 - [ ] [0104. 一些常见的通用 css](https://tdahuyou.github.io/TNotes.html-css-js/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README) <!-- [locale](./notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README) -->  
   - [1. ⏰ 从语雀搬运笔记](https://tdahuyou.github.io/TNotes.html-css-js/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README#1--从语雀搬运笔记)
+  
+
+## 15. 🈳
+
+- [ ] [0112. xxx](https://tdahuyou.github.io/TNotes.html-css-js/notes/0112.%20xxx/README) <!-- [locale](./notes/0112.%20xxx/README) -->  
+  
+  
+  
+
+- [ ] [0114. xxx](https://tdahuyou.github.io/TNotes.html-css-js/notes/0114.%20xxx/README) <!-- [locale](./notes/0114.%20xxx/README) -->  
+
+- [ ] [0115. xxx](https://tdahuyou.github.io/TNotes.html-css-js/notes/0115.%20xxx/README) <!-- [locale](./notes/0115.%20xxx/README) -->  
+  
+  
+  
   
