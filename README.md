@@ -479,7 +479,7 @@
     - 理解节流
     - 完成 leetcode 算法题
   - 防抖（debouncing）和节流（throttling）都是用来控制函数调用频率的技术解决方案。
-    - ![](https://raw.githubusercontent.com/Tdahuyou/TNotes.html-css-js/main/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/assets%2F2024-12-31-17-34-54.png)
+    - [](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/assets%2F2024-12-31-17-34-54.png)
   
 
 - [ ] [0038. 数组类型【扩展】](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md) <!-- [locale](./notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md) -->  
@@ -799,11 +799,11 @@
   - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0072.%20CommonJS%20%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98/README.md#5--ai)
   
 
-- [ ] [0073. CommonJS 练习 - 制作一个斗地主洗牌发牌的程序](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0073.%20CommonJS%20%E7%BB%83%E4%B9%A0%20-%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%96%97%E5%9C%B0%E4%B8%BB%E6%B4%97%E7%89%8C%E5%8F%91%E7%89%8C%E7%9A%84%E7%A8%8B%E5%BA%8F/README.md) <!-- [locale](./notes/0073.%20CommonJS%20%E7%BB%83%E4%B9%A0%20-%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%96%97%E5%9C%B0%E4%B8%BB%E6%B4%97%E7%89%8C%E5%8F%91%E7%89%8C%E7%9A%84%E7%A8%8B%E5%BA%8F/README.md) -->  
+- [ ] [0073. CommonJS 练习 - 制作一个斗地主洗牌发牌的程序](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0073.%20CommonJS%20%E7%BB%83%E4%B9%A0%20-%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%96%97%E5%9C%B0%E4%B8%BB%E6%B4%97%E7%89%8C%E5%8F%91%E7%89%8C%E7%9A%84%E7%A8%8B%E5%BA%8F/README.md) <!-- [locale](./notes/0073.%20CommonJS%20%E7%BB%83%E4%B9%A0%20-%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%96%97%E5%9C%B0%E4%B8%BB%E6%B4%97%E7%89%8C%E5%8F%91%E7%89%8C%E7%9A%84%E7%A8%8B%E5%BA%8F/README.md) -->
 
-- [ ] [0074. 订阅发布模式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0074.%20%E8%AE%A2%E9%98%85%E5%8F%91%E5%B8%83%E6%A8%A1%E5%BC%8F/README.md) <!-- [locale](./notes/0074.%20%E8%AE%A2%E9%98%85%E5%8F%91%E5%B8%83%E6%A8%A1%E5%BC%8F/README.md) -->  
+- [ ] [0074. 订阅发布模式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0074.%20%E8%AE%A2%E9%98%85%E5%8F%91%E5%B8%83%E6%A8%A1%E5%BC%8F/README.md) <!-- [locale](./notes/0074.%20%E8%AE%A2%E9%98%85%E5%8F%91%E5%B8%83%E6%A8%A1%E5%BC%8F/README.md) -->
 
-- [ ] [0075. 观察者模式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README.md) <!-- [locale](./notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README.md) -->  
+- [ ] [0075. 观察者模式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README.md) <!-- [locale](./notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README.md) -->
 
 - [ ] [0076. 使用 Array.form 来创建一个二维数组](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md) <!-- [locale](./notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md) -->  
   
@@ -1077,13 +1077,8 @@
 
 - [ ] [0112. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20__empty__/README.md) <!-- [locale](./notes/0112.%20__empty__/README.md) -->  
   
-  
-  
 
-- [ ] [0114. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0114.%20__empty__/README.md) <!-- [locale](./notes/0114.%20__empty__/README.md) -->  
+- [ ] [0114. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0114.%20__empty__/README.md) <!-- [locale](./notes/0114.%20__empty__/README.md) -->
 
 - [ ] [0115. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0115.%20__empty__/README.md) <!-- [locale](./notes/0115.%20__empty__/README.md) -->  
-  
-  
-  
   
