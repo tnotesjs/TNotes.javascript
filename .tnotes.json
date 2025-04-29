@@ -1,7 +1,9 @@
 {
   "author": "Tdahuyou",
   "repoName": "TNotes.html-css-js",
-  "keywords": ["TNotes.html-css-js"],
+  "keywords": [
+    "TNotes.html-css-js"
+  ],
   "ignore_dirs": [
     ".vscode",
     "0000",
@@ -50,5 +52,6 @@
       "link": "https://github.com/Tdahuyou/TNotes.template",
       "icon": "github"
     }
-  ]
+  ],
+  "id": "f4d46730-6e71-47db-a019-e78ccb282fc8"
 }
