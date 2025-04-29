@@ -1,6 +1,7 @@
 # [0118. VSCode 中的 eslint 插件](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6)
 
 <!-- region:toc -->
+
 - [1. 🔗 vscode marketplace eslint](#1--vscode-marketplace-eslint)
 - [2. 📒 VS Code ESLint extension 简介](#2--vs-code-eslint-extension-简介)
 - [3. 📒 主要功能](#3--主要功能)
@@ -8,6 +9,7 @@
 - [5. 📒 常见配置](#5--常见配置)
 - [6. 📒 常见的初始配置流程](#6--常见的初始配置流程)
 - [7. 📒 常见问题](#7--常见问题)
+
 <!-- endregion:toc -->
 
 ## 1. 🔗 vscode marketplace eslint

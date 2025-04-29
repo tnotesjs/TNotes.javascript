@@ -1,12 +1,14 @@
 # [0120. eslint 配置格式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F)
 
 <!-- region:toc -->
+
 - [1. 📒 eslint 的配置文件都有哪些格式？](#1--eslint-的配置文件都有哪些格式)
 - [2. 💻 `.eslintrc.js` (JavaScript)](#2--eslintrcjs-javascript)
 - [3. 💻 `.eslintrc.json` (JSON)](#3--eslintrcjson-json)
 - [4. 💻 `.eslintrc.yaml` 或 `.eslintrc.yml` (YAML)](#4--eslintrcyaml-或-eslintrcyml-yaml)
 - [5. 💻 `.eslintrc.cjs` (CommonJS)](#5--eslintrccjs-commonjs)
 - [6. 💻 包管理器配置文件（如 `package.json`）](#6--包管理器配置文件如-packagejson)
+
 <!-- endregion:toc -->
 
 ## 1. 📒 eslint 的配置文件都有哪些格式？

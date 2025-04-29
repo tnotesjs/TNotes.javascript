@@ -1,11 +1,13 @@
 # [0019. 循环语句 - 标签（label）](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89)
 
 <!-- region:toc -->
+
 - [1. 📒 标签](#1--标签)
 - [2. 💻 demos.1 - break、continue 加标签](#2--demos1---breakcontinue-加标签)
 - [3. 💻 demos.2 - 跳出区块](#3--demos2---跳出区块)
 - [4. 💻 demos.3 - 不能跨区块跳](#4--demos3---不能跨区块跳)
 - [5. 🤔 问：如何看待“标签”？](#5--问如何看待标签)
+
 <!-- endregion:toc -->
 - “标签” 在开发时几乎不会用到它，这个知识点不算重要，快速过一遍笔记，简单了解一下它的作用即可。
 

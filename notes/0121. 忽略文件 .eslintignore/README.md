@@ -1,7 +1,9 @@
 # [0121. 忽略文件 .eslintignore](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore)
 
 <!-- region:toc -->
+
 - [1. 📒 忽略文件 `.eslintignore` 简介](#1--忽略文件-eslintignore-简介)
+
 <!-- endregion:toc -->
 
 ## 1. 📒 忽略文件 `.eslintignore` 简介

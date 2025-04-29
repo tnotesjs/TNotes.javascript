@@ -1,6 +1,7 @@
 # [0003. let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97)
 
 <!-- region:toc -->
+
 - [1. 📒 let 关键字](#1--let-关键字)
 - [2. 💻 demos.1 - 块级作用域](#2--demos1---块级作用域)
 - [3. 💻 demos.2 - 对比 for 循环的循环变量使用 var 和 let 来定义](#3--demos2---对比-for-循环的循环变量使用-var-和-let-来定义)
@@ -10,6 +11,7 @@
 - [7. 💻 demos.6 - 同一作用域内不允许重复声明](#7--demos6---同一作用域内不允许重复声明)
 - [8. 💻 demos.7 - for 循环的特别之处](#8--demos7---for-循环的特别之处)
 - [9. 💻 demos.8 - let 出现之前的一些历史问题](#9--demos8---let-出现之前的一些历史问题)
+
 <!-- endregion:toc -->
 - 知识点：
   - let 关键字

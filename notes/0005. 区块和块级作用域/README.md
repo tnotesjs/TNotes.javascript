@@ -1,10 +1,12 @@
 # [0005. 区块和块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F)
 
 <!-- region:toc -->
+
 - [1. 📒 区块和块级作用域](#1--区块和块级作用域)
 - [2. 💻 demos.1 - 块级作用域](#2--demos1---块级作用域)
 - [3. 💻 demos.2 - if 结构](#3--demos2---if-结构)
 - [4. 💻 demos.3 - 使用区块来隔离上下文](#4--demos3---使用区块来隔离上下文)
+
 <!-- endregion:toc -->
 - 知识点：
   - 区块是什么

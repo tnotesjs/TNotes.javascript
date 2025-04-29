@@ -1,8 +1,10 @@
 # [0079. window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload)
 
 <!-- region:toc -->
+
 - [1. 🔗 mdn - window.onbeforeunload](#1--mdn---windowonbeforeunload)
 - [2. 💻 demos.1 - window.onbeforeunload 基本使用](#2--demos1---windowonbeforeunload-基本使用)
+
 <!-- endregion:toc -->
 - `window.onbeforeunload` 是一个事件处理器，它用于在窗口、页面或标签即将卸载时触发。
 - **当用户尝试关闭浏览器窗口、刷新页面、导航到另一个页面或者通过其他方式离开当前页面时**，这个事件会被触发。

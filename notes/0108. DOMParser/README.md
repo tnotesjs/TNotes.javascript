@@ -1,6 +1,7 @@
 # [0108. DOMParser](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0108.%20DOMParser)
 
 <!-- region:toc -->
+
 - [1. 📒 DOMParser 概述](#1--domparser-概述)
 - [2. 📒 解析 XML 字符串](#2--解析-xml-字符串)
 - [3. 📒 代码解析](#3--代码解析)
@@ -9,6 +10,7 @@
 - [6. 📒 `DOMParser` 在 Blockly 代码中的应用](#6--domparser-在-blockly-代码中的应用)
 - [7. 📒 `DOMParser` vs. `document.createElement`](#7--domparser-vs-documentcreateelement)
 - [8. 📒 `DOMParser` vs. `XSLTProcessor`](#8--domparser-vs-xsltprocessor)
+
 <!-- endregion:toc -->
 
 ## 1. 📒 DOMParser 概述

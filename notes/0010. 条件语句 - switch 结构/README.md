@@ -1,10 +1,12 @@
 # [0010. 条件语句 - switch 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84)
 
 <!-- region:toc -->
+
 - [1. 📒 switch 基本结构](#1--switch-基本结构)
 - [2. 💻 demos.1 - switch 中的 break 语句](#2--demos1---switch-中的-break-语句)
 - [3. 💻 demos.2 - 使用表达式](#3--demos2---使用表达式)
 - [4. 💻 demos.3 - 匹配规则是严格相等](#4--demos3---匹配规则是严格相等)
+
 <!-- endregion:toc -->
 - 知识点：
   - switch 结构

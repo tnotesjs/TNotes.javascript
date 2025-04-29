@@ -1,7 +1,9 @@
 # [0081. 使用 postMessage 实现跨标签页通信](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0081.%20%E4%BD%BF%E7%94%A8%20postMessage%20%E5%AE%9E%E7%8E%B0%E8%B7%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%80%9A%E4%BF%A1)
 
 <!-- region:toc -->
+
 - [1. 💻 demos.1 - 使用 postMessage 实现跨标签页通信](#1--demos1---使用-postmessage-实现跨标签页通信)
+
 <!-- endregion:toc -->
 - `postMessage` API 可用于实现不同窗口、标签页或 iframe 之间的安全通信。它允许你向另一个浏览上下文（如新打开的窗口、iframe 等）发送消息，并可以接收来自这些上下文的消息。
 

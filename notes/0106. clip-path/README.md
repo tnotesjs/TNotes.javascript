@@ -1,6 +1,7 @@
 # [0106. clip-path](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0106.%20clip-path)
 
 <!-- region:toc -->
+
 - [1. 📒 clip-path 概述](#1--clip-path-概述)
 - [2. 💻 demos.1 - 圆形裁剪](#2--demos1---圆形裁剪)
 - [3. 💻 demos.3 - 椭圆形裁剪](#3--demos3---椭圆形裁剪)
@@ -8,6 +9,7 @@
 - [5. 💻 demos.2 - 多边形裁剪](#5--demos2---多边形裁剪)
 - [6. 💻 demos.5 - 使用 svg 的裁剪路径来裁剪](#6--demos5---使用-svg-的裁剪路径来裁剪)
 - [7. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github](#7--demos6---使用-svg-的裁剪路径来裁剪---vitegithub)
+
 <!-- endregion:toc -->
 - clip-path 的写法非常灵活，笔记中的 demo 仅记录了其中一部分写法，更多写法可以参考 MDN。
 - 虽然路径的绘制方式有很多，但其实如果我们掌握好了 svg 的话，使用 svg 来绘制路径，想要啥效果就画啥效果，也就是说啥路径都可以自行指定。
