@@ -13,6 +13,15 @@
   ],
   "port": 9379,
   "rootDocsSrcDir": "../_/docs/src",
+  "home.features.item": {
+    "icon": {
+      "src": "https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/assets/icon--html-css-js.png"
+    },
+    "title": "前端三件套",
+    "completed_notes_count": 29,
+    "details": "记录跟前端相关的一系列内容。",
+    "link": "https://tdahuyou.github.io/TNotes.html-css-js/"
+  },
   "menuItems": [
     {
       "text": "🏠 Home",
