@@ -1,7 +1,9 @@
 {
   "author": "Tdahuyou",
   "repoName": "TNotes.html-css-js",
-  "keywords": ["TNotes.html-css-js"],
+  "keywords": [
+    "TNotes.html-css-js"
+  ],
   "ignore_dirs": [
     ".vscode",
     "0000",
