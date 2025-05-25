@@ -3,99 +3,86 @@
 <!-- region:toc -->
 
 - [html-css-js](#html-css-js)
-  - [1. var、let、const](#1-varletconst)
-  - [2. 作用域](#2-作用域)
-  - [3. js 执行环境](#3-js-执行环境)
-  - [4. 语句和表达式](#4-语句和表达式)
-  - [5. 符号](#5-符号)
-  - [6. 流程控制语句](#6-流程控制语句)
-  - [7. 数据类型](#7-数据类型)
-  - [8. 模块化](#8-模块化)
-  - [9. ⚙️ window 对象](#9-️-window-对象)
-  - [10. css 属性](#10-css-属性)
-  - [11. html 元素](#11-html-元素)
-  - [12. prettier](#12-prettier)
-  - [13. eslint](#13-eslint)
-  - [14. ⏰ html-css](#14--html-css)
-  - [15. 🈳](#15-)
+  - [1. roadmap](#1-roadmap)
+  - [2. var、let、const](#2-varletconst)
+  - [3. 作用域](#3-作用域)
+  - [4. js 执行环境](#4-js-执行环境)
+  - [5. 语句和表达式](#5-语句和表达式)
+  - [6. 符号](#6-符号)
+  - [7. 流程控制语句](#7-流程控制语句)
+  - [8. 数据类型](#8-数据类型)
+  - [9. 模块化](#9-模块化)
+  - [10. ⚙️ window 对象](#10-️-window-对象)
+  - [11. css 属性](#11-css-属性)
+  - [12. html 元素](#12-html-元素)
+  - [13. prettier](#13-prettier)
+  - [14. eslint](#14-eslint)
+  - [15. color picker](#15-color-picker)
+  - [16. ⏰ html-css](#16--html-css)
 
 <!-- endregion:toc -->
 
-## 1. var、let、const
+## 1. roadmap
+
+- [x] [0112. roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md)
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#1--概述)
+  - [2. 🔍 Frontend roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#2--frontend-roadmap)
+  - [3. 🔍 html roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#3--html-roadmap)
+  - [4. 🔍 css roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#4--css-roadmap)
+
+## 2. var、let、const
 
 - [x] [0001. var 关键字和变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md)
-  - [1. 💡 思维导图](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#1--思维导图)
-  - [2. 📒 理解变量、内存、值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#2--理解变量内存值)
-  - [3. 💻 demos.11 - `var` 关键字的作用域特性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#3--demos11---var-关键字的作用域特性)
-  - [4. 📒 不再推荐使用 `var` 来声明变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#4--不再推荐使用-var-来声明变量)
-  - [5. 💻 demos.1 - 理解变量和值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#5--demos1---理解变量和值)
-  - [6. 💻 demos.2 - 区分大小写](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#6--demos2---区分大小写)
-  - [7. 💻 demos.3 - 变量的声明、赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#7--demos3---变量的声明赋值)
-  - [8. 💻 demos.4 - 仅声明未赋值为 undefined](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#8--demos4---仅声明未赋值为-undefined)
-  - [9. 💻 demos.5 - 全局变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#9--demos5---全局变量)
-  - [10. 💻 demos.6 - 使用未声明的变量会报错](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#10--demos6---使用未声明的变量会报错)
-  - [11. 💻 demos.7 - 可一次声明多个变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#11--demos7---可一次声明多个变量)
-  - [12. 💻 demos.8 - 理解“动态”类型](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#12--demos8---理解动态类型)
-  - [13. 💻 demos.9 - 变量重复声明无效](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#13--demos9---变量重复声明无效)
-  - [14. 💻 demos.10 - 变量重复声明并重新赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#14--demos10---变量重复声明并重新赋值)
-  - 知识点：
-    - 理解变量、内存、值是什么
-    - 了解 var 关键字的基本使用
-    - 直到 var 关键字已被淘汰，不再推荐使用
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#1--概述)
+  - [2. 💡 思维导图](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#2--思维导图)
+  - [3. 📒 理解变量、内存、值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#3--理解变量内存值)
+  - [4. 💻 demos.11 - `var` 关键字的作用域特性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#4--demos11---var-关键字的作用域特性)
+  - [5. 📒 不再推荐使用 `var` 来声明变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#5--不再推荐使用-var-来声明变量)
+  - [6. 💻 demos.1 - 理解变量和值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#6--demos1---理解变量和值)
+  - [7. 💻 demos.2 - 区分大小写](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#7--demos2---区分大小写)
+  - [8. 💻 demos.3 - 变量的声明、赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#8--demos3---变量的声明赋值)
+  - [9. 💻 demos.4 - 仅声明未赋值为 undefined](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#9--demos4---仅声明未赋值为-undefined)
+  - [10. 💻 demos.5 - 全局变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#10--demos5---全局变量)
+  - [11. 💻 demos.6 - 使用未声明的变量会报错](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#11--demos6---使用未声明的变量会报错)
+  - [12. 💻 demos.7 - 可一次声明多个变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#12--demos7---可一次声明多个变量)
+  - [13. 💻 demos.8 - 理解“动态”类型](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#13--demos8---理解动态类型)
+  - [14. 💻 demos.9 - 变量重复声明无效](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#14--demos9---变量重复声明无效)
+  - [15. 💻 demos.10 - 变量重复声明并重新赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#15--demos10---变量重复声明并重新赋值)
 - [x] [0002. 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md)
-  - [1. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#1--links)
-  - [2. 📒 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#2--变量声明提升和暂时性死区)
-  - [3. 💻 demos.1 - var 声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#3--demos1---var-声明)
-  - [4. 💻 demos.2 - let 和 const 声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#4--demos2---let-和-const-声明)
-  - [5. 💻 demos.3 - 函数声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#5--demos3---函数声明)
-  - [6. 💻 demos.4 - 函数表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#6--demos4---函数表达式)
-  - [7. 💼 面试题.1 - 下面的代码输出什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#7--面试题1---下面的代码输出什么)
-  - [8. 💼 面试题.2 - 下面的代码输出的结果是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#8--面试题2---下面的代码输出的结果是什么)
-  - [9. 💼 面试题.3 - 请谈谈什么是变量声明提升？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#9--面试题3---请谈谈什么是变量声明提升)
-  - [10. 🤔 思考 - let、const 真的有被提升吗？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#10--思考---letconst-真的有被提升吗)
-  - 知识点：
-    - 变量声明提升
-    - var、let、const 声明
-    - 函数声明
-    - 函数表达式
-    - 暂时性死区（TDZ）
-  - 变量声明提升可以算是面试题常客，需要知道变量声明提升是什么。
-  - 介绍了什么是变量声明提升、什么是暂时性死区，并通过一些示例，来了解在 JS 中不同类型的变量的声明和提升机制。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#1--概述)
+  - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#2--links)
+  - [3. 📒 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#3--变量声明提升和暂时性死区)
+  - [4. 💻 demos.1 - var 声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#4--demos1---var-声明)
+  - [5. 💻 demos.2 - let 和 const 声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#5--demos2---let-和-const-声明)
+  - [6. 💻 demos.3 - 函数声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#6--demos3---函数声明)
+  - [7. 💻 demos.4 - 函数表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#7--demos4---函数表达式)
+  - [8. 💼 面试题.1 - 下面的代码输出什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#8--面试题1---下面的代码输出什么)
+  - [9. 💼 面试题.2 - 下面的代码输出的结果是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#9--面试题2---下面的代码输出的结果是什么)
+  - [10. 💼 面试题.3 - 请谈谈什么是变量声明提升？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#10--面试题3---请谈谈什么是变量声明提升)
+  - [11. 🤔 思考 - let、const 真的有被提升吗？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#11--思考---letconst-真的有被提升吗)
 - [x] [0003. let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md)
-  - [1. 📒 let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#1--let-关键字)
-  - [2. 💻 demos.1 - 块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#2--demos1---块级作用域)
-  - [3. 💻 demos.2 - 对比 for 循环的循环变量使用 var 和 let 来定义](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#3--demos2---对比-for-循环的循环变量使用-var-和-let-来定义)
-  - [4. 💻 demos.3 - let 暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#4--demos3---let-暂时性死区)
-  - [5. 💻 demos.4 - 函数参数默认值中的死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#5--demos4---函数参数默认值中的死区)
-  - [6. 💻 demos.5 - 其他奇怪的报错](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#6--demos5---其他奇怪的报错)
-  - [7. 💻 demos.6 - 同一作用域内不允许重复声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#7--demos6---同一作用域内不允许重复声明)
-  - [8. 💻 demos.7 - for 循环的特别之处](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#8--demos7---for-循环的特别之处)
-  - [9. 💻 demos.8 - let 出现之前的一些历史问题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#9--demos8---let-出现之前的一些历史问题)
-  - 知识点：
-    - let 关键字
-    - 块级作用域
-    - 暂时性死区（TDZ）
-    - 经典的“闭包陷阱”问题
-  - let 关键字的规则不多，也比较好理解。在 let、const 关键字出现之前，定义变量只能使用 var 关键字，var 这玩意儿存在不少问题，有很多经典的历史问题在 let、const 出现之后都引刃而解了。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#1--概述)
+  - [2. 📒 let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#2--let-关键字)
+  - [3. 💻 demos.1 - 块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#3--demos1---块级作用域)
+  - [4. 💻 demos.2 - 对比 for 循环的循环变量使用 var 和 let 来定义](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#4--demos2---对比-for-循环的循环变量使用-var-和-let-来定义)
+  - [5. 💻 demos.3 - let 暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#5--demos3---let-暂时性死区)
+  - [6. 💻 demos.4 - 函数参数默认值中的死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#6--demos4---函数参数默认值中的死区)
+  - [7. 💻 demos.5 - 其他奇怪的报错](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#7--demos5---其他奇怪的报错)
+  - [8. 💻 demos.6 - 同一作用域内不允许重复声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#8--demos6---同一作用域内不允许重复声明)
+  - [9. 💻 demos.7 - for 循环的特别之处](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#9--demos7---for-循环的特别之处)
+  - [10. 💻 demos.8 - let 出现之前的一些历史问题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#10--demos8---let-出现之前的一些历史问题)
 - [x] [0004. const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md)
-  - [1. 📒 const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#1--const-关键字)
-  - [2. 📒 理解 const 的 “常量约束” 的本质](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#2--理解-const-的-常量约束-的本质)
-  - [3. 📒 栈内存、堆内存](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#3--栈内存堆内存)
-  - [4. 💻 demos.1 - 常量不允许重新赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#4--demos1---常量不允许重新赋值)
-  - [5. 💻 demos.2 - 声明的同时完成初始化赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#5--demos2---声明的同时完成初始化赋值)
-  - [6. 💻 demos.3 - 引用类型，确保地址不变](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#6--demos3---引用类型确保地址不变)
-  - [7. 💻 demos.4 - 对象冻结](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#7--demos4---对象冻结)
-  - [8. 💼 面试题.1 - 请谈谈 var、let、const](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#8--面试题1---请谈谈-varletconst)
-  - 知识点：
-    - const 关键字
-    - const 的 “常量约束” 的本质
-    - 栈内存、堆内存
-    - const 和 let 之间的区别
-    - 对象冻结 `Object.freeze`
-    - 对象深度冻结（递归）
-  - const 和 let 非常类似，区别在于 let 定义的是变量，const 定义的是常量。定义变量时首选 const 关键字，其次 let 关键字，放弃 var 关键字。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#1--概述)
+  - [2. 📒 const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#2--const-关键字)
+  - [3. 📒 理解 const 的 “常量约束” 的本质](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#3--理解-const-的-常量约束-的本质)
+  - [4. 📒 栈内存、堆内存](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#4--栈内存堆内存)
+  - [5. 💻 demos.1 - 常量不允许重新赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#5--demos1---常量不允许重新赋值)
+  - [6. 💻 demos.2 - 声明的同时完成初始化赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#6--demos2---声明的同时完成初始化赋值)
+  - [7. 💻 demos.3 - 引用类型，确保地址不变](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#7--demos3---引用类型确保地址不变)
+  - [8. 💻 demos.4 - 对象冻结](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#8--demos4---对象冻结)
+  - [9. 💼 面试题.1 - 请谈谈 var、let、const](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#9--面试题1---请谈谈-varletconst)
 
-## 2. 作用域
+## 3. 作用域
 
 - [x] [0005. 区块和块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md)
   - [1. 📒 区块和块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#1--区块和块级作用域)
@@ -110,7 +97,7 @@
     - 学会使用区块来隔离上下文
   - 区块“block”可以简单地理解为一对大括号 `{}`。var 没有块级作用域，let、const 有块级作用域。
 
-## 3. js 执行环境
+## 4. js 执行环境
 
 - [x] [0006. 常见的两个 JS 运行环境：浏览器、NodeJS](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md)
   - [1. 💻 demos.1 - 用浏览器来执行 JS 程序的基本流程](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md#1--demos1---用浏览器来执行-js-程序的基本流程)
@@ -120,7 +107,7 @@
   - 在开始学习 JS 的内容之前，首先需要知道如何运行 JS 代码。这篇笔记介绍如何使用浏览器跑 JS 程序。
   - 在 nodejs 的学习笔记中，会介绍如何使用 nodejs 来执行 JS 程序（其实非常简单，安装好 nodejs，然后使用 node 命令 👉 `node xxx.js` 就可以执行 `xxx.js` 了。）
 
-## 4. 语句和表达式
+## 5. 语句和表达式
 
 - [x] [0007. 语句和表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md)
   - [1. 📒 表达式（Expression）和语句（Statement）](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#1--表达式expression和语句statement)
@@ -139,7 +126,7 @@
     - `xxx` 可能同时是语句和表达式
   - **很多时候我们并没有必要严格区分开我们所写某一代码片段到底是“表达式”还是“语句”，更重要的是能够理解这玩意儿能否“产生”一个值。**
 
-## 5. 符号
+## 6. 符号
 
 - [x] [0078. JS 中的符号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md)
   - [1. 📒 关键字和保留字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#1--关键字和保留字)
@@ -172,7 +159,7 @@
     - 标识符的命名规范
   - 标识符其实就是一个名字。程序中需要你指定名字的地方有很多，比如：变量名、函数名、参数名。需要掌握标识符的命名规则，可以拿笔记中的面试题练练手。
 
-## 6. 流程控制语句
+## 7. 流程控制语句
 
 - [x] [0008. 条件语句 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md)
   - [1. 📒 条件语句 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#1--条件语句---if-结构)
@@ -290,7 +277,7 @@
     - 理解字面量是什么
   - 字面量就是直接写在代码中的值。
 
-## 7. 数据类型
+## 8. 数据类型
 
 - [ ] [0023. boolean 类型](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md#1--summary)
@@ -528,7 +515,7 @@
   - [4. 💻 demo](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0060.%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/README.md#4--demo)
   - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0060.%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/README.md#5--ai)
 
-## 8. 模块化
+## 9. 模块化
 
 - [ ] [0061.doing. 前端模块化](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md#1--summary)
@@ -613,7 +600,7 @@
 - [ ] [0077. encodeURIcomponent](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0077.%20encodeURIcomponent/README.md)
 
 
-## 9. ⚙️ window 对象
+## 10. ⚙️ window 对象
 
 - [x] [0079. window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md)
   - [1. 🔗 mdn - window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#1--mdn---windowonbeforeunload)
@@ -655,7 +642,7 @@
   - [7. ❌ 缺点](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0109.%20XSLTProcessor/README.md#7--缺点)
     - [7.1. 现代替代方案](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0109.%20XSLTProcessor/README.md#71-现代替代方案)
 
-## 10. css 属性
+## 11. css 属性
 
 - [ ] [0105. background](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md)
   - [1. ⏰ background-* 忘记哪个就找些 demo 来看看，并汇总到 demos.* 中。](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md#1--background--忘记哪个就找些-demo-来看看并汇总到-demos-中)
@@ -690,7 +677,7 @@
   - https://caniuse.com/?search=clip-path
     - can i use clip-path
 
-## 11. html 元素
+## 12. html 元素
 
 - [ ] [0107. style 元素的 sheet 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7/README.md)
   - [1. 📒 `sheet` 属性概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7/README.md#1--sheet-属性概述)
@@ -707,7 +694,7 @@
 - [ ] [0111. script 元素的 type 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0111.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E5%B1%9E%E6%80%A7/README.md)
   - [1. 📒 type 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0111.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E5%B1%9E%E6%80%A7/README.md#1--type-属性)
 
-## 12. prettier
+## 13. prettier
 
 - [x] [0113. 学习 prettier 基本配置字段的书写](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md)
   - [1. 📒 认识一些常见的基本配置字段](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#1--认识一些常见的基本配置字段)
@@ -717,7 +704,7 @@
   - [5. 📒 将 prettier 配置的书写位置](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#5--将-prettier-配置的书写位置)
   - [6. 💻 demos.4 - 将 prettier 配置写到项目根目录中的 `.vscode/settings.json` 文件中](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#6--demos4---将-prettier-配置写到项目根目录中的-vscodesettingsjson-文件中)
 
-## 13. eslint
+## 14. eslint
 
 - [x] [0116. eslint 是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README.md)
   - [1. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README.md#1--links)
@@ -750,7 +737,14 @@
 - [ ] [0121. 忽略文件 .eslintignore](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README.md)
   - [1. 📒 忽略文件 `.eslintignore` 简介](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README.md#1--忽略文件-eslintignore-简介)
 
-## 14. ⏰ html-css
+## 15. color picker
+
+- [ ] [0122. 自定义 color picker 组件](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md)
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#1--概述)
+  - [2. 📒 Spectrum](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#2--spectrum)
+  - [3. 💻 demos.1](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#3--demos1)
+
+## 16. ⏰ html-css
 
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md)
   - [1. ⏰ 从语雀搬运笔记](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md#1--从语雀搬运笔记)
@@ -798,16 +792,3 @@
   - [1. ⏰ 从语雀搬运笔记](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0103.%20%E9%A2%9C%E8%89%B2%E7%9A%84%20alpha%20%E9%80%9A%E9%81%93/README.md#1--从语雀搬运笔记)
 - [ ] [0104. 一些常见的通用 css](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README.md)
   - [1. ⏰ 从语雀搬运笔记](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README.md#1--从语雀搬运笔记)
-
-## 15. 🈳
-
-- [ ] [0112. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20__empty__/README.md)
-
-- [ ] [0114. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0114.%20__empty__/README.md)
-
-- [ ] [0115. __empty__](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0115.%20__empty__/README.md)
-
-- [ ] [0122. 自定义 color picker 组件](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md)
-  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#1--概述)
-  - [2. 📒 Spectrum](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#2--spectrum)
-  - [3. 💻 demos.1](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#3--demos1)
