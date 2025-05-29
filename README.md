@@ -517,18 +517,12 @@
 
 ## 9. 模块化
 
-- [ ] [0061.doing. 前端模块化](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md)
-  - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md#1--summary)
-  - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md#2--links)
-  - [3. 📒 notes](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md#3--notes)
-  - [4. 💻 demo](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md#4--demo)
-  - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96/README.md#5--ai)
-- [ ] [0062.doing. 前端设计模式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.doing.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
-  - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.doing.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md#1--summary)
-  - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.doing.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md#2--links)
-  - [3. 📒 notes](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.doing.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md#3--notes)
-  - [4. 💻 demo](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.doing.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md#4--demo)
-  - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.doing.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md#5--ai)
+- [ ] [0061. 在浏览器中引入 ESM 模块](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README.md)
+
+- [ ] [0062. ESM 绑定再导出](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/README.md)
+  某个目录下提供一个导出该目录下所有需要导出的文件的入口文件。
+  ![](https://github.com/Tdahuyou/TNotes.html-css-js/blob/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/assets/2024-09-29-15-11-04.png?raw=true)
+  `demo/utils/index.js` 用于导入所有 `demo/utils/*.js` 模块导出的内容，然后再将这些导入的内容统一导出，外部如果需要使用 `demo/utils` 中的模块，只需要导入 `demo/utils/index.js` 即可。
 - [ ] [0063. ESM 模块的基本导出、导入](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md#1--summary)
   - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md#2--links)
