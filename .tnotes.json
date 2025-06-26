@@ -19,9 +19,9 @@
     "icon": {
       "src": "https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/assets/icon--html-css-js.png"
     },
-    "title": "前端三件套",
+    "title": "html-css-js",
     "completed_notes_count": 30,
-    "details": "记录跟前端相关的一系列内容。",
+    "details": "前端三件套及跟前端相关的其它内容",
     "link": "https://tdahuyou.github.io/TNotes.html-css-js/"
   },
   "menuItems": [
