@@ -16,7 +16,7 @@
 
 - https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
   - marketplace eslint
-  - ![](assets/2024-09-29-11-07-20.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-11-07-20.png)
 
 ## 2. 📒 VS Code ESLint extension 简介
 
@@ -63,11 +63,13 @@
 - **项目特定配置**：你可以在项目的 `.vscode/settings.json` 文件中添加特定于项目的 ESLint 设置。
 - **运行模式**：你可以设置 ESLint 在什么情况下运行，例如在保存文件时 (`onSave`) 或者在输入时 (`onType`)。
 - **自动修复**：你可以在保存文件时自动应用 ESLint 的修复建议。在用户设置或项目设置中添加：
+
 ```json
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 }
 ```
+
 - **忽略某些文件或文件夹**：如果你不希望 ESLint 检查某些文件或文件夹，可以在 `.eslintignore` 文件中列出它们。
 
 ## 7. 📒 常见问题

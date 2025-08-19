@@ -3,10 +3,10 @@
 <!-- region:toc -->
 
 - [html-css-js](#html-css-js)
-  - [1. roadmap](#1-roadmap)
-  - [2. var、let、const](#2-varletconst)
-  - [3. 作用域](#3-作用域)
-  - [4. js 执行环境](#4-js-执行环境)
+  - [1. 前端学习路线](#1-前端学习路线)
+  - [2. 程序执行环境](#2-程序执行环境)
+  - [3. 变量](#3-变量)
+  - [4. 作用域](#4-作用域)
   - [5. 语句和表达式](#5-语句和表达式)
   - [6. 符号](#6-符号)
   - [7. 流程控制语句](#7-流程控制语句)
@@ -22,17 +22,30 @@
 
 <!-- endregion:toc -->
 
-## 1. roadmap
+## 1. 前端学习路线
 
 - [x] [0112. roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md)
+  - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+    - [TNotes.yuque.html-css-js.0112](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0112)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#1--概述)
-  - [2. 🔍 Frontend roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#2--frontend-roadmap)
-  - [3. 🔍 html roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#3--html-roadmap)
-  - [4. 🔍 css roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#4--css-roadmap)
+  - [2. 🔍 前端学习路线](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#2--前端学习路线)
+    - [2.1. frontend roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#21-frontend-roadmap)
+    - [2.2. html roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#22-html-roadmap)
+    - [2.3. css roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#23-css-roadmap)
+  - [3. 💻 学会自定义 roadmap](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#3--学会自定义-roadmap)
+  - [4. 🔗 References](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0112.%20roadmap/README.md#4--references)
 
-## 2. var、let、const
+## 2. 程序执行环境
+
+- [x] [0006. 常见的两个 JS 运行环境：浏览器、NodeJS](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md)
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md#1--概述)
+  - [2. 💻 demos.1 - 用浏览器来执行 JS 程序的基本流程](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md#2--demos1---用浏览器来执行-js-程序的基本流程)
+
+## 3. 变量
 
 - [x] [0001. var 关键字和变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md)
+  - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+    - [TNotes.yuque.html-css-js.0001](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0001)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#1--概述)
   - [2. 💡 思维导图](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#2--思维导图)
   - [3. 📒 理解变量、内存、值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#3--理解变量内存值)
@@ -50,21 +63,24 @@
   - [15. 💻 demos.10 - 变量重复声明并重新赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README.md#15--demos10---变量重复声明并重新赋值)
 - [x] [0002. 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#1--概述)
-  - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#2--links)
+  - [2. 🆚 `var`、`let`、`const`](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#2--varletconst)
   - [3. 📒 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#3--变量声明提升和暂时性死区)
   - [4. 💻 demos.1 - var 声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#4--demos1---var-声明)
   - [5. 💻 demos.2 - let 和 const 声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#5--demos2---let-和-const-声明)
   - [6. 💻 demos.3 - 函数声明](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#6--demos3---函数声明)
   - [7. 💻 demos.4 - 函数表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#7--demos4---函数表达式)
-  - [8. 💼 面试题.1 - 下面的代码输出什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#8--面试题1---下面的代码输出什么)
-  - [9. 💼 面试题.2 - 下面的代码输出的结果是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#9--面试题2---下面的代码输出的结果是什么)
-  - [10. 💼 面试题.3 - 请谈谈什么是变量声明提升？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#10--面试题3---请谈谈什么是变量声明提升)
-  - [11. 🤔 思考 - let、const 真的有被提升吗？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#11--思考---letconst-真的有被提升吗)
+  - [8. 💼 interviews.1 - 下面的代码输出什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#8--interviews1---下面的代码输出什么)
+  - [9. 💼 interviews.2 - 下面的代码输出的结果是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#9--interviews2---下面的代码输出的结果是什么)
+  - [10. 💼 interviews.3 - 请谈谈什么是变量声明提升？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#10--interviews3---请谈谈什么是变量声明提升)
+  - [11. 🤔 let、const 真的有被提升吗？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#11--letconst-真的有被提升吗)
+  - [12. 🆚 提升 ≠ 内存分配](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#12--提升--内存分配)
+  - [13. 🤔 var、let、const 到底提升了什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#13--varletconst-到底提升了什么)
+  - [14. 🔗 References](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md#14--references)
 - [x] [0003. let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#1--概述)
   - [2. 📒 let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#2--let-关键字)
   - [3. 💻 demos.1 - 块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#3--demos1---块级作用域)
-  - [4. 💻 demos.2 - 对比 for 循环的循环变量使用 var 和 let 来定义](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#4--demos2---对比-for-循环的循环变量使用-var-和-let-来定义)
+  - [4. 💻 demos.2 - 使用 var、let 定义 for 循环的循环变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#4--demos2---使用-varlet-定义-for-循环的循环变量)
   - [5. 💻 demos.3 - let 暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#5--demos3---let-暂时性死区)
   - [6. 💻 demos.4 - 函数参数默认值中的死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#6--demos4---函数参数默认值中的死区)
   - [7. 💻 demos.5 - 其他奇怪的报错](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#7--demos5---其他奇怪的报错)
@@ -72,6 +88,8 @@
   - [9. 💻 demos.7 - for 循环的特别之处](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#9--demos7---for-循环的特别之处)
   - [10. 💻 demos.8 - let 出现之前的一些历史问题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#10--demos8---let-出现之前的一些历史问题)
 - [x] [0004. const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md)
+  - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+    - [TNotes.yuque.html-css-js.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0004)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#1--概述)
   - [2. 📒 const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#2--const-关键字)
   - [3. 📒 理解 const 的 “常量约束” 的本质](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#3--理解-const-的-常量约束-的本质)
@@ -80,202 +98,147 @@
   - [6. 💻 demos.2 - 声明的同时完成初始化赋值](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#6--demos2---声明的同时完成初始化赋值)
   - [7. 💻 demos.3 - 引用类型，确保地址不变](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#7--demos3---引用类型确保地址不变)
   - [8. 💻 demos.4 - 对象冻结](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#8--demos4---对象冻结)
-  - [9. 💼 面试题.1 - 请谈谈 var、let、const](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#9--面试题1---请谈谈-varletconst)
+  - [9. 💼 interviews.1 - 请谈谈 var、let、const](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README.md#9--interviews1---请谈谈-varletconst)
 
-## 3. 作用域
+## 4. 作用域
 
 - [x] [0005. 区块和块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md)
-  - [1. 📒 区块和块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#1--区块和块级作用域)
-  - [2. 💻 demos.1 - 块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#2--demos1---块级作用域)
-  - [3. 💻 demos.2 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#3--demos2---if-结构)
-  - [4. 💻 demos.3 - 使用区块来隔离上下文](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#4--demos3---使用区块来隔离上下文)
-  - 知识点：
-    - 区块是什么
-    - 区块的创建
-    - 区块的作用
-    - 块级作用域
-    - 学会使用区块来隔离上下文
-  - 区块“block”可以简单地理解为一对大括号 `{}`。var 没有块级作用域，let、const 有块级作用域。
-
-## 4. js 执行环境
-
-- [x] [0006. 常见的两个 JS 运行环境：浏览器、NodeJS](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md)
-  - [1. 💻 demos.1 - 用浏览器来执行 JS 程序的基本流程](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md#1--demos1---用浏览器来执行-js-程序的基本流程)
-  - 知识点：
-    - 学会使用浏览器环境运行 JS
-    - 学会使用 NodeJS 环境运行 JS
-  - 在开始学习 JS 的内容之前，首先需要知道如何运行 JS 代码。这篇笔记介绍如何使用浏览器跑 JS 程序。
-  - 在 nodejs 的学习笔记中，会介绍如何使用 nodejs 来执行 JS 程序（其实非常简单，安装好 nodejs，然后使用 node 命令 👉 `node xxx.js` 就可以执行 `xxx.js` 了。）
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#1--概述)
+  - [2. 📒 区块和块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#2--区块和块级作用域)
+  - [3. 💻 demos.1 - 块级作用域](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#3--demos1---块级作用域)
+  - [4. 💻 demos.2 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#4--demos2---if-结构)
+  - [5. 💻 demos.3 - 使用区块来隔离上下文](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md#5--demos3---使用区块来隔离上下文)
 
 ## 5. 语句和表达式
 
 - [x] [0007. 语句和表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md)
-  - [1. 📒 表达式（Expression）和语句（Statement）](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#1--表达式expression和语句statement)
-  - [2. 💻 demos.1 - 理解语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#2--demos1---理解语句)
-  - [3. 💻 demos.2 - 理解表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#3--demos2---理解表达式)
-  - [4. ✍️ 练习题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#4-️-练习题)
-  - [5. 🤔 问：写在前面的语句一定先于后面的语句执行吗？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#5--问写在前面的语句一定先于后面的语句执行吗)
-  - [6. 🤔 问：如何区分表达式和语句？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#6--问如何区分表达式和语句)
-  - 知识点：
-    - 语句
-    - 表达式
-    - 问：如何区分表达式和语句？
-  - 这篇笔记介绍了什么是语句，什么是表达式。其实语句和表达式是非常类似的，从概念上不容易区分。并且从定义来看，它们之间的关系还不是互斥的，而是相交的关系。也就是说有以下可能：
-    - `xxx` 是语句，不是表达式
-    - `xxx` 是表达式，不是语句
-    - `xxx` 可能同时是语句和表达式
-  - **很多时候我们并没有必要严格区分开我们所写某一代码片段到底是“表达式”还是“语句”，更重要的是能够理解这玩意儿能否“产生”一个值。**
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#1--概述)
+  - [2. 📒 表达式（Expression）和语句（Statement）](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#2--表达式expression和语句statement)
+  - [3. 💻 demos.1 - 理解语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#3--demos1---理解语句)
+  - [4. 💻 demos.2 - 理解表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#4--demos2---理解表达式)
+  - [5. ✍️ 练习题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#5-️-练习题)
+  - [6. 🤔 问：写在前面的语句一定先于后面的语句执行吗？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#6--问写在前面的语句一定先于后面的语句执行吗)
+  - [7. 🤔 问：如何区分表达式和语句？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md#7--问如何区分表达式和语句)
 
 ## 6. 符号
 
 - [x] [0078. JS 中的符号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md)
-  - [1. 📒 关键字和保留字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#1--关键字和保留字)
-  - [2. 📒 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#2--标识符)
-  - [3. 📒 操作符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#3--操作符)
-  - [4. 📒 分隔符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#4--分隔符)
-  - [5. 📒 转义符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#5--转义符)
-  - [6. 📒 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#6--字面量)
-  - [7. 📒 注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#7--注释)
-  - 知识点：
-    - 了解 JS 中都有哪些符号
-  - JS 中的符号有很多种类型，这篇笔记对 JS 中的符号做了汇总和归类。
-  - 快速过一遍即可，了解在 JS 中都有哪些类型的符号。其中有一些符号我们已经学过，其他符号在接下来的学习过程中都会介绍到，到时候再掌握即可。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#1--概述)
+  - [2. 📒 关键字和保留字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#2--关键字和保留字)
+  - [3. 📒 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#3--标识符)
+  - [4. 📒 操作符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#4--操作符)
+  - [5. 📒 分隔符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#5--分隔符)
+  - [6. 📒 转义符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#6--转义符)
+  - [7. 📒 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#7--字面量)
+  - [8. 📒 注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7/README.md#8--注释)
 - [x] [0013. 转义符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md)
-  - [1. 📒 转义符的含义和作用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#1--转义符的含义和作用)
-  - [2. 🔗 wiki 对转义符的介绍](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#2--wiki-对转义符的介绍)
-  - [3. 🤔 问：`escape character` 是什么意思？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#3--问escape-character-是什么意思)
-  - [4. 💻 练习题.1 - 按照指定格式打印系统时间](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#4--练习题1---按照指定格式打印系统时间)
-  - [5. 🤔 问：在 js 的字符串中，\ 反斜杠表示转义，如何不转义，输入反斜杠呢？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#5--问在-js-的字符串中-反斜杠表示转义如何不转义输入反斜杠呢)
-  - [6. 🤔 问：转义符 `\r\n` 诞生的背景](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#6--问转义符-rn-诞生的背景)
-  - 知识点：
-    - 转义符是什么
-    - 转义符有什么用
-  - 当你在程序中需要输出一些特殊字符的时候，能够想要“转义符”这个知识点即可。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#1--概述)
+  - [2. 📒 转义符的含义和作用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#2--转义符的含义和作用)
+  - [3. 🔗 wiki 对转义符的介绍](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#3--wiki-对转义符的介绍)
+  - [4. 🤔 问：`escape character` 是什么意思？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#4--问escape-character-是什么意思)
+  - [5. 💻 练习题.1 - 按照指定格式打印系统时间](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#5--练习题1---按照指定格式打印系统时间)
+  - [6. 🤔 问：在 js 的字符串中，\ 反斜杠表示转义，如何不转义，输入反斜杠呢？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#6--问在-js-的字符串中-反斜杠表示转义如何不转义输入反斜杠呢)
+  - [7. 🤔 问：转义符 `\r\n` 诞生的背景](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md#7--问转义符-rn-诞生的背景)
 - [x] [0014. 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md)
-  - [1. 📒 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md#1--标识符)
-  - [2. 💼 面试题.1 - 以下哪些标识符是合法的？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md#2--面试题1---以下哪些标识符是合法的)
-  - 知识点：
-    - 标识符是什么
-    - 标识符的命名规范
-  - 标识符其实就是一个名字。程序中需要你指定名字的地方有很多，比如：变量名、函数名、参数名。需要掌握标识符的命名规则，可以拿笔记中的面试题练练手。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md#1--概述)
+  - [2. 📒 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md#2--标识符)
+  - [3. 💼 interviews1 - 以下哪些标识符是合法的？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md#3--interviews1---以下哪些标识符是合法的)
 
 ## 7. 流程控制语句
 
 - [x] [0008. 条件语句 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md)
-  - [1. 📒 条件语句 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#1--条件语句---if-结构)
-  - [2. 💻 demos.1 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#2--demos1---if-结构)
-  - [3. 💻 demos.2 - if 加大括号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#3--demos2---if-加大括号)
-  - [4. 💻 demos.3 - 区分赋值和比较](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#4--demos3---区分赋值和比较)
-  - 知识点：掌握 if 语句的使用。
-  - 笔记中除了介绍 if 语句的基本用法之外，还涉及到了一些和布尔运算、类型转换相关的知识点，这些也非常重要，详情会在其他笔记中介绍。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#1--概述)
+  - [2. 📒 条件语句 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#2--条件语句---if-结构)
+  - [3. 💻 demos.1 - if 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#3--demos1---if-结构)
+  - [4. 💻 demos.2 - if 加大括号](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#4--demos2---if-加大括号)
+  - [5. 💻 demos.3 - 区分赋值和比较](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0008.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if%20%E7%BB%93%E6%9E%84/README.md#5--demos3---区分赋值和比较)
 - [x] [0009. 条件语句 - if...else 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md)
-  - [1. 📒 if...else 基本结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#1--ifelse-基本结构)
-  - [2. 💻 demos.2 - 认识基本的 if...else 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#2--demos2---认识基本的-ifelse-结构)
-  - [3. 💻 demos.3 - 多个 if...else 的情况](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#3--demos3---多个-ifelse-的情况)
-  - [4. 💻 demos.1 - else 和最近的 if 配对](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#4--demos1---else-和最近的-if-配对)
-  - 知识点：
-    - 掌握 if...else 基本结构
-    - 直到 if else 的配对规则
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#1--概述)
+  - [2. 📒 if...else 基本结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#2--ifelse-基本结构)
+  - [3. 💻 demos.2 - 认识基本的 if...else 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#3--demos2---认识基本的-ifelse-结构)
+  - [4. 💻 demos.3 - 多个 if...else 的情况](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#4--demos3---多个-ifelse-的情况)
+  - [5. 💻 demos.1 - else 和最近的 if 配对](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0009.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20if...else%20%E7%BB%93%E6%9E%84/README.md#5--demos1---else-和最近的-if-配对)
 - [x] [0010. 条件语句 - switch 结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md)
-  - [1. 📒 switch 基本结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#1--switch-基本结构)
-  - [2. 💻 demos.1 - switch 中的 break 语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#2--demos1---switch-中的-break-语句)
-  - [3. 💻 demos.2 - 使用表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#3--demos2---使用表达式)
-  - [4. 💻 demos.3 - 匹配规则是严格相等](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#4--demos3---匹配规则是严格相等)
-  - 知识点：
-    - switch 结构
-    - break 语句
-    - 匹配校验 - 严格相等 `===`
-  - JavaScript 提供 `if` 结构和 `switch` 结构，完成条件判断，即只有满足预设的条件，才会执行相应的语句。但是，相对于 `if` 语句而言，`switch` 语句是很罕见的（甚至有的公司禁止使用，可能是考虑到条件语句咋用 `if` 就完全足够了，没必要再来一个 `switch`）。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#1--概述)
+  - [2. 📒 switch 基本结构](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#2--switch-基本结构)
+  - [3. 💻 demos.1 - switch 中的 break 语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#3--demos1---switch-中的-break-语句)
+  - [4. 💻 demos.2 - 使用表达式](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#4--demos2---使用表达式)
+  - [5. 💻 demos.3 - 匹配规则是严格相等](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0010.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20switch%20%E7%BB%93%E6%9E%84/README.md#5--demos3---匹配规则是严格相等)
 - [x] [0011. 条件语句 - 三元运算符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md)
-  - [1. 📒 三元运算符 `? :` 的基本语法](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#1--三元运算符---的基本语法)
-  - [2. 💻 demos.1 - 判偶数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#2--demos1---判偶数)
-  - 知识点：
-    - 掌握三元运算符 `?:` 的基本语法
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#1--概述)
+  - [2. 📒 三元运算符 `? :` 的基本语法](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#2--三元运算符---的基本语法)
+  - [3. 💻 demos.1 - 判偶数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#3--demos1---判偶数)
 - [x] [0012. 条件语句 - 练习](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md)
-  - [1. 💻 练习.1 - 判断数字是否是三位数，是否能被 13 整除](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--练习1---判断数字是否是三位数是否能被-13-整除)
-  - [2. 💻 练习.2 - 判断学生成绩的等级](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--练习2---判断学生成绩的等级)
-  - [3. 💻 练习.3 - 判断健康状况](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--练习3---判断健康状况)
-  - [4. 💻 练习.4 - 计算理财收益](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--练习4---计算理财收益)
-  - [5. 💻 练习.5 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--练习5---猜拳游戏)
-  - 完成笔记中记录的相关练习
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--概述)
+  - [2. 💻 练习.1 - 判断数字是否是三位数，是否能被 13 整除](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--练习1---判断数字是否是三位数是否能被-13-整除)
+  - [3. 💻 练习.2 - 判断学生成绩的等级](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--练习2---判断学生成绩的等级)
+  - [4. 💻 练习.3 - 判断健康状况](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--练习3---判断健康状况)
+  - [5. 💻 练习.4 - 计算理财收益](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--练习4---计算理财收益)
+  - [6. 💻 练习.5 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#6--练习5---猜拳游戏)
 - [x] [0015. 循环语句 - for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md)
-  - [1. 📒 for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#1--for-循环)
-  - [2. 💻 demos.1 - for 循环的基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#2--demos1---for-循环的基本使用)
-  - [3. 💻 demos.2 - 使用 while 循环来替代 for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#3--demos2---使用-while-循环来替代-for-循环)
-  - [4. 💻 demos.3 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#4--demos3---死循环)
-  - [5. 🤔 问：应该使用 `for` 循环还是 `while` 循环？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#5--问应该使用-for-循环还是-while-循环)
-  - 知识点：
-    - for 循环的基本结构
-    - 死循环
-    - 对比 for 循环和 while 循环
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#1--概述)
+  - [2. 📒 for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#2--for-循环)
+  - [3. 💻 demos.1 - for 循环的基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#3--demos1---for-循环的基本使用)
+  - [4. 💻 demos.2 - 使用 while 循环来替代 for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#4--demos2---使用-while-循环来替代-for-循环)
+  - [5. 💻 demos.3 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#5--demos3---死循环)
+  - [6. 🤔 问：应该使用 `for` 循环还是 `while` 循环？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#6--问应该使用-for-循环还是-while-循环)
 - [x] [0016. 循环语句 - while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md)
-  - [1. 📒 while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#1--while-循环)
-  - [2. 💻 demos.1 - while 循环的基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#2--demos1---while-循环的基本使用)
-  - [3. 💻 demos.2 -  使用 break 跳出循环体](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#3--demos2----使用-break-跳出循环体)
-  - [4. 💻 demos.3 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#4--demos3---死循环)
-  - 知识点：
-    - while 循环的基本结构
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#1--概述)
+  - [2. 📒 while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#2--while-循环)
+  - [3. 💻 demos.1 - while 循环的基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#3--demos1---while-循环的基本使用)
+  - [4. 💻 demos.2 - 使用 break 跳出循环体](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#4--demos2---使用-break-跳出循环体)
+  - [5. 💻 demos.3 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#5--demos3---死循环)
 - [x] [0017. 循环语句 - do...while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md)
-  - [1. 📒 do...while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#1--dowhile-循环)
-  - [2. 💻 demos.1 - 理解 do...while 循环的执行流程](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#2--demos1---理解-dowhile-循环的执行流程)
-  - [3. 💻 demos.2 - 对比 do...while 和 while 之间的差异](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#3--demos2---对比-dowhile-和-while-之间的差异)
-  - 知识点：
-    - 掌握 do...while 循环的基本语法
-  - do...while 循环不常用，快速过有个印象即可。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#1--概述)
+  - [2. 📒 do...while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#2--dowhile-循环)
+  - [3. 💻 demos.1 - 理解 do...while 循环的执行流程](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#3--demos1---理解-dowhile-循环的执行流程)
+  - [4. 💻 demos.2 - 对比 do...while 和 while 之间的差异](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#4--demos2---对比-dowhile-和-while-之间的差异)
 - [x] [0018. 循环语句 - break 语句和 continue 语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md)
-  - [1. 📒 break 语句和 continue 语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#1--break-语句和-continue-语句)
-  - [2. 💻 demos.1 - 在 while 中使用 break](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#2--demos1---在-while-中使用-break)
-  - [3. 💻 demos.2 - 在 for 中使用 break](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#3--demos2---在-for-中使用-break)
-  - [4. 💻 demos.3 - 在循环中使用 continue](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#4--demos3---在循环中使用-continue)
-  - [5. 💻 demos.4 - 多重循环 - break、continue 语句针对当前所在的循环体而言](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#5--demos4---多重循环---breakcontinue-语句针对当前所在的循环体而言)
-  - 知识点：
-    - break 语句
-    - continue 语句
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#1--概述)
+  - [2. 📒 break 语句和 continue 语句](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#2--break-语句和-continue-语句)
+  - [3. 💻 demos.1 - 在 while 中使用 break](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#3--demos1---在-while-中使用-break)
+  - [4. 💻 demos.2 - 在 for 中使用 break](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#4--demos2---在-for-中使用-break)
+  - [5. 💻 demos.3 - 在循环中使用 continue](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#5--demos3---在循环中使用-continue)
+  - [6. 💻 demos.4 - 多重循环 - break、continue 语句针对当前所在的循环体而言](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md#6--demos4---多重循环---breakcontinue-语句针对当前所在的循环体而言)
 - [x] [0019. 循环语句 - 标签（label）](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md)
-  - [1. 📒 标签](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#1--标签)
-  - [2. 💻 demos.1 - break、continue 加标签](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#2--demos1---breakcontinue-加标签)
-  - [3. 💻 demos.2 - 跳出区块](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#3--demos2---跳出区块)
-  - [4. 💻 demos.3 - 不能跨区块跳](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#4--demos3---不能跨区块跳)
-  - [5. 🤔 问：如何看待“标签”？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#5--问如何看待标签)
-  - “标签” 在开发时几乎不会用到它，这个知识点不算重要，快速过一遍笔记，简单了解一下它的作用即可。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#1--概述)
+  - [2. 📒 标签](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#2--标签)
+  - [3. 💻 demos.1 - break、continue 加标签](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#3--demos1---breakcontinue-加标签)
+  - [4. 💻 demos.2 - 跳出区块](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#4--demos2---跳出区块)
+  - [5. 💻 demos.3 - 不能跨区块跳](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#5--demos3---不能跨区块跳)
+  - [6. 🤔 问：如何看待“标签”？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#6--问如何看待标签)
 - [x] [0020. 循环语句 - 练习](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md)
-  - [1. 💻 练习.1 - 在控制台中输出 100 个 `*`](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--练习1---在控制台中输出-100-个-)
-  - [2. 💻 练习.2 - 输出 1-100 的所有数字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--练习2---输出-1-100-的所有数字)
-  - [3. 💻 练习.3 - 输出 1-100 的所有奇数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--练习3---输出-1-100-的所有奇数)
-  - [4. 💻 练习.4 - 求 1-100 之间所有数字之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--练习4---求-1-100-之间所有数字之和)
-  - [5. 💻 练习.5 - 求 1-100 之间所有奇数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--练习5---求-1-100-之间所有奇数之和)
-  - [6. 💻 练习.6 - 求 1-10 之间所有数字的积](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#6--练习6---求-1-10-之间所有数字的积)
-  - [7. 💻 练习.7 - 输出一个 3 行 5 列的 `*` 号矩阵](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#7--练习7---输出一个-3-行-5-列的--号矩阵)
-  - [8. 💻 练习.8 - 用 `*` 号输出一个 5 行的直角三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#8--练习8---用--号输出一个-5-行的直角三角形)
-  - [9. 💻 练习.9 - 用 `*` 号输出一个 5 行的等腰三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#9--练习9---用--号输出一个-5-行的等腰三角形)
-  - [10. 💻 练习.10 - 判断数字 233 是不是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#10--练习10---判断数字-233-是不是素数)
-  - [11. 💻 练习.11 - 判断 1-100 哪些数是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#11--练习11---判断-1-100-哪些数是素数)
-  - [12. 💻 练习.12 - 求 1-100 之间的所有素数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#12--练习12---求-1-100-之间的所有素数之和)
-  - [13. 💻 练习.13 - 输出 99 乘法表](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#13--练习13---输出-99-乘法表)
-  - [14. 💻 练习.14 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#14--练习14---猜拳游戏)
-  - 完成笔记中记录的相关练习题。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--概述)
+  - [2. 💻 练习.1 - 在控制台中输出 100 个 `*`](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--练习1---在控制台中输出-100-个-)
+  - [3. 💻 练习.2 - 输出 1-100 的所有数字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--练习2---输出-1-100-的所有数字)
+  - [4. 💻 练习.3 - 输出 1-100 的所有奇数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--练习3---输出-1-100-的所有奇数)
+  - [5. 💻 练习.4 - 求 1-100 之间所有数字之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--练习4---求-1-100-之间所有数字之和)
+  - [6. 💻 练习.5 - 求 1-100 之间所有奇数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#6--练习5---求-1-100-之间所有奇数之和)
+  - [7. 💻 练习.6 - 求 1-10 之间所有数字的积](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#7--练习6---求-1-10-之间所有数字的积)
+  - [8. 💻 练习.7 - 输出一个 3 行 5 列的 `*` 号矩阵](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#8--练习7---输出一个-3-行-5-列的--号矩阵)
+  - [9. 💻 练习.8 - 用 `*` 号输出一个 5 行的直角三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#9--练习8---用--号输出一个-5-行的直角三角形)
+  - [10. 💻 练习.9 - 用 `*` 号输出一个 5 行的等腰三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#10--练习9---用--号输出一个-5-行的等腰三角形)
+  - [11. 💻 练习.10 - 判断数字 233 是不是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#11--练习10---判断数字-233-是不是素数)
+  - [12. 💻 练习.11 - 判断 1-100 哪些数是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#12--练习11---判断-1-100-哪些数是素数)
+  - [13. 💻 练习.12 - 求 1-100 之间的所有素数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#13--练习12---求-1-100-之间的所有素数之和)
+  - [14. 💻 练习.13 - 输出 99 乘法表](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#14--练习13---输出-99-乘法表)
+  - [15. 💻 练习.14 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#15--练习14---猜拳游戏)
 - [x] [0021. 注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
-  - [1. 🔗 JSDoc 官网](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#1--jsdoc-官网)
-  - [2. 📒 注释是什么](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#2--注释是什么)
-  - [3. 📒 注释的分类](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#3--注释的分类)
-  - [4. 📒 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#4--文档注释)
-  - [5. 📒 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#5--区域注释)
-  - [6. 💻 demos.1 - 单行注释和多行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#6--demos1---单行注释和多行注释)
-  - [7. 💻 demos.2 - 特殊的单行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#7--demos2---特殊的单行注释)
-  - [8. 💻 demos.3 - 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#8--demos3---文档注释)
-  - [9. 💻 demos.4 - 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#9--demos4---区域注释)
-  - 知识点：
-    - 单行注释
-    - 多行注释
-    - 文档注释
-    - 区域注释
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#1--概述)
+  - [2. 🔗 JSDoc 官网](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#2--jsdoc-官网)
+  - [3. 📒 注释是什么](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#3--注释是什么)
+  - [4. 📒 注释的分类](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#4--注释的分类)
+  - [5. 📒 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#5--文档注释)
+  - [6. 📒 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#6--区域注释)
+  - [7. 💻 demos.1 - 单行注释和多行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#7--demos1---单行注释和多行注释)
+  - [8. 💻 demos.2 - 特殊的单行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#8--demos2---特殊的单行注释)
+  - [9. 💻 demos.3 - 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#9--demos3---文档注释)
+  - [10. 💻 demos.4 - 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#10--demos4---区域注释)
 - [x] [0022. 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md)
-  - [1. 🔗 MDN 对 字面量（Literal）的描述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#1--mdn-对-字面量literal的描述)
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#1--概述)
   - [2. 📒 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#2--字面量)
   - [3. 💻 demos.1 - 不同类型的字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#3--demos1---不同类型的字面量)
-  - 知识点：
-    - 理解字面量是什么
-  - 字面量就是直接写在代码中的值。
+  - [4. 🔗 References](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#4--references)
 
 ## 8. 数据类型
 
@@ -364,18 +327,13 @@
   - [4. 💻 demo](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0036.%20%E4%BD%BF%E7%94%A8%20for...in%20%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/README.md#4--demo)
   - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0036.%20%E4%BD%BF%E7%94%A8%20for...in%20%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/README.md#5--ai)
 - [x] [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md)
-  - [1. 🔗 leetcode 相关例题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#1--leetcode-相关例题)
-  - [2. 📒 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#2--防抖)
-  - [3. 📒 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#3--节流)
-  - [4. 📒 防抖 vs. 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#4--防抖-vs-节流)
-  - [5. 💻 demos.1 - 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#5--demos1---防抖)
-  - [6. 💻 demos.2 - 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#6--demos2---节流)
-  - 知识点：
-    - 理解防抖
-    - 理解节流
-    - 完成 leetcode 算法题
-  - 防抖（debouncing）和节流（throttling）都是用来控制函数调用频率的技术解决方案。
-    - ![](https://github.com/Tdahuyou/TNotes.html-css-js/blob/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/assets/2024-12-31-17-34-54.png?raw=true)
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#1--概述)
+  - [2. 🔗 leetcode 相关例题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#2--leetcode-相关例题)
+  - [3. 📒 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#3--防抖)
+  - [4. 📒 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#4--节流)
+  - [5. 📒 防抖 vs. 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#5--防抖-vs-节流)
+  - [6. 💻 demos.1 - 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#6--demos1---防抖)
+  - [7. 💻 demos.2 - 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#7--demos2---节流)
 - [ ] [0038. 数组类型【扩展】](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#1--summary)
   - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#2--links)
@@ -520,9 +478,7 @@
 - [ ] [0061. 在浏览器中引入 ESM 模块](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README.md)
 
 - [ ] [0062. ESM 绑定再导出](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/README.md)
-  某个目录下提供一个导出该目录下所有需要导出的文件的入口文件。
-  ![](https://github.com/Tdahuyou/TNotes.html-css-js/blob/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/assets/2024-09-29-15-11-04.png?raw=true)
-  `demo/utils/index.js` 用于导入所有 `demo/utils/*.js` 模块导出的内容，然后再将这些导入的内容统一导出，外部如果需要使用 `demo/utils` 中的模块，只需要导入 `demo/utils/index.js` 即可。
+  某个目录下提供一个导出该目录下所有需要导出的文件的入口文件。 ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-15-11-04.png) `demo/utils/index.js` 用于导入所有 `demo/utils/*.js` 模块导出的内容，然后再将这些导入的内容统一导出，外部如果需要使用 `demo/utils` 中的模块，只需要导入 `demo/utils/index.js` 即可。
 - [ ] [0063. ESM 模块的基本导出、导入](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md#1--summary)
   - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md#2--links)
@@ -597,21 +553,16 @@
 ## 10. ⚙️ window 对象
 
 - [x] [0079. window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md)
-  - [1. 🔗 mdn - window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#1--mdn---windowonbeforeunload)
-  - [2. 💻 demos.1 - window.onbeforeunload 基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#2--demos1---windowonbeforeunload-基本使用)
-  - `window.onbeforeunload` 是一个事件处理器，它用于在窗口、页面或标签即将卸载时触发。
-  - **当用户尝试关闭浏览器窗口、刷新页面、导航到另一个页面或者通过其他方式离开当前页面时**，这个事件会被触发。
-  - 使用 `onbeforeunload` 事件可以显示一个确认对话框给用户，询问他们是否真的要离开页面。
-  - **这在用户正在编辑表单或其他数据而尚未保存的情况下特别有用**，因为它提供了一种防止意外丢失工作的方式。
-  - 滥用 `onbeforeunload` 可能会导致糟糕的用户体验，应谨慎使用，仅在必要时提醒用户。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#1--概述)
+  - [2. 🔗 mdn - window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#2--mdn---windowonbeforeunload)
+  - [3. 💻 demos.1 - window.onbeforeunload 基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#3--demos1---windowonbeforeunload-基本使用)
 - [x] [0080. window.confirm](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm/README.md)
-  - [1. 🔗 mdn - window.confirm](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm/README.md#1--mdn---windowconfirm)
-  - [2. 💻 demos.1 - window.confirm()](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm/README.md#2--demos1---windowconfirm)
-  - 在 Web 开发中，如果开发者想要在特定条件下触发类似的对话框，可以使用 `window.confirm()` 方法。
-  - 这个方法会显示一个带有“确定”和“取消”按钮的基本对话框，并返回一个布尔值，表示用户的选择是“确定”（true）还是“取消”（false）。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm/README.md#1--概述)
+  - [2. 🔗 mdn - window.confirm](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm/README.md#2--mdn---windowconfirm)
+  - [3. 💻 demos.1 - window.confirm()](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm/README.md#3--demos1---windowconfirm)
 - [x] [0081. 使用 postMessage 实现跨标签页通信](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0081.%20%E4%BD%BF%E7%94%A8%20postMessage%20%E5%AE%9E%E7%8E%B0%E8%B7%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%80%9A%E4%BF%A1/README.md)
-  - [1. 💻 demos.1 - 使用 postMessage 实现跨标签页通信](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0081.%20%E4%BD%BF%E7%94%A8%20postMessage%20%E5%AE%9E%E7%8E%B0%E8%B7%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%80%9A%E4%BF%A1/README.md#1--demos1---使用-postmessage-实现跨标签页通信)
-  - `postMessage` API 可用于实现不同窗口、标签页或 iframe 之间的安全通信。它允许你向另一个浏览上下文（如新打开的窗口、iframe 等）发送消息，并可以接收来自这些上下文的消息。
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0081.%20%E4%BD%BF%E7%94%A8%20postMessage%20%E5%AE%9E%E7%8E%B0%E8%B7%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%80%9A%E4%BF%A1/README.md#1--概述)
+  - [2. 💻 demos.1 - 使用 postMessage 实现跨标签页通信](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0081.%20%E4%BD%BF%E7%94%A8%20postMessage%20%E5%AE%9E%E7%8E%B0%E8%B7%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%80%9A%E4%BF%A1/README.md#2--demos1---使用-postmessage-实现跨标签页通信)
 - [ ] [0108. DOMParser](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0108.%20DOMParser/README.md)
   - [1. 📒 DOMParser 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0108.%20DOMParser/README.md#1--domparser-概述)
   - [2. 📒 解析 XML 字符串](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0108.%20DOMParser/README.md#2--解析-xml-字符串)
@@ -639,7 +590,7 @@
 ## 11. css 属性
 
 - [ ] [0105. background](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md)
-  - [1. ⏰ background-* 忘记哪个就找些 demo 来看看，并汇总到 demos.* 中。](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md#1--background--忘记哪个就找些-demo-来看看并汇总到-demos-中)
+  - [1. ⏰ background-_ 忘记哪个就找些 demo 来看看，并汇总到 demos._ 中。](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md#1--background-_-忘记哪个就找些-demo-来看看并汇总到-demos_-中)
   - [2. 💻 demos.1 - 使用 background-image 设置背景](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md#2--demos1---使用-background-image-设置背景)
   - MDN background
     - https://developer.mozilla.org/zh-CN/docs/Web/CSS/background

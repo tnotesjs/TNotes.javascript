@@ -3,16 +3,19 @@
 <!-- region:toc -->
 
 - [1. 📝 概述](#1--概述)
-- [2. 🔗 links](#2--links)
+- [2. 🆚 `var`、`let`、`const`](#2--varletconst)
 - [3. 📒 变量声明提升和暂时性死区](#3--变量声明提升和暂时性死区)
 - [4. 💻 demos.1 - var 声明](#4--demos1---var-声明)
 - [5. 💻 demos.2 - let 和 const 声明](#5--demos2---let-和-const-声明)
 - [6. 💻 demos.3 - 函数声明](#6--demos3---函数声明)
 - [7. 💻 demos.4 - 函数表达式](#7--demos4---函数表达式)
-- [8. 💼 面试题.1 - 下面的代码输出什么？](#8--面试题1---下面的代码输出什么)
-- [9. 💼 面试题.2 - 下面的代码输出的结果是什么？](#9--面试题2---下面的代码输出的结果是什么)
-- [10. 💼 面试题.3 - 请谈谈什么是变量声明提升？](#10--面试题3---请谈谈什么是变量声明提升)
-- [11. 🤔 思考 - let、const 真的有被提升吗？](#11--思考---letconst-真的有被提升吗)
+- [8. 💼 interviews.1 - 下面的代码输出什么？](#8--interviews1---下面的代码输出什么)
+- [9. 💼 interviews.2 - 下面的代码输出的结果是什么？](#9--interviews2---下面的代码输出的结果是什么)
+- [10. 💼 interviews.3 - 请谈谈什么是变量声明提升？](#10--interviews3---请谈谈什么是变量声明提升)
+- [11. 🤔 let、const 真的有被提升吗？](#11--letconst-真的有被提升吗)
+- [12. 🆚 提升 ≠ 内存分配](#12--提升--内存分配)
+- [13. 🤔 var、let、const 到底提升了什么？](#13--varletconst-到底提升了什么)
+- [14. 🔗 References](#14--references)
 
 <!-- endregion:toc -->
 
@@ -24,21 +27,18 @@
   - 函数声明
   - 函数表达式
   - 暂时性死区（TDZ）
-- 变量声明提升可以算是面试题常客，需要知道变量声明提升是什么。
-- 介绍了什么是变量声明提升、什么是暂时性死区，并通过一些示例，来了解在 JS 中不同类型的变量的声明和提升机制。
+- 评价：
+  - 变量声明提升可以算是面试题常客，需要知道变量声明提升是什么。
+  - 本文介绍了什么是变量声明提升、什么是暂时性死区，并通过一些示例，来了解在 JS 中不同类型的变量的声明和提升机制。
+  - 结尾对 ECMA 官方文档原文的引用和分析对日常撸代码基本无影响，可以作为扩展内容来看待。
 
-## 2. 🔗 links
+## 2. 🆚 `var`、`let`、`const`
 
-- https://juejin.cn/post/6844903753015885831
-  - 掘金，《理解 ES6 中的 TDZ（暂时性死区）》。
-- https://exploringjs.com/js/book/ch_variables-assignment.html
-  - Variables and assignment • JavaScript for impatient programmers (ES2022 edition)
-- https://juejin.cn/post/6993676334635417614#heading-2
-  - 掘金，深究一下 let、const 到底有没有提升？
-- https://www.youtube.com/watch?v=VbHaL_J8Ex0
-  - YouTube，Variable Hoisting with LET, CONST and VAR in JavaScript
-- https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
-  - ECMA 官方文档，14.3.1 Let and Const Declarations
+| **关键字** | **声明提升** | **初始化提升** | **赋值时机** | **暂时性死区** |
+| --- | --- | --- | --- | --- |
+| `var` | ✅ 是 | ✅ 初始化为 `undefined` | 执行赋值语句时 | ❌ 无 |
+| `let` | ✅ 是 | ❌ 否 | 执行声明语句时 | ✅ 有 |
+| `const` | ✅ 是 | ❌ 否 | 必须在声明时赋值 | ✅ 有 |
 
 ## 3. 📒 变量声明提升和暂时性死区
 
@@ -89,177 +89,131 @@ console.log(a) // => 5
 
 - **暂时性死区的作用**
   - 暂时性死区是 JavaScript 中 `let` 和 `const` 引入的一个重要特性，它强制开发者以更加严格和有序的方式声明和使用变量，从而提高代码的 **可读性** 和 **可维护性**。
-- 暂时性死区的存在 **有助于 JavaScript 开发者避免几种常见的编程错误**，例如：
+  - 暂时性死区的存在 **有助于 JavaScript 开发者避免几种常见的编程错误**，例如：
   - **变量提前使用**：确保开发者不会在变量准备好之前就开始使用它，这有助于避免运行时错误。
   - **变量覆盖**：在较大的作用域中已有同名变量时，`let` 和 `const` 声明的局部变量会阻止提前访问全局变量或外部作用域的变量，从而避免可能的逻辑错误。
 
 ## 4. 💻 demos.1 - var 声明
 
-```javascript
-console.log(a) // => undefined
-var a = 1
-console.log(a) // => 5
+::: code-group
 
-/*
-使用 var 关键字声明的变量会提升其声明，但不会提升它们的初始化（赋值）。
-如果在声明之前访问变量，则该变量的值为 undefined。
+<<< ./demos/1/1.js {}
 
-实际上执行的代码如下：
-var a
-console.log(a)
-a = 1
-console.log(a)
-
-js 引擎的工作方式是：
-  先解析代码
-  获取所有被声明的变量
-  然后再一行一行地运行
-
-这种工作方式所造成的结果：
-  所有的变量的声明语句都会被提升到代码的头部
-  这就叫做变量提升（hoisting）
-*/
-```
+:::
 
 ## 5. 💻 demos.2 - let 和 const 声明
 
-```javascript
-console.log(x) // ❌ ReferenceError
-let x = 10
+::: code-group
 
-/*
-let x = 10
-在变量 x 被声明之前的区域属于 x 的 TDZ
-在这块区域中访问 x 将会抛出 ReferenceError 错误
+<<< ./demos/2/1.js {}
 
-let 和 const 关键字声明的变量表现得就像它们没有被提升一样。
-实际上，它们被提升了，但是在初始化之前不能访问它们，这被称为“暂时性死区”（Temporal Dead Zone, TDZ）。
-尝试在声明之前访问这些变量将会导致 ReferenceError。
-*/
-```
+:::
 
-![](assets/2024-12-27-13-13-02.png)
+![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-27-13-13-02.png)
 
 ## 6. 💻 demos.3 - 函数声明
 
-```javascript
-hello() // 输出：Hello, world!
-function hello() {
-  console.log('Hello, world!')
-}
+::: code-group
 
-/* 
-函数声明完整地被提升，即提升函数的声明和实体定义。
-这意味着在声明函数之前就可以调用函数。
-*/
-```
+<<< ./demos/3/1.js {}
+
+:::
 
 ## 7. 💻 demos.4 - 函数表达式
 
-```javascript
-console.log(hello) // 输出：undefined
-var hello = function () {
-  console.log('Hello, world!')
-}
+::: code-group
 
-/*
-如果函数是通过函数表达式创建的
-那么只有变量名被提升
-而函数的实体不会被提升
-*/
-```
+<<< ./demos/4/1.js {}
 
-## 8. 💼 面试题.1 - 下面的代码输出什么？
+:::
 
-```javascript
-// 问：下面的代码输出什么？
+## 8. 💼 interviews.1 - 下面的代码输出什么？
 
-console.log(a, b, c)
-var a = 1
-var b = function () {}
-function c() {}
-```
+::: code-group
 
-- **参考答案**
-  - 执行 console.log(a, b, c); 时，a 和 b 是 undefined，而 c 是已定义的函数。
+<<< ./interviews/1/1.js {}
 
-```javascript
-var a
-var b
-function c() {}
+:::
 
-console.log(a, b, c) // 在此时，a 和 b 是 undefined，c 是函数
-// undefined undefined [Function: c]
+::: details 参考答案
 
-a = 1
-b = function () {}
+- 执行 `console.log(a, b, c);` 时，`a` 和 `b` 是 `undefined`，而 `c` 是已定义的函数。
 
-/*
-JavaScript 中，变量和函数声明会被提升（Hoisting）到其作用域的顶部，但赋值操作不会提升。
+<<< ./interviews/1/2.js {}
 
-代码的实际执行顺序如下：
-1. 变量 a 被提升，但其赋值 1 保持在原位置。
-2. 变量 b 被提升，但其赋值 function () {} 保持在原位置。
-3. 函数声明 c 被提升，整个函数定义被提升。
-提升后的代码等价于上述这种写法。
+:::
 
-因此，执行 console.log(a, b, c); 时，a 和 b 是 undefined，而 c 是已定义的函数。
-*/
-```
+## 9. 💼 interviews.2 - 下面的代码输出的结果是什么？
 
-## 9. 💼 面试题.2 - 下面的代码输出的结果是什么？
+::: code-group
 
-```javascript
-// 问：下面的代码输出的结果是什么？
-let x = 20,
-  y = 10
+<<< ./interviews/2/1.js {}
 
-let result = add(x)
-console.log('result1 ' + result)
+:::
 
-var add = function (x, y) {
-  return x + y
-}
-
-function add(x) {
-  return x + 40
-}
-```
-
-- **参考答案**
+::: details 参考答案
 
 ```javascript
 // result1 60
 ```
 
-## 10. 💼 面试题.3 - 请谈谈什么是变量声明提升？
+- 提示：丢到浏览器控制台中查看运行结果，如果直接在 nodejs 环境跑，会报错
+- nodejs 环境
+  - ![图 1](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-14-54-27.png)
+- 浏览器环境
+  - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-14-54-00.png)
 
-当 JavaScript 引擎执行代码时，创建了全局执行上下文，它有两个阶段：
+:::
 
-1. 创建
-2. 执行
+## 10. 💼 interviews.3 - 请谈谈什么是变量声明提升？
 
-创建阶段，也可以说是代码编译阶段、代码解析阶段，这一阶段主要是做一些准备工作。在代码被执行之前的解析阶段，JavaScript 引擎将 `var` 和 `function` 声明移到了顶层，这就是 JavaScript 的变量提升。
+::: details 参考答案
 
-`var` 和 `function` 声明的变量可以在声明前访问，这就是因为变量提升的缘故。
+- **变量声明提升是 JavaScript 在编译阶段对声明的“预处理”。`var` 提升并初始化为 undefined，`let/const` 提升但受限于 TDZ，函数声明提升后可以在声明前调用。**
 
-## 11. 🤔 思考 - let、const 真的有被提升吗？
+---
 
-> **先说答案：let、const 也被提升了。**
->
-> **这个问题对我们写代码有影响吗？**
->
-> 没有
->
-> 从撸代码的层面来看，该问题其实没必要深究，我们只需要知道这一点就行 —— **使用 let、const 声明的变量，无法在声明之前访问**。至于它们到底有没有提升其实对我们撸代码没啥影响。
->
-> **记录这个问题的原因：**
->
-> 看到有些人说 let、const 没有提升，有些人说有，就查阅了一下 ECMA 官方对此的描述。
->
-> https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
->
-> 这是 ECMA 官方文档，14.3.1 Let and Const Declarations
+下面是具体说明：
+
+- 在 JavaScript 中，**变量声明提升（Hoisting）** 指的是：在代码执行之前的编译阶段，JavaScript 引擎会将变量和函数的声明提升到它们所在作用域的顶部，从而可以在声明语句之前访问它们。
+- **`var`** 声明会被提升到作用域顶端，并在创建阶段初始化为 `undefined`，因此可以在声明前访问，只是值为 `undefined`。
+- **`let` 和 `const`** 也会被提升，但在执行到声明语句之前处于 **暂时性死区（TDZ）**，在此之前访问会抛出 `ReferenceError`。
+- **函数声明**（`function foo(){}`）会被整体提升，函数体在创建阶段就已初始化，因此可以在声明前调用。
+
+```js
+console.log(a) // undefined
+var a = 1
+
+console.log(b) // ❌ ReferenceError
+let b = 2
+
+foo() // ✅ "hello"
+function foo() {
+  console.log('hello')
+}
+```
+
+:::
+
+## 11. 🤔 let、const 真的有被提升吗？
+
+- 先说答案：
+  - **let、const 也被提升了。**
+
+---
+
+- 🤔 这个问题对我们写代码有影响吗？
+  - **几乎没有**
+  - 从撸代码的层面来看，该问题其实没必要深究，我们只需要知道这一点就行 —— **使用 let、const 声明的变量，无法在声明之前访问**。至于它们到底有没有提升其实对我们撸代码没啥影响。
+
+---
+
+- **记录这个问题的原因：**
+  - 看到有些人说 let、const 没有提升，有些人说有，就查阅了一下 ECMA 官方对此的描述。
+  - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
+  - 这是 ECMA 官方文档，14.3.1 Let and Const Declarations
+
+---
 
 - **ECMA 官方文档 - 原文**
   - `let` and `const` declarations define variables that are scoped to the [running execution context](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#running-execution-context)'s LexicalEnvironment. The variables are created when their containing [Environment Record](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#sec-environment-records) is instantiated but may not be accessed in any way until the variable's [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) is evaluated. A variable defined by a [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) with an [Initializer](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer) is assigned the value of its [Initializer](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer)'s [AssignmentExpression](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-AssignmentExpression) when the [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) is evaluated, not when the variable is created. If a [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) in a `let` declaration does not have an [Initializer](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer) the variable is assigned the value undefined when the [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) is evaluated.
@@ -276,28 +230,54 @@ function add(x) {
   - 尽管这些变量已经被创建，但在实际执行到它们的声明语句之前，你无法访问它们。这段 **时间** 被称为暂时性死区（TDZ）。如果你在 TDZ 内尝试访问这些变量，会抛出一个 `ReferenceError`。
     - “时间” 这个词比较有意思，在细读文档之前，一直以为 “死区” 指的是 “某一段区域范围”，实际上指的是 “时间范围”。不过代码也是按照时间一步步往下执行的，因此理解成区域也没啥毛病。
   - 这句话中提到的额 “词法绑定求值” 是指在代码执行过程中，当 JavaScript 引擎遇到变量声明时，将变量名与实际的内存位置绑定，并将初始值赋给变量的过程。对于 let 和 const，在代码执行到声明语句时，才会进行这种赋值操作。
-- **提升 ≠ 内存分配**
-  - 在 JavaScript 中，变量声明的提升（Hoisting）和内存分配（Memory Allocation）是两个相关但不同的步骤。
-  - **提升（Hoisting）**
-    - 提升是指在 JavaScript 解释器执行代码之前，将变量和函数声明提升到其作用域的顶部。这意味着在代码运行之前，所有的变量和函数声明已经被识别（也就是说 JS 解释器已经知道这玩意儿存在了）。提升过程适用于 var、let、const 声明以及函数声明。
-  - **内存分配（Memory Allocation）**
-    - 内存分配是指为变量分配内存空间以存储其值。这一步骤涉及将变量与特定的内存地址相关联。
-- **var、let、const 到底提升了什么？**
-  - 要回答这个问题，得知道一个变量在被创建的时候的大致流程。既然说是提升，一定是有些流程被提前做了。
-  - **var 声明变量的流程**
-    1. 创建词法环境（作用域）
-    2. 变量声明并初始化为 undefined（内存分配）
-    3. 变量初始化（内存分配）
-  - **let 变量声明的流程**
-    1. 创建词法环境（作用域）
-    2. 变量声明（内存分配）
-    3. 变量初始化（内存分配）
-  - **const 变量声明的流程**
-    1. 创建词法环境（作用域）
-    2. 变量声明并同时完成初始化（内存分配）
-  - var 提升：1、2
-  - let 提升：1
-  - const 提升：1
+
+## 12. 🆚 提升 ≠ 内存分配
+
+- 在 JavaScript 中，变量声明的提升（Hoisting）和内存分配（Memory Allocation）是两个相关但不同的步骤。
+- **提升（Hoisting）**
+  - 提升是指在 JavaScript 解释器执行代码之前，将变量和函数声明提升到其作用域的顶部。这意味着在代码运行之前，所有的变量和函数声明已经被识别（也就是说 JS 解释器已经知道这玩意儿存在了）。提升过程适用于 var、let、const 声明以及函数声明。
+- **内存分配（Memory Allocation）**
+  - 内存分配是指为变量分配内存空间以存储其值。这一步骤涉及将变量与特定的内存地址相关联。
+
+## 13. 🤔 var、let、const 到底提升了什么？
+
+- 要回答这个问题，得知道变量声明在编译阶段和执行阶段的分工。既然说是提升，一定是有些流程被提前做了。提升的本质是 **声明阶段** 被提前到作用域顶部。
+- **核心三阶段**（所有变量声明共有）：
+  1. **声明（Declaration）**：在词法环境注册标识符（作用域创建）
+  2. **初始化（Initialization）**：分配内存并设置初始值
+  3. **赋值（Assignment）**：将具体值绑定到变量（执行阶段）
+- **var 声明流程**
+  1. **编译阶段**：声明变量并 **初始化为 `undefined`**（提升）
+  2. **执行阶段**：执行赋值操作（如 `= 10`）
+- **let 声明流程**
+  1. **编译阶段**：声明变量（**未初始化**，进入暂时性死区）
+  2. **执行阶段**：
+     - 执行到 `let` 语句时初始化（默认 `undefined`）
+     - 执行赋值操作（如 `= 20`）
+- **const 声明流程**
+  1. **编译阶段**：声明变量（**未初始化**，进入暂时性死区）
+  2. **执行阶段**：执行到 `const` 语句时**同步完成初始化与赋值**（不可拆分）
+- **提升的本质**
+
+| 关键字 | 提升内容 | 表现示例 |
+| --- | --- | --- |
+| `var` | 声明 + 初始化（`undefined`） | `console.log(a); var a=10;` → `undefined` |
+| `let` | 仅声明（未初始化） | `console.log(b); let b=20;` → `ReferenceError` |
+| `const` | 仅声明（未初始化） | `console.log(c); const c=30;` → `ReferenceError` |
+
 - **结论**
   - `var` 提升，并完成了内存分配，初始化为 `undefined`。
   - `let` 和 `const` 提升，但在声明语句之前处于暂时性死区（TDZ），不会初始化。内存分配和初始化在代码执行到声明语句时发生。
+
+## 14. 🔗 References
+
+- https://juejin.cn/post/6844903753015885831
+  - 掘金，《理解 ES6 中的 TDZ（暂时性死区）》。
+- https://exploringjs.com/js/book/ch_variables-assignment.html
+  - Variables and assignment • JavaScript for impatient programmers (ES2022 edition)
+- https://juejin.cn/post/6993676334635417614#heading-2
+  - 掘金，深究一下 let、const 到底有没有提升？
+- https://www.youtube.com/watch?v=VbHaL_J8Ex0
+  - YouTube，Variable Hoisting with LET, CONST and VAR in JavaScript
+- https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
+  - ECMA 官方文档，14.3.1 Let and Const Declarations

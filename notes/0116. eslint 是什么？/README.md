@@ -48,28 +48,27 @@ npx eslint --init
 
 `eslint --init` 命令会引导你完成一系列的选择题，帮助你设置最适合项目的 ESLint 配置。根据你的选择，它可能会生成一个 `.eslintrc` 文件，该文件包含了所有的规则设定。之后，你可以在你的构建流程中加入 `eslint` 命令来定期检查代码。
 
-
 ## 4. 💻 demo - 基础示例 - 尝试添加规则：程序中的引号必须使用单引号
 
 ```js
 // demo/eslint.config.cjs
 module.exports = {
-    rules: {
-        quotes: ['error', 'single'],
-        // 引号必须使用单引号，否则会报错。
-    }
+  rules: {
+    quotes: ['error', 'single'],
+    // 引号必须使用单引号，否则会报错。
+  },
 }
 ```
 
 ```js
 // demo/1.js
-const str = "Hello World"
+const str = 'Hello World'
 // 报错：
 // Strings must use singlequote.eslintquotes
 ```
 
-- ![](assets/2024-09-29-10-29-42.png)
+- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-10-29-42.png)
 - 可以通过 eslint 命令来快速修复一个模块中不符合规范的代码，能够减少手动修改代码的工作量。不过这个功能仅限于那些可以自动化修复的错误，比如这个示例中的引号错误使用而引起的错误。对于那些无法自动一键修复的错误，依旧是需要根据 IDE 的提示，手动去修改的。
-- ![](assets/2024-09-29-10-32-20.png)
+- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-10-32-20.png)
 - 命令 `eslint --fix` 可用来一键修复模块中的一些能够被自动修复的错误。
 - eslint 规则未生效的原因可能是因为 eslint 配置文件没有被正确加载，或者是 eslint 服务出现问题。测试时如果出现这样的异常现象“已明确代码没问题，但是 VSCode 并没有提供错误提示”，可以通过重启 VSCode 来尝试解决。

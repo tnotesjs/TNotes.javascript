@@ -2,19 +2,23 @@
 
 <!-- region:toc -->
 
-- [1. 📒 switch 基本结构](#1--switch-基本结构)
-- [2. 💻 demos.1 - switch 中的 break 语句](#2--demos1---switch-中的-break-语句)
-- [3. 💻 demos.2 - 使用表达式](#3--demos2---使用表达式)
-- [4. 💻 demos.3 - 匹配规则是严格相等](#4--demos3---匹配规则是严格相等)
+- [1. 📝 概述](#1--概述)
+- [2. 📒 switch 基本结构](#2--switch-基本结构)
+- [3. 💻 demos.1 - switch 中的 break 语句](#3--demos1---switch-中的-break-语句)
+- [4. 💻 demos.2 - 使用表达式](#4--demos2---使用表达式)
+- [5. 💻 demos.3 - 匹配规则是严格相等](#5--demos3---匹配规则是严格相等)
 
 <!-- endregion:toc -->
+
+## 1. 📝 概述
+
 - 知识点：
   - switch 结构
   - break 语句
   - 匹配校验 - 严格相等 `===`
 - JavaScript 提供 `if` 结构和 `switch` 结构，完成条件判断，即只有满足预设的条件，才会执行相应的语句。但是，相对于 `if` 语句而言，`switch` 语句是很罕见的（甚至有的公司禁止使用，可能是考虑到条件语句咋用 `if` 就完全足够了，没必要再来一个 `switch`）。
 
-## 1. 📒 switch 基本结构
+## 2. 📒 switch 基本结构
 
 - 多个 `if...else` 连在一起使用的时候，可以转为使用 `switch` 结构。
 - 通常在书写 `case` 代码块时，都在每个 `case` 代码块末尾加上 `break` 语句。
@@ -23,14 +27,14 @@
 
 ```javascript
 switch (fruit) {
-  case "banana":
+  case 'banana':
     // ...
-    break;
-  case "apple":
+    break
+  case 'apple':
     // ...
-    break;
+    break
   default:
-    // ...
+  // ...
 }
 
 // 根据变量fruit的值，选择执行相应的case。
@@ -40,7 +44,7 @@ switch (fruit) {
 // 每个case代码块内部的break语句不能少，否则会接下去执行下一个case代码块，而不是跳出switch结构。
 ```
 
-## 2. 💻 demos.1 - switch 中的 break 语句
+## 3. 💻 demos.1 - switch 中的 break 语句
 
 ```javascript
 var x = 1
@@ -85,7 +89,7 @@ switch (x) {
 // x 等于1
 ```
 
-## 3. 💻 demos.2 - 使用表达式
+## 4. 💻 demos.2 - 使用表达式
 
 ```javascript
 switch (1 + 3) {
@@ -102,7 +106,7 @@ switch (1 + 3) {
 // 运行了 case 2 + 2
 ```
 
-## 4. 💻 demos.3 - 匹配规则是严格相等
+## 5. 💻 demos.3 - 匹配规则是严格相等
 
 ```javascript
 var x = 1

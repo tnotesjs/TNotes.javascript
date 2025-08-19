@@ -1,31 +1,34 @@
 # [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81)
 
-
 <!-- region:toc -->
 
-- [1. 🔗 leetcode 相关例题](#1--leetcode-相关例题)
-- [2. 📒 防抖](#2--防抖)
-- [3. 📒 节流](#3--节流)
-- [4. 📒 防抖 vs. 节流](#4--防抖-vs-节流)
-- [5. 💻 demos.1 - 防抖](#5--demos1---防抖)
-- [6. 💻 demos.2 - 节流](#6--demos2---节流)
+- [1. 📝 概述](#1--概述)
+- [2. 🔗 leetcode 相关例题](#2--leetcode-相关例题)
+- [3. 📒 防抖](#3--防抖)
+- [4. 📒 节流](#4--节流)
+- [5. 📒 防抖 vs. 节流](#5--防抖-vs-节流)
+- [6. 💻 demos.1 - 防抖](#6--demos1---防抖)
+- [7. 💻 demos.2 - 节流](#7--demos2---节流)
 
 <!-- endregion:toc -->
+
+## 1. 📝 概述
+
 - 知识点：
   - 理解防抖
   - 理解节流
   - 完成 leetcode 算法题
 - 防抖（debouncing）和节流（throttling）都是用来控制函数调用频率的技术解决方案。
-  - ![](assets/2024-12-31-17-34-54.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-34-54.png)
 
-## 1. 🔗 leetcode 相关例题
+## 2. 🔗 leetcode 相关例题
 
 - https://www.yuque.com/huyouda/leetcode/2627
   - leetcode，实现函数防抖。
 - https://www.yuque.com/huyouda/leetcode/2676
   - leetcode，实现函数节流。
 
-## 2. 📒 防抖
+## 3. 📒 防抖
 
 - **防抖是什么**
   - 防抖是指短时间内大量触发同一事件，只会在 **最后一次事件完成后** 延迟执行一次函数。
@@ -39,12 +42,12 @@ var debounce = function (fn, delay) {
   let timer
   return function (...args) {
     clearTimeout(timer)
-    timer = setTimeout(_ => fn(...args), delay)
+    timer = setTimeout((_) => fn(...args), delay)
   }
-};
+}
 ```
 
-## 3. 📒 节流
+## 4. 📒 节流
 
 - **节流是什么**
   - 可以通过类比来理解“节流”这个词，它就好比未拧紧的水龙头一样，水龙头每隔一段时间就会滴水（节流是每隔一段时间就执行一次函数）。即使在这段时间管道里有更多的水，水龙头也不会掉更多的水。
@@ -62,7 +65,6 @@ var debounce = function (fn, delay) {
 
 ```javascript
 var throttle = function (fn, t) {
-
   const now = Date.now
 
   let timer
@@ -78,7 +80,7 @@ var throttle = function (fn, t) {
 }
 ```
 
-## 4. 📒 防抖 vs. 节流
+## 5. 📒 防抖 vs. 节流
 
 - **防抖**：确保在一段时间内没有新的事件触发后，才执行一次函数。它适用于用户停止频繁操作后才需要执行函数的场景。
 - **节流**：限制函数在一定时间间隔内最多执行一次，适用于高频率触发但希望在指定时间间隔内执行固定次数的场景。
@@ -88,37 +90,37 @@ var throttle = function (fn, t) {
 // 【debounce】
 // 搜索框输入
 // 用户输入时实时搜索，但希望只在用户停止输入后一段时间才发起搜索请求。
-input.addEventListener('input', debounce(handleSearch, 300));
+input.addEventListener('input', debounce(handleSearch, 300))
 
 // 窗口大小调整
 // 用户调整浏览器窗口大小时，重新布局或渲染页面，只在用户停止调整窗口大小后进行操作。
-window.addEventListener('resize', debounce(handleResize, 200));
+window.addEventListener('resize', debounce(handleResize, 200))
 
 // 表单验证
 // 用户输入表单内容时，实时验证但希望只在用户停止输入后进行验证。
-input.addEventListener('input', debounce(validateInput, 300));
+input.addEventListener('input', debounce(validateInput, 300))
 
 // 【throttle】
 // 滚动事件
 // 页面滚动时，每隔一段时间执行一次函数，避免因为高频率滚动事件导致性能问题。
-window.addEventListener('scroll', throttle(handleScroll, 100));
+window.addEventListener('scroll', throttle(handleScroll, 100))
 
 // 窗口大小调整
 // 用户调整浏览器窗口大小时，每隔一段时间执行一次重新布局或渲染操作。
-window.addEventListener('resize', throttle(handleResize, 200));
+window.addEventListener('resize', throttle(handleResize, 200))
 
 // 按钮点击
 // 防止用户在短时间内多次点击按钮，确保在规定时间内按钮点击事件只触发一次。
-button.addEventListener('click', throttle(handleClick, 500));
+button.addEventListener('click', throttle(handleClick, 500))
 
 // 拖拽事件
 // 用户拖拽元素时，每隔一段时间更新一次位置，避免频繁计算导致性能问题。
-element.addEventListener('drag', throttle(handleDrag, 100));
+element.addEventListener('drag', throttle(handleDrag, 100))
 ```
 
 - 根据具体需求选择适合的方法，目的在于解决由于事件高频触发导致的一些类似性能方面的问题。
 
-## 5. 💻 demos.1 - 防抖
+## 6. 💻 demos.1 - 防抖
 
 ```html
 <!DOCTYPE html>
@@ -170,10 +172,10 @@ element.addEventListener('drag', throttle(handleDrag, 100));
 </html>
 ```
 
-- ![](assets/2024-12-31-17-37-47.png)
+- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-37-47.png)
 - 当用户在输入框中输入内容时，输入事件会被防抖函数处理，只有在用户停止输入 300 毫秒后，才会更新显示的内容。这样可以避免频繁的事件触发，提高性能。
 
-## 6. 💻 demos.2 - 节流
+## 7. 💻 demos.2 - 节流
 
 ```html
 <!DOCTYPE html>
@@ -212,4 +214,4 @@ element.addEventListener('drag', throttle(handleDrag, 100));
 </html>
 ```
 
-- ![](assets/2024-12-31-17-38-06.png)
+- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-38-06.png)

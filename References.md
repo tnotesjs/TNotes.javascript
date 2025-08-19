@@ -1,0 +1,3 @@
+- https://tc39.es/ecma262/multipage/#sec-intro
+  - tc39 委员会 ecma262 标准
+  - 这是 ECMAScript® 语言规范（ECMA-262）的官网，由 JavaScript 标准化组织 TC39 提供的官方在线规范 —— 可以说是 JavaScript（ECMAScript）最权威的参考资料。

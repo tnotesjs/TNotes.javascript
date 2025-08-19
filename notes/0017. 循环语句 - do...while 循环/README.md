@@ -1,32 +1,34 @@
 # [0017. 循环语句 - do...while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF)
 
-
 <!-- region:toc -->
 
-- [1. 📒 do...while 循环](#1--dowhile-循环)
-- [2. 💻 demos.1 - 理解 do...while 循环的执行流程](#2--demos1---理解-dowhile-循环的执行流程)
-- [3. 💻 demos.2 - 对比 do...while 和 while 之间的差异](#3--demos2---对比-dowhile-和-while-之间的差异)
+- [1. 📝 概述](#1--概述)
+- [2. 📒 do...while 循环](#2--dowhile-循环)
+- [3. 💻 demos.1 - 理解 do...while 循环的执行流程](#3--demos1---理解-dowhile-循环的执行流程)
+- [4. 💻 demos.2 - 对比 do...while 和 while 之间的差异](#4--demos2---对比-dowhile-和-while-之间的差异)
 
 <!-- endregion:toc -->
+
+## 1. 📝 概述
+
 - 知识点：
   - 掌握 do...while 循环的基本语法
 - do...while 循环不常用，快速过有个印象即可。
 
-## 1. 📒 do...while 循环
+## 2. 📒 do...while 循环
 
 - 掌握 do...while 循环的语法，知道它和 while 循环之间的差异。在大多数代码库和开发者社区中，for 和 while 循环更为常见，do...while 循环很少会见到。
 - `do...while` 循环与 `while` 循环类似，唯一的区别就是先运行一次循环体，然后判断循环条件。
 - **do...while 循环基本结构**
 
 ```javascript
-do
-  语句
-while (条件);
+do 语句
+while (条件)
 
 // 或者
 do {
   语句
-} while (条件);
+} while (条件)
 ```
 
 ```mermaid
@@ -40,7 +42,7 @@ st((开始))-->循环体
 
 - 不管条件是否为真，`do...while` 循环至少运行一次，这是这种结构最大的特点。另外需要注意不要省略 `while` 语句后面的分号。
 
-## 2. 💻 demos.1 - 理解 do...while 循环的执行流程
+## 3. 💻 demos.1 - 理解 do...while 循环的执行流程
 
 ```javascript
 var x = 3
@@ -57,26 +59,26 @@ do {
 // 2
 ```
 
-## 3. 💻 demos.2 - 对比 do...while 和 while 之间的差异
+## 4. 💻 demos.2 - 对比 do...while 和 while 之间的差异
 
 ```js
-let count = 0;
+let count = 0
 while (count > 0) {
-    console.log("当前计数: " + count);
-    count++;
+  console.log('当前计数: ' + count)
+  count++
 }
 
 // 没有任何输出
 ```
 
 ```js
-let count = 0;
+let count = 0
 do {
-    console.log("当前计数: " + count);
-    count++;
+  console.log('当前计数: ' + count)
+  count++
 
-    if (count > 10) break; // 以防死循环
-} while (count > 0);
+  if (count > 10) break // 以防死循环
+} while (count > 0)
 
 // 输出：
 // 当前计数: 0

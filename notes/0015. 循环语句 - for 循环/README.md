@@ -1,28 +1,30 @@
 # [0015. 循环语句 - for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF)
 
-
 <!-- region:toc -->
 
-- [1. 📒 for 循环](#1--for-循环)
-- [2. 💻 demos.1 - for 循环的基本使用](#2--demos1---for-循环的基本使用)
-- [3. 💻 demos.2 - 使用 while 循环来替代 for 循环](#3--demos2---使用-while-循环来替代-for-循环)
-- [4. 💻 demos.3 - 死循环](#4--demos3---死循环)
-- [5. 🤔 问：应该使用 `for` 循环还是 `while` 循环？](#5--问应该使用-for-循环还是-while-循环)
+- [1. 📝 概述](#1--概述)
+- [2. 📒 for 循环](#2--for-循环)
+- [3. 💻 demos.1 - for 循环的基本使用](#3--demos1---for-循环的基本使用)
+- [4. 💻 demos.2 - 使用 while 循环来替代 for 循环](#4--demos2---使用-while-循环来替代-for-循环)
+- [5. 💻 demos.3 - 死循环](#5--demos3---死循环)
+- [6. 🤔 问：应该使用 `for` 循环还是 `while` 循环？](#6--问应该使用-for-循环还是-while-循环)
 
 <!-- endregion:toc -->
+
+## 1. 📝 概述
+
 - 知识点：
   - for 循环的基本结构
   - 死循环
   - 对比 for 循环和 while 循环
 
-## 1. 📒 for 循环
+## 2. 📒 for 循环
 
 - `for` 语句是循环命令的另一种形式，可以很直观地看到循环的 **起点** 和 **终止条件**，以及 **循环变量的在开始下一次循环时的变化情况**。
 - **for 循环基本结构**
 
 ```javascript
-for (初始化表达式; 条件; 递增表达式)
-  语句
+for (初始化表达式; 条件; 递增表达式) 语句
 
 // 或者
 
@@ -48,12 +50,12 @@ st((开始))-->递增表达式
 条件--false-->ed((结束))
 ```
 
-## 2. 💻 demos.1 - for 循环的基本使用
+## 3. 💻 demos.1 - for 循环的基本使用
 
 ```javascript
-var x = 3;
+var x = 3
 for (var i = 0; i < x; i++) {
-  console.log(i);
+  console.log(i)
 }
 
 // 初始化表达式是 var i = 0 即初始化一个变量 i。
@@ -66,7 +68,7 @@ for (var i = 0; i < x; i++) {
 // 2
 ```
 
-## 3. 💻 demos.2 - 使用 while 循环来替代 for 循环
+## 4. 💻 demos.2 - 使用 while 循环来替代 for 循环
 
 ```javascript
 var x = 3
@@ -85,7 +87,7 @@ while (i < x) {
 // 2
 ```
 
-## 4. 💻 demos.3 - 死循环
+## 5. 💻 demos.3 - 死循环
 
 ```javascript
 for (;;) {
@@ -95,8 +97,7 @@ for (;;) {
 // 该 demo 省略了 for 语句表达式的三个部分，结果就导致了一个无限循环。
 ```
 
-
-## 5. 🤔 问：应该使用 `for` 循环还是 `while` 循环？
+## 6. 🤔 问：应该使用 `for` 循环还是 `while` 循环？
 
 - A：都行
 - 在前端领域，`for` 会更加常见一些。

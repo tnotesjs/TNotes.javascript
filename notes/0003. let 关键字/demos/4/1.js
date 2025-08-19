@@ -2,7 +2,7 @@ function bar(x = y, y = 2) {
   console.log([x, y])
 }
 
-bar() // 报错
+bar() // ❌ 报错
 
 function foo(x = 2, y = x) {
   console.log([x, y])

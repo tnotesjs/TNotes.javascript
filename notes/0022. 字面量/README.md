@@ -1,20 +1,19 @@
 # [0022. 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F)
 
-
 <!-- region:toc -->
 
-- [1. 🔗 MDN 对 字面量（Literal）的描述](#1--mdn-对-字面量literal的描述)
+- [1. 📝 概述](#1--概述)
 - [2. 📒 字面量](#2--字面量)
 - [3. 💻 demos.1 - 不同类型的字面量](#3--demos1---不同类型的字面量)
+- [4. 🔗 References](#4--references)
 
 <!-- endregion:toc -->
+
+## 1. 📝 概述
+
 - 知识点：
   - 理解字面量是什么
 - 字面量就是直接写在代码中的值。
-
-## 1. 🔗 MDN 对 字面量（Literal）的描述
-
-https://developer.mozilla.org/en-US/docs/Glossary/Literal
 
 ## 2. 📒 字面量
 
@@ -33,14 +32,18 @@ https://developer.mozilla.org/en-US/docs/Glossary/Literal
 111
 
 // 以下是字符串字面量
-'hello'
-'word!'
+;('hello')
+;('word!')
 
 // 以下是布尔字面量
 true
-false
-
-// 以下是数组字面量
-[1, 2, 3]
-['a', 'b', 'c']
+false[
+  // 以下是数组字面量
+  (1, 2, 3)
+][('a', 'b', 'c')]
 ```
+
+## 4. 🔗 References
+
+- https://developer.mozilla.org/en-US/docs/Glossary/Literal
+  - MDN 对 字面量（Literal）的描述

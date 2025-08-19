@@ -25,17 +25,17 @@
 
 ```js
 module.exports = {
-    rules: {
-        'no-unused-vars': 'error'
-    }
+  rules: {
+    'no-unused-vars': 'error',
+  },
 }
 ```
 
 - `'no-unused-vars': 'error'` 表示启用 `no-unused-vars` 规则，并设置为错误级别。这意味着，如果代码中出现未使用的变量，ESLint 将会报出警告或错误。
 - 下面是一个报错的例子：
-  - ![](assets/2024-09-29-13-03-19.png)
-- 除了 `error` 还可以配置为  `warn` 如果设置为 `'no-unused-vars': 'error'`，则会在错误的位置通过黄色的下划线来警告出错。
-  - ![](assets/2024-11-28-17-33-23.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-13-03-19.png)
+- 除了 `error` 还可以配置为 `warn` 如果设置为 `'no-unused-vars': 'error'`，则会在错误的位置通过黄色的下划线来警告出错。
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-28-17-33-23.png)
 
 ## 4. 📒 忽略模式概述
 
@@ -43,21 +43,23 @@ module.exports = {
 // 如果你希望忽略某些特定的变量名或模式，可以使用 varsIgnorePattern 和 argsIgnorePattern 选项：
 module.exports = {
   rules: {
-    'no-unused-vars': ['error', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }]
+    'no-unused-vars': [
+      'error',
+      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
+    ],
     // 所有以 _ 开头的变量和函数参数将被忽略，不会触发 no-unused-vars 错误。
-  }
-};
+  },
+}
 ```
-
 
 假设你有如下 JavaScript 代码：
 
 ```javascript
 function example(a, b) {
-  console.log(a);
+  console.log(a)
 }
 
-const unusedVar = 42;
+const unusedVar = 42
 ```
 
 如果没有配置 `no-unused-vars` 规则，这段代码会被认为是有效的。但是，当你启用了 `no-unused-vars` 规则后，ESLint 会报告 `b` 和 `unusedVar` 未被使用。
@@ -67,19 +69,22 @@ const unusedVar = 42;
 ```javascript
 module.exports = {
   rules: {
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
-  }
-};
+    'no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+    ],
+  },
+}
 ```
 
 然后修改代码：
 
 ```javascript
 function example(_a, _b) {
-  console.log(_a);
+  console.log(_a)
 }
 
-const _unusedVar = 42;
+const _unusedVar = 42
 ```
 
 此时，ESLint 将不会报告 `_b` 和 `_unusedVar` 未被使用。
@@ -93,10 +98,10 @@ const _unusedVar = 42;
 // 有时候你可能需要保留一些函数参数，即使它们没有被使用，比如回调函数中的默认参数。你可以通过设置 args 选项来调整这一点：
 module.exports = {
   rules: {
-    'no-unused-vars': ['error', { args: 'none' }]
+    'no-unused-vars': ['error', { args: 'none' }],
     // 这会禁用对函数参数的检查。
-  }
-};
+  },
+}
 ```
 
 ```javascript
@@ -105,10 +110,10 @@ module.exports = {
 // 如果你想启用这项检查，可以设置 destructuredArrayIgnorePattern 和 ignoreRestSiblings 选项：
 module.exports = {
   rules: {
-    'no-unused-vars': ['error', { destructuredArrayIgnorePattern: '^_' }]
+    'no-unused-vars': ['error', { destructuredArrayIgnorePattern: '^_' }],
     // 除了那些匹配模式的解构变量外，其他未使用的解构变量都会触发错误。
-  }
-};
+  },
+}
 ```
 
 ```javascript
@@ -116,8 +121,8 @@ module.exports = {
 // 有时你可能需要导出一些变量，即使它们在当前文件中没有被使用。你可以通过设置 vars 选项来调整这一点：
 module.exports = {
   rules: {
-    'no-unused-vars': ['error', { vars: 'local' }]
+    'no-unused-vars': ['error', { vars: 'local' }],
     // 这会只检查局部变量，而忽略全局变量和导出的变量。
-  }
-};
+  },
+}
 ```

@@ -2,10 +2,11 @@
 
 <!-- region:toc -->
 
-- [1. ⏰ background-* 忘记哪个就找些 demo 来看看，并汇总到 demos.* 中。](#1--background--忘记哪个就找些-demo-来看看并汇总到-demos-中)
+- [1. ⏰ background-_ 忘记哪个就找些 demo 来看看，并汇总到 demos._ 中。](#1--background-_-忘记哪个就找些-demo-来看看并汇总到-demos_-中)
 - [2. 💻 demos.1 - 使用 background-image 设置背景](#2--demos1---使用-background-image-设置背景)
 
 <!-- endregion:toc -->
+
 - MDN background
   - https://developer.mozilla.org/zh-CN/docs/Web/CSS/background
     - 在侧边目录中查看 `background-*`
@@ -22,7 +23,7 @@
     - background-repeat
     - background-size
 
-## 1. ⏰ background-* 忘记哪个就找些 demo 来看看，并汇总到 demos.* 中。
+## 1. ⏰ background-_ 忘记哪个就找些 demo 来看看，并汇总到 demos._ 中。
 
 ## 2. 💻 demos.1 - 使用 background-image 设置背景
 
@@ -53,11 +54,11 @@ background-image: url("star-transparent.gif"), url("cat-front.png");
       }
 
       div {
-        background-image: url("mdn_logo_only_color.png");
+        background-image: url('mdn_logo_only_color.png');
       }
 
       .cats-and-stars {
-        background-image: url("star-transparent.gif"), url("cat-front.png");
+        background-image: url('star-transparent.gif'), url('cat-front.png');
         background-color: transparent;
       }
     </style>
@@ -77,4 +78,4 @@ background-image: url("star-transparent.gif"), url("cat-front.png");
 </html>
 ```
 
-- ![](assets/2024-12-03-15-23-27.png)
+- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-03-15-23-27.png)

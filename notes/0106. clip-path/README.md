@@ -11,6 +11,7 @@
 - [7. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github](#7--demos6---使用-svg-的裁剪路径来裁剪---vitegithub)
 
 <!-- endregion:toc -->
+
 - clip-path 的写法非常灵活，笔记中的 demo 仅记录了其中一部分写法，更多写法可以参考 MDN。
 - 虽然路径的绘制方式有很多，但其实如果我们掌握好了 svg 的话，使用 svg 来绘制路径，想要啥效果就画啥效果，也就是说啥路径都可以自行指定。
 - https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
@@ -25,7 +26,7 @@
   - 这在创建复杂的图形形状、实现特殊的视觉效果等方面非常有用。
 - 兼容性
   - `clip-path` 在现代浏览器中得到了广泛支持，兼容性还算不错。
-  - ![](assets/2024-11-22-15-04-37.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-04-37.png)
 - `clip-path` 会影响元素的布局和渲染，因此在复杂布局中使用时要特别小心。
 - 使用 `clip-path` 时，确保元素的内容仍然可访问，特别是在涉及文本或交互元素时。
 - 基本语法：`clip-path: <clip-source> | [ <basic-shape> || <geometry-box> ] | none;`
@@ -64,9 +65,9 @@ clip-path: circle(50% at 50% 50%);
 ```
 
 - 未裁剪：
-  - ![](assets/2024-11-22-15-23-42.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-23-42.png)
 - 裁剪：
-  - ![](assets/2024-11-22-15-23-28.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-23-28.png)
 
 ## 3. 💻 demos.3 - 椭圆形裁剪
 
@@ -98,9 +99,9 @@ clip-path: ellipse(50% 50% at 50% 50%);
 ```
 
 - 未裁剪：
-  - ![](assets/2024-11-22-15-22-27.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-22-27.png)
 - 裁剪：
-  - ![](assets/2024-11-22-15-22-11.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-22-11.png)
 
 ## 4. 💻 demos.4 - 矩形裁剪
 
@@ -132,9 +133,9 @@ clip-path: inset(10px 20px 30px 40px round 10px);
 ```
 
 - 未裁剪：
-  - ![](assets/2024-11-22-15-23-05.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-23-05.png)
 - 裁剪：
-  - ![](assets/2024-11-22-15-23-11.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-23-11.png)
 
 ## 5. 💻 demos.2 - 多边形裁剪
 
@@ -165,7 +166,7 @@ clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 ```
 
 - 对比是否加 clip-path 的效果：
-  - ![](assets/2024-11-22-15-21-00.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-21-00.png)
 
 ## 6. 💻 demos.5 - 使用 svg 的裁剪路径来裁剪
 
@@ -173,7 +174,7 @@ clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <!-- 
+  <!--
   这里的 #c1 准备用来裁剪，后续会在 5.svg 中被引用。
   它是不可见的，仅仅是一个裁剪的路径。
   这里的路径是一个圆形。
@@ -183,7 +184,7 @@ clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
       <circle cx="50" cy="50" r="40" />
     </clipPath>
   </defs>
-  <!-- 
+  <!--
   如果你想要预览路径，可以把下面的注释去掉。
   红色的描边儿就是裁剪的路径。
   -->
@@ -192,7 +193,7 @@ clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 ```
 
 - 裁剪路径预览；
-  - ![](assets/2024-11-22-15-44-03.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-44-03.png)
 - 在 demo/5.html 中将 svg 路径用于裁剪
 
 ```html
@@ -225,9 +226,9 @@ clip-path: url(1.svg#c1);
 ```
 
 - 未裁剪：
-  - ![](assets/2024-11-22-15-49-45.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-49-45.png)
 - 裁剪：
-  - ![](assets/2024-11-22-15-49-50.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-49-50.png)
 
 ## 7. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github
 
@@ -242,14 +243,22 @@ clip-path: url(1.svg#c1);
       .github-clip {
         width: 30px;
         height: 30px;
-        background: linear-gradient(to bottom, #666666, #000000); /* 渐变色 灰到黑 */
+        background: linear-gradient(
+          to bottom,
+          #666666,
+          #000000
+        ); /* 渐变色 灰到黑 */
         clip-path: url(github.svg#github-clip);
       }
 
       .vite-clip {
         width: 410px;
         height: 410px;
-        background: linear-gradient(to bottom, #666666, #000000); /* 渐变色 灰到黑 */
+        background: linear-gradient(
+          to bottom,
+          #666666,
+          #000000
+        ); /* 渐变色 灰到黑 */
         clip-path: url(vite.svg#vite-clip);
       }
     </style>
@@ -263,10 +272,10 @@ clip-path: url(1.svg#c1);
 
 - vite、github 的 svg 资源可以从官网去趴 svg 源码。
   - vite svg - https://vite.dev/logo.svg
-    - ![](assets/2024-11-22-16-14-43.png)
+    - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-16-14-43.png)
   - GitHub svg
-    - ![](assets/2024-11-22-16-13-57.png)
+    - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-16-13-57.png)
 - 未裁剪：
-  - ![](assets/2024-11-22-16-09-41.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-16-09-41.png)
 - 裁剪：
-  - ![](assets/2024-11-22-16-09-47.png)
+  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-16-09-47.png)
