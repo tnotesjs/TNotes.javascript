@@ -1,10 +1,10 @@
-let count = 0;
+let count = 0
 do {
-    console.log("当前计数: " + count);
-    count++;
+  console.log('当前计数: ' + count)
+  count++
 
-    if (count > 10) break; // 以防死循环
-} while (count > 0);
+  if (count > 10) break // 以防死循环
+} while (count > 0)
 
 // 输出：
 // 当前计数: 0

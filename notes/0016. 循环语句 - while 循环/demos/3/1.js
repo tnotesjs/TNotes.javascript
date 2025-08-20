@@ -1,4 +1,4 @@
-var i = 0
+let i = 0
 
 while (i < 100) {
   if (i === 10) break // 当 i 等于 10 的时候，跳出循环。

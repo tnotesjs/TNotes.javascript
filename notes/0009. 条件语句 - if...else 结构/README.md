@@ -14,7 +14,9 @@
 
 - 知识点：
   - 掌握 if...else 基本结构
-  - 直到 if else 的配对规则
+  - 知道 if else 的配对规则
+- 评价：
+  - if else 的配对规则不需要刻意去记，若按照规范来书写，配对关系是自然而然就能看出来的。
 
 ## 2. 📒 if...else 基本结构
 
@@ -22,7 +24,9 @@
 - 对同一个变量进行多次判断时，多个 `if...else` 语句可以连写在一起。
 - `else` 代码块总是与离自己最近的那个 `if` 语句配对。
 
-```javascript
+::: code-group
+
+```javascript [if...else 基本结构]
 if (x === 3) {
   // 满足条件时，执行的语句
 } else {
@@ -41,85 +45,30 @@ if (x === 0) {
 }
 ```
 
+:::
+
 ## 3. 💻 demos.2 - 认识基本的 if...else 结构
 
-```javascript
-var x1 = 1,
-  x2 = 2
+::: code-group
 
-if (x1 === 1) {
-  console.log('x1 is 1')
-} else {
-  console.log('x1 is not 1')
-}
+<<< ./demos/2/1.js {}
 
-if (x2 === 1) {
-  console.log('x2 is 1')
-} else {
-  console.log('x2 is not 1')
-}
-
-// 最终输出结果：
-// x1 is 1
-// x2 is not 1
-```
+:::
 
 ## 4. 💻 demos.3 - 多个 if...else 的情况
 
-```javascript
-var x = 0
+::: code-group
 
-if (x > 0) {
-  console.log('x 是正数')
-} else if (x < 0) {
-  console.log('x 是负数')
-} else {
-  console.log('x 是 0')
-}
+<<< ./demos/3/1.js {}
 
-// 最终输出结果：
-// x 是 0
-```
+:::
 
 ## 5. 💻 demos.1 - else 和最近的 if 配对
 
-```javascript
-var x1 = 1
-var x2 = 2
+::: code-group
 
-// 写法 1【不推荐】
-if (x1 !== 1)
-  if (x2 === 2) console.log('hello')
-  else console.log('world')
+<<< ./demos/1/1.js {}
 
-// 写法 2【推荐】
-// if (x1 !== 1) {
-//   if (x2 === 2) {
-//     console.log('hello')
-//   } else {
-//     console.log('world')
-//   }
-// }
+<<< ./demos/1/2.js {}
 
-// 最终将不会有任何输出
-// 写法 1 和写法 2 是等效的
-// else 和最近的 if 配对
-// 建议在写 if...else 结构时，使用 {} 包裹代码块，以提高代码可读性。
-```
-
-```javascript
-var x1 = 1
-var x2 = 2
-
-if (x1 !== 1) {
-}
-
-if (x2 === 2) {
-  console.log('hello')
-} else {
-  console.log('world')
-}
-
-// 最终将输出：
-// hello
-```
+:::

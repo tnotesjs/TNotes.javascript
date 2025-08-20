@@ -1,4 +1,4 @@
-var x = 0
+const x = 0
 
 if (x > 0) {
   console.log('x 是正数')

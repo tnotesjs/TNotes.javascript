@@ -1,5 +1,5 @@
-var x = 3
-var i = 0
+const x = 3
+let i = 0
 
 do {
   console.log(i)

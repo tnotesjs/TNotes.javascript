@@ -1,9 +1,9 @@
-var x = 3;
-for (var i = 0; i < x; i++) {
-  console.log(i);
+const x = 3
+for (let i = 0; i < x; i++) {
+  console.log(i)
 }
 
-// 初始化表达式是 var i = 0 即初始化一个变量 i。
+// 初始化表达式是 let i = 0 即初始化一个变量 i。
 // 条件表达式是 i < x 即只要 i 小于 x，就会执行循环。
 // 递增表达式是 i++，即每次循环结束后，i 增大 1。
 

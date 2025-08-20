@@ -1,10 +1,10 @@
-var x1 = 1
-var x2 = 2
+const x1 = 1
+const x2 = 2
 
 // 写法 1【不推荐】
 if (x1 !== 1)
-if (x2 === 2) console.log('hello')
-else console.log('world')
+  if (x2 === 2) console.log('hello')
+  else console.log('world')
 
 // 写法 2【推荐】
 // if (x1 !== 1) {

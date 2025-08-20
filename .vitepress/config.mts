@@ -85,6 +85,7 @@ function markdown() {
   const markdown: MarkdownOptions = {
     lineNumbers: true,
     math: true,
+    cache: false,
     config(md) {
       // 添加前置规则保存原始内容
       md.core.ruler.before('normalize', 'save-source', (state) => {

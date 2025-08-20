@@ -1,10 +1,10 @@
-var n = 1
+const n = 1
 
 // 写法 1
-var isEven = n % 2 === 0 ? true : false
+const isEven = n % 2 === 0 ? true : false
 
 // 写法 2
-// var isEven
+// const isEven
 // if (n % 2 === 0) {
 //   isEven = true
 // } else {

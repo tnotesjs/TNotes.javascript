@@ -12,16 +12,18 @@
 ## 1. 📝 概述
 
 - 知识点：
-  - 掌握 do...while 循环的基本语法
-- do...while 循环不常用，快速过有个印象即可。
+  - 了解 do...while 循环的基本语法，知道它和 while 循环之间的差异。
+- 评价：
+  - do...while 循环不常用，快速过有个印象，确保能读懂程序即可。
 
 ## 2. 📒 do...while 循环
 
-- 掌握 do...while 循环的语法，知道它和 while 循环之间的差异。在大多数代码库和开发者社区中，for 和 while 循环更为常见，do...while 循环很少会见到。
+- 在大多数代码库和开发者社区中，for 和 while 循环更为常见，do...while 循环很少会见到。
 - `do...while` 循环与 `while` 循环类似，唯一的区别就是先运行一次循环体，然后判断循环条件。
-- **do...while 循环基本结构**
 
-```javascript
+::: code-group
+
+```javascript [do...while 循环基本结构]
 do 语句
 while (条件)
 
@@ -30,6 +32,8 @@ do {
   语句
 } while (条件)
 ```
+
+:::
 
 ```mermaid
 graph TD
@@ -44,52 +48,18 @@ st((开始))-->循环体
 
 ## 3. 💻 demos.1 - 理解 do...while 循环的执行流程
 
-```javascript
-var x = 3
-var i = 0
+::: code-group
 
-do {
-  console.log(i)
-  i++
-} while (i < x)
+<<< ./demos/1/1.js {}
 
-// 最终输出结果：
-// 0
-// 1
-// 2
-```
+:::
 
 ## 4. 💻 demos.2 - 对比 do...while 和 while 之间的差异
 
-```js
-let count = 0
-while (count > 0) {
-  console.log('当前计数: ' + count)
-  count++
-}
+::: code-group
 
-// 没有任何输出
-```
+<<< ./demos/2/1.js {}
 
-```js
-let count = 0
-do {
-  console.log('当前计数: ' + count)
-  count++
+<<< ./demos/2/2.js {}
 
-  if (count > 10) break // 以防死循环
-} while (count > 0)
-
-// 输出：
-// 当前计数: 0
-// 当前计数: 1
-// 当前计数: 2
-// 当前计数: 3
-// 当前计数: 4
-// 当前计数: 5
-// 当前计数: 6
-// 当前计数: 7
-// 当前计数: 8
-// 当前计数: 9
-// 当前计数: 10
-```
+:::

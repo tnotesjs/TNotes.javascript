@@ -1,4 +1,5 @@
-var x1 = 1, x2 = 2
+const x1 = 1,
+  x2 = 2
 
 if (x1 === 1) {
   console.log('x1 is 1')

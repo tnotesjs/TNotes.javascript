@@ -1,4 +1,4 @@
-var x = 1
+const x = 1
 
 switch (x) {
   case 1:
