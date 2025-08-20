@@ -10,15 +10,16 @@
   - [5. 语句和表达式](#5-语句和表达式)
   - [6. 符号](#6-符号)
   - [7. 流程控制语句](#7-流程控制语句)
-  - [8. 数据类型](#8-数据类型)
-  - [9. 模块化](#9-模块化)
-  - [10. ⚙️ window 对象](#10-️-window-对象)
-  - [11. css 属性](#11-css-属性)
-  - [12. html 元素](#12-html-元素)
-  - [13. prettier](#13-prettier)
-  - [14. eslint](#14-eslint)
-  - [15. color picker](#15-color-picker)
-  - [16. ⏰ html-css](#16--html-css)
+  - [8. 防抖、节流](#8-防抖节流)
+  - [9. 数据类型](#9-数据类型)
+  - [10. 模块化](#10-模块化)
+  - [11. ⚙️ window 对象](#11-️-window-对象)
+  - [12. css 属性](#12-css-属性)
+  - [13. html 元素](#13-html-元素)
+  - [14. prettier](#14-prettier)
+  - [15. eslint](#15-eslint)
+  - [16. color picker](#16-color-picker)
+  - [17. ⏰ html-css](#17--html-css)
 
 <!-- endregion:toc -->
 
@@ -172,25 +173,24 @@
   - [2. 📒 三元运算符 `? :` 的基本语法](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#2--三元运算符---的基本语法)
   - [3. 💻 demos.1 - 判偶数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0011.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E4%B8%89%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6/README.md#3--demos1---判偶数)
 - [x] [0012. 条件语句 - 练习](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md)
-  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--概述)
-  - [2. 💻 练习.1 - 判断数字是否是三位数，是否能被 13 整除](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--练习1---判断数字是否是三位数是否能被-13-整除)
-  - [3. 💻 练习.2 - 判断学生成绩的等级](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--练习2---判断学生成绩的等级)
-  - [4. 💻 练习.3 - 判断健康状况](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--练习3---判断健康状况)
-  - [5. 💻 练习.4 - 计算理财收益](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--练习4---计算理财收益)
-  - [6. 💻 练习.5 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#6--练习5---猜拳游戏)
+  - [1. 💻 exercises.1 - 判断数字是否是三位数，是否能被 13 整除](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--exercises1---判断数字是否是三位数是否能被-13-整除)
+  - [2. 💻 exercises.2 - 判断学生成绩的等级](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--exercises2---判断学生成绩的等级)
+  - [3. 💻 exercises.3 - 判断健康状况](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--exercises3---判断健康状况)
+  - [4. 💻 exercises.4 - 计算理财收益](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--exercises4---计算理财收益)
+  - [5. 💻 exercises.5 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0012.%20%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--exercises5---猜拳游戏)
 - [x] [0015. 循环语句 - for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#1--概述)
   - [2. 📒 for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#2--for-循环)
   - [3. 💻 demos.1 - for 循环的基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#3--demos1---for-循环的基本使用)
   - [4. 💻 demos.2 - 使用 while 循环来替代 for 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#4--demos2---使用-while-循环来替代-for-循环)
   - [5. 💻 demos.3 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#5--demos3---死循环)
-  - [6. 🤔 问：应该使用 `for` 循环还是 `while` 循环？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#6--问应该使用-for-循环还是-while-循环)
+  - [6. 🤔 应该使用 `for` 循环还是 `while` 循环？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0015.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20for%20%E5%BE%AA%E7%8E%AF/README.md#6--应该使用-for-循环还是-while-循环)
 - [x] [0016. 循环语句 - while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#1--概述)
   - [2. 📒 while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#2--while-循环)
   - [3. 💻 demos.1 - while 循环的基本使用](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#3--demos1---while-循环的基本使用)
-  - [4. 💻 demos.2 - 使用 break 跳出循环体](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#4--demos2---使用-break-跳出循环体)
-  - [5. 💻 demos.3 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#5--demos3---死循环)
+  - [4. 💻 demos.3 - 使用 break 跳出循环体](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#4--demos3---使用-break-跳出循环体)
+  - [5. 💻 demos.2 - 死循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0016.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20while%20%E5%BE%AA%E7%8E%AF/README.md#5--demos2---死循环)
 - [x] [0017. 循环语句 - do...while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#1--概述)
   - [2. 📒 do...while 循环](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0017.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20do...while%20%E5%BE%AA%E7%8E%AF/README.md#2--dowhile-循环)
@@ -209,41 +209,54 @@
   - [3. 💻 demos.1 - break、continue 加标签](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#3--demos1---breakcontinue-加标签)
   - [4. 💻 demos.2 - 跳出区块](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#4--demos2---跳出区块)
   - [5. 💻 demos.3 - 不能跨区块跳](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#5--demos3---不能跨区块跳)
-  - [6. 🤔 问：如何看待“标签”？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#6--问如何看待标签)
+  - [6. 🤔 如何看待“标签”？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md#6--如何看待标签)
 - [x] [0020. 循环语句 - 练习](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md)
-  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--概述)
-  - [2. 💻 练习.1 - 在控制台中输出 100 个 `*`](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--练习1---在控制台中输出-100-个-)
-  - [3. 💻 练习.2 - 输出 1-100 的所有数字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--练习2---输出-1-100-的所有数字)
-  - [4. 💻 练习.3 - 输出 1-100 的所有奇数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--练习3---输出-1-100-的所有奇数)
-  - [5. 💻 练习.4 - 求 1-100 之间所有数字之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--练习4---求-1-100-之间所有数字之和)
-  - [6. 💻 练习.5 - 求 1-100 之间所有奇数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#6--练习5---求-1-100-之间所有奇数之和)
-  - [7. 💻 练习.6 - 求 1-10 之间所有数字的积](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#7--练习6---求-1-10-之间所有数字的积)
-  - [8. 💻 练习.7 - 输出一个 3 行 5 列的 `*` 号矩阵](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#8--练习7---输出一个-3-行-5-列的--号矩阵)
-  - [9. 💻 练习.8 - 用 `*` 号输出一个 5 行的直角三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#9--练习8---用--号输出一个-5-行的直角三角形)
-  - [10. 💻 练习.9 - 用 `*` 号输出一个 5 行的等腰三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#10--练习9---用--号输出一个-5-行的等腰三角形)
-  - [11. 💻 练习.10 - 判断数字 233 是不是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#11--练习10---判断数字-233-是不是素数)
-  - [12. 💻 练习.11 - 判断 1-100 哪些数是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#12--练习11---判断-1-100-哪些数是素数)
-  - [13. 💻 练习.12 - 求 1-100 之间的所有素数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#13--练习12---求-1-100-之间的所有素数之和)
-  - [14. 💻 练习.13 - 输出 99 乘法表](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#14--练习13---输出-99-乘法表)
-  - [15. 💻 练习.14 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#15--练习14---猜拳游戏)
+  - [1. 💻 exercises.1 - 在控制台中输出 100 个 `*`](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#1--exercises1---在控制台中输出-100-个-)
+  - [2. 💻 exercises.2 - 输出 1-100 的所有数字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#2--exercises2---输出-1-100-的所有数字)
+  - [3. 💻 exercises.3 - 输出 1-100 的所有奇数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#3--exercises3---输出-1-100-的所有奇数)
+  - [4. 💻 exercises.4 - 求 1-100 之间所有数字之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#4--exercises4---求-1-100-之间所有数字之和)
+  - [5. 💻 exercises.5 - 求 1-100 之间所有奇数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#5--exercises5---求-1-100-之间所有奇数之和)
+  - [6. 💻 exercises.6 - 求 1-10 之间所有数字的积](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#6--exercises6---求-1-10-之间所有数字的积)
+  - [7. 💻 exercises.7 - 输出一个 3 行 5 列的 `*` 号矩阵](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#7--exercises7---输出一个-3-行-5-列的--号矩阵)
+  - [8. 💻 exercises.8 - 用 `*` 号输出一个 5 行的直角三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#8--exercises8---用--号输出一个-5-行的直角三角形)
+  - [9. 💻 exercises.9 - 用 `*` 号输出一个 5 行的等腰三角形](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#9--exercises9---用--号输出一个-5-行的等腰三角形)
+  - [10. 💻 exercises.10 - 判断数字 233 是不是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#10--exercises10---判断数字-233-是不是素数)
+  - [11. 💻 exercises.11 - 判断 1-100 哪些数是素数](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#11--exercises11---判断-1-100-哪些数是素数)
+  - [12. 💻 exercises.12 - 求 1-100 之间的所有素数之和](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#12--exercises12---求-1-100-之间的所有素数之和)
+  - [13. 💻 exercises.13 - 输出 99 乘法表](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#13--exercises13---输出-99-乘法表)
+  - [14. 💻 exercises.14 - 猜拳游戏](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md#14--exercises14---猜拳游戏)
 - [x] [0021. 注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#1--概述)
-  - [2. 🔗 JSDoc 官网](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#2--jsdoc-官网)
-  - [3. 📒 注释是什么](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#3--注释是什么)
-  - [4. 📒 注释的分类](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#4--注释的分类)
-  - [5. 📒 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#5--文档注释)
-  - [6. 📒 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#6--区域注释)
-  - [7. 💻 demos.1 - 单行注释和多行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#7--demos1---单行注释和多行注释)
-  - [8. 💻 demos.2 - 特殊的单行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#8--demos2---特殊的单行注释)
-  - [9. 💻 demos.3 - 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#9--demos3---文档注释)
-  - [10. 💻 demos.4 - 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#10--demos4---区域注释)
+  - [2. 🤔 注释是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#2--注释是什么)
+  - [3. 🤔 注释有哪些类型](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#3--注释有哪些类型)
+  - [4. 📒 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#4--文档注释)
+  - [5. 📒 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#5--区域注释)
+  - [6. 💻 demos.1 - 单行注释和多行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#6--demos1---单行注释和多行注释)
+  - [7. 💻 demos.2 - 特殊的单行注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#7--demos2---特殊的单行注释)
+  - [8. 💻 demos.3 - 文档注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#8--demos3---文档注释)
+  - [9. 💻 demos.4 - 区域注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#9--demos4---区域注释)
+  - [10. 🔗 References](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md#10--references)
 - [x] [0022. 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#1--概述)
-  - [2. 📒 字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#2--字面量)
+  - [2. 📒 字面量（Literal）](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#2--字面量literal)
   - [3. 💻 demos.1 - 不同类型的字面量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#3--demos1---不同类型的字面量)
   - [4. 🔗 References](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md#4--references)
 
-## 8. 数据类型
+## 8. 防抖、节流
+
+- [x] [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md)
+  - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+    - [TNotes.yuque.html-css-js.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0037)
+  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#1--概述)
+  - [2. 💡 一张图说明防抖和节流的事件触发差异](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#2--一张图说明防抖和节流的事件触发差异)
+  - [3. 📒 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#3--防抖)
+  - [4. 📒 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#4--节流)
+  - [5. 🆚 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#5--防抖节流)
+  - [6. 💻 demos.1 - 输入框内容校验 - 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#6--demos1---输入框内容校验---防抖)
+  - [7. 💻 demos.2 - 窗口尺寸变化 - 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#7--demos2---窗口尺寸变化---节流)
+  - [8. 🔗 References](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#8--references)
+
+## 9. 数据类型
 
 - [ ] [0023. boolean 类型](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md#1--summary)
@@ -329,14 +342,6 @@
   - [3. 📒 notes](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0036.%20%E4%BD%BF%E7%94%A8%20for...in%20%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/README.md#3--notes)
   - [4. 💻 demo](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0036.%20%E4%BD%BF%E7%94%A8%20for...in%20%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/README.md#4--demo)
   - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0036.%20%E4%BD%BF%E7%94%A8%20for...in%20%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84/README.md#5--ai)
-- [x] [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md)
-  - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#1--概述)
-  - [2. 🔗 leetcode 相关例题](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#2--leetcode-相关例题)
-  - [3. 📒 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#3--防抖)
-  - [4. 📒 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#4--节流)
-  - [5. 📒 防抖 vs. 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#5--防抖-vs-节流)
-  - [6. 💻 demos.1 - 防抖](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#6--demos1---防抖)
-  - [7. 💻 demos.2 - 节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README.md#7--demos2---节流)
 - [ ] [0038. 数组类型【扩展】](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md)
   - [1. 📝 summary](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#1--summary)
   - [2. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0038.%20%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#2--links)
@@ -476,7 +481,7 @@
   - [4. 💻 demo](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0060.%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/README.md#4--demo)
   - [5. 🤖 AI](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0060.%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/README.md#5--ai)
 
-## 9. 模块化
+## 10. 模块化
 
 - [ ] [0061. 在浏览器中引入 ESM 模块](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README.md)
 
@@ -553,7 +558,7 @@
 - [ ] [0077. encodeURIcomponent](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0077.%20encodeURIcomponent/README.md)
 
 
-## 10. ⚙️ window 对象
+## 11. ⚙️ window 对象
 
 - [x] [0079. window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload/README.md#1--概述)
@@ -590,7 +595,7 @@
   - [7. ❌ 缺点](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0109.%20XSLTProcessor/README.md#7--缺点)
     - [7.1. 现代替代方案](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0109.%20XSLTProcessor/README.md#71-现代替代方案)
 
-## 11. css 属性
+## 12. css 属性
 
 - [ ] [0105. background](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md)
   - [1. ⏰ background-_ 忘记哪个就找些 demo 来看看，并汇总到 demos._ 中。](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background/README.md#1--background-_-忘记哪个就找些-demo-来看看并汇总到-demos_-中)
@@ -625,7 +630,7 @@
   - https://caniuse.com/?search=clip-path
     - can i use clip-path
 
-## 12. html 元素
+## 13. html 元素
 
 - [ ] [0107. style 元素的 sheet 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7/README.md)
   - [1. 📒 `sheet` 属性概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7/README.md#1--sheet-属性概述)
@@ -642,7 +647,7 @@
 - [ ] [0111. script 元素的 type 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0111.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E5%B1%9E%E6%80%A7/README.md)
   - [1. 📒 type 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0111.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E5%B1%9E%E6%80%A7/README.md#1--type-属性)
 
-## 13. prettier
+## 14. prettier
 
 - [x] [0113. 学习 prettier 基本配置字段的书写](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md)
   - [1. 📒 认识一些常见的基本配置字段](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#1--认识一些常见的基本配置字段)
@@ -652,7 +657,7 @@
   - [5. 📒 将 prettier 配置的书写位置](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#5--将-prettier-配置的书写位置)
   - [6. 💻 demos.4 - 将 prettier 配置写到项目根目录中的 `.vscode/settings.json` 文件中](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md#6--demos4---将-prettier-配置写到项目根目录中的-vscodesettingsjson-文件中)
 
-## 14. eslint
+## 15. eslint
 
 - [x] [0116. eslint 是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README.md)
   - [1. 🔗 links](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README.md#1--links)
@@ -685,14 +690,14 @@
 - [ ] [0121. 忽略文件 .eslintignore](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README.md)
   - [1. 📒 忽略文件 `.eslintignore` 简介](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README.md#1--忽略文件-eslintignore-简介)
 
-## 15. color picker
+## 16. color picker
 
 - [ ] [0122. 自定义 color picker 组件](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md)
   - [1. 📝 概述](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#1--概述)
   - [2. 📒 Spectrum](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#2--spectrum)
   - [3. 💻 demos.1](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md#3--demos1)
 
-## 16. ⏰ html-css
+## 17. ⏰ html-css
 
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md)
   - [1. ⏰ 从语雀搬运笔记](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md#1--从语雀搬运笔记)

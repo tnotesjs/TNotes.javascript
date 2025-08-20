@@ -28,7 +28,7 @@
           timer = setTimeout(() => {
             timer = null
             fn.apply(this, args)
-          }, delay || 1000 / 60)
+          }, delay)
         }
       }
 
