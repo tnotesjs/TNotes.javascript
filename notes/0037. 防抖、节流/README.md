@@ -194,7 +194,7 @@ element.addEventListener('drag', throttle(handleDrag, 100))
 
 ## 8. 🔗 References
 
-- [TNotes.leetcode/2627](/TNotes.leetcode/2627)
+- [TNotes.leetcode/notes/2627](/TNotes.leetcode/notes/2627)
   - leetcode，实现函数防抖。
-- [TNotes.leetcode/2676](/TNotes.leetcode/2676)
+- [TNotes.leetcode/notes/2676](/TNotes.leetcode/notes/2676)
   - leetcode，实现函数节流。
