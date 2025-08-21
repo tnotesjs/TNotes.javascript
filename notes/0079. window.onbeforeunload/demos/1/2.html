@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function thereIsUnsavedWork() {
+        console.log('检查是否有未保存的工作')
+
+        // 有未保存的工作
+        // return true // 会弹出提示框
+
+        // 没有未保存的工作
+        return false // 不会弹出提示框
+      }
+
+      // 可以在工作内容发生变更的时候，触发以下逻辑：
+      window.onbeforeunload = thereIsUnsavedWork() ? () => '' : undefined
+      // 只要有未保存的工作，就会弹出提示框
+    </script>
+  </body>
+</html>
