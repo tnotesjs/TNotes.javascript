@@ -1,4 +1,4 @@
-# [0002. 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA)
+# [0002. 变量声明提升和暂时性死区](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA)
 
 <!-- region:toc -->
 
@@ -110,7 +110,7 @@ console.log(a) // => 5
 
 :::
 
-![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-27-13-13-02.png)
+![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-27-13-13-02.png)
 
 ## 7. 💻 demos.3 - 函数声明
 
@@ -160,9 +160,9 @@ console.log(a) // => 5
 
 - 提示：丢到浏览器控制台中查看运行结果，如果直接在 nodejs 环境跑，会报错
 - nodejs 环境
-  - ![图 1](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-14-54-27.png)
+  - ![图 1](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-14-54-27.png)
 - 浏览器环境
-  - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-14-54-00.png)
+  - ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-14-54-00.png)
 
 :::
 

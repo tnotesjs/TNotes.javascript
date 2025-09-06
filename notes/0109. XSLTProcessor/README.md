@@ -1,4 +1,4 @@
-# [0109. XSLTProcessor](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0109.%20XSLTProcessor)
+# [0109. XSLTProcessor](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0109.%20XSLTProcessor)
 
 <!-- region:toc -->
 

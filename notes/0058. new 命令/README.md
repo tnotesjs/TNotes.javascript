@@ -1,4 +1,4 @@
-# [0058. new 命令](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0058.%20new%20%E5%91%BD%E4%BB%A4)
+# [0058. new 命令](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0058.%20new%20%E5%91%BD%E4%BB%A4)
 
 
 <!-- region:toc -->

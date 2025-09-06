@@ -1,4 +1,4 @@
-# [0108. DOMParser](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0108.%20DOMParser)
+# [0108. DOMParser](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0108.%20DOMParser)
 
 <!-- region:toc -->
 

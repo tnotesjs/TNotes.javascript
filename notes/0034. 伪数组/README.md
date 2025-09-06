@@ -1,4 +1,4 @@
-# [0034. 伪数组](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0034.%20%E4%BC%AA%E6%95%B0%E7%BB%84)
+# [0034. 伪数组](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0034.%20%E4%BC%AA%E6%95%B0%E7%BB%84)
 
 
 <!-- region:toc -->

@@ -1,4 +1,4 @@
-# [0105. background](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0105.%20background)
+# [0105. background](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0105.%20background)
 
 <!-- region:toc -->
 
@@ -79,4 +79,4 @@ background-image: url("star-transparent.gif"), url("cat-front.png");
 </html>
 ```
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-03-15-23-27.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-03-15-23-27.png)

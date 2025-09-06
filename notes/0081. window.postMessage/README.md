@@ -1,4 +1,4 @@
-# [0081. window.postMessage](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0081.%20window.postMessage)
+# [0081. window.postMessage](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0081.%20window.postMessage)
 
 <!-- region:toc -->
 
@@ -48,13 +48,13 @@
 
 ::: swiper
 
-![1](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-09-03-22-17-27.png)
+![1](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-22-17-27.png)
 
-![2](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-09-03-22-17-41.png)
+![2](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-22-17-41.png)
 
-![3](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-09-03-22-17-48.png)
+![3](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-22-17-48.png)
 
-![4](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-09-03-22-19-41.png)
+![4](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-22-19-41.png)
 
 :::
 

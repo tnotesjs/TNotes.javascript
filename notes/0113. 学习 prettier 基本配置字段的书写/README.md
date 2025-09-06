@@ -1,4 +1,4 @@
-# [0113. 学习 prettier 基本配置字段的书写](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99)
+# [0113. 学习 prettier 基本配置字段的书写](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99)
 
 <!-- region:toc -->
 

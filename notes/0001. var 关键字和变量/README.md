@@ -1,9 +1,9 @@
-# [0001. var 关键字和变量](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F)
+# [0001. var 关键字和变量](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F)
 
 <!-- region:toc -->
 
 - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-  - [TNotes.yuque.html-css-js.0001](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0001)
+  - [TNotes.yuque.javascript.0001](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0001)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 💡 思维导图](#3--思维导图)
@@ -93,13 +93,13 @@
 - 变量、内存、值
   - 内存 👉🏻 酒店
     - **内存**：就像一栋酒店，有很多房间（存储空间）供客人使用。
-      - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-10-25-07-25-01.png)
+      - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-10-25-07-25-01.png)
   - 变量 👉🏻 门牌
     - **变量**：就像房间的门牌号，用来标识和找到特定的房间。
-      - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-10-25-07-25-08.png)
+      - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-10-25-07-25-08.png)
   - 值 👉🏻 房间里的东西
     - **值**：就像房间里的东西，可以是家具、家电等，是实际存储在房间（内存）里的内容。
-      - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-10-25-07-25-18.png)
+      - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-10-25-07-25-18.png)
 
 ```
 

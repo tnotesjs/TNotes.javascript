@@ -1,4 +1,4 @@
-# [0080. window.confirm](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0080.%20window.confirm)
+# [0080. window.confirm](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0080.%20window.confirm)
 
 <!-- region:toc -->
 
@@ -41,7 +41,7 @@
 
 :::
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-01-02-09-58-44.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-01-02-09-58-44.png)
 
 ## 5. 💻 demos.2 - 自定义 confirm 效果
 
@@ -55,7 +55,7 @@
 
 :::
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-09-03-21-53-50.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-21-53-50.png)
 
 ## 6. 🔗 References
 

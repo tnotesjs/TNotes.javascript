@@ -1,9 +1,9 @@
-# [0004. const 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97)
+# [0004. const 关键字](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97)
 
 <!-- region:toc -->
 
 - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-  - [TNotes.yuque.html-css-js.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0004)
+  - [TNotes.yuque.javascript.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0004)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 📒 const 关键字](#3--const-关键字)
@@ -51,7 +51,7 @@
 - **基本** 数据类型的特点：直接存储在 **栈** (stack) 中的数据。
 - **引用** 数据类型的特点：真实的数据存放在 **堆** 内存里，在 **栈** 中存储的是该对象在 **堆** 引用。
   - 引用数据类型在 **栈中存储了指针**，该指针指向 **堆中该实体的起始地址**。
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-27-14-38-48.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-27-14-38-48.png)
 
 ## 6. 💻 demos.1 - 常量不允许重新赋值
 

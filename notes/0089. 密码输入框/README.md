@@ -1,4 +1,4 @@
-# [0089. 密码输入框](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0089.%20%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E6%A1%86)
+# [0089. 密码输入框](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0089.%20%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E6%A1%86)
 
 <!-- region:toc -->
 

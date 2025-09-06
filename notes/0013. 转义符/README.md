@@ -1,4 +1,4 @@
-# [0013. 转义符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6)
+# [0013. 转义符](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6)
 
 <!-- region:toc -->
 
@@ -67,7 +67,7 @@
 :::
 
 - 输出示例
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-28-12-09-17.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-28-12-09-17.png)
 
 ::: details 参考答案
 
@@ -101,7 +101,7 @@ console.log(message)
 
 ## 8. ⌛️ 旧版打字机 - 转义符 `\r\n` 诞生的背景
 
-- ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-21-52-20.png)
+- ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-21-52-20.png)
 - `\r\n` 的诞生背景，和历史上的打字机有关。
   - 回车换行 `\r\n`
   - 回车 `\r`

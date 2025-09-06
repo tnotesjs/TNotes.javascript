@@ -1,4 +1,4 @@
-# [0027. 模板字符串](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0027.%20%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2)
+# [0027. 模板字符串](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0027.%20%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2)
 
 
 <!-- region:toc -->

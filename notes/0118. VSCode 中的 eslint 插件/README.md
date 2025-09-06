@@ -1,4 +1,4 @@
-# [0118. VSCode 中的 eslint 插件](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6)
+# [0118. VSCode 中的 eslint 插件](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0118.%20VSCode%20%E4%B8%AD%E7%9A%84%20eslint%20%E6%8F%92%E4%BB%B6)
 
 <!-- region:toc -->
 
@@ -16,7 +16,7 @@
 
 - https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
   - marketplace eslint
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-11-07-20.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-09-29-11-07-20.png)
 
 ## 2. 📒 VS Code ESLint extension 简介
 

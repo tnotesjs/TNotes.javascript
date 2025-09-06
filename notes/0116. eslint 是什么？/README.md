@@ -1,4 +1,4 @@
-# [0116. eslint 是什么？](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
+# [0116. eslint 是什么？](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
 <!-- region:toc -->
 
@@ -67,8 +67,8 @@ const str = 'Hello World'
 // Strings must use singlequote.eslintquotes
 ```
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-10-29-42.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-09-29-10-29-42.png)
 - 可以通过 eslint 命令来快速修复一个模块中不符合规范的代码，能够减少手动修改代码的工作量。不过这个功能仅限于那些可以自动化修复的错误，比如这个示例中的引号错误使用而引起的错误。对于那些无法自动一键修复的错误，依旧是需要根据 IDE 的提示，手动去修改的。
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-09-29-10-32-20.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-09-29-10-32-20.png)
 - 命令 `eslint --fix` 可用来一键修复模块中的一些能够被自动修复的错误。
 - eslint 规则未生效的原因可能是因为 eslint 配置文件没有被正确加载，或者是 eslint 服务出现问题。测试时如果出现这样的异常现象“已明确代码没问题，但是 VSCode 并没有提供错误提示”，可以通过重启 VSCode 来尝试解决。

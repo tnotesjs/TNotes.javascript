@@ -1,4 +1,4 @@
-# [0003. let 关键字](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97)
+# [0003. let 关键字](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97)
 
 <!-- region:toc -->
 
@@ -108,8 +108,8 @@
 
 :::
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-27-14-15-51.png)
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-27-14-15-58.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-27-14-15-51.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-27-14-15-58.png)
 
 ::: code-group
 

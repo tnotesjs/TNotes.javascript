@@ -1,4 +1,4 @@
-# [0107. style 元素的 sheet 属性](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7)
+# [0107. style 元素的 sheet 属性](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7)
 
 <!-- region:toc -->
 

@@ -1,4 +1,4 @@
-# [0021. 注释](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A)
+# [0021. 注释](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A)
 
 <!-- region:toc -->
 
@@ -83,7 +83,7 @@ function add(a, b) {
 - 在编写代码时，你可以将那些你暂时不关心的 region 给折叠起来，专心处理那些你当前关心的 region。
 - VS Code
   - 你可以在 VS Code 官网查看不同语言的区域注释在 VS Code 中应该如何书写
-  - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-20-08-03-58.png)
+  - ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-20-08-03-58.png)
 
 ## 7. 💻 demos.1 - 单行注释和多行注释
 
@@ -102,9 +102,9 @@ function add(a, b) {
 :::
 
 - 在 VS Code 中集成的 JS 的语法检查服务会认为该写法是错误的，会爆红。
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-11-49.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-11-49.png)
 - 虽然在 VSCode 中，这些写法会报红，但是程序是可以正常运行的。
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-11-57.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-11-57.png)
   - 你可以将这段程序搬运到浏览器调试工具中跑一下看看效果，会发现是能够正常输出 1 的。
 
 ::: code-group
@@ -129,11 +129,11 @@ function add(a, b) {
 
 ::: swiper
 
-![生成产物](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-13-27.png)
+![生成产物](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-13-27.png)
 
-![out/1.js.html](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-44-09.png)
+![out/1.js.html](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-16-44-09.png)
 
-![out/global.html](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-45-03.png)
+![out/global.html](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-16-45-03.png)
 
 :::
 
@@ -165,13 +165,13 @@ function add(a, b) {
 
 - 在这个示例中，我们使用 `// #region` 和 `// #endregion` 来将相关的函数分组。你可以根据需要添加描述，以便更好地理解这些区域的内容。
 - 你可以选择性地将区域给折叠起来，在 VSCode 中，区域开始位置的数字右侧会有一个符号：
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-19-24.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-19-24.png)
   - 点击后即可折叠
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-19-32.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-19-32.png)
 - 并且，在右侧的缩略图中，你会发现区域的名字会放大显示，以便于你尽快找到对应的代码区域所在的位置。
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-19-56.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-19-56.png)
 - 下面是全部折叠起来之后的效果。
-  - ![图 2](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-45-20.png)
+  - ![图 2](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-16-45-20.png)
 - 不同的编辑器对这玩意儿的支持会有所不同，上述介绍的仅仅是 VSCode 环境下的效果。
   - webstorm 对着玩意儿的支持好像会更好一些。
 
@@ -179,7 +179,7 @@ function add(a, b) {
 
 - [JSDoc 官网][1]
 - [vscode 官网 - 查看不同语言的区域注释如何书写][2]
-  - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-20-08-03-58.png)
+  - ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-20-08-03-58.png)
 
 [1]: https://jsdoc.app/
 [2]: https://code.visualstudio.com/docs/editing/codebasics#_folding

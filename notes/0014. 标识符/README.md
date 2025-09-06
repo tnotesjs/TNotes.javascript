@@ -1,9 +1,9 @@
-# [0014. 标识符](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6)
+# [0014. 标识符](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6)
 
 <!-- region:toc -->
 
 - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-  - [TNotes.yuque.html-css-js.0014](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0014)
+  - [TNotes.yuque.javascript.0014](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0014)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 📒 标识符](#3--标识符)

@@ -1,9 +1,9 @@
-# [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81)
+# [0037. 防抖、节流](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81)
 
 <!-- region:toc -->
 
 - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-  - [TNotes.yuque.html-css-js.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0037)
+  - [TNotes.yuque.javascript.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0037)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 💡 一张图说明防抖和节流的事件触发差异](#3--一张图说明防抖和节流的事件触发差异)
@@ -152,7 +152,7 @@ element.addEventListener('drag', throttle(handleDrag, 100))
 
 :::
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-37-47.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-37-47.png)
 - 当用户在输入框中输入内容时，输入事件会被防抖函数处理，只有在用户停止输入 300 毫秒后，才会更新显示的内容。这样可以避免频繁的事件触发，提高性能。
 
 ## 8. 💻 demos.2 - 窗口尺寸变化 - 节流
@@ -165,7 +165,7 @@ element.addEventListener('drag', throttle(handleDrag, 100))
 
 :::
 
-- ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-38-06.png)
+- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-38-06.png)
 
 ## 9. 🔗 References
 

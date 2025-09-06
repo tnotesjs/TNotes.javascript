@@ -1,4 +1,4 @@
-# [0079. window.onbeforeunload](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0079.%20window.onbeforeunload)
+# [0079. window.onbeforeunload](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0079.%20window.onbeforeunload)
 
 <!-- region:toc -->
 
@@ -56,7 +56,7 @@ window.onbeforeunload = () => ''
 :::
 
 - 在离开页面之前，会弹出如下提示框：
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-01-02-09-46-36.png)
+  - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-01-02-09-46-36.png)
 
 ## 5. 🔗 References
 

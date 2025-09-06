@@ -1,4 +1,4 @@
-# [0100. 伪类选择器 nth-cihld](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0100.%20%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%20nth-cihld)
+# [0100. 伪类选择器 nth-cihld](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0100.%20%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%20nth-cihld)
 
 <!-- region:toc -->
 

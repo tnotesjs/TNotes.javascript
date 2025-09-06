@@ -1,4 +1,4 @@
-# [0068. AMD](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0068.%20AMD)
+# [0068. AMD](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0068.%20AMD)
 
 
 <!-- region:toc -->

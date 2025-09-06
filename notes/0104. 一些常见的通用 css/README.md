@@ -1,4 +1,4 @@
-# [0104. 一些常见的通用 css](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css)
+# [0104. 一些常见的通用 css](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css)
 
 <!-- region:toc -->
 
