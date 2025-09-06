@@ -1,4 +1,4 @@
-# [0062. ESM 绑定再导出](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA)
+# [0062. ESM 绑定再导出](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA)
 
 <!-- region:toc -->
 

@@ -1,4 +1,4 @@
-# [0116. eslint 是什么？](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
+# [0116. eslint 是什么？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F)
 
 <!-- region:toc -->
 

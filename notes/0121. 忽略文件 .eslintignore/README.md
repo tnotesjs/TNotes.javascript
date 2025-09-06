@@ -1,4 +1,4 @@
-# [0121. 忽略文件 .eslintignore](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore)
+# [0121. 忽略文件 .eslintignore](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore)
 
 <!-- region:toc -->
 

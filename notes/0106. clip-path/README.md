@@ -1,4 +1,4 @@
-# [0106. clip-path](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0106.%20clip-path)
+# [0106. clip-path](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0106.%20clip-path)
 
 <!-- region:toc -->
 

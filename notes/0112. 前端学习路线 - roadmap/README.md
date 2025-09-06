@@ -1,4 +1,4 @@
-# [0112. 前端学习路线 - roadmap](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap)
+# [0112. 前端学习路线 - roadmap](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap)
 
 <!-- region:toc -->
 

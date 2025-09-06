@@ -1,4 +1,4 @@
-# [0005. 区块和块级作用域](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F)
+# [0005. 区块和块级作用域](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0005.%20%E5%8C%BA%E5%9D%97%E5%92%8C%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F)
 
 <!-- region:toc -->
 

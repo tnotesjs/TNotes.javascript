@@ -1,4 +1,4 @@
-# [0119. 使用 no-unused-vars 配置规则：未使用的变量报错](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99)
+# [0119. 使用 no-unused-vars 配置规则：未使用的变量报错](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0119.%20%E4%BD%BF%E7%94%A8%20no-unused-vars%20%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99%EF%BC%9A%E6%9C%AA%E4%BD%BF%E7%94%A8%E7%9A%84%E5%8F%98%E9%87%8F%E6%8A%A5%E9%94%99)
 
 <!-- region:toc -->
 

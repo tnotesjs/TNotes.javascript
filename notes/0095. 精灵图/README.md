@@ -1,4 +1,4 @@
-# [0095. 精灵图](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0095.%20%E7%B2%BE%E7%81%B5%E5%9B%BE)
+# [0095. 精灵图](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0095.%20%E7%B2%BE%E7%81%B5%E5%9B%BE)
 
 <!-- region:toc -->
 

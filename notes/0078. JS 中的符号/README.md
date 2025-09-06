@@ -1,4 +1,4 @@
-# [0078. JS 中的符号](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7)
+# [0078. JS 中的符号](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0078.%20JS%20%E4%B8%AD%E7%9A%84%E7%AC%A6%E5%8F%B7)
 
 <!-- region:toc -->
 

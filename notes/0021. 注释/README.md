@@ -1,4 +1,4 @@
-# [0021. 注释](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A)
+# [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A)
 
 <!-- region:toc -->
 

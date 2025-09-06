@@ -1,4 +1,4 @@
-# [0120. eslint 配置格式](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F)
+# [0120. eslint 配置格式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F)
 
 <!-- region:toc -->
 

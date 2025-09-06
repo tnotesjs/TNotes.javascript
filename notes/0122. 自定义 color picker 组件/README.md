@@ -1,4 +1,4 @@
-# [0122. 自定义 color picker 组件](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6)
+# [0122. 自定义 color picker 组件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6)
 
 <!-- region:toc -->
 

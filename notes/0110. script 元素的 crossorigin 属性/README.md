@@ -1,4 +1,4 @@
-# [0110. script 元素的 crossorigin 属性](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0110.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20crossorigin%20%E5%B1%9E%E6%80%A7)
+# [0110. script 元素的 crossorigin 属性](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0110.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20crossorigin%20%E5%B1%9E%E6%80%A7)
 
 <!-- region:toc -->
 

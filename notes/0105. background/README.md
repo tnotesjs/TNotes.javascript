@@ -1,4 +1,4 @@
-# [0105. background](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0105.%20background)
+# [0105. background](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0105.%20background)
 
 <!-- region:toc -->
 

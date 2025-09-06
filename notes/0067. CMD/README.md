@@ -1,4 +1,4 @@
-# [0067. CMD](https://github.com/Tdahuyou/TNotes.javascript/tree/main/notes/0067.%20CMD)
+# [0067. CMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD)
 
 
 <!-- region:toc -->
