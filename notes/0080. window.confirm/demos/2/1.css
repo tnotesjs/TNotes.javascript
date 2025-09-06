@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 遮罩层 */
+.custom-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 对话框主体 */
+.custom-confirm {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+}
+
+.custom-confirm h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.custom-confirm p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.custom-confirm-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.custom-confirm-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-confirm-button.confirm {
+  background-color: #007bff;
+  color: white;
+}
+
+.custom-confirm-button.cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.custom-confirm-button:hover {
+  opacity: 0.9;
+}
+
+.custom-confirm-button:active {
+  transform: scale(0.98);
+}

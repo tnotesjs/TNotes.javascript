@@ -2,15 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 📒 clip-path 概述](#1--clip-path-概述)
-- [2. 💻 demos.1 - 圆形裁剪](#2--demos1---圆形裁剪)
-- [3. 💻 demos.3 - 椭圆形裁剪](#3--demos3---椭圆形裁剪)
-- [4. 💻 demos.4 - 矩形裁剪](#4--demos4---矩形裁剪)
-- [5. 💻 demos.2 - 多边形裁剪](#5--demos2---多边形裁剪)
-- [6. 💻 demos.5 - 使用 svg 的裁剪路径来裁剪](#6--demos5---使用-svg-的裁剪路径来裁剪)
-- [7. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github](#7--demos6---使用-svg-的裁剪路径来裁剪---vitegithub)
+- [1. 🫧 评价](#1--评价)
+- [2. 📒 clip-path 概述](#2--clip-path-概述)
+- [3. 💻 demos.1 - 圆形裁剪](#3--demos1---圆形裁剪)
+- [4. 💻 demos.3 - 椭圆形裁剪](#4--demos3---椭圆形裁剪)
+- [5. 💻 demos.4 - 矩形裁剪](#5--demos4---矩形裁剪)
+- [6. 💻 demos.2 - 多边形裁剪](#6--demos2---多边形裁剪)
+- [7. 💻 demos.5 - 使用 svg 的裁剪路径来裁剪](#7--demos5---使用-svg-的裁剪路径来裁剪)
+- [8. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github](#8--demos6---使用-svg-的裁剪路径来裁剪---vitegithub)
 
 <!-- endregion:toc -->
+
+## 1. 🫧 评价
 
 - clip-path 的写法非常灵活，笔记中的 demo 仅记录了其中一部分写法，更多写法可以参考 MDN。
 - 虽然路径的绘制方式有很多，但其实如果我们掌握好了 svg 的话，使用 svg 来绘制路径，想要啥效果就画啥效果，也就是说啥路径都可以自行指定。
@@ -19,7 +22,7 @@
 - https://caniuse.com/?search=clip-path
   - can i use clip-path
 
-## 1. 📒 clip-path 概述
+## 2. 📒 clip-path 概述
 
 - `clip-path` 是 CSS 中的一个属性，**用于定义元素的可见区域（即剪裁区域）**。
 - **通过 `clip-path`，你可以控制元素的哪些部分是可见的，哪些部分是被隐藏的。**
@@ -35,7 +38,7 @@
   - **`<geometry-box>`**: 定义剪裁区域的参考盒，例如 `margin-box`、`border-box`、`padding-box` 或 `content-box`。
   - **`none`**: 不应用任何剪裁，元素完全可见。
 
-## 2. 💻 demos.1 - 圆形裁剪
+## 3. 💻 demos.1 - 圆形裁剪
 
 ```html
 <!-- 
@@ -69,7 +72,7 @@ clip-path: circle(50% at 50% 50%);
 - 裁剪：
   - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-23-28.png)
 
-## 3. 💻 demos.3 - 椭圆形裁剪
+## 4. 💻 demos.3 - 椭圆形裁剪
 
 ```html
 <!-- 
@@ -103,7 +106,7 @@ clip-path: ellipse(50% 50% at 50% 50%);
 - 裁剪：
   - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-22-11.png)
 
-## 4. 💻 demos.4 - 矩形裁剪
+## 5. 💻 demos.4 - 矩形裁剪
 
 ```html
 <!-- 
@@ -137,7 +140,7 @@ clip-path: inset(10px 20px 30px 40px round 10px);
 - 裁剪：
   - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-23-11.png)
 
-## 5. 💻 demos.2 - 多边形裁剪
+## 6. 💻 demos.2 - 多边形裁剪
 
 ```html
 <!-- 
@@ -168,7 +171,7 @@ clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 - 对比是否加 clip-path 的效果：
   - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-21-00.png)
 
-## 6. 💻 demos.5 - 使用 svg 的裁剪路径来裁剪
+## 7. 💻 demos.5 - 使用 svg 的裁剪路径来裁剪
 
 - 准备一个用户裁剪的 svg 模块
 
@@ -230,7 +233,7 @@ clip-path: url(1.svg#c1);
 - 裁剪：
   - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-11-22-15-49-50.png)
 
-## 7. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github
+## 8. 💻 demos.6 - 使用 svg 的裁剪路径来裁剪 - vite、github
 
 ```html
 <!DOCTYPE html>

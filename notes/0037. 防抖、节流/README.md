@@ -4,41 +4,43 @@
 
 - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
   - [TNotes.yuque.html-css-js.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0037)
-- [1. 📝 概述](#1--概述)
-- [2. 💡 一张图说明防抖和节流的事件触发差异](#2--一张图说明防抖和节流的事件触发差异)
-- [3. 📒 防抖](#3--防抖)
-- [4. 📒 节流](#4--节流)
-- [5. 🆚 防抖、节流](#5--防抖节流)
-- [6. 💻 demos.1 - 输入框内容校验 - 防抖](#6--demos1---输入框内容校验---防抖)
-- [7. 💻 demos.2 - 窗口尺寸变化 - 节流](#7--demos2---窗口尺寸变化---节流)
-- [8. 🔗 References](#8--references)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评价](#2--评价)
+- [3. 💡 一张图说明防抖和节流的事件触发差异](#3--一张图说明防抖和节流的事件触发差异)
+- [4. 📒 防抖](#4--防抖)
+- [5. 📒 节流](#5--节流)
+- [6. 🆚 防抖、节流](#6--防抖节流)
+- [7. 💻 demos.1 - 输入框内容校验 - 防抖](#7--demos1---输入框内容校验---防抖)
+- [8. 💻 demos.2 - 窗口尺寸变化 - 节流](#8--demos2---窗口尺寸变化---节流)
+- [9. 🔗 References](#9--references)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🎯 本节内容
 
-- 知识点：
-  - 理解防抖
-  - 理解节流
-  - 完成 leetcode 算法题
-- 评价：
-  - 防抖（debouncing）和节流（throttling）都是用来控制函数调用频率的技术解决方案。
-  - 笔记中对防抖和节流的区别做了详细的说明，可以结合说明图片来辅助理解。
-  - 在开发中根据实际需求选择适合的方案（防抖 or 节流）即可，最终目的基本上都是为了解决由于事件高频触发导致的一些问题。（可能是性能优化，也可能是用户体验优化 ……）
-  - 在笔记的结尾，记录了 leetcode 上两道算法题 - 防抖、节流，可以顺带着把这两题给刷了。
-  - 注意：
-    - 你可能会发现在不同的文章中，对于防抖和节流的介绍会有所不同，主要差异点无非就是第一次和最后一次的触发问题。
-    - 没有哪个正宗，哪个冒牌的说法，它们的核心原理都是一样的。
-    - 重要的是，如果你的业务场景对第一次和最后一次触发有严格要求，需要知道这些细微的差异，应该如何通过编码来实现。
+- 理解防抖
+- 理解节流
+- 完成 leetcode 算法题
 
-## 2. 💡 一张图说明防抖和节流的事件触发差异
+## 2. 🫧 评价
+
+- 防抖（debouncing）和节流（throttling）都是用来控制函数调用频率的技术解决方案。
+- 笔记中对防抖和节流的区别做了详细的说明，可以结合说明图片来辅助理解。
+- 在开发中根据实际需求选择适合的方案（防抖 or 节流）即可，最终目的基本上都是为了解决由于事件高频触发导致的一些问题。（可能是性能优化，也可能是用户体验优化 ……）
+- 在笔记的结尾，记录了 leetcode 上两道算法题 - 防抖、节流，可以顺带着把这两题给刷了。
+- 注意：
+  - 你可能会发现在不同的文章中，对于防抖和节流的介绍会有所不同，主要差异点无非就是第一次和最后一次的触发问题。
+  - 没有哪个正宗，哪个冒牌的说法，它们的核心原理都是一样的。
+  - 重要的是，如果你的业务场景对第一次和最后一次触发有严格要求，需要知道这些细微的差异，应该如何通过编码来实现。
+
+## 3. 💡 一张图说明防抖和节流的事件触发差异
 
 - ![svg](./assets/2.svg)
 - 从中文语义角度来理解：
   - 防抖：停止抖动才会触发，如果不停地抖，那么永远不会触发。
   - 节流：调整好水龙头的流速，在指定的时间间隔到了之后，才会流出一滴水。
 
-## 3. 📒 防抖
+## 4. 📒 防抖
 
 - **防抖是什么**
   - 防抖是指短时间内大量触发同一事件，只会在 **最后一次事件完成后** 延迟执行一次函数。
@@ -58,7 +60,7 @@ var debounce = function (fn, delay) {
 }
 ```
 
-## 4. 📒 节流
+## 5. 📒 节流
 
 - **节流是什么**
   - 可以通过类比来理解“节流”这个词，它就好比未拧紧的水龙头一样，水龙头每隔一段时间就会滴水（节流是每隔一段时间就执行一次函数）。即使在这段时间管道里有更多的水，水龙头也不会掉更多的水。
@@ -99,7 +101,7 @@ var throttle = function (fn, delay) {
 - 下面是对上述这个节流版本的说明：
 - ![svg](./assets/1.svg)
 
-## 5. 🆚 防抖、节流
+## 6. 🆚 防抖、节流
 
 - **防抖**：
   - 确保在一段时间内没有新的事件触发后，才执行一次函数。
@@ -140,61 +142,35 @@ button.addEventListener('click', throttle(handleClick, 500))
 element.addEventListener('drag', throttle(handleDrag, 100))
 ```
 
-## 6. 💻 demos.1 - 输入框内容校验 - 防抖
+## 7. 💻 demos.1 - 输入框内容校验 - 防抖
 
 ::: code-group
 
-<<< ./demos/1/1.html {24-44}
+<<< ./demos/1/1.js
+
+<<< ./demos/1/1.html
 
 :::
 
 - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-37-47.png)
 - 当用户在输入框中输入内容时，输入事件会被防抖函数处理，只有在用户停止输入 300 毫秒后，才会更新显示的内容。这样可以避免频繁的事件触发，提高性能。
 
-## 7. 💻 demos.2 - 窗口尺寸变化 - 节流
+## 8. 💻 demos.2 - 窗口尺寸变化 - 节流
 
-```html
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>节流示例</title>
-  </head>
-  <body>
-    <h1>节流（Throttle）示例</h1>
-    <p>尝试改变浏览器窗口大小，看看控制台的输出。</p>
+::: code-group
 
-    <script>
-      // 定义节流函数
-      var throttle = function (fn, delay) {
-        let lastCall = 0
-        return function (...args) {
-          const now = Date.now()
-          if (now - lastCall >= delay) {
-            lastCall = now
-            fn.apply(this, args)
-          }
-        }
-      }
+<<< ./demos/2/1.js
 
-      // 使用节流函数包装的函数
-      const logWindowSize = throttle(() => {
-        console.log(`Window size: ${window.innerWidth} x ${window.innerHeight}`)
-      }, 250) // 设置延迟时间为 250 毫秒
+<<< ./demos/2/1.html
 
-      // 添加事件监听器
-      window.addEventListener('resize', logWindowSize)
-    </script>
-  </body>
-</html>
-```
+:::
 
 - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-38-06.png)
 
-## 8. 🔗 References
+## 9. 🔗 References
 
-- [TNotes.leetcode/notes/2627](/TNotes.leetcode/notes/2627)
-  - leetcode，实现函数防抖。
-- [TNotes.leetcode/notes/2676](/TNotes.leetcode/notes/2676)
-  - leetcode，实现函数节流。
+- [leetcode - 实现函数防抖][1]
+- [leetcode - 实现函数节流][2]
+
+[1]: /TNotes.leetcode/notes/2627
+[2]: /TNotes.leetcode/notes/2676

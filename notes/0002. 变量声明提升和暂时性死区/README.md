@@ -2,37 +2,38 @@
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
-- [2. 🆚 `var`、`let`、`const`](#2--varletconst)
-- [3. 📒 变量声明提升和暂时性死区](#3--变量声明提升和暂时性死区)
-- [4. 💻 demos.1 - var 声明](#4--demos1---var-声明)
-- [5. 💻 demos.2 - let 和 const 声明](#5--demos2---let-和-const-声明)
-- [6. 💻 demos.3 - 函数声明](#6--demos3---函数声明)
-- [7. 💻 demos.4 - 函数表达式](#7--demos4---函数表达式)
-- [8. 💼 interviews.1 - 下面的代码输出什么？](#8--interviews1---下面的代码输出什么)
-- [9. 💼 interviews.2 - 下面的代码输出的结果是什么？](#9--interviews2---下面的代码输出的结果是什么)
-- [10. 💼 interviews.3 - 请谈谈什么是变量声明提升？](#10--interviews3---请谈谈什么是变量声明提升)
-- [11. 🤔 let、const 真的有被提升吗？](#11--letconst-真的有被提升吗)
-- [12. 🆚 提升 ≠ 内存分配](#12--提升--内存分配)
-- [13. 🤔 var、let、const 到底提升了什么？](#13--varletconst-到底提升了什么)
-- [14. 🔗 References](#14--references)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评价](#2--评价)
+- [3. 🆚 `var`、`let`、`const`](#3--varletconst)
+- [4. 📒 变量声明提升和暂时性死区](#4--变量声明提升和暂时性死区)
+- [5. 💻 demos.1 - var 声明](#5--demos1---var-声明)
+- [6. 💻 demos.2 - let 和 const 声明](#6--demos2---let-和-const-声明)
+- [7. 💻 demos.3 - 函数声明](#7--demos3---函数声明)
+- [8. 💻 demos.4 - 函数表达式](#8--demos4---函数表达式)
+- [9. 💼 interviews.1 - 下面的代码输出什么？](#9--interviews1---下面的代码输出什么)
+- [10. 💼 interviews.2 - 下面的代码输出的结果是什么？](#10--interviews2---下面的代码输出的结果是什么)
+- [11. 💼 interviews.3 - 请谈谈什么是变量声明提升？](#11--interviews3---请谈谈什么是变量声明提升)
+- [12. 🤔 let、const 真的有被提升吗？](#12--letconst-真的有被提升吗)
+- [13. 🆚 提升 ≠ 内存分配](#13--提升--内存分配)
+- [14. 🤔 var、let、const 到底提升了什么？](#14--varletconst-到底提升了什么)
+- [15. 🔗 References](#15--references)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🎯 本节内容
 
-- 知识点：
-  - 变量声明提升
-  - var、let、const 声明
-  - 函数声明
-  - 函数表达式
-  - 暂时性死区（TDZ）
-- 评价：
-  - 变量声明提升可以算是面试题常客，需要知道变量声明提升是什么。
-  - 本文介绍了什么是变量声明提升、什么是暂时性死区，并通过一些示例，来了解在 JS 中不同类型的变量的声明和提升机制。
-  - 结尾对 ECMA 官方文档原文的引用和分析对日常撸代码基本无影响，可以作为扩展内容来看待。
+- 理解变量声明提升
+- 知道 var、let、const 声明之间的区别
+- 知道“函数声明”和“函数表达式”两种写法之间的区别
+- 了解暂时性死区（TDZ）
 
-## 2. 🆚 `var`、`let`、`const`
+## 2. 🫧 评价
+
+- 变量声明提升可以算是面试题常客，需要知道变量声明提升是什么。
+- 本文介绍了什么是变量声明提升、什么是暂时性死区，并通过一些示例，来了解在 JS 中不同类型的变量的声明和提升机制。
+- 结尾对 ECMA 官方文档原文的引用和分析对日常撸代码基本无影响，可以作为扩展内容来看待。
+
+## 3. 🆚 `var`、`let`、`const`
 
 | **关键字** | **声明提升** | **初始化提升** | **赋值时机** | **暂时性死区** |
 | --- | --- | --- | --- | --- |
@@ -40,7 +41,7 @@
 | `let` | ✅ 是 | ❌ 否 | 执行声明语句时 | ✅ 有 |
 | `const` | ✅ 是 | ❌ 否 | 必须在声明时赋值 | ✅ 有 |
 
-## 3. 📒 变量声明提升和暂时性死区
+## 4. 📒 变量声明提升和暂时性死区
 
 - **变量声明提升是什么**
   - 在 JavaScript 中，**变量声明提升**（Hoisting）是一种行为，指的是 **变量和函数声明在代码执行之前被移动到它们各自作用域的顶部**。这意味着无论声明它们的代码在何处，都可以在声明之前访问这些变量和函数。
@@ -93,7 +94,7 @@ console.log(a) // => 5
   - **变量提前使用**：确保开发者不会在变量准备好之前就开始使用它，这有助于避免运行时错误。
   - **变量覆盖**：在较大的作用域中已有同名变量时，`let` 和 `const` 声明的局部变量会阻止提前访问全局变量或外部作用域的变量，从而避免可能的逻辑错误。
 
-## 4. 💻 demos.1 - var 声明
+## 5. 💻 demos.1 - var 声明
 
 ::: code-group
 
@@ -101,7 +102,7 @@ console.log(a) // => 5
 
 :::
 
-## 5. 💻 demos.2 - let 和 const 声明
+## 6. 💻 demos.2 - let 和 const 声明
 
 ::: code-group
 
@@ -111,7 +112,7 @@ console.log(a) // => 5
 
 ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-27-13-13-02.png)
 
-## 6. 💻 demos.3 - 函数声明
+## 7. 💻 demos.3 - 函数声明
 
 ::: code-group
 
@@ -119,7 +120,7 @@ console.log(a) // => 5
 
 :::
 
-## 7. 💻 demos.4 - 函数表达式
+## 8. 💻 demos.4 - 函数表达式
 
 ::: code-group
 
@@ -127,7 +128,7 @@ console.log(a) // => 5
 
 :::
 
-## 8. 💼 interviews.1 - 下面的代码输出什么？
+## 9. 💼 interviews.1 - 下面的代码输出什么？
 
 ::: code-group
 
@@ -143,7 +144,7 @@ console.log(a) // => 5
 
 :::
 
-## 9. 💼 interviews.2 - 下面的代码输出的结果是什么？
+## 10. 💼 interviews.2 - 下面的代码输出的结果是什么？
 
 ::: code-group
 
@@ -165,7 +166,7 @@ console.log(a) // => 5
 
 :::
 
-## 10. 💼 interviews.3 - 请谈谈什么是变量声明提升？
+## 11. 💼 interviews.3 - 请谈谈什么是变量声明提升？
 
 ::: details 参考答案
 
@@ -195,7 +196,7 @@ function foo() {
 
 :::
 
-## 11. 🤔 let、const 真的有被提升吗？
+## 12. 🤔 let、const 真的有被提升吗？
 
 - 先说答案：
   - **let、const 也被提升了。**
@@ -231,7 +232,7 @@ function foo() {
     - “时间” 这个词比较有意思，在细读文档之前，一直以为 “死区” 指的是 “某一段区域范围”，实际上指的是 “时间范围”。不过代码也是按照时间一步步往下执行的，因此理解成区域也没啥毛病。
   - 这句话中提到的额 “词法绑定求值” 是指在代码执行过程中，当 JavaScript 引擎遇到变量声明时，将变量名与实际的内存位置绑定，并将初始值赋给变量的过程。对于 let 和 const，在代码执行到声明语句时，才会进行这种赋值操作。
 
-## 12. 🆚 提升 ≠ 内存分配
+## 13. 🆚 提升 ≠ 内存分配
 
 - 在 JavaScript 中，变量声明的提升（Hoisting）和内存分配（Memory Allocation）是两个相关但不同的步骤。
 - **提升（Hoisting）**
@@ -239,7 +240,7 @@ function foo() {
 - **内存分配（Memory Allocation）**
   - 内存分配是指为变量分配内存空间以存储其值。这一步骤涉及将变量与特定的内存地址相关联。
 
-## 13. 🤔 var、let、const 到底提升了什么？
+## 14. 🤔 var、let、const 到底提升了什么？
 
 - 要回答这个问题，得知道变量声明在编译阶段和执行阶段的分工。既然说是提升，一定是有些流程被提前做了。提升的本质是 **声明阶段** 被提前到作用域顶部。
 - **核心三阶段**（所有变量声明共有）：
@@ -269,15 +270,16 @@ function foo() {
   - `var` 提升，并完成了内存分配，初始化为 `undefined`。
   - `let` 和 `const` 提升，但在声明语句之前处于暂时性死区（TDZ），不会初始化。内存分配和初始化在代码执行到声明语句时发生。
 
-## 14. 🔗 References
+## 15. 🔗 References
 
-- https://juejin.cn/post/6844903753015885831
-  - 掘金，《理解 ES6 中的 TDZ（暂时性死区）》。
-- https://exploringjs.com/js/book/ch_variables-assignment.html
-  - Variables and assignment • JavaScript for impatient programmers (ES2022 edition)
-- https://juejin.cn/post/6993676334635417614#heading-2
-  - 掘金，深究一下 let、const 到底有没有提升？
-- https://www.youtube.com/watch?v=VbHaL_J8Ex0
-  - YouTube，Variable Hoisting with LET, CONST and VAR in JavaScript
-- https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
-  - ECMA 官方文档，14.3.1 Let and Const Declarations
+- [掘金，《理解 ES6 中的 TDZ（暂时性死区）》][1]
+- [Variables and assignment • JavaScript for impatient programmers (ES2022 edition)][2]
+- [掘金，深究一下 let、const 到底有没有提升？][3]
+- [YouTube，Variable Hoisting with LET, CONST and VAR in JavaScript][4]
+- [ECMA 官方文档，14.3.1 Let and Const Declarations][5]
+
+[1]: https://juejin.cn/post/6844903753015885831
+[2]: https://exploringjs.com/js/book/ch_variables-assignment.html
+[3]: https://juejin.cn/post/6993676334635417614#heading-2
+[4]: https://www.youtube.com/watch?v=VbHaL_J8Ex0
+[5]: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations

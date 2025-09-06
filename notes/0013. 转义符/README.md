@@ -2,26 +2,28 @@
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
-- [2. 📒 转义符的含义和作用](#2--转义符的含义和作用)
-- [3. 🔍 查看 wiki 对转义符的介绍](#3--查看-wiki-对转义符的介绍)
-- [4. 🤔 转义符的英文为啥叫 `escape character`？](#4--转义符的英文为啥叫-escape-character)
-- [5. 💻 exercises.1 - 按照指定格式打印系统时间](#5--exercises1---按照指定格式打印系统时间)
-- [6. 🤔 在 js 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？](#6--在-js-的字符串中-反斜杠表示转义如何不转义输入反斜杠呢)
-- [7. ⌛️ 旧版打字机 - 转义符 `\r\n` 诞生的背景](#7-️-旧版打字机---转义符-rn-诞生的背景)
-- [8. 🔗 References](#8--references)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评价](#2--评价)
+- [3. 📒 转义符的含义和作用](#3--转义符的含义和作用)
+- [4. 🔍 查看 wiki 对转义符的介绍](#4--查看-wiki-对转义符的介绍)
+- [5. 🤔 转义符的英文为啥叫 `escape character`？](#5--转义符的英文为啥叫-escape-character)
+- [6. 💻 exercises.1 - 按照指定格式打印系统时间](#6--exercises1---按照指定格式打印系统时间)
+- [7. 🤔 在 js 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？](#7--在-js-的字符串中-反斜杠表示转义如何不转义输入反斜杠呢)
+- [8. ⌛️ 旧版打字机 - 转义符 `\r\n` 诞生的背景](#8-️-旧版打字机---转义符-rn-诞生的背景)
+- [9. 🔗 References](#9--references)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🎯 本节内容
 
-- 知识点：
-  - 转义符
-- 评价：
-  - 需要知道转义符是什么，转义符有什么用。
-  - 当你在程序中需要输出一些特殊字符的时候，能够想要“转义符”这个知识点即可。
+- 转义符
 
-## 2. 📒 转义符的含义和作用
+## 2. 🫧 评价
+
+- 需要知道转义符是什么，转义符有什么用。
+- 当你在程序中需要输出一些特殊字符的时候，能够想要“转义符”这个知识点即可。
+
+## 3. 📒 转义符的含义和作用
 
 - 转义字符是编程语言中一种非常重要的机制，它 **允许开发者在字符串中安全地使用特殊字符**。
   - **有些字符在字符串文本中有特殊的含义**，例如：
@@ -43,20 +45,20 @@
 | `\n`   | 换行           |
 | ……     | ……             |
 
-## 3. 🔍 查看 wiki 对转义符的介绍
+## 4. 🔍 查看 wiki 对转义符的介绍
 
-- 维基百科 - Escape character
+- [维基百科 - Escape character][1]
 - In computing and telecommunication, an **escape character** is a character that invokes an alternative interpretation on the following characters in a character sequence. An escape character is a particular case of metacharacters. Generally, the judgement of whether something is an escape character or not depends on the context.
 - 中文：
 - **在计算机和通信领域中，转义字符是一种字符，它会对其后的字符序列中的字符进行替代解释**。转义字符是元字符的一种特殊情况。通常，判断某个字符是否为转义字符取决于上下文环境。
 
-## 4. 🤔 转义符的英文为啥叫 `escape character`？
+## 5. 🤔 转义符的英文为啥叫 `escape character`？
 
 - **`escape` 表示逃离的意思，`escape character` 表示转义字符（可以理解为逃离计算机的翻译）**。
 - 在编程中，转义符的作用是让某些字符“逃脱”其正常的解释方式，从而被解释为特殊含义或符号。这种机制与“逃脱”或“避开”字符的原始含义非常相似，因此“escape”这个词非常贴切。
 - 在阅读外文文档的时候，需要知道这个短语 `escape character` 表示的是转义符的含义。
 
-## 5. 💻 exercises.1 - 按照指定格式打印系统时间
+## 6. 💻 exercises.1 - 按照指定格式打印系统时间
 
 ::: code-group
 
@@ -73,7 +75,7 @@
 
 :::
 
-## 6. 🤔 在 js 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？
+## 7. 🤔 在 js 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？
 
 - 在 JavaScript 中，如果你想要在字符串中包含一个实际的反斜杠（`\`），你需要使用双反斜杠（`\\`）来表示。
 - 可能的应用场景：
@@ -97,7 +99,7 @@ console.log(message)
 // 输出: The config file is located at: C:\Program Files\MyApp\config.ini
 ```
 
-## 7. ⌛️ 旧版打字机 - 转义符 `\r\n` 诞生的背景
+## 8. ⌛️ 旧版打字机 - 转义符 `\r\n` 诞生的背景
 
 - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-21-52-20.png)
 - `\r\n` 的诞生背景，和历史上的打字机有关。
@@ -128,8 +130,8 @@ console.log(message)
 - 现代应用
   - 尽管现代计算机和打印技术不再需要物理的“回车”和“换行”操作，`\r\n` 作为行结束符的约定仍然在 Windows 系统中保留。这种历史遗留的特性意味着跨平台软件开发和网络通信协议（如 HTTP 和电子邮件标准）中仍需考虑不同的行结束符处理。
 
-## 8. 🔗 References
+## 9. 🔗 References
 
-- https://en.wikipedia.org/wiki/Escape_character
-  - 维基百科
-  - Escape character
+- [维基百科 - Escape character][1]
+
+[1]: https://en.wikipedia.org/wiki/Escape_character

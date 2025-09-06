@@ -2,24 +2,26 @@
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
-- [2. 📒 switch 基本结构](#2--switch-基本结构)
-- [3. 💻 demos.1 - switch 中的 break 语句](#3--demos1---switch-中的-break-语句)
-- [4. 💻 demos.2 - 使用表达式](#4--demos2---使用表达式)
-- [5. 💻 demos.3 - 匹配规则是严格相等](#5--demos3---匹配规则是严格相等)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评价](#2--评价)
+- [3. 📒 switch 基本结构](#3--switch-基本结构)
+- [4. 💻 demos.1 - switch 中的 break 语句](#4--demos1---switch-中的-break-语句)
+- [5. 💻 demos.2 - 使用表达式](#5--demos2---使用表达式)
+- [6. 💻 demos.3 - 匹配规则是严格相等](#6--demos3---匹配规则是严格相等)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🎯 本节内容
 
-- 知识点：
-  - switch 结构
-  - break 语句
-  - 匹配校验 - 严格相等 `===`
-- 评价：
-  - JavaScript 提供 `if` 结构和 `switch` 结构，完成条件判断，即只有满足预设的条件，才会执行相应的语句。但是，相对于 `if` 语句而言，`switch` 语句是很罕见的（甚至有的公司禁止使用，可能是考虑到条件语句咋用 `if` 就完全足够了，没必要再来一个 `switch`）。
+- switch 结构
+- break 语句
+- 匹配校验 - 严格相等 `===`
 
-## 2. 📒 switch 基本结构
+## 2. 🫧 评价
+
+- JavaScript 提供 `if` 结构和 `switch` 结构，完成条件判断，即只有满足预设的条件，才会执行相应的语句。但是，相对于 `if` 语句而言，`switch` 语句是很罕见的（甚至有的公司禁止使用，可能是考虑到条件语句咋用 `if` 就完全足够了，没必要再来一个 `switch`）。
+
+## 3. 📒 switch 基本结构
 
 - 多个 `if...else` 连在一起使用的时候，可以转为使用 `switch` 结构。
 - 通常在书写 `case` 代码块时，都在每个 `case` 代码块末尾加上 `break` 语句。
@@ -49,7 +51,7 @@ switch (fruit) {
 
 :::
 
-## 3. 💻 demos.1 - switch 中的 break 语句
+## 4. 💻 demos.1 - switch 中的 break 语句
 
 ::: code-group
 
@@ -64,7 +66,7 @@ switch (fruit) {
 - `2.js`
   - 正确写法应该是在每个 case 代码块末尾加上 break 语句。
 
-## 4. 💻 demos.2 - 使用表达式
+## 5. 💻 demos.2 - 使用表达式
 
 ::: code-group
 
@@ -72,7 +74,7 @@ switch (fruit) {
 
 :::
 
-## 5. 💻 demos.3 - 匹配规则是严格相等
+## 6. 💻 demos.3 - 匹配规则是严格相等
 
 ::: code-group
 

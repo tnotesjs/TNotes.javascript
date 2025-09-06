@@ -2,46 +2,48 @@
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
-- [2. 🤔 注释是什么？](#2--注释是什么)
-- [3. 🤔 注释有哪些类型](#3--注释有哪些类型)
-- [4. 📒 文档注释](#4--文档注释)
-- [5. 📒 区域注释](#5--区域注释)
-- [6. 💻 demos.1 - 单行注释和多行注释](#6--demos1---单行注释和多行注释)
-- [7. 💻 demos.2 - 特殊的单行注释](#7--demos2---特殊的单行注释)
-- [8. 💻 demos.3 - 文档注释](#8--demos3---文档注释)
-- [9. 💻 demos.4 - 区域注释](#9--demos4---区域注释)
-- [10. 🔗 References](#10--references)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评价](#2--评价)
+- [3. 🤔 注释是什么？](#3--注释是什么)
+- [4. 🤔 注释有哪些类型](#4--注释有哪些类型)
+- [5. 📒 文档注释](#5--文档注释)
+- [6. 📒 区域注释](#6--区域注释)
+- [7. 💻 demos.1 - 单行注释和多行注释](#7--demos1---单行注释和多行注释)
+- [8. 💻 demos.2 - 特殊的单行注释](#8--demos2---特殊的单行注释)
+- [9. 💻 demos.3 - 文档注释](#9--demos3---文档注释)
+- [10. 💻 demos.4 - 区域注释](#10--demos4---区域注释)
+- [11. 🔗 References](#11--references)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🎯 本节内容
 
-- 知识点：
-  - 单行注释
-  - 多行注释
-  - 文档注释
-  - 区域注释
-- 评价：
-  - 单行注释、多行注释、文档注释、区域注释，这些注释在开发中都是比较常见的，也都非常简单。
-  - 对于文档注释，笔记中只是做了一个简单的介绍，有关文档注释的语法还有很多，这里不做过多介绍，后续会考虑单独写文档加以说明。
-  - 区域注释让我们可以通过注释的形式对一个模块中的代码进行分组。
-  - 在 VS Code 中也有一些和区域注释相关的插件，比如：
-    - `Region Viewer` 可以将模块中的 region 罗列出来到独立的视图中，并支持点击不同的区域快速导航到对应的代码所在位置。
-    - `Region Highlighter` 可以自定义配置区域的高亮显示，可以通过命令快速给某些代码片段加上区域注释。
+- 单行注释
+- 多行注释
+- 文档注释
+- 区域注释
 
-## 2. 🤔 注释是什么？
+## 2. 🫧 评价
+
+- 单行注释、多行注释、文档注释、区域注释，这些注释在开发中都是比较常见的，也都非常简单。
+- 对于文档注释，笔记中只是做了一个简单的介绍，有关文档注释的语法还有很多，这里不做过多介绍，后续会考虑单独写文档加以说明。
+- 区域注释让我们可以通过注释的形式对一个模块中的代码进行分组。
+- 在 VS Code 中也有一些和区域注释相关的插件，比如：
+  - `Region Viewer` 可以将模块中的 region 罗列出来到独立的视图中，并支持点击不同的区域快速导航到对应的代码所在位置。
+  - `Region Highlighter` 可以自定义配置区域的高亮显示，可以通过命令快速给某些代码片段加上区域注释。
+
+## 3. 🤔 注释是什么？
 
 - 源码中 **被 JS 引擎忽略的部分** 就叫做注释，它的作用是对代码进行解释。
 
-## 3. 🤔 注释有哪些类型
+## 4. 🤔 注释有哪些类型
 
 - 单行注释：`// ...`、`<!-- ...`、`--> ...`
 - 多行注释：`/* ... */`
 - 文档注释：以 `/**` 开头，然后每行都以 `*` 开始，最后以 `*/` 结束
 - 区域注释：`// #region 区域描述` `// #endregion 区域描述`
 
-## 4. 📒 文档注释
+## 5. 📒 文档注释
 
 - 在多数编程语言中，文档注释有特定的格式，使得工具能够轻松识别和解析它们。
 - 在某个函数声明的前一行，输入 `/**` 后按下回车就会自动生成文档注释。然后依次按下 `tab` 键，输入一个个位置的注释信息。
@@ -66,7 +68,7 @@ function add(a, b) {
 - **文档注释的特殊作用** - 可以自动生成详细和格式化的 API 文档。
 - 除了 `@param`、`@returns` 标签之外，JSDoc 还提供了许多其他标签，如 `@class`, `@constructor`, `@deprecated`, `@throws` 等，用于描述各种代码特性和行为。
 
-## 5. 📒 区域注释
+## 6. 📒 区域注释
 
 - 区域注释（Region Comments）是一种使代码更加可读和组织化的方式，特别是在大型代码文件中。
   - 这里说的“大型”不太好量化，看个人感觉来定。
@@ -83,7 +85,7 @@ function add(a, b) {
   - 你可以在 VS Code 官网查看不同语言的区域注释在 VS Code 中应该如何书写
   - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-20-08-03-58.png)
 
-## 6. 💻 demos.1 - 单行注释和多行注释
+## 7. 💻 demos.1 - 单行注释和多行注释
 
 ::: code-group
 
@@ -91,7 +93,7 @@ function add(a, b) {
 
 :::
 
-## 7. 💻 demos.2 - 特殊的单行注释
+## 8. 💻 demos.2 - 特殊的单行注释
 
 ::: code-group
 
@@ -111,7 +113,7 @@ function add(a, b) {
 
 :::
 
-## 8. 💻 demos.3 - 文档注释
+## 9. 💻 demos.3 - 文档注释
 
 ::: code-group
 
@@ -123,13 +125,18 @@ function add(a, b) {
 - **基本流程：**
   1. 安装 JSDoc：`npm i -g jsdoc`
   2. 使用 jsdoc 命令来生成文档：`jsdoc 1.js`，这个命令会生成一个 `out` 目录，里面包含生成的 HTML 文档。
-- **生成产物：**
-  - ![img](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-13-27.png)
   - 如果不想安装 jsdoc 的话，也可以直接使用 `npx jsdoc 1.js` 来临时体验一下。
-    - `out/1.js.html`
-      - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-44-09.png)
-    - `out/global.html`
-      - ![图 1](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-45-03.png)
+
+::: swiper
+
+![生成产物](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2024-12-31-17-13-27.png)
+
+![out/1.js.html](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-44-09.png)
+
+![out/global.html](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-19-16-45-03.png)
+
+:::
+
 - **可配置**
   - 你可以使用配置文件来自定义生成的文档。创建一个 jsdoc.json 文件，并添加你需要的配置。
   - 详细的配置说明：https://jsdoc.app/about-configuring-jsdoc
@@ -148,7 +155,7 @@ function add(a, b) {
 }
 ```
 
-## 9. 💻 demos.4 - 区域注释
+## 10. 💻 demos.4 - 区域注释
 
 ::: code-group
 
@@ -168,10 +175,11 @@ function add(a, b) {
 - 不同的编辑器对这玩意儿的支持会有所不同，上述介绍的仅仅是 VSCode 环境下的效果。
   - webstorm 对着玩意儿的支持好像会更好一些。
 
-## 10. 🔗 References
+## 11. 🔗 References
 
-- https://jsdoc.app/
-  - JSDoc 官网
-- https://code.visualstudio.com/docs/editing/codebasics#_folding
-  - vscode 官网 - 查看不同语言的区域注释如何书写
+- [JSDoc 官网][1]
+- [vscode 官网 - 查看不同语言的区域注释如何书写][2]
   - ![图 0](https://cdn.jsdelivr.net/gh/Tdahuyou/imgs@main/2025-08-20-08-03-58.png)
+
+[1]: https://jsdoc.app/
+[2]: https://code.visualstudio.com/docs/editing/codebasics#_folding

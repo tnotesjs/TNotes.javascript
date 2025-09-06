@@ -2,23 +2,25 @@
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
-- [2. 📒 break 语句和 continue 语句](#2--break-语句和-continue-语句)
-- [3. 💻 demos.1 - 在 while 中使用 break](#3--demos1---在-while-中使用-break)
-- [4. 💻 demos.2 - 在 for 中使用 break](#4--demos2---在-for-中使用-break)
-- [5. 💻 demos.3 - 在循环中使用 continue](#5--demos3---在循环中使用-continue)
-- [6. 💻 demos.4 - 多重循环 - break、continue 语句针对当前所在的循环体而言](#6--demos4---多重循环---breakcontinue-语句针对当前所在的循环体而言)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评价](#2--评价)
+- [3. 📒 break 语句和 continue 语句](#3--break-语句和-continue-语句)
+- [4. 💻 demos.1 - 在 while 中使用 break](#4--demos1---在-while-中使用-break)
+- [5. 💻 demos.2 - 在 for 中使用 break](#5--demos2---在-for-中使用-break)
+- [6. 💻 demos.3 - 在循环中使用 continue](#6--demos3---在循环中使用-continue)
+- [7. 💻 demos.4 - 多重循环 - break、continue 语句针对当前所在的循环体而言](#7--demos4---多重循环---breakcontinue-语句针对当前所在的循环体而言)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🎯 本节内容
 
-- 知识点：
-  - 掌握 break 语句和 continue 语句的基本使用
-- 评价：
-  - break、continue 是循环中的常客，属于重点内容，必须掌握。
+- 掌握 break 语句和 continue 语句的基本使用
 
-## 2. 📒 break 语句和 continue 语句
+## 2. 🫧 评价
+
+- break、continue 是循环中的常客，属于重点内容，必须掌握。
+
+## 3. 📒 break 语句和 continue 语句
 
 - `break`、`continue` 语句是比较常见的，在实际开发中也算是经常会用到的，需要掌握它们的用法。
 - `break` 语句和 `continue` 语句都具有跳转作用，可以让代码不按既有的顺序执行。它们通常出现在 `for`、`while` 这样的循环体中。
@@ -28,7 +30,7 @@
   - 当出现多重循环嵌套的时候，需要清楚知道 `break` 语句和 `continue` 语句跳出的是当前层的循环。
   - 带参数的 `break` 语句和 `continue` 语句需要结合具体情况来判断跳到什么位置，这和标签定位符有关。（标签会在其它笔记中介绍）
 
-## 3. 💻 demos.1 - 在 while 中使用 break
+## 4. 💻 demos.1 - 在 while 中使用 break
 
 ::: code-group
 
@@ -36,7 +38,7 @@
 
 :::
 
-## 4. 💻 demos.2 - 在 for 中使用 break
+## 5. 💻 demos.2 - 在 for 中使用 break
 
 ::: code-group
 
@@ -44,7 +46,7 @@
 
 :::
 
-## 5. 💻 demos.3 - 在循环中使用 continue
+## 6. 💻 demos.3 - 在循环中使用 continue
 
 ::: code-group
 
@@ -52,7 +54,7 @@
 
 :::
 
-## 6. 💻 demos.4 - 多重循环 - break、continue 语句针对当前所在的循环体而言
+## 7. 💻 demos.4 - 多重循环 - break、continue 语句针对当前所在的循环体而言
 
 ::: code-group
 

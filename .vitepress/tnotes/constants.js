@@ -53,6 +53,7 @@ export const ROOT_README_PATH = path.resolve(ROOT_DIR_PATH, 'README.md')
 export const ROOT_CONFIG_PATH = path.resolve(ROOT_DIR_PATH, '.tnotes.json')
 export const NOTES_DIR_PATH = path.resolve(ROOT_DIR_PATH, 'notes')
 export const VP_DIR_PATH = path.resolve(ROOT_DIR_PATH, '.vitepress')
+export const PUBLIC_PATH = path.resolve(ROOT_DIR_PATH, 'public')
 export const GITHUB_DIR_PATH = path.resolve(ROOT_DIR_PATH, '.github')
 export const GITHUB_DEPLOYYML_PATH = path.resolve(
   GITHUB_DIR_PATH,
@@ -95,8 +96,8 @@ export const REPO_NOTES_URL = `https://github.com/${author}/${repoName}/tree/mai
 export const REPO_BLOB_URL_1 = `https://github.com/${author}/${repoName}/blob/main/notes`
 export const REPO_BLOB_URL_2 = `?raw=true`
 
-export const GITHUB_PAGE_URL = `https://tdahuyou.github.io/${repoName}`
-export const GITHUB_PAGE_NOTES_URL = `https://tdahuyou.github.io/${repoName}/notes`
+export const GITHUB_PAGE_URL = `https://tnotesjs.github.io/${repoName}`
+export const GITHUB_PAGE_NOTES_URL = `https://tnotesjs.github.io/${repoName}/notes`
 
 /**
  * 新增笔记 README.md 模板
@@ -105,11 +106,11 @@ export const NEW_NOTES_README_MD_TEMPLATE = `
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
+- [1. 🫧 评价](#1--概述)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 🫧 评价
 
 `
 

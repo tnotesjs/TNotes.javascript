@@ -6,31 +6,6 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
-      window.addEventListener('beforeunload', function (event) {
-        // 写法1
-        // if (thereIsUnsavedWork()) {
-        //   const message = '您确定要离开此页面吗？未保存的数据将会丢失。'
-        //   event.returnValue = message
-        //   return message
-        // }
-
-        // 写法2
-        if (thereIsUnsavedWork()) return (event.returnValue = ' ')
-
-        // 在 chrome 上，写法 1、2 的最终效果都是一样的。
-        // 在中文环境下，弹出的提示文案都是：系统可能不会保存您所做的更改。
-      })
-
-      function thereIsUnsavedWork() {
-        console.log('检查是否有未保存的工作')
-
-        // 有未保存的工作
-        return true // 会弹出提示框
-
-        // 没有未保存的工作
-        // return false // 不会弹出提示框
-      }
-    </script>
+    <script src="./1.js"></script>
   </body>
 </html>

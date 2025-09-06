@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自定义 Confirm 对话框</title>
+    <link rel="stylesheet" href="./1.css" />
+  </head>
+  <body>
+    <h1>自定义 Confirm 示例</h1>
+    <button id="showConfirm">点击弹出自定义确认框</button>
+    <script src="./1.js"></script>
+    <script>
+      document
+        .getElementById('showConfirm')
+        .addEventListener('click', async () => {
+          const result = await customConfirm(
+            '删除确认',
+            '你确定要删除这个项目吗？此操作不可撤销。',
+            { confirmText: '删除', cancelText: '取消' }
+          )
+
+          if (result) {
+            alert('用户点击了“删除”')
+          } else {
+            alert('用户取消了操作')
+          }
+        })
+    </script>
+  </body>
+</html>
