@@ -1,5 +1,5 @@
 {
-  "author": "Tdahuyou",
+  "author": "tnotesjs",
   "repoName": "TNotes.javascript",
   "keywords": ["TNotes.javascript"],
   "ignore_dirs": [
@@ -20,7 +20,7 @@
     "title": "javascript",
     "completed_notes_count": 30,
     "details": "前端三件套及跟前端相关的其它内容",
-    "link": "https://tdahuyou.github.io/TNotes.javascript/",
+    "link": "https://tnotesjs.github.io/TNotes.javascript/",
     "created_at": 1740924811000,
     "updated_at": 1757164227509,
     "days_since_birth": 9379
@@ -44,7 +44,7 @@
     },
     {
       "text": "📒 TNotes",
-      "link": "https://tdahuyou.github.io/notes"
+      "link": "https://tnotesjs.github.io/notes"
     },
     {
       "text": "📂 TNotes.yuque",
