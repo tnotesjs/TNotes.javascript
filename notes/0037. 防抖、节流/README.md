@@ -12,7 +12,7 @@
 - [6. 🆚 防抖、节流](#6--防抖节流)
 - [7. 💻 demos.1 - 输入框内容校验 - 防抖](#7--demos1---输入框内容校验---防抖)
 - [8. 💻 demos.2 - 窗口尺寸变化 - 节流](#8--demos2---窗口尺寸变化---节流)
-- [9. 🔗 References](#9--references)
+- [9. 🔗 引用](#9--引用)
 
 <!-- endregion:toc -->
 
@@ -167,7 +167,7 @@ element.addEventListener('drag', throttle(handleDrag, 100))
 
 - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-31-17-38-06.png)
 
-## 9. 🔗 References
+## 9. 🔗 引用
 
 - [leetcode - 实现函数防抖][1]
 - [leetcode - 实现函数节流][2]

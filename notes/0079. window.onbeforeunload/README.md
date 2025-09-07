@@ -6,7 +6,7 @@
 - [2. 🫧 评价](#2--评价)
 - [3. 📒 `window.onbeforeunload`](#3--windowonbeforeunload)
 - [4. 💻 demos.1 - `window.onbeforeunload` 基本使用](#4--demos1---windowonbeforeunload-基本使用)
-- [5. 🔗 References](#5--references)
+- [5. 🔗 引用](#5--引用)
 
 <!-- endregion:toc -->
 
@@ -58,7 +58,7 @@ window.onbeforeunload = () => ''
 - 在离开页面之前，会弹出如下提示框：
   - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-01-02-09-46-36.png)
 
-## 5. 🔗 References
+## 5. 🔗 引用
 
 - [mdn - window.onbeforeunload][1]
 

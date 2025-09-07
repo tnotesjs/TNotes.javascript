@@ -7,7 +7,7 @@
 - [3. 📒 `window.confirm()`](#3--windowconfirm)
 - [4. 💻 demos.1 - 使用 `window.confirm()` 弹出确认提示框](#4--demos1---使用-windowconfirm-弹出确认提示框)
 - [5. 💻 demos.2 - 自定义 confirm 效果](#5--demos2---自定义-confirm-效果)
-- [6. 🔗 References](#6--references)
+- [6. 🔗 引用](#6--引用)
 
 <!-- endregion:toc -->
 
@@ -57,7 +57,7 @@
 
 - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-21-53-50.png)
 
-## 6. 🔗 References
+## 6. 🔗 引用
 
 - [mdn - window.confirm][1]
 

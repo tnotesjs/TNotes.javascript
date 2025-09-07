@@ -10,7 +10,7 @@
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#2--评价)
   - [3. 🔍 前端学习路线](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#3--前端学习路线)
   - [4. 💻 学会自定义 roadmap](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#4--学会自定义-roadmap)
-  - [5. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#5--references)
+  - [5. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#5--引用)
 
 ## 2. 程序执行环境
 
@@ -52,10 +52,7 @@
   - [9. 💼 interviews.1 - 下面的代码输出什么？](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#9--interviews1---下面的代码输出什么)
   - [10. 💼 interviews.2 - 下面的代码输出的结果是什么？](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#10--interviews2---下面的代码输出的结果是什么)
   - [11. 💼 interviews.3 - 请谈谈什么是变量声明提升？](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#11--interviews3---请谈谈什么是变量声明提升)
-  - [12. 🤔 let、const 真的有被提升吗？](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#12--letconst-真的有被提升吗)
-  - [13. 🆚 提升 ≠ 内存分配](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#13--提升--内存分配)
-  - [14. 🤔 var、let、const 到底提升了什么？](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#14--varletconst-到底提升了什么)
-  - [15. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#15--references)
+  - [12. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README#12--引用)
 - [x] [0003. let 关键字](https://tnotesjs.github.io/TNotes.javascript/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README#2--评价)
@@ -81,6 +78,18 @@
   - [8. 💻 demos.3 - 引用类型，确保地址不变](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README#8--demos3---引用类型确保地址不变)
   - [9. 💻 demos.4 - 对象冻结](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README#9--demos4---对象冻结)
   - [10. 💼 interviews.1 - 请谈谈 var、let、const](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README#10--interviews1---请谈谈-varletconst)
+- [x] [0114. 深入理解“提升”【扩展】](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README)
+  - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#1--本节内容)
+  - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#2--评价)
+  - [3. 🤔 `let`、`const` 真的有被提升吗？](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#3--letconst-真的有被提升吗)
+  - [4. 🤔 “提升（Hosting）” 一词是哪来的，为什么 ECMAScript 没有具体的定义呢？](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#4--提升hosting-一词是哪来的为什么-ecmascript-没有具体的定义呢)
+  - [5. 🔍 ECMAScript 官方文档 - 原文](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#5--ecmascript-官方文档---原文)
+  - [6. 🆚 词法环境 `LexicalEnvironment` vs. 作用域 `scope`](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#6--词法环境-lexicalenvironment-vs-作用域-scope)
+  - [7. 📒 提升（Hosting） ≠ 可访问（Accessible）、提升（Hosting） ≠ 内存分配（Memory Allocation）](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#7--提升hosting--可访问accessible提升hosting--内存分配memory-allocation)
+  - [8. 🤔 let、const 声明的变量，何时脱离暂时性死区？](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#8--letconst-声明的变量何时脱离暂时性死区)
+  - [9. 🤔 var、let、const 到底提升了什么？](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#9--varletconst-到底提升了什么)
+  - [10. 🤔 如何看待类似“提升”这样存在“冲突”的社区术语呢？](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#10--如何看待类似提升这样存在冲突的社区术语呢)
+  - [11. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README#11--引用)
 
 ## 4. 作用域
 
@@ -125,7 +134,7 @@
   - [6. 💻 exercises.1 - 按照指定格式打印系统时间](https://tnotesjs.github.io/TNotes.javascript/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README#6--exercises1---按照指定格式打印系统时间)
   - [7. 🤔 在 js 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？](https://tnotesjs.github.io/TNotes.javascript/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README#7--在-js-的字符串中-反斜杠表示转义如何不转义输入反斜杠呢)
   - [8. ⌛️ 旧版打字机 - 转义符 `\r\n` 诞生的背景](https://tnotesjs.github.io/TNotes.javascript/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README#8-️-旧版打字机---转义符-rn-诞生的背景)
-  - [9. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README#9--references)
+  - [9. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README#9--引用)
 - [x] [0014. 标识符](https://tnotesjs.github.io/TNotes.javascript/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README)
   - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
     - [TNotes.yuque.javascript.0014](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0014)
@@ -230,13 +239,13 @@
   - [8. 💻 demos.2 - 特殊的单行注释](https://tnotesjs.github.io/TNotes.javascript/notes/0021.%20%E6%B3%A8%E9%87%8A/README#8--demos2---特殊的单行注释)
   - [9. 💻 demos.3 - 文档注释](https://tnotesjs.github.io/TNotes.javascript/notes/0021.%20%E6%B3%A8%E9%87%8A/README#9--demos3---文档注释)
   - [10. 💻 demos.4 - 区域注释](https://tnotesjs.github.io/TNotes.javascript/notes/0021.%20%E6%B3%A8%E9%87%8A/README#10--demos4---区域注释)
-  - [11. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0021.%20%E6%B3%A8%E9%87%8A/README#11--references)
+  - [11. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0021.%20%E6%B3%A8%E9%87%8A/README#11--引用)
 - [x] [0022. 字面量](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README#2--评价)
   - [3. 📒 字面量（Literal）](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README#3--字面量literal)
   - [4. 💻 demos.1 - 不同类型的字面量](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README#4--demos1---不同类型的字面量)
-  - [5. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README#5--references)
+  - [5. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README#5--引用)
 
 ## 8. 防抖、节流
 
@@ -251,7 +260,7 @@
   - [6. 🆚 防抖、节流](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#6--防抖节流)
   - [7. 💻 demos.1 - 输入框内容校验 - 防抖](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#7--demos1---输入框内容校验---防抖)
   - [8. 💻 demos.2 - 窗口尺寸变化 - 节流](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#8--demos2---窗口尺寸变化---节流)
-  - [9. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#9--references)
+  - [9. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#9--引用)
 
 ## 9. 数据类型
 
@@ -562,20 +571,20 @@
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0079.%20window.onbeforeunload/README#2--评价)
   - [3. 📒 `window.onbeforeunload`](https://tnotesjs.github.io/TNotes.javascript/notes/0079.%20window.onbeforeunload/README#3--windowonbeforeunload)
   - [4. 💻 demos.1 - `window.onbeforeunload` 基本使用](https://tnotesjs.github.io/TNotes.javascript/notes/0079.%20window.onbeforeunload/README#4--demos1---windowonbeforeunload-基本使用)
-  - [5. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0079.%20window.onbeforeunload/README#5--references)
+  - [5. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0079.%20window.onbeforeunload/README#5--引用)
 - [x] [0080. window.confirm](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#2--评价)
   - [3. 📒 `window.confirm()`](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#3--windowconfirm)
   - [4. 💻 demos.1 - 使用 `window.confirm()` 弹出确认提示框](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#4--demos1---使用-windowconfirm-弹出确认提示框)
   - [5. 💻 demos.2 - 自定义 confirm 效果](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#5--demos2---自定义-confirm-效果)
-  - [6. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#6--references)
+  - [6. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0080.%20window.confirm/README#6--引用)
 - [x] [0081. window.postMessage](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README#1--本节内容)
   - [2. 🫧 评论](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README#2--评论)
   - [3. 📒 `postMessage`](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README#3--postmessage)
   - [4. 💻 demos.1 - 使用 postMessage 实现跨标签页通信](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README#4--demos1---使用-postmessage-实现跨标签页通信)
-  - [5. 🔗 References](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README#5--references)
+  - [5. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0081.%20window.postMessage/README#5--引用)
 - [ ] [0108. DOMParser](https://tnotesjs.github.io/TNotes.javascript/notes/0108.%20DOMParser/README)
   - [1. 📒 DOMParser 概述](https://tnotesjs.github.io/TNotes.javascript/notes/0108.%20DOMParser/README#1--domparser-概述)
   - [2. 📒 解析 XML 字符串](https://tnotesjs.github.io/TNotes.javascript/notes/0108.%20DOMParser/README#2--解析-xml-字符串)

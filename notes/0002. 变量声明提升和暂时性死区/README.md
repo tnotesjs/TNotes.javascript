@@ -13,10 +13,7 @@
 - [9. 💼 interviews.1 - 下面的代码输出什么？](#9--interviews1---下面的代码输出什么)
 - [10. 💼 interviews.2 - 下面的代码输出的结果是什么？](#10--interviews2---下面的代码输出的结果是什么)
 - [11. 💼 interviews.3 - 请谈谈什么是变量声明提升？](#11--interviews3---请谈谈什么是变量声明提升)
-- [12. 🤔 let、const 真的有被提升吗？](#12--letconst-真的有被提升吗)
-- [13. 🆚 提升 ≠ 内存分配](#13--提升--内存分配)
-- [14. 🤔 var、let、const 到底提升了什么？](#14--varletconst-到底提升了什么)
-- [15. 🔗 References](#15--references)
+- [12. 🔗 引用](#12--引用)
 
 <!-- endregion:toc -->
 
@@ -196,90 +193,20 @@ function foo() {
 
 :::
 
-## 12. 🤔 let、const 真的有被提升吗？
-
-- 先说答案：
-  - **let、const 也被提升了。**
-
----
-
-- 🤔 这个问题对我们写代码有影响吗？
-  - **几乎没有**
-  - 从撸代码的层面来看，该问题其实没必要深究，我们只需要知道这一点就行 —— **使用 let、const 声明的变量，无法在声明之前访问**。至于它们到底有没有提升其实对我们撸代码没啥影响。
-
----
-
-- **记录这个问题的原因：**
-  - 看到有些人说 let、const 没有提升，有些人说有，就查阅了一下 ECMA 官方对此的描述。
-  - https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
-  - 这是 ECMA 官方文档，14.3.1 Let and Const Declarations
-
----
-
-- **ECMA 官方文档 - 原文**
-  - `let` and `const` declarations define variables that are scoped to the [running execution context](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#running-execution-context)'s LexicalEnvironment. The variables are created when their containing [Environment Record](https://tc39.es/ecma262/multipage/executable-code-and-execution-contexts.html#sec-environment-records) is instantiated but may not be accessed in any way until the variable's [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) is evaluated. A variable defined by a [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) with an [Initializer](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer) is assigned the value of its [Initializer](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer)'s [AssignmentExpression](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-AssignmentExpression) when the [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) is evaluated, not when the variable is created. If a [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) in a `let` declaration does not have an [Initializer](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer) the variable is assigned the value undefined when the [LexicalBinding](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-LexicalBinding) is evaluated.
-- 中文翻译
-  - `let`和`const`声明的变量是在其执行上下文的词法环境中定义的。**变量在其环境记录实例化时被创建，但在变量的词法绑定被求值之前，无法以任何方式访问**。如果一个`let`声明中的词法绑定有初始化器，则在词法绑定被求值时，变量被赋予初始化器的赋值表达式的值，而不是在变量创建时。如果`let`声明中的词法绑定没有初始化器，则在词法绑定被求值时，变量被赋值为`undefined`。
-    - 关键在于这句话：**变量在其环境记录实例化时被创建，但在变量的词法绑定被求值之前，无法以任何方式访问**。这句话说明了 **`let`** 和 **`const`** 声明的变量是提前被创建的（这部分称为“提升”），但在实际执行到声明语句之前，它们是不可访问的。这解释了为什么在声明之前访问这些变量会导致错误。
-- **官方对“提升”的定义** - 在 ECMAScript 规范中，变量和函数的提升是通过 **创建词法环境**（Lexical Environment）来描述的（这里所说的词法环境是指作用域 scope）。在 **创建词法环境**（Lexical Environment） 的时候，如果变量就被丢到了这个词法环境中，那就意味着被提升了。
-  - 对于 `var` 声明，ECMAScript 规范表示 **变量声明在创建词法环境时被处理**。这意味着在代码执行之前，变量已经被声明，但尚未初始化。
-  - 对于 `let` 和 `const` 声明，规范描述了这些 **变量在进入词法环境时被创建**，但它们在初始化之前处于未初始化状态，访问它们会导致 `ReferenceError`。
-  - 小结：使用 var、let、const 声明的变量都会被提升，因为它们都会在创建上下文（执行上下文环境 scope）的时候被丢到作用域中。由于 var 被丢到作用域中做了一些处理（初始化），所以在程序中提前访问 var 声明的变量。而 let、const 仅仅是丢到作用域中，但是它们并没有被初始化，所以不能在声明之前访问它们。
-- **变量在其环境记录实例化时被创建**
-  - 当你在一个作用域（例如函数或块级作用域，就是 let、const 所在的那块空间）内声明了变量（使用 `let` 或 `const`），这些变量在作用域开始时就已经“被创建”了。也就是说，JavaScript 引擎在进入这个作用域时，已经知道这些变量存在，并在内部为它们分配了空间。
-- **在变量的词法绑定（指初始化）被求值之前，无法以任何方式访问**
-  - 尽管这些变量已经被创建，但在实际执行到它们的声明语句之前，你无法访问它们。这段 **时间** 被称为暂时性死区（TDZ）。如果你在 TDZ 内尝试访问这些变量，会抛出一个 `ReferenceError`。
-    - “时间” 这个词比较有意思，在细读文档之前，一直以为 “死区” 指的是 “某一段区域范围”，实际上指的是 “时间范围”。不过代码也是按照时间一步步往下执行的，因此理解成区域也没啥毛病。
-  - 这句话中提到的额 “词法绑定求值” 是指在代码执行过程中，当 JavaScript 引擎遇到变量声明时，将变量名与实际的内存位置绑定，并将初始值赋给变量的过程。对于 let 和 const，在代码执行到声明语句时，才会进行这种赋值操作。
-
-## 13. 🆚 提升 ≠ 内存分配
-
-- 在 JavaScript 中，变量声明的提升（Hoisting）和内存分配（Memory Allocation）是两个相关但不同的步骤。
-- **提升（Hoisting）**
-  - 提升是指在 JavaScript 解释器执行代码之前，将变量和函数声明提升到其作用域的顶部。这意味着在代码运行之前，所有的变量和函数声明已经被识别（也就是说 JS 解释器已经知道这玩意儿存在了）。提升过程适用于 var、let、const 声明以及函数声明。
-- **内存分配（Memory Allocation）**
-  - 内存分配是指为变量分配内存空间以存储其值。这一步骤涉及将变量与特定的内存地址相关联。
-
-## 14. 🤔 var、let、const 到底提升了什么？
-
-- 要回答这个问题，得知道变量声明在编译阶段和执行阶段的分工。既然说是提升，一定是有些流程被提前做了。提升的本质是 **声明阶段** 被提前到作用域顶部。
-- **核心三阶段**（所有变量声明共有）：
-  1. **声明（Declaration）**：在词法环境注册标识符（作用域创建）
-  2. **初始化（Initialization）**：分配内存并设置初始值
-  3. **赋值（Assignment）**：将具体值绑定到变量（执行阶段）
-- **var 声明流程**
-  1. **编译阶段**：声明变量并 **初始化为 `undefined`**（提升）
-  2. **执行阶段**：执行赋值操作（如 `= 10`）
-- **let 声明流程**
-  1. **编译阶段**：声明变量（**未初始化**，进入暂时性死区）
-  2. **执行阶段**：
-     - 执行到 `let` 语句时初始化（默认 `undefined`）
-     - 执行赋值操作（如 `= 20`）
-- **const 声明流程**
-  1. **编译阶段**：声明变量（**未初始化**，进入暂时性死区）
-  2. **执行阶段**：执行到 `const` 语句时**同步完成初始化与赋值**（不可拆分）
-- **提升的本质**
-
-| 关键字 | 提升内容 | 表现示例 |
-| --- | --- | --- |
-| `var` | 声明 + 初始化（`undefined`） | `console.log(a); var a=10;` → `undefined` |
-| `let` | 仅声明（未初始化） | `console.log(b); let b=20;` → `ReferenceError` |
-| `const` | 仅声明（未初始化） | `console.log(c); const c=30;` → `ReferenceError` |
-
-- **结论**
-  - `var` 提升，并完成了内存分配，初始化为 `undefined`。
-  - `let` 和 `const` 提升，但在声明语句之前处于暂时性死区（TDZ），不会初始化。内存分配和初始化在代码执行到声明语句时发生。
-
-## 15. 🔗 References
+## 12. 🔗 引用
 
 - [掘金，《理解 ES6 中的 TDZ（暂时性死区）》][1]
+- [阮一峰 - 《ES6 教程》 - let 和 const 命令][7]
 - [Variables and assignment • JavaScript for impatient programmers (ES2022 edition)][2]
 - [掘金，深究一下 let、const 到底有没有提升？][3]
 - [YouTube，Variable Hoisting with LET, CONST and VAR in JavaScript][4]
 - [ECMA 官方文档，14.3.1 Let and Const Declarations][5]
+- [v8][6]
 
 [1]: https://juejin.cn/post/6844903753015885831
 [2]: https://exploringjs.com/js/book/ch_variables-assignment.html
 [3]: https://juejin.cn/post/6993676334635417614#heading-2
 [4]: https://www.youtube.com/watch?v=VbHaL_J8Ex0
 [5]: https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#sec-let-and-const-declarations
+[6]: https://github.com/v8/v8
+[7]: https://wangdoc.com/es6/let
