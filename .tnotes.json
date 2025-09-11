@@ -1,9 +1,7 @@
 {
   "author": "tnotesjs",
   "repoName": "TNotes.javascript",
-  "keywords": [
-    "TNotes.javascript"
-  ],
+  "keywords": ["TNotes.javascript"],
   "ignore_dirs": [
     ".vscode",
     "0000",
@@ -69,8 +67,8 @@
       }
     },
     {
-      "ariaLabel": "TNotes.template github 仓库链接",
-      "link": "https://github.com/tnotesjs/TNotes.template",
+      "ariaLabel": "TNotes.javascript github 仓库链接",
+      "link": "https://github.com/tnotesjs/TNotes.javascript",
       "icon": "github"
     }
   ],
