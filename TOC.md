@@ -5,7 +5,7 @@
 
 - [x] [0112. 前端学习路线 - roadmap](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README)
   - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-    - [TNotes.yuque.javascript.0112](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0112)
+    - [TNotes.yuque.javascript.0112](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0112)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#2--评价)
   - [3. 🔍 前端学习路线](https://tnotesjs.github.io/TNotes.javascript/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README#3--前端学习路线)
@@ -23,7 +23,7 @@
 
 - [x] [0001. var 关键字和变量](https://tnotesjs.github.io/TNotes.javascript/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README)
   - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-    - [TNotes.yuque.javascript.0001](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0001)
+    - [TNotes.yuque.javascript.0001](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0001)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README#2--评价)
   - [3. 💡 思维导图](https://tnotesjs.github.io/TNotes.javascript/notes/0001.%20var%20%E5%85%B3%E9%94%AE%E5%AD%97%E5%92%8C%E5%8F%98%E9%87%8F/README#3--思维导图)
@@ -54,7 +54,7 @@
   - [11. 💻 demos.8 - let 出现之前的一些历史问题](https://tnotesjs.github.io/TNotes.javascript/notes/0003.%20let%20%E5%85%B3%E9%94%AE%E5%AD%97/README#11--demos8---let-出现之前的一些历史问题)
 - [x] [0004. const 关键字](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README)
   - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-    - [TNotes.yuque.javascript.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0004)
+    - [TNotes.yuque.javascript.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0004)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README#2--评价)
   - [3. 📒 const 关键字](https://tnotesjs.github.io/TNotes.javascript/notes/0004.%20const%20%E5%85%B3%E9%94%AE%E5%AD%97/README#3--const-关键字)
@@ -137,7 +137,7 @@
   - [9. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README#9--引用)
 - [x] [0014. 标识符](https://tnotesjs.github.io/TNotes.javascript/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README)
   - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-    - [TNotes.yuque.javascript.0014](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0014)
+    - [TNotes.yuque.javascript.0014](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0014)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README#2--评价)
   - [3. 📒 标识符](https://tnotesjs.github.io/TNotes.javascript/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README#3--标识符)
@@ -251,7 +251,7 @@
 
 - [x] [0037. 防抖、节流](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README)
   - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-    - [TNotes.yuque.javascript.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0037)
+    - [TNotes.yuque.javascript.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0037)
   - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#1--本节内容)
   - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#2--评价)
   - [3. 💡 一张图说明防抖和节流的事件触发差异](https://tnotesjs.github.io/TNotes.javascript/notes/0037.%20%E9%98%B2%E6%8A%96%E3%80%81%E8%8A%82%E6%B5%81/README#3--一张图说明防抖和节流的事件触发差异)
@@ -489,6 +489,20 @@
 
 ## 10. 模块化
 
+- [x] [0115. 前端模块化发展史](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README)
+  - [1. 🎯 本节内容](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#1--本节内容)
+  - [2. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#2--评价)
+  - [3. 🤔 为什么要讲前端的模块化发展史？](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#3--为什么要讲前端的模块化发展史)
+  - [4. 🤔 学习模块化的目的是？](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#4--学习模块化的目的是)
+  - [5. 🤔 什么是模块化？](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#5--什么是模块化)
+  - [6. ⌛️ 第一阶段](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#6-️-第一阶段)
+  - [7. ⌛️ 第二阶段](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#7-️-第二阶段)
+  - [8. ⌛️ 第三阶段](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#8-️-第三阶段)
+  - [9. ⌛️ 第四阶段](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#9-️-第四阶段)
+  - [10. 📒 小结](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#10--小结)
+  - [11. 🔗 引用](https://tnotesjs.github.io/TNotes.javascript/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README#11--引用)
+- [ ] [0124. “模块”核心概念](https://tnotesjs.github.io/TNotes.javascript/notes/0124.%20%E2%80%9C%E6%A8%A1%E5%9D%97%E2%80%9D%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/README)
+  - [1. 🫧 评价](https://tnotesjs.github.io/TNotes.javascript/notes/0124.%20%E2%80%9C%E6%A8%A1%E5%9D%97%E2%80%9D%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/README#1--评价)
 - [ ] [0061. 在浏览器中引入 ESM 模块](https://tnotesjs.github.io/TNotes.javascript/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README)
 
 - [ ] [0062. ESM 绑定再导出](https://tnotesjs.github.io/TNotes.javascript/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/README)
@@ -554,14 +568,6 @@
   - [4. 💻 demo](https://tnotesjs.github.io/TNotes.javascript/notes/0072.%20CommonJS%20%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98/README#4--demo)
   - [5. 🤖 AI](https://tnotesjs.github.io/TNotes.javascript/notes/0072.%20CommonJS%20%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98/README#5--ai)
 - [ ] [0073. CommonJS 练习 - 制作一个斗地主洗牌发牌的程序](https://tnotesjs.github.io/TNotes.javascript/notes/0073.%20CommonJS%20%E7%BB%83%E4%B9%A0%20-%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%96%97%E5%9C%B0%E4%B8%BB%E6%B4%97%E7%89%8C%E5%8F%91%E7%89%8C%E7%9A%84%E7%A8%8B%E5%BA%8F/README)
-
-- [ ] [0074. 订阅发布模式](https://tnotesjs.github.io/TNotes.javascript/notes/0074.%20%E8%AE%A2%E9%98%85%E5%8F%91%E5%B8%83%E6%A8%A1%E5%BC%8F/README)
-
-- [ ] [0075. 观察者模式](https://tnotesjs.github.io/TNotes.javascript/notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README)
-
-- [ ] [0076. 使用 Array.form 来创建一个二维数组](https://tnotesjs.github.io/TNotes.javascript/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README)
-
-- [ ] [0077. encodeURIcomponent](https://tnotesjs.github.io/TNotes.javascript/notes/0077.%20encodeURIcomponent/README)
 
 
 ## 11. ⚙️ window 对象
@@ -691,7 +697,7 @@
   - [2. 📒 Spectrum](https://tnotesjs.github.io/TNotes.javascript/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README#2--spectrum)
   - [3. 💻 demos.1](https://tnotesjs.github.io/TNotes.javascript/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README#3--demos1)
 
-## 17. ⏰ html-css
+## 17. ⏰ pending
 
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://tnotesjs.github.io/TNotes.javascript/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README)
   - [1. ⏰ 从语雀搬运笔记](https://tnotesjs.github.io/TNotes.javascript/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README#1--从语雀搬运笔记)
@@ -739,3 +745,20 @@
   - [1. ⏰ 从语雀搬运笔记](https://tnotesjs.github.io/TNotes.javascript/notes/0103.%20%E9%A2%9C%E8%89%B2%E7%9A%84%20alpha%20%E9%80%9A%E9%81%93/README#1--从语雀搬运笔记)
 - [ ] [0104. 一些常见的通用 css](https://tnotesjs.github.io/TNotes.javascript/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README)
   - [1. ⏰ 从语雀搬运笔记](https://tnotesjs.github.io/TNotes.javascript/notes/0104.%20%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E9%80%9A%E7%94%A8%20css/README#1--从语雀搬运笔记)
+- [ ] [0074. 订阅发布模式](https://tnotesjs.github.io/TNotes.javascript/notes/0074.%20%E8%AE%A2%E9%98%85%E5%8F%91%E5%B8%83%E6%A8%A1%E5%BC%8F/README)
+
+- [ ] [0075. 观察者模式](https://tnotesjs.github.io/TNotes.javascript/notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README)
+
+- [ ] [0076. 使用 Array.form 来创建一个二维数组](https://tnotesjs.github.io/TNotes.javascript/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README)
+
+- [ ] [0077. encodeURIcomponent](https://tnotesjs.github.io/TNotes.javascript/notes/0077.%20encodeURIcomponent/README)
+
+
+## 18. ⏰ pending
+
+- [ ] [0123. 前端设计模式](https://tnotesjs.github.io/TNotes.javascript/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README)
+  - [1. 📝 summary](https://tnotesjs.github.io/TNotes.javascript/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README#1--summary)
+  - [2. 🔗 links](https://tnotesjs.github.io/TNotes.javascript/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README#2--links)
+  - [3. 📒 notes](https://tnotesjs.github.io/TNotes.javascript/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README#3--notes)
+  - [4. 💻 demo](https://tnotesjs.github.io/TNotes.javascript/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README#4--demo)
+  - [5. 🤖 AI](https://tnotesjs.github.io/TNotes.javascript/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README#5--ai)

@@ -3,7 +3,7 @@
 <!-- region:toc -->
 
 - [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-  - [TNotes.yuque.javascript.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/html-css-js.0004)
+  - [TNotes.yuque.javascript.0004](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0004)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 📒 const 关键字](#3--const-关键字)

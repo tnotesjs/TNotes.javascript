@@ -1,4 +1,4 @@
-# [0061.doing. 前端模块化](https://github.com/Tdahuyou/TNotes.html-css-js/tree/main/notes/0061.doing.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96)
+# [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 
 
 <!-- region:toc -->
