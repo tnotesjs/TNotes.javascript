@@ -1,7 +1,9 @@
 {
   "bilibili": [],
-  "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
+  "yuque": [
+    "javascript.0070"
+  ],
+  "done": true,
+  "enableDiscussions": true,
   "id": "9a4cc3d9-bf9c-44dd-b05b-3934a0614672"
 }
