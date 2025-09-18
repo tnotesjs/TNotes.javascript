@@ -2,16 +2,18 @@
 
 <!-- region:toc -->
 
+- [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+  - [TNotes.yuque.javascript.0068](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0068)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 📒 AMD 简介](#3--amd-简介)
 - [4. 📒 demos 需求 - 计算两数相乘](#4--demos-需求---计算两数相乘)
-- [5. 💻 demos.1 - 写法 1](#5--demos1---写法-1)
-- [6. 💻 demos.2 - 写法 2](#6--demos2---写法-2)
-- [7. 💻 demos.3 - 写法 3](#7--demos3---写法-3)
-- [8. 💻 demos.4 - 写法 4](#8--demos4---写法-4)
-- [9. 💻 demos.5 - 写法 5](#9--demos5---写法-5)
-- [10. 💻 demos.6 - 写法 6](#10--demos6---写法-6)
+- [5. 💻 demos.1 - 写法 1 - AMD 经典写法](#5--demos1---写法-1---amd-经典写法)
+- [6. 💻 demos.2 - 写法 2 - 可以通过 `data-main` 来指定入口](#6--demos2---写法-2---可以通过-data-main-来指定入口)
+- [7. 💻 demos.3 - 写法 3 - 注意模块的相对路径问题](#7--demos3---写法-3---注意模块的相对路径问题)
+- [8. 💻 demos.4 - 写法 4 - 模块路径的简写形式](#8--demos4---写法-4---模块路径的简写形式)
+- [9. 💻 demos.5 - 写法 5 - 支持 AMD + 类 CommonJS 风格](#9--demos5---写法-5---支持-amd--类-commonjs-风格)
+- [10. 💻 demos.6 - 写法 6 - 导入导出都支持类 CommonJS 风格](#10--demos6---写法-6---导入导出都支持类-commonjs-风格)
 - [11. 🔗 引用](#11--引用)
 
 <!-- endregion:toc -->
@@ -23,7 +25,8 @@
 ## 2. 🫧 评价
 
 - 通过一个简单的「计算两数相乘」的 demo 来了解一下 AMD 规范的导入、导出写法。
-- AMD 现在已经基本用不到了，快速过一遍就行。
+- 通过笔记中记录的这些 demos，你会发现 RequireJS 是非常灵活的，它兼容了多种模块导入、导出的写法。
+- 不过 AMD 现在已经基本用不到了，快速过一遍 demos 就行。
 
 ## 3. 📒 AMD 简介
 
@@ -84,7 +87,7 @@ define(function (require, exports, module) {
   2. 通过 amd 规范来引入模块并使用
 - 功能其实非常简单，下面将通过多种等效的写法来认识 AMD 规范的语法。
 
-## 5. 💻 demos.1 - 写法 1
+## 5. 💻 demos.1 - 写法 1 - AMD 经典写法
 
 ::: code-group
 
@@ -94,7 +97,7 @@ define(function (require, exports, module) {
 
 :::
 
-## 6. 💻 demos.2 - 写法 2
+## 6. 💻 demos.2 - 写法 2 - 可以通过 `data-main` 来指定入口
 
 ::: code-group
 
@@ -106,53 +109,58 @@ define(function (require, exports, module) {
 
 :::
 
-## 7. 💻 demos.3 - 写法 3
+## 7. 💻 demos.3 - 写法 3 - 注意模块的相对路径问题
 
 ::: code-group
 
 <<< ./demos/3/1.html {}
 
-<<< ./demos/3/scripts/1.js {}
+<<< ./demos/3/scripts/1.js {} [./scripts/1.js]
 
-<<< ./demos/3/scripts/main.js {}
+<<< ./demos/3/scripts/main.js {} [./scripts/main.js]
 
 :::
 
-## 8. 💻 demos.4 - 写法 4
+## 8. 💻 demos.4 - 写法 4 - 模块路径的简写形式
 
 ::: code-group
 
 <<< ./demos/4/1.html {}
 
-<<< ./demos/4/scripts/1.js {}
+<<< ./demos/4/scripts/1.js {} [./scripts/1.js]
 
-<<< ./demos/4/scripts/main.js {}
+<<< ./demos/4/scripts/main.js {} [./scripts/main.js]
 
 :::
 
-## 9. 💻 demos.5 - 写法 5
+## 9. 💻 demos.5 - 写法 5 - 支持 AMD + 类 CommonJS 风格
 
 ::: code-group
 
-<<< ./demos/1/1.html {}
+<<< ./demos/5/1.html {}
 
-<<< ./demos/5/scripts/1.js {}
+<<< ./demos/5/scripts/1.js {} [./scripts/1.js]
 
-<<< ./demos/5/scripts/main.js {}
+<<< ./demos/5/scripts/main.js {} [./scripts/main.js]
 
 :::
 
-## 10. 💻 demos.6 - 写法 6
+- `1.js` 用的是 AMD 风格
+- `main.js` 用的是 CommonJS 风格
+
+## 10. 💻 demos.6 - 写法 6 - 导入导出都支持类 CommonJS 风格
 
 ::: code-group
 
-<<< ./demos/1/1.html {}
+<<< ./demos/6/1.html {}
 
-<<< ./demos/6/scripts/1.js {}
+<<< ./demos/6/scripts/1.js {} [./scripts/1.js]
 
-<<< ./demos/6/scripts/main.js {}
+<<< ./demos/6/scripts/main.js {} [./scripts/main.js]
 
 :::
+
+- `1.js` 和 `main.js` 用的都是 CommonJS 风格
 
 ## 11. 🔗 引用
 
