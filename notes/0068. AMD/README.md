@@ -166,6 +166,10 @@ define(function (require, exports, module) {
 
 - [require.js download][1]
 - [require.js start][2]
+- [requirejs github][3]
+- [AMD 规范 - 阮一峰的网络日志][4]
 
 [1]: https://requirejs.org/docs/download.html#requirejs
 [2]: https://requirejs.org/docs/start.html
+[3]: https://github.com/requirejs/requirejs
+[4]: https://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html
