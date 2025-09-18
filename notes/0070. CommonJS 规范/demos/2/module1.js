@@ -1,4 +1,6 @@
 // module1.js
+let count = 0
+
 function getNumber() {
   count++
   return count
@@ -9,5 +11,12 @@ const user = {
   age: 24,
 }
 
+// 导出成员：
 exports.getNumber = getNumber
 exports.user = user
+
+// 等效写法：
+// module.exports = {
+//   getNumber,
+//   user
+// }
