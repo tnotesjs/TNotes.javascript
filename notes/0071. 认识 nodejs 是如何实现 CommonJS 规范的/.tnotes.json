@@ -1,9 +1,11 @@
 {
   "bilibili": [],
-  "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
+  "yuque": [
+    "javascript.0071"
+  ],
+  "done": true,
+  "enableDiscussions": true,
   "created_at": 1740924811000,
-  "updated_at": 1758181918000,
+  "updated_at": 1758185297184,
   "id": "67792ed9-4e02-4902-963a-b51c4e3271f2"
 }
