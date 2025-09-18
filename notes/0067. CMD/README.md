@@ -1,19 +1,12 @@
 # [0067. CMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD)
 
-
 <!-- region:toc -->
 
-- [1. 📝 summary](#1--summary)
-- [2. 🔗 links](#2--links)
-- [3. 📒 notes](#3--notes)
-- [4. 💻 demo](#4--demo)
-- [5. 🤖 AI](#5--ai)
+- [1. 🎯 本节内容](#1--本节内容)
+- [2. 🫧 评论](#2--评论)
 
 <!-- endregion:toc -->
 
-## 1. 📝 summary
+## 1. 🎯 本节内容
 
-## 2. 🔗 links
-## 3. 📒 notes
-## 4. 💻 demo
-## 5. 🤖 AI
+## 2. 🫧 评论

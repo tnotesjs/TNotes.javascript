@@ -512,6 +512,10 @@
 
 ## 10. 模块化
 
+- [x] [0126. 模块化 - 概述](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0126.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%A6%82%E8%BF%B0/README.md)
+  - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0126.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%A6%82%E8%BF%B0/README.md#1--本节内容)
+  - [2. 🫧 评价](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0126.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%A6%82%E8%BF%B0/README.md#2--评价)
+  - [3. ⌛️ 时间线](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0126.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%A6%82%E8%BF%B0/README.md#3-️-时间线)
 - [x] [0115. 前端模块化发展史](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README.md)
   - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README.md#1--本节内容)
   - [2. 🫧 评价](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README.md#2--评价)
@@ -581,14 +585,20 @@
   - [5. 🤔 CommonJS 那一套搬运到浏览器中使用的核心问题是什么？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20AMD%E3%80%81CMD%20%E7%9A%84%E5%87%BA%E7%8E%B0%E8%83%8C%E6%99%AF/README.md#5--commonjs-那一套搬运到浏览器中使用的核心问题是什么)
   - [6. 🤔 AMD、CMD 是什么？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20AMD%E3%80%81CMD%20%E7%9A%84%E5%87%BA%E7%8E%B0%E8%83%8C%E6%99%AF/README.md#6--amdcmd-是什么)
 - [ ] [0067. CMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md)
-  - [1. 📝 summary](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#1--summary)
-  - [2. 🔗 links](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#2--links)
-  - [3. 📒 notes](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#3--notes)
-  - [4. 💻 demo](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#4--demo)
-  - [5. 🤖 AI](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#5--ai)
+  - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#1--本节内容)
+  - [2. 🫧 评论](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#2--评论)
 - [ ] [0068. AMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md)
   - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#1--本节内容)
   - [2. 🫧 评价](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#2--评价)
+  - [3. 📒 AMD 简介](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#3--amd-简介)
+  - [4. 📒 demos 需求 - 计算两数相乘](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#4--demos-需求---计算两数相乘)
+  - [5. 💻 demos.1 - 写法 1](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#5--demos1---写法-1)
+  - [6. 💻 demos.2 - 写法 2](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#6--demos2---写法-2)
+  - [7. 💻 demos.3 - 写法 3](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#7--demos3---写法-3)
+  - [8. 💻 demos.4 - 写法 4](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#8--demos4---写法-4)
+  - [9. 💻 demos.5 - 写法 5](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#9--demos5---写法-5)
+  - [10. 💻 demos.6 - 写法 6](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#10--demos6---写法-6)
+  - [11. 🔗 引用](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md#11--引用)
 - [ ] [0061. 在浏览器中引入 ESM 模块](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README.md)
 
 - [ ] [0062. ESM 绑定再导出](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/README.md)
@@ -623,6 +633,10 @@
   - [3. 📒 notes](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0069.%20JS%20%E5%AF%BC%E5%85%A5%E6%96%AD%E8%A8%80/README.md#3--notes)
   - [4. 💻 demo](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0069.%20JS%20%E5%AF%BC%E5%85%A5%E6%96%AD%E8%A8%80/README.md#4--demo)
   - [5. 🤖 AI](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0069.%20JS%20%E5%AF%BC%E5%85%A5%E6%96%AD%E8%A8%80/README.md#5--ai)
+- [ ] [0127. 模块化 - 总结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0127.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%80%BB%E7%BB%93/README.md)
+  - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0127.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%80%BB%E7%BB%93/README.md#1--本节内容)
+  - [2. 🫧 评价](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0127.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%80%BB%E7%BB%93/README.md#2--评价)
+  - [3. 🆚 JavaScript 不同模块化方案的对比](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0127.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%80%BB%E7%BB%93/README.md#3--javascript-不同模块化方案的对比)
 
 ## 11. ⚙️ window 对象
 
