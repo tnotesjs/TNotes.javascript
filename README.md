@@ -601,6 +601,9 @@
 - [ ] [0067. CMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md)
   - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#1--本节内容)
   - [2. 🫧 评论](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#2--评论)
+  - [3. 📒 CMD 简介](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#3--cmd-简介)
+  - [4. 💻 demos.1 - Sea.js 的基本使用](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#4--demos1---seajs-的基本使用)
+  - [5. 🔗 引用](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md#5--引用)
 - [ ] [0061. 在浏览器中引入 ESM 模块](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README.md)
 
 - [ ] [0062. ESM 绑定再导出](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/README.md)

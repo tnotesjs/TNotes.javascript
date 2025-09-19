@@ -46,13 +46,13 @@
 <script data-main="./index.js" src="./require.js"></script>
 ```
 
-- `require.js` 包的下载链接：[require.js download][1]
-  - `require.js` 实现了 AMD 模块化规范。
-- `data-main`：属性值是 入口文件的路径
+- `data-main` 属性值是 入口文件的路径
   - require.js 会读取 script 标签身上的 data-main 属性的属性值，然后创建一个 script 标签，并将它的 src 属性的属性值设置为从 data-main 中读取到的属性值，然后再插入到页面中。
   - ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-18-20-33-06.png)
   - 引用 [require.js start][2]
-- `src`：属性值是 require.js 文件
+- `src` 属性值是 require.js 文件
+  - `require.js` 包的下载链接：[require.js download][1]
+  - `require.js` 实现了 AMD 模块化规范。
 
 ```js
 // 需要引入 require.js 文件，该文件可以在网上下载。
@@ -77,8 +77,7 @@ define(function (require, exports, module) {
 */
 ```
 
-- RequireJS 实现了 AMD 规范。
-- RequireJS 额外兼容了一部分 CommonJS 风格的写法（称为 Simplified CommonJS Wrapping），方便开发者迁移。
+- RequireJS 实现了 AMD 规范，同时还额外兼容了一部分 CommonJS 风格的写法（称为 Simplified CommonJS Wrapping），方便开发者迁移。
 
 ## 4. 📒 demos 需求 - 计算两数相乘
 
