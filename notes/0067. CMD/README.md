@@ -2,6 +2,8 @@
 
 <!-- region:toc -->
 
+- [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+  - [TNotes.yuque.javascript.0067](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0067)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评论](#2--评论)
 - [3. 📒 CMD 简介](#3--cmd-简介)
@@ -33,7 +35,8 @@
   - Sea.js 是一个遵循 CMD 规范的模块加载器，你可以在 [Sea.js 官网][2] 下载源码。
   - Sea.js 是一位阿里的前工程师 [玉伯][7] 写的。
   - ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-07-42-26.png)
-  - 图片来源： [yuque garden][4] ，sea.js 实现了 CMD 规范，在 CMD 中，导入和导出模块的代码，都必须放置在 define 函数中。
+  - 图片来源： [yuque garden][4]
+  - Sea.js 实现了 CMD 规范，在 CMD 中，导入和导出模块的代码，都必须放置在 define 函数中。
 - AMD vs. CMD
   - CMD 和 AMD 的实现原理都差不多，早期流行这么一种观点：CMD 更加好用，因为它更加类似于 CommonJS 规范。
   - 历史：虽然实现了 AMD 规范的 require.js 目前也支持类似于 CommonJS 规范的写法，但是 sea.js 更早支持类似于 CommonJS 规范的写法。
@@ -89,6 +92,8 @@ define(function (require, exports, module) {
 
 :::
 
+- 依赖关系：
+  - ![svg](./assets/1.svg)
 - 打开 index.html 控制台输出结果：
   - ![图 1](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-08-34-40.png)
 
@@ -102,7 +107,6 @@ define(function (require, exports, module) {
   - [微博 - 玉伯也叫黑侠][1]
   - [github - lifesinger][7]
   - [x - lifesinger][6]
-  - Sea.js 作者【玉伯】的微博
 - [yuque garden][4]
 
 [1]: https://weibo.com/lifesinger
