@@ -287,6 +287,15 @@
 
 ## 9. 数据类型
 
+- [x] [0129. Number 类型的取值范围【扩展】](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md)
+  - [1. 🎯 本节内容](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#1--本节内容)
+  - [2. 🫧 评价](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#2--评价)
+  - [3. 🤔 JS 中的整数是 32 位吗？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#3--js-中的整数是-32-位吗)
+  - [4. 🤔 “整数安全范围”是 `(-2^63, 2^63 - 1)` 吗？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#4--整数安全范围是--263-263---1-吗)
+  - [5. 🤔 **为什么 JS 中整数的安全范围是 `(-(2^53 - 1))` 到 `(2^53 - 1)`？**](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#5--为什么-js-中整数的安全范围是--253---1-到-253---1)
+  - [6. 🤔 为什么有些时候会说 JS 中的整数是 32 位的呢？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#6--为什么有些时候会说-js-中的整数是-32-位的呢)
+  - [7. 🤔 位运算的时候会自动隐式转换，这有官方依据吗？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#7--位运算的时候会自动隐式转换这有官方依据吗)
+  - [8. 🔗 引用](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0129.%20Number%20%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md#8--引用)
 - [ ] [0023. boolean 类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md)
   - [1. 📝 summary](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md#1--summary)
   - [2. 🔗 links](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0023.%20boolean%20%E7%B1%BB%E5%9E%8B/README.md#2--links)
