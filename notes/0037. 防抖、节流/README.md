@@ -2,8 +2,6 @@
 
 <!-- region:toc -->
 
-- [📂 TNotes.yuque](https://www.yuque.com/tdahuyou/tnotes.yuque/)
-  - [TNotes.yuque.javascript.0037](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0037)
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 💡 一张图说明防抖和节流的事件触发差异](#3--一张图说明防抖和节流的事件触发差异)
