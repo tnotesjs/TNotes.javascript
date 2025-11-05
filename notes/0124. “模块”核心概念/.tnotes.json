@@ -1,12 +1,11 @@
 {
   "bilibili": [],
   "tnotes": [],
-  "yuque": [
-    "javascript.0124"
-  ],
+  "yuque": ["javascript.0124"],
   "done": true,
+  "deprecated": false,
   "enableDiscussions": true,
+  "id": "16cb6799-d8f1-470b-8b90-20fe43b7ff02",
   "created_at": 1758172029013,
-  "updated_at": 1758172029013,
-  "id": "16cb6799-d8f1-470b-8b90-20fe43b7ff02"
+  "updated_at": 1758172029013
 }

@@ -2,25 +2,7 @@
 
 <!-- region:toc -->
 
-- [html-css-js](#html-css-js)
-  - [1. 前端学习路线](#1-前端学习路线)
-  - [2. 程序执行环境](#2-程序执行环境)
-  - [3. 变量](#3-变量)
-  - [4. 作用域](#4-作用域)
-  - [5. 语句和表达式](#5-语句和表达式)
-  - [6. 符号](#6-符号)
-  - [7. 流程控制语句](#7-流程控制语句)
-  - [8. 防抖、节流](#8-防抖节流)
-  - [9. 数据类型](#9-数据类型)
-  - [10. 模块化](#10-模块化)
-  - [11. ⚙️ window 对象](#11-️-window-对象)
-  - [12. css 属性](#12-css-属性)
-  - [13. html 元素](#13-html-元素)
-  - [14. prettier](#14-prettier)
-  - [15. eslint](#15-eslint)
-  - [16. color picker](#16-color-picker)
-  - [17. ⏰ pending](#17--pending)
-  - [18. ⏰ pending](#18--pending)
+
 
 <!-- endregion:toc -->
 
@@ -206,3 +188,5 @@
 ## 18. ⏰ pending
 
 - [ ] [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
+
+- [ ] [0000](https://github.com/tnotesjs/TNotes.introduction/tree/main/notes/0000/README.md)

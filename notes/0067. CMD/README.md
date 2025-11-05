@@ -2,6 +2,13 @@
 
 <!-- region:toc -->
 
+::: details 📚 相关资源
+
+- [📂 TNotes.yuque（笔记附件资源）](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+  - [TNotes.yuque.javascript.0067](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0067)
+
+:::
+
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评论](#2--评论)
 - [3. 📒 CMD 简介](#3--cmd-简介)

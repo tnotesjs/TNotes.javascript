@@ -2,6 +2,13 @@
 
 <!-- region:toc -->
 
+::: details 📚 相关资源
+
+- [📂 TNotes.yuque（笔记附件资源）](https://www.yuque.com/tdahuyou/tnotes.yuque/)
+  - [TNotes.yuque.javascript.0001](https://www.yuque.com/tdahuyou/tnotes.yuque/javascript.0001)
+
+:::
+
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 💡 思维导图](#3--思维导图)
