@@ -209,3 +209,4 @@
 - [ ] [0000](https://github.com/tnotesjs/TNotes.introduction/tree/main/notes/0000/README.md)
 - [ ] [0000](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0000/README.md)
 - [ ] [0000](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0000/README.md)
+- [ ] [0000](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0000/README.md)
