@@ -1,4 +1,4 @@
-# [0071. nodejs 是如何实现 CommonJS 规范的](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0071.%20nodejs%20%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%20CommonJS%20%E8%A7%84%E8%8C%83%E7%9A%84)
+# [0071. NodeJS 中 CommonJS 规范的实现原理](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0071.%20NodeJS%20%E4%B8%AD%20CommonJS%20%E8%A7%84%E8%8C%83%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
 
 <!-- region:toc -->
 

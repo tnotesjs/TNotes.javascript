@@ -119,7 +119,7 @@
 - [x] [0115. 前端模块化发展史](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README.md)
 - [x] [0124. “模块”核心概念](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20%E2%80%9C%E6%A8%A1%E5%9D%97%E2%80%9D%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/README.md)
 - [x] [0070. CommonJS 规范](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0070.%20CommonJS%20%E8%A7%84%E8%8C%83/README.md)
-- [x] [0071. nodejs 是如何实现 CommonJS 规范的](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0071.%20nodejs%20%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%20CommonJS%20%E8%A7%84%E8%8C%83%E7%9A%84/README.md)
+- [x] [0071. NodeJS 中 CommonJS 规范的实现原理](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0071.%20NodeJS%20%E4%B8%AD%20CommonJS%20%E8%A7%84%E8%8C%83%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/README.md)
 - [x] [0072. CommonJS 模块缓存](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20CommonJS%20%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98/README.md)
 - [x] [0073. CommonJS 练习 - 制作一个斗地主洗牌发牌的程序](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20CommonJS%20%E7%BB%83%E4%B9%A0%20-%20%E5%88%B6%E4%BD%9C%E4%B8%80%E4%B8%AA%E6%96%97%E5%9C%B0%E4%B8%BB%E6%B4%97%E7%89%8C%E5%8F%91%E7%89%8C%E7%9A%84%E7%A8%8B%E5%BA%8F/README.md)
 - [x] [0125. AMD、CMD 的出现背景](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20AMD%E3%80%81CMD%20%E7%9A%84%E5%87%BA%E7%8E%B0%E8%83%8C%E6%99%AF/README.md)
