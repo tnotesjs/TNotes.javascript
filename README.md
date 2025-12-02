@@ -19,7 +19,6 @@
 - [15. eslint](#15-eslint)
 - [16. color picker](#16-color-picker)
 - [17. ⏰ pending](#17--pending)
-- [18. ⏰ pending](#18--pending)
 
 <!-- endregion:toc -->
 
@@ -116,7 +115,7 @@
 
 ## 10. 模块化
 
-- [x] [0126. 模块化 - 概述](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0126.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%A6%82%E8%BF%B0/README.md)
+- [x] [0126. 模块化](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0126.%20%E6%A8%A1%E5%9D%97%E5%8C%96/README.md)
 - [x] [0115. 前端模块化发展史](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0115.%20%E5%89%8D%E7%AB%AF%E6%A8%A1%E5%9D%97%E5%8C%96%E5%8F%91%E5%B1%95%E5%8F%B2/README.md)
 - [x] [0124. “模块”核心概念](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20%E2%80%9C%E6%A8%A1%E5%9D%97%E2%80%9D%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/README.md)
 - [x] [0070. CommonJS 规范](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0070.%20CommonJS%20%E8%A7%84%E8%8C%83/README.md)
@@ -201,12 +200,4 @@
 - [ ] [0075. 观察者模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0075.%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/README.md)
 - [ ] [0076. 使用 Array.form 来创建一个二维数组](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md)
 - [ ] [0077. encodeURIcomponent](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0077.%20encodeURIcomponent/README.md)
-
-## 18. ⏰ pending
-
 - [ ] [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
-
-- [ ] [0000](https://github.com/tnotesjs/TNotes.introduction/tree/main/notes/0000/README.md)
-- [ ] [0000](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0000/README.md)
-- [ ] [0000](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0000/README.md)
-- [ ] [0000](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0000/README.md)

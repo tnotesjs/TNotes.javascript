@@ -314,8 +314,8 @@
     "collapsed": true,
     "items": [
       {
-        "text": "✅ 0126. 模块化 - 概述",
-        "link": "/notes/0126. 模块化 - 概述/README"
+        "text": "✅ 0126. 模块化",
+        "link": "/notes/0126. 模块化/README"
       },
       {
         "text": "✅ 0115. 前端模块化发展史",
@@ -610,13 +610,7 @@
       {
         "text": "⏰ 0077. encodeURIcomponent",
         "link": "/notes/0077. encodeURIcomponent/README"
-      }
-    ]
-  },
-  {
-    "text": "18. ⏰ pending",
-    "collapsed": true,
-    "items": [
+      },
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"

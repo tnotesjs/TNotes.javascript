@@ -1,0 +1,352 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "ee5K1sL0ZqVCAqLcuU7vd",
+      "type": "text",
+      "x": 366.0385043578285,
+      "y": 115.25456199999999,
+      "width": 357.2198791503906,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 344542363,
+      "version": 145,
+      "versionNonce": 1756569179,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "xJsYtD6FVF4yc8BtlajHB",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1764600893490,
+      "link": null,
+      "locked": false,
+      "text": "阶段 1：CommonJS (实现代表 Node.js)",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "阶段 1：CommonJS (实现代表 Node.js)",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "lyeA1Pis53SYubDuR6uck",
+      "type": "text",
+      "x": 366.03850435782846,
+      "y": 224.06809600585936,
+      "width": 360,
+      "height": 125,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a2",
+      "roundness": null,
+      "seed": 1045348763,
+      "version": 230,
+      "versionNonce": 749067893,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "xJsYtD6FVF4yc8BtlajHB",
+          "type": "arrow"
+        },
+        {
+          "id": "IE5QfmxpygS-6S_z0CCzV",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1764601044863,
+      "link": null,
+      "locked": false,
+      "text": "问题：CommonJS 虽好\n但是它无法很好的应用于浏览器端\n\n为了解决浏览器端模块化规范的问题\n社区提出的两条比较经典的模块化路线：",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "问题：CommonJS 虽好\n但是它无法很好的应用于浏览器端\n\n为了解决浏览器端模块化规范的问题\n社区提出的两条比较经典的模块化路线：",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "FBBjDvVzFSt7XWoc1kCJU",
+      "type": "text",
+      "x": 366.0385037328285,
+      "y": 426.8458389548715,
+      "width": 266.9198913574219,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a3",
+      "roundness": null,
+      "seed": 167094587,
+      "version": 162,
+      "versionNonce": 1594040821,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "IE5QfmxpygS-6S_z0CCzV",
+          "type": "arrow"
+        },
+        {
+          "id": "uXdJyi2u7Zt4s36EcnlKk",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1764601049097,
+      "link": null,
+      "locked": false,
+      "text": "阶段 2：\nAMD（实现代表 RequireJS）\nCMD（实现代表 SeaJS）",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "阶段 2：\nAMD（实现代表 RequireJS）\nCMD（实现代表 SeaJS）",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "yM-nZidgkQ8jabNCQPBHZ",
+      "type": "text",
+      "x": 366.03850370939114,
+      "y": 599.2448287165903,
+      "width": 289.39990234375,
+      "height": 75,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a5",
+      "roundness": null,
+      "seed": 1778172507,
+      "version": 220,
+      "versionNonce": 1962563067,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "id": "uXdJyi2u7Zt4s36EcnlKk",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1764601054147,
+      "link": null,
+      "locked": false,
+      "text": "阶段 3：ESM 官方标准出现\n最终 ECMAScript 官方统一标准\nES Module 也是目前的通用标准",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "阶段 3：ESM 官方标准出现\n最终 ECMAScript 官方统一标准\nES Module 也是目前的通用标准",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "xJsYtD6FVF4yc8BtlajHB",
+      "type": "arrow",
+      "x": 512.9585174508795,
+      "y": 149.64518490764823,
+      "width": 0,
+      "height": 67.33470412792639,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a8",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1118941083,
+      "version": 118,
+      "versionNonce": 1273737179,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1764601065903,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          67.33470412792639
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "ee5K1sL0ZqVCAqLcuU7vd",
+        "focus": 0.17742532446691045,
+        "gap": 9.390622907648236
+      },
+      "endBinding": {
+        "elementId": "lyeA1Pis53SYubDuR6uck",
+        "focus": -0.1837777050386053,
+        "gap": 7.088206970284745
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "IE5QfmxpygS-6S_z0CCzV",
+      "type": "arrow",
+      "x": 505.01576651769795,
+      "y": 359.7688726517888,
+      "width": 0,
+      "height": 59.828432883785865,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aB",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1738025627,
+      "version": 235,
+      "versionNonce": 876795419,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1764601063744,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          59.828432883785865
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "lyeA1Pis53SYubDuR6uck",
+        "focus": 0.22790409911183634,
+        "gap": 10.700776645929409
+      },
+      "endBinding": {
+        "elementId": "FBBjDvVzFSt7XWoc1kCJU",
+        "focus": 0.041340621548287076,
+        "gap": 7.248533419296848
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    },
+    {
+      "id": "uXdJyi2u7Zt4s36EcnlKk",
+      "type": "arrow",
+      "x": 499.2640253917489,
+      "y": 512.9850286576483,
+      "width": 0,
+      "height": 71.79036044315274,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "aC",
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1962240315,
+      "version": 344,
+      "versionNonce": 268385691,
+      "isDeleted": false,
+      "boundElements": [],
+      "updated": 1764601058825,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          71.79036044315274
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": {
+        "elementId": "FBBjDvVzFSt7XWoc1kCJU",
+        "focus": 0.0017565121774803648,
+        "gap": 11.139189702776775
+      },
+      "endBinding": {
+        "elementId": "yM-nZidgkQ8jabNCQPBHZ",
+        "focus": -0.07929808819277259,
+        "gap": 14.46943961578927
+      },
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "elbowed": false
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
