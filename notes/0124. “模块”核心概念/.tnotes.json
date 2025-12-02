@@ -1,12 +1,14 @@
 {
   "bilibili": [],
   "tnotes": [],
-  "yuque": ["javascript.0124"],
+  "yuque": [
+    "javascript.0124"
+  ],
   "done": true,
   "deprecated": false,
   "enableDiscussions": true,
-  "description": "",
+  "description": "“模块”的核心概念（比如模块的导入、导出）是所有编程语言的通识，一通百通，理解这些概念多少能加深我们对模块化的认识。",
   "id": "16cb6799-d8f1-470b-8b90-20fe43b7ff02",
   "created_at": 1758172029013,
-  "updated_at": 1764682296119
+  "updated_at": 1764687443581
 }

@@ -330,8 +330,8 @@
         "link": "/notes/0070. CommonJS 规范/README"
       },
       {
-        "text": "✅ 0071. 认识 nodejs 是如何实现 CommonJS 规范的",
-        "link": "/notes/0071. 认识 nodejs 是如何实现 CommonJS 规范的/README"
+        "text": "✅ 0071. nodejs 是如何实现 CommonJS 规范的",
+        "link": "/notes/0071. nodejs 是如何实现 CommonJS 规范的/README"
       },
       {
         "text": "✅ 0072. CommonJS 模块缓存",
