@@ -322,24 +322,8 @@
         "link": "/notes/0115. 前端模块化发展史/README"
       },
       {
-        "text": "✅ 0124. “模块”核心概念",
-        "link": "/notes/0124. “模块”核心概念/README"
-      },
-      {
-        "text": "✅ 0070. CommonJS 规范",
-        "link": "/notes/0070. CommonJS 规范/README"
-      },
-      {
-        "text": "✅ 0071. NodeJS 中 CommonJS 规范的实现原理",
-        "link": "/notes/0071. NodeJS 中 CommonJS 规范的实现原理/README"
-      },
-      {
-        "text": "✅ 0073. CommonJS 练习 - 制作一个斗地主洗牌发牌的程序",
-        "link": "/notes/0073. CommonJS 练习 - 制作一个斗地主洗牌发牌的程序/README"
-      },
-      {
-        "text": "✅ 0125. AMD、CMD 的出现背景",
-        "link": "/notes/0125. AMD、CMD 的出现背景/README"
+        "text": "✅ 0070. CommonJS",
+        "link": "/notes/0070. CommonJS/README"
       },
       {
         "text": "✅ 0068. AMD",
