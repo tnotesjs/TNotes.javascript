@@ -5,8 +5,8 @@
   "done": true,
   "deprecated": false,
   "enableDiscussions": true,
-  "description": "",
+  "description": "和 AMD 一样，CMD 也可以说几乎完全退出历史舞台了，很少场景会使用到它，简单了解一下它的导入导出写法，能读懂程序即可。",
   "id": "7e127e70-b0f8-4adc-8de8-75477d5e7c69",
   "created_at": 1740924811000,
-  "updated_at": 1758357452879
+  "updated_at": 1765112077398
 }

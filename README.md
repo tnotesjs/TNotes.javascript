@@ -2,7 +2,7 @@
 
 <!-- region:toc -->
 
-- [1. 前端学习路线](#1-前端学习路线)
+- [1. 学习资料](#1-学习资料)
 - [2. 程序执行环境](#2-程序执行环境)
 - [3. 变量](#3-变量)
 - [4. 作用域](#4-作用域)
@@ -22,9 +22,9 @@
 
 <!-- endregion:toc -->
 
-## 1. 前端学习路线
+## 1. 学习资料
 
-- [x] [0112. 前端学习路线 - roadmap](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%20-%20roadmap/README.md)
+- [x] [0112. 前端学习路线](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/README.md)
 
 ## 2. 程序执行环境
 

@@ -11,7 +11,11 @@
 
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评论](#2--评论)
-- [3. 📒 CMD 简介](#3--cmd-简介)
+- [3. 🤔 CMD 是什么？](#3--cmd-是什么)
+  - [3.1. CMD](#31-cmd)
+  - [3.2. Sea.js 简介](#32-seajs-简介)
+  - [3.3. 基本用法](#33-基本用法)
+  - [3.4. 🆚 AMD vs CMD](#34--amd-vs-cmd)
 - [4. 💻 demos.1 - Sea.js 的基本使用](#4--demos1---seajs-的基本使用)
 - [5. 🔗 引用](#5--引用)
 
@@ -23,48 +27,71 @@
 
 ## 2. 🫧 评论
 
-- CMD 现在基本也不用了，简单看下「demo」，了解下 CMD 的模块导入、导出写法即可。
+和 AMD 一样，CMD 也可以说几乎完全退出历史舞台了，很少场景会使用到它，简单了解一下它的导入导出写法，能读懂程序即可。
 
-## 3. 📒 CMD 简介
+## 3. 🤔 CMD 是什么？
 
-- CMD 全称是 **Common Module Definition**，公共/通用模块定义规范
-  - CMD 是另一种用于浏览器端的模块化规范，由中国程序员玉伯提出。
-- **代表实现：** Sea.js
-- **核心思想：** **就近依赖**。
-  - 它只在需要使用模块时才进行下载和执行。
-  - 它与 AMD 类似，但是更加注重模块的延迟执行，**依赖就近**，延迟执行。
-- **优点：** 逻辑清晰，模块加载时机更符合 CommonJS 的语法习惯。
-- **缺点：** 依赖不能并行加载，可能导致 Cascading network requests（级联式网络请求），在网络条件差时，性能表现不如 AMD。
-  - 通用模块定义，与 AMD 类似，但是在模块定义的方式和加载的时机上有所不同
-- Sea.js
-  - Sea.js 是一个遵循 CMD 规范的模块加载器，你可以在 [Sea.js 官网][2] 下载源码。
-  - Sea.js 是一位阿里的前工程师 [玉伯][7] 写的。
-  - ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-07-42-26.png)
-  - 图片来源： [yuque garden][4]
-  - Sea.js 实现了 CMD 规范，在 CMD 中，导入和导出模块的代码，都必须放置在 define 函数中。
-- AMD vs. CMD
-  - CMD 和 AMD 的实现原理都差不多，早期流行这么一种观点：CMD 更加好用，因为它更加类似于 CommonJS 规范。
-  - 历史：虽然实现了 AMD 规范的 require.js 目前也支持类似于 CommonJS 规范的写法，但是 sea.js 更早支持类似于 CommonJS 规范的写法。
-  - 现状（24 年）：**AMD 和 CMD 基本都退出历史舞台了，目前更加主流的是 CommonJS、ES Module**。
+### 3.1. CMD
+
+CMD（Common Module Definition）是一种通用模块定义规范，由中国程序员玉伯提出，专为浏览器端设计。
+
+- 就近依赖，按需加载，加载时机更符合 CommonJS 语法习惯
+- 延迟执行，只在使用时才下载和执行模块
+- 语法更接近 CommonJS，符合开发者习惯
+- 代表实现：Sea.js
+- 依赖无法并行加载，可能导致级联网络请求，弱网环境性能不如 AMD
+- 目前（2025）AMD 和 CMD 都已退出历史舞台，主流规范是 CommonJS 和 ES Module
+
+### 3.2. Sea.js 简介
+
+Sea.js 是遵循 CMD 规范的模块加载器，由阿里前工程师 [玉伯][7] 开发。
+
+Sea.js 包下载地址：[Sea.js 官网][2]
+
+::: tip Sea.js 的作者“玉伯” 同时也是“语雀”的作者
+
+![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-07-42-26.png)
+
+图片来源：[yuque garden][4]
+
+:::
+
+### 3.3. 基本用法
+
+引入 Sea.js：
 
 ```html
-<!-- 
-和 AMD 的不同点：入口文件的书写
-AMD 的写法：<script data-main="./index.js" src="./require.js"></script>
-CMD 的写法如下： 
--->
+<!-- AMD 写法对比 -->
+<!-- <script data-main="./index.js" src="./require.js"></script> -->
+
+<!-- CMD 写法 -->
 <script src="./sea.js"></script>
 <script>
   seajs.use('./index.js')
 </script>
 ```
 
+定义模块：
+
 ```js
-// 定义一个模块
 define(function (require, exports, module) {
-  // 模块内部的代码
+  // 模块内部代码
+  // 导入和导出必须在 define 函数中
 })
 ```
+
+### 3.4. 🆚 AMD vs CMD
+
+| 对比项   | AMD                      | CMD                        |
+| -------- | ------------------------ | -------------------------- |
+| 依赖声明 | 依赖前置，提前声明       | 就近依赖，按需声明         |
+| 加载时机 | 并行加载所有依赖         | 按需加载，延迟执行         |
+| 语法风格 | 早期不支持 CommonJS 风格 | 更早支持 CommonJS 风格写法 |
+| 历史地位 | 已退出历史舞台           | 已退出历史舞台             |
+
+- 早期观点：CMD 更好用，因为更接近 CommonJS 规范
+- 后期发展：RequireJS 也支持了类 CommonJS 写法，差异缩小
+- 现状：两者都已被 ES Module 取代
 
 ## 4. 💻 demos.1 - Sea.js 的基本使用
 
@@ -97,10 +124,13 @@ define(function (require, exports, module) {
 
 :::
 
-- 依赖关系：
-  - ![svg](./assets/1.svg)
-- 打开 index.html 控制台输出结果：
-  - ![图 1](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-08-34-40.png)
+依赖关系：
+
+![svg](./assets/1.svg)
+
+打开 index.html 控制台输出结果：
+
+![图 1](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-08-34-40.png)
 
 ## 5. 🔗 引用
 
