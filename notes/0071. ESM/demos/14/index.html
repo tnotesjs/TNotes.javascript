@@ -4,9 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESM 依赖预加载与延迟加载对比</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #output {
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        white-space: pre-wrap;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
-    <!-- 使用静态导入示例 若要切换为动态导入请将 src 改为 ./index-dynamic.js -->
-    <script type="module" src="./index-static.js"></script>
+    <h1>ESM 依赖预加载 vs 延迟加载</h1>
+    <p>打开控制台查看加载过程和性能对比</p>
+
+    <div>
+      <button id="staticBtn">测试静态导入（预加载）</button>
+      <button id="dynamicBtn">测试动态导入（延迟加载）</button>
+      <button id="clearBtn">清空输出</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script type="module">
+      const output = document.getElementById('output')
+      const originalLog = console.log
+
+      // 劫持 console.log 显示到页面
+      console.log = (...args) => {
+        originalLog(...args)
+        output.textContent += args.join(' ') + '\n'
+      }
+
+      document.getElementById('staticBtn').addEventListener('click', async () => {
+        output.textContent = ''
+        // 动态导入静态导入示例
+        await import('./index-static.js?' + Date.now())
+      })
+
+      document.getElementById('dynamicBtn').addEventListener('click', async () => {
+        output.textContent = ''
+        // 动态导入动态导入示例
+        await import('./index-dynamic.js?' + Date.now())
+      })
+
+      document.getElementById('clearBtn').addEventListener('click', () => {
+        output.textContent = ''
+      })
+    </script>
   </body>
 </html>

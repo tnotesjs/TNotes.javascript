@@ -1,15 +1,19 @@
-// index.js - 默认导入的多种写法
-// 获取 a.js 中的基本导出与默认导出
-import { a } from './a.js'
-import method from './a.js'
-// 等效：
-// import method, { a } from './a.js'
-// 等效：
-// import { default as method, a } from './a.js'
-// 等效：
-// import * as moduleA from './a.js'
-// moduleA.default()
-// console.log(moduleA.a)
+// index.js - 默认导入等价写法对比
+console.log('=== 默认导入的 4 种等价写法 ===\n')
 
-console.log(a)
-method()
+// 方式 1：分别导入
+await import('./index-1.js')
+console.log()
+
+// 方式 2：混合导入
+await import('./index-2.js')
+console.log()
+
+// 方式 3：default as 别名
+await import('./index-3.js')
+console.log()
+
+// 方式 4：命名空间导入
+await import('./index-4.js')
+
+console.log('\n✅ 以上 4 种写法完全等价')

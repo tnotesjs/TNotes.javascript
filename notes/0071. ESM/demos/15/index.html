@@ -4,8 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ESM 绑定再导出 演示</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #output {
+        background: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        white-space: pre-wrap;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
-    <script type="module" src="./main.js"></script>
+    <h1>ESM 绑定再导出演示</h1>
+    <p>打开控制台查看不同场景的演示</p>
+
+    <div>
+      <button id="basicBtn">基本用法</button>
+      <button id="conflictBtn">命名冲突解决</button>
+      <button id="noDefaultBtn">export * 不含 default</button>
+      <button id="clearBtn">清空输出</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script type="module">
+      const output = document.getElementById('output')
+      const originalLog = console.log
+      const originalDir = console.dir
+
+      // 劫持 console
+      console.log = (...args) => {
+        originalLog(...args)
+        output.textContent += args.join(' ') + '\n'
+      }
+
+      console.dir = (obj) => {
+        originalDir(obj)
+        output.textContent += JSON.stringify(obj, null, 2) + '\n'
+      }
+
+      document.getElementById('basicBtn').addEventListener('click', async () => {
+        output.textContent = ''
+        await import('./main.js?' + Date.now())
+      })
+
+      document.getElementById('conflictBtn').addEventListener('click', async () => {
+        output.textContent = ''
+        await import('./main-conflict.js?' + Date.now())
+      })
+
+      document.getElementById('noDefaultBtn').addEventListener('click', async () => {
+        output.textContent = ''
+        await import('./main-no-default.js?' + Date.now())
+      })
+
+      document.getElementById('clearBtn').addEventListener('click', () => {
+        output.textContent = ''
+      })
+    </script>
   </body>
 </html>
