@@ -5,8 +5,8 @@
   "done": true,
   "deprecated": false,
   "enableDiscussions": true,
-  "description": "",
+  "description": "AMD 可以说几乎完全退出历史舞台了，很少场景会使用到它，简单了解一下它的导入导出写法即可。",
   "id": "f8e46cdf-16f9-4bdf-94be-9694cf45a3b0",
   "created_at": 1740924811000,
-  "updated_at": 1758242109690
+  "updated_at": 1765108929643
 }
