@@ -5,8 +5,8 @@
   "done": true,
   "deprecated": false,
   "enableDiscussions": true,
-  "description": "",
+  "description": "AMD、CMD 的差异点有很多，这篇笔记主要关注模块的加载和执行的差异，来对 AMD 和 CMD 做一个比较。",
   "id": "6ee27824-0c08-4813-911a-3d52f4663a10",
   "created_at": 1758254481547,
-  "updated_at": 1765112077398
+  "updated_at": 1765112146285
 }

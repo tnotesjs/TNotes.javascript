@@ -12,13 +12,14 @@
 - [8. 防抖、节流](#8-防抖节流)
 - [9. 数据类型](#9-数据类型)
 - [10. 模块化](#10-模块化)
-- [11. ⚙️ window 对象](#11-️-window-对象)
+- [11. window 对象](#11-window-对象)
 - [12. css 属性](#12-css-属性)
 - [13. html 元素](#13-html-元素)
 - [14. prettier](#14-prettier)
 - [15. eslint](#15-eslint)
 - [16. color picker](#16-color-picker)
-- [17. ⏰ pending](#17--pending)
+- [17. pending](#17-pending)
+- [18. new](#18-new)
 
 <!-- endregion:toc -->
 
@@ -121,6 +122,7 @@
 - [x] [0068. AMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0068.%20AMD/README.md)
 - [x] [0067. CMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0067.%20CMD/README.md)
 - [x] [0128. 对比 AMD、CMD](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0128.%20%E5%AF%B9%E6%AF%94%20AMD%E3%80%81CMD/README.md)
+- [ ] [0071. ESM](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0071.%20ESM/README.md)
 - [ ] [0061. 在浏览器中引入 ESM 模块](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0061.%20%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%BC%95%E5%85%A5%20ESM%20%E6%A8%A1%E5%9D%97/README.md)
 - [ ] [0062. ESM 绑定再导出](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0062.%20ESM%20%E7%BB%91%E5%AE%9A%E5%86%8D%E5%AF%BC%E5%87%BA/README.md)
 - [ ] [0063. ESM 模块的基本导出、导入](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0063.%20ESM%20%E6%A8%A1%E5%9D%97%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5/README.md)
@@ -130,7 +132,7 @@
 - [ ] [0069. JS 导入断言](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0069.%20JS%20%E5%AF%BC%E5%85%A5%E6%96%AD%E8%A8%80/README.md)
 - [ ] [0127. 模块化 - 总结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0127.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%80%BB%E7%BB%93/README.md)
 
-## 11. ⚙️ window 对象
+## 11. window 对象
 
 - [x] [0079. window.onbeforeunload](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0079.%20window.onbeforeunload/README.md)
 - [x] [0080. window.confirm](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0080.%20window.confirm/README.md)
@@ -166,7 +168,7 @@
 
 - [ ] [0122. 自定义 color picker 组件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md)
 
-## 17. ⏰ pending
+## 17. pending
 
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md)
 - [ ] [0083. 容器高度自适应图片高度](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0083.%20%E5%AE%B9%E5%99%A8%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E5%9B%BE%E7%89%87%E9%AB%98%E5%BA%A6/README.md)
@@ -196,3 +198,15 @@
 - [ ] [0076. 使用 Array.form 来创建一个二维数组](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md)
 - [ ] [0077. encodeURIcomponent](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0077.%20encodeURIcomponent/README.md)
 - [ ] [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
+
+## 18. new
+
+- [ ] [0072. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20new/README.md)
+- [ ] [0073. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20new/README.md)
+- [ ] [0124. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20new/README.md)
+- [ ] [0125. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20new/README.md)
+- [ ] [0130. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0130.%20new/README.md)
+- [ ] [0131. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0131.%20new/README.md)
+- [ ] [0132. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0132.%20new/README.md)
+- [ ] [0133. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0133.%20new/README.md)
+- [ ] [0134. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0134.%20new/README.md)

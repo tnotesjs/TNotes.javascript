@@ -338,6 +338,10 @@
         "link": "/notes/0128. 对比 AMD、CMD/README"
       },
       {
+        "text": "⏰ 0071. ESM",
+        "link": "/notes/0071. ESM/README"
+      },
+      {
         "text": "⏰ 0061. 在浏览器中引入 ESM 模块",
         "link": "/notes/0061. 在浏览器中引入 ESM 模块/README"
       },
@@ -372,7 +376,7 @@
     ]
   },
   {
-    "text": "11. ⚙️ window 对象",
+    "text": "11. window 对象",
     "collapsed": true,
     "items": [
       {
@@ -480,7 +484,7 @@
     ]
   },
   {
-    "text": "17. ⏰ pending",
+    "text": "17. pending",
     "collapsed": true,
     "items": [
       {
@@ -594,6 +598,48 @@
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"
+      }
+    ]
+  },
+  {
+    "text": "18. new",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "⏰ 0072. new",
+        "link": "/notes/0072. new/README"
+      },
+      {
+        "text": "⏰ 0073. new",
+        "link": "/notes/0073. new/README"
+      },
+      {
+        "text": "⏰ 0124. new",
+        "link": "/notes/0124. new/README"
+      },
+      {
+        "text": "⏰ 0125. new",
+        "link": "/notes/0125. new/README"
+      },
+      {
+        "text": "⏰ 0130. new",
+        "link": "/notes/0130. new/README"
+      },
+      {
+        "text": "⏰ 0131. new",
+        "link": "/notes/0131. new/README"
+      },
+      {
+        "text": "⏰ 0132. new",
+        "link": "/notes/0132. new/README"
+      },
+      {
+        "text": "⏰ 0133. new",
+        "link": "/notes/0133. new/README"
+      },
+      {
+        "text": "⏰ 0134. new",
+        "link": "/notes/0134. new/README"
       }
     ]
   }
