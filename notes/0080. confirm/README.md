@@ -1,4 +1,4 @@
-# [0080. window.confirm](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0080.%20window.confirm)
+# [0080. confirm](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0080.%20confirm)
 
 <!-- region:toc -->
 

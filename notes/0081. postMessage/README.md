@@ -1,4 +1,4 @@
-# [0081. window.postMessage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0081.%20window.postMessage)
+# [0081. postMessage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0081.%20postMessage)
 
 <!-- region:toc -->
 

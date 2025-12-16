@@ -17,9 +17,7 @@
 - [13. html 元素](#13-html-元素)
 - [14. prettier](#14-prettier)
 - [15. eslint](#15-eslint)
-- [16. color picker](#16-color-picker)
-- [17. pending](#17-pending)
-- [18. new](#18-new)
+- [16. pending](#16-pending)
 
 <!-- endregion:toc -->
 
@@ -134,11 +132,12 @@
 
 ## 11. window 对象
 
-- [x] [0079. window.onbeforeunload](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0079.%20window.onbeforeunload/README.md)
-- [x] [0080. window.confirm](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0080.%20window.confirm/README.md)
-- [x] [0081. window.postMessage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0081.%20window.postMessage/README.md)
+- [x] [0079. onbeforeunload](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0079.%20onbeforeunload/README.md)
+- [x] [0080. confirm](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0080.%20confirm/README.md)
+- [x] [0081. postMessage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0081.%20postMessage/README.md)
 - [ ] [0108. DOMParser](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0108.%20DOMParser/README.md)
 - [ ] [0109. XSLTProcessor](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0109.%20XSLTProcessor/README.md)
+- [ ] [0072. web streams](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20web%20streams/README.md)
 
 ## 12. css 属性
 
@@ -164,12 +163,9 @@
 - [ ] [0120. eslint 配置格式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README.md)
 - [ ] [0121. 忽略文件 .eslintignore](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README.md)
 
-## 16. color picker
+## 16. pending
 
 - [ ] [0122. 自定义 color picker 组件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md)
-
-## 17. pending
-
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md)
 - [ ] [0083. 容器高度自适应图片高度](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0083.%20%E5%AE%B9%E5%99%A8%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94%E5%9B%BE%E7%89%87%E9%AB%98%E5%BA%A6/README.md)
 - [ ] [0084. 普通元素的参考系是父元素的 content-box](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0084.%20%E6%99%AE%E9%80%9A%E5%85%83%E7%B4%A0%E7%9A%84%E5%8F%82%E8%80%83%E7%B3%BB%E6%98%AF%E7%88%B6%E5%85%83%E7%B4%A0%E7%9A%84%20content-box/README.md)
@@ -198,10 +194,6 @@
 - [ ] [0076. 使用 Array.form 来创建一个二维数组](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md)
 - [ ] [0077. encodeURIcomponent](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0077.%20encodeURIcomponent/README.md)
 - [ ] [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
-
-## 18. new
-
-- [ ] [0072. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20new/README.md)
 - [ ] [0073. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20new/README.md)
 - [ ] [0124. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20new/README.md)
 - [ ] [0125. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20new/README.md)

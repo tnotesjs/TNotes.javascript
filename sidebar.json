@@ -380,16 +380,16 @@
     "collapsed": true,
     "items": [
       {
-        "text": "✅ 0079. window.onbeforeunload",
-        "link": "/notes/0079. window.onbeforeunload/README"
+        "text": "✅ 0079. onbeforeunload",
+        "link": "/notes/0079. onbeforeunload/README"
       },
       {
-        "text": "✅ 0080. window.confirm",
-        "link": "/notes/0080. window.confirm/README"
+        "text": "✅ 0080. confirm",
+        "link": "/notes/0080. confirm/README"
       },
       {
-        "text": "✅ 0081. window.postMessage",
-        "link": "/notes/0081. window.postMessage/README"
+        "text": "✅ 0081. postMessage",
+        "link": "/notes/0081. postMessage/README"
       },
       {
         "text": "⏰ 0108. DOMParser",
@@ -398,6 +398,10 @@
       {
         "text": "⏰ 0109. XSLTProcessor",
         "link": "/notes/0109. XSLTProcessor/README"
+      },
+      {
+        "text": "⏰ 0072. web streams",
+        "link": "/notes/0072. web streams/README"
       }
     ]
   },
@@ -474,19 +478,13 @@
     ]
   },
   {
-    "text": "16. color picker",
+    "text": "16. pending",
     "collapsed": true,
     "items": [
       {
         "text": "⏰ 0122. 自定义 color picker 组件",
         "link": "/notes/0122. 自定义 color picker 组件/README"
-      }
-    ]
-  },
-  {
-    "text": "17. pending",
-    "collapsed": true,
-    "items": [
+      },
       {
         "text": "⏰ 0082. img 元素宽度撑满，防止溢出容器",
         "link": "/notes/0082. img 元素宽度撑满，防止溢出容器/README"
@@ -598,16 +596,6 @@
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"
-      }
-    ]
-  },
-  {
-    "text": "18. new",
-    "collapsed": true,
-    "items": [
-      {
-        "text": "⏰ 0072. new",
-        "link": "/notes/0072. new/README"
       },
       {
         "text": "⏰ 0073. new",

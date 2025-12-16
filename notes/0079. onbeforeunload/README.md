@@ -1,4 +1,4 @@
-# [0079. window.onbeforeunload](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0079.%20window.onbeforeunload)
+# [0079. onbeforeunload](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0079.%20onbeforeunload)
 
 <!-- region:toc -->
 
