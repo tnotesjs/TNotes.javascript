@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大文件分片上传演示</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 12px;
+        font-size: 28px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 32px;
+        font-size: 14px;
+      }
+
+      .upload-area {
+        border: 3px dashed #ddd;
+        border-radius: 12px;
+        padding: 48px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-bottom: 24px;
+      }
+
+      .upload-area:hover {
+        border-color: #667eea;
+        background: #f8f9ff;
+      }
+
+      .upload-area.active {
+        border-color: #667eea;
+        background: #f0f2ff;
+      }
+
+      .upload-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      .upload-text {
+        color: #666;
+        font-size: 16px;
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      .file-info {
+        background: #f8f9fa;
+        padding: 16px;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        display: none;
+      }
+
+      .file-info.show {
+        display: block;
+      }
+
+      .file-name {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .file-size {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .settings {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .setting-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .setting-group label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      .setting-group input,
+      .setting-group select {
+        padding: 10px 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.2s;
+      }
+
+      .setting-group input:focus,
+      .setting-group select:focus {
+        outline: none;
+        border-color: #667eea;
+      }
+
+      .controls {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 14px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .btn-secondary:hover:not(:disabled) {
+        background: #5a6268;
+      }
+
+      .btn-danger {
+        background: #dc3545;
+        color: white;
+      }
+
+      .btn-danger:hover:not(:disabled) {
+        background: #c82333;
+      }
+
+      .progress-container {
+        background: #f8f9fa;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 24px;
+        display: none;
+      }
+
+      .progress-container.show {
+        display: block;
+      }
+
+      .progress-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 28px;
+        background: #e9ecef;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        transition: width 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+      }
+
+      .stat {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .stat-label {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 4px;
+      }
+
+      .stat-value {
+        font-size: 18px;
+        font-weight: 700;
+        color: #667eea;
+      }
+
+      .chunks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+        gap: 4px;
+        margin-top: 16px;
+      }
+
+      .chunk {
+        height: 32px;
+        background: #e9ecef;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        transition: all 0.2s;
+        position: relative;
+      }
+
+      .chunk.uploading {
+        background: linear-gradient(
+          45deg,
+          #ffc107 25%,
+          transparent 25%,
+          transparent 50%,
+          #ffc107 50%,
+          #ffc107 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 20px 20px;
+        animation: chunk-progress 1s linear infinite;
+      }
+
+      .chunk.success {
+        background: #28a745;
+        color: white;
+      }
+
+      .chunk.error {
+        background: #dc3545;
+        color: white;
+      }
+
+      .chunk.retry {
+        background: #ff9800;
+        color: white;
+      }
+
+      @keyframes chunk-progress {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 20px 20px;
+        }
+      }
+
+      .chunk:hover::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        white-space: nowrap;
+        margin-bottom: 4px;
+        z-index: 10;
+      }
+
+      .log {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 16px;
+        border-radius: 8px;
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 13px;
+        max-height: 300px;
+        overflow-y: auto;
+        margin-bottom: 16px;
+      }
+
+      .log-entry {
+        margin-bottom: 4px;
+        padding: 4px 8px;
+        border-radius: 4px;
+      }
+
+      .log-entry.info {
+        color: #4ec9b0;
+      }
+
+      .log-entry.success {
+        color: #b5cea8;
+      }
+
+      .log-entry.warning {
+        color: #dcdcaa;
+      }
+
+      .log-entry.error {
+        color: #f48771;
+      }
+
+      .status {
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 16px;
+        display: none;
+      }
+
+      .status.show {
+        display: block;
+      }
+
+      .status.success {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .status.error {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📤 大文件分片上传</h1>
+      <p class="subtitle">支持断点续传、失败重试、并发控制的分片上传演示</p>
+
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-icon">📁</div>
+        <div class="upload-text">点击选择文件或拖拽文件到此处</div>
+        <input type="file" id="fileInput" class="file-input" />
+      </div>
+
+      <div class="file-info" id="fileInfo">
+        <div class="file-name" id="fileName"></div>
+        <div class="file-size" id="fileSize"></div>
+      </div>
+
+      <div class="settings">
+        <div class="setting-group">
+          <label>分片大小</label>
+          <select id="chunkSize">
+            <option value="262144">256 KB</option>
+            <option value="524288">512 KB</option>
+            <option value="1048576" selected>1 MB</option>
+            <option value="2097152">2 MB</option>
+            <option value="5242880">5 MB</option>
+          </select>
+        </div>
+        <div class="setting-group">
+          <label>并发数</label>
+          <input type="number" id="concurrency" value="3" min="1" max="10" />
+        </div>
+        <div class="setting-group">
+          <label>最大重试次数</label>
+          <input type="number" id="maxRetries" value="3" min="0" max="10" />
+        </div>
+        <div class="setting-group">
+          <label>模拟失败率</label>
+          <select id="failureRate">
+            <option value="0">0% (正常)</option>
+            <option value="0.1">10%</option>
+            <option value="0.2">20%</option>
+            <option value="0.3">30%</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-primary" id="startBtn" disabled>开始上传</button>
+        <button class="btn btn-secondary" id="pauseBtn" disabled>暂停</button>
+        <button class="btn btn-secondary" id="resumeBtn" disabled>继续</button>
+        <button class="btn btn-danger" id="cancelBtn" disabled>取消</button>
+      </div>
+
+      <div class="status" id="status"></div>
+
+      <div class="progress-container" id="progressContainer">
+        <div class="progress-label">
+          <span>上传进度</span>
+          <span id="progressText">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 0%">
+            0%
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">已上传</div>
+            <div class="stat-value" id="uploadedChunks">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">总分片</div>
+            <div class="stat-value" id="totalChunks">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">上传速度</div>
+            <div class="stat-value" id="uploadSpeed">0 KB/s</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">剩余时间</div>
+            <div class="stat-value" id="timeRemaining">--:--</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">重试次数</div>
+            <div class="stat-value" id="retryCount">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">失败分片</div>
+            <div class="stat-value" id="failedChunks">0</div>
+          </div>
+        </div>
+
+        <div class="chunks-grid" id="chunksGrid"></div>
+      </div>
+
+      <div class="log" id="log"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

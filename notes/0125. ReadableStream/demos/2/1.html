@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadableStream</title>
+    <style>
+      body {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .output {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 15px;
+        min-height: 150px;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>无限数据生成器流</h1>
+    <p>演示如何创建按需生成数据的流，并支持取消操作</p>
+
+    <button onclick="startCounter()">启动计数器</button>
+    <button onclick="stopCounter()">停止计数器</button>
+    <button onclick="startRandom()">启动随机数生成器</button>
+    <button onclick="stopRandom()">停止随机数</button>
+
+    <div class="output" id="output"></div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

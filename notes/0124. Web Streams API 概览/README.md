@@ -5,30 +5,30 @@
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 🤔 为什么说 Web Streams 是“响应式数据管道”的基础，而不仅是“大数据处理工具”？](#3--为什么说-web-streams-是响应式数据管道的基础而不仅是大数据处理工具)
-  - [3.1. 响应式数据管道的特性](#31-响应式数据管道的特性)
+  - [3.1. 数据流（Stream）的响应式数据管道](#31-数据流stream的响应式数据管道)
   - [3.2. 核心应用场景](#32-核心应用场景)
   - [3.3. 与大数据处理的区别](#33-与大数据处理的区别)
-- [4. 🤔 一个流被读取后为何不能再被其他 reader 使用？这与 Promise 的 once-resolution 有何异同？](#4--一个流被读取后为何不能再被其他-reader-使用这与-promise-的-once-resolution-有何异同)
-  - [4.1. 流的锁定机制](#41-流的锁定机制)
-  - [4.2. 为什么需要锁定](#42-为什么需要锁定)
-  - [4.3. 解决方案：tee() 分流](#43-解决方案tee-分流)
-  - [4.4. 与 Promise 的对比](#44-与-promise-的对比)
-- [5. 🤔 如果不关注背压机制,流处理可能会导致什么实际问题？](#5--如果不关注背压机制流处理可能会导致什么实际问题)
-  - [5.1. 典型问题：内存溢出](#51-典型问题内存溢出)
-  - [5.2. 实际场景的问题](#52-实际场景的问题)
-  - [5.3. 背压的作用](#53-背压的作用)
-- [6. 🤔 Fetch 的 Response.body 为什么是 ReadableStream 而不是直接返回整个数据？](#6--fetch-的-responsebody-为什么是-readablestream-而不是直接返回整个数据)
-  - [6.1. 核心原因：用户体验和资源效率](#61-核心原因用户体验和资源效率)
-  - [6.2. 实际优势对比](#62-实际优势对比)
-  - [6.3. 典型应用场景](#63-典型应用场景)
-- [7. 🤔 Web Streams 与 RxJS / Node.js Streams 的设计理念主要差异在哪里？](#7--web-streams-与-rxjs--nodejs-streams-的设计理念主要差异在哪里)
-  - [7.1. 核心对比](#71-核心对比)
-  - [7.2. 代码风格对比](#72-代码风格对比)
-  - [7.3. 设计理念差异](#73-设计理念差异)
-  - [7.4. 何时选择 Web Streams](#74-何时选择-web-streams)
-- [8. 💻 demos.1 - 对比传统 fetch().json() 与流式处理响应体](#8--demos1---对比传统-fetchjson-与流式处理响应体)
-- [9. 💻 demos.2 - 用三行代码创建并消费一个自定义可读流](#9--demos2---用三行代码创建并消费一个自定义可读流)
-- [10. 🔗 引用](#10--引用)
+- [4. 🤔 为什么一个流不能被多个消费者同时消费？](#4--为什么一个流不能被多个消费者同时消费)
+- [5. 🤔 一个流被消费后为何不能再次被消费？](#5--一个流被消费后为何不能再次被消费)
+- [6. 🆚 Stream vs Promise](#6--stream-vs-promise)
+  - [6.1. 相似点 - 单次、单相向消费](#61-相似点---单次单相向消费)
+  - [6.2. 核心点 - 关注点不同](#62-核心点---关注点不同)
+- [7. 🤔 如果不关注背压机制，流处理可能会导致什么实际问题？](#7--如果不关注背压机制流处理可能会导致什么实际问题)
+  - [7.1. 典型问题：内存溢出](#71-典型问题内存溢出)
+  - [7.2. 实际场景的问题](#72-实际场景的问题)
+  - [7.3. 背压的作用](#73-背压的作用)
+- [8. 🤔 Fetch 的 Response.body 为什么是 ReadableStream 而不是直接返回整个数据？](#8--fetch-的-responsebody-为什么是-readablestream-而不是直接返回整个数据)
+  - [8.1. 核心原因：用户体验和资源效率](#81-核心原因用户体验和资源效率)
+  - [8.2. 实际优势对比](#82-实际优势对比)
+  - [8.3. 典型应用场景](#83-典型应用场景)
+- [9. 🤔 Web Streams 与 RxJS / Node.js Streams 的设计理念主要差异在哪里？](#9--web-streams-与-rxjs--nodejs-streams-的设计理念主要差异在哪里)
+  - [9.1. 核心对比](#91-核心对比)
+  - [9.2. 代码风格对比](#92-代码风格对比)
+  - [9.3. 设计理念差异](#93-设计理念差异)
+  - [9.4. 何时选择 Web Streams](#94-何时选择-web-streams)
+- [10. 💻 demos.1 - 对比传统 fetch().json() 与流式处理响应体](#10--demos1---对比传统-fetchjson-与流式处理响应体)
+- [11. 💻 demos.2 - 用三行代码创建并消费一个自定义可读流](#11--demos2---用三行代码创建并消费一个自定义可读流)
+- [12. 🔗 引用](#12--引用)
 
 <!-- endregion:toc -->
 
@@ -52,24 +52,28 @@ Web Streams API 是现代前端架构中一项极其重要但容易被低估的�
 
 ## 3. 🤔 为什么说 Web Streams 是“响应式数据管道”的基础，而不仅是“大数据处理工具”？
 
-Web Streams 的核心价值在于数据流转的编排能力，而非单纯的大数据处理。
+提到“流”，你可能首先会想到用它来处理大数据的分块传输，以缓解内存压力，但 Web Streams 的设计理念远不止于此。它更强调数据的“响应式”处理能力，即数据在生产、传输和消费过程中能够实时协调和适应各方需求。
 
-### 3.1. 响应式数据管道的特性
+### 3.1. 数据流（Stream）的响应式数据管道
+
+Web Streams 实现了 `数据生产者（Producer）→ 管道（Pipeline）→ 数据消费者（Consumer）` 的异步流动模型，数据可以逐块（chunk）生成、转换和消费，而不是一次性加载到内存。
 
 ```js
 // 传统方式：一次性获取全部数据
 const data = await fetch(url).then((r) => r.json())
-processData(data) // ❌ 必须等待全部数据到达
+processData(data) // 必须等待全部数据到达
 
 // 流式管道：数据到达即处理
 fetch(url)
   .then((r) => r.body)
   .pipeThrough(new TextDecoderStream())
-  .pipeThrough(jsonLineParser) // ✅ 逐行解析
-  .pipeThrough(dataValidator) // ✅ 实时验证
-  .pipeThrough(transformer) // ✅ 边收边转换
-  .pipeTo(uiRenderer) // ✅ 渐进式渲染
+  .pipeThrough(jsonLineParser) // 逐行解析
+  .pipeThrough(dataValidator) // 实时验证
+  .pipeThrough(transformer) // 边收边转换
+  .pipeTo(uiRenderer) // 渐进式渲染
 ```
+
+背压（Backpressure）机制是响应式系统的核心特征之一。当消费者处理速度跟不上数据生产速度时，系统会自动反向通知生产者降速，实现流量控制，避免内存溢出。这种“实时协调”的能力是响应式管道的典型特征。
 
 ### 3.2. 核心应用场景
 
@@ -85,25 +89,25 @@ fetch(url)
 
 ```mermaid
 graph LR
-    A[数据源] -->|传统方式| B[完整加载到内存]
-    B --> C[处理]
-    C --> D[输出]
+    A[传统方式] --> B[数据源]
+    B --> C[完整加载到内存]
+    C --> D[处理]
+    D --> E[输出]
 
-    A2[数据源] -->|流式管道| E[Chunk 1]
-    E --> F[处理]
-    F --> G[输出]
-    A2 -->|并行| H[Chunk 2]
-    H --> I[处理]
+    F[流式方式] --> G[数据源]
+    G --Chunk 1--> H[管道 1 处理]
+    H --管道 2、管道 3、...--> I[管道 n 处理]
     I --> J[输出]
+    G --Chunk 2--> K[管道 1 处理]
+    K --管道 2、管道 3、...--> L[管道 n 处理]
+    L --> M[输出]
 ```
 
-流让你组合异步操作，而不只是处理大数据。
+流让你可以通过不同的管道来组合异步操作逐步处理一个个数据块。
 
-## 4. 🤔 一个流被读取后为何不能再被其他 reader 使用？这与 Promise 的 once-resolution 有何异同？
+## 4. 🤔 为什么一个流不能被多个消费者同时消费？
 
-### 4.1. 流的锁定机制
-
-流被读取时会锁定（locked），这是为了保证数据的顺序性和一致性。
+流被读取时会被锁定（locked），被锁定之后这个流就不能再被其他 reader 使用了。
 
 ```js
 const stream = new ReadableStream({
@@ -120,13 +124,13 @@ await reader1.read() // { value: 'chunk1', done: false }
 const reader2 = stream.getReader() // ❌ TypeError: This stream is locked to a reader
 ```
 
-### 4.2. 为什么需要锁定
+需要锁定的原因：
 
 1. 数据顺序保证：避免多个 reader 交错读取导致数据乱序
 2. 背压控制：只有一个消费者才能正确发送背压信号
 3. 资源管理：底层源（如文件句柄）只能被一个消费者持有
 
-### 4.3. 解决方案：tee() 分流
+多消费者的解决方案：使用 `tee()` 进行分流
 
 ```js
 const [stream1, stream2] = originalStream.tee()
@@ -136,21 +140,184 @@ const reader1 = stream1.getReader()
 const reader2 = stream2.getReader()
 ```
 
-### 4.4. 与 Promise 的对比
+`tee()` 方法就是对“多消费者需求”的响应，它创建了两个独立的流，每个都有自己的内部缓冲区。
 
-| 特性       | Promise                       | Stream                     |
-| ---------- | ----------------------------- | -------------------------- |
-| 值的数量   | 单值（once-resolution）       | 多值序列                   |
-| 可重复使用 | ✅ 可以多次 `.then()`         | ❌ 只能一个 reader         |
-| 状态       | pending → fulfilled/rejected  | readable → locked → closed |
-| 消费方式   | 多个 `.then()` 共享同一个结果 | 锁定后独占数据流           |
-| 分支       | 天然支持多个 `.then()`        | 需要显式 `.tee()`          |
+## 5. 🤔 一个流被消费后为何不能再次被消费？
 
-核心差异：Promise 的值是已完成的结果，可以被多次访问；Stream 的值是正在流动的数据，一旦被消费就消失了。
+```javascript
+// 像水流一样，流过了就不能倒流
+const waterStream = getWaterFromPipe()
+drinkFrom(waterStream) // 水被喝掉了
+drinkFromAgain(waterStream) // 管道里已经没有水了
+```
 
-## 5. 🤔 如果不关注背压机制,流处理可能会导致什么实际问题？
+真实世界的数据源（网络响应、文件读取、用户输入）通常就是一次性的，Stream 忠实地反映了这一现实。
 
-### 5.1. 典型问题：内存溢出
+如果可以重复读取，需要：
+
+1. 缓存所有已读取的数据（内存问题）
+2. 或者让数据源支持重播（并非所有源都支持）
+
+对比两种不同的设计方案：
+
+- 支持重读 → 需要缓存 → 内存开销大 + 复杂的状态管理
+- 禁止重读 → 简单明确 + 内存开销小 + 符合多数真实场景
+
+如果想要用多个消费者消费同一个流中的数据，可以在可读的数据源头做分流 `tee()` 分流处理而不是让同一个源同时被多个消费者消费。
+
+```javascript
+// 分流
+const [stream1, stream2] = originalStream.tee()
+
+// 或者使用 TransformStream 复制数据
+const transform = new TransformStream({
+  transform(chunk, controller) {
+    controller.enqueue(cloneChunk(chunk))
+    // 可以发送到多个地方
+  },
+})
+```
+
+## 6. 🆚 Stream vs Promise
+
+### 6.1. 相似点 - 单次、单相向消费
+
+相同的“状态转换”模型：
+
+```js
+// Promise 的状态变化（单向）：
+pending → fulfilled ✅ 或 pending → rejected ❌
+
+// ReadableStream 的状态变化（单向）：
+readable → closed ✅ 或 readable → errored ❌
+```
+
+两者都遵循单次状态转换的模式：
+
+- Promise：一旦 resolved/rejected，值就被“消费”，后续的 `then()` 只能获取相同结果
+- Stream：一旦被 reader 锁定并开始消费，数据就被顺序读取，无法倒带重读
+
+```js
+// Promise 的“一次性值”
+const promise = fetch('/api/data') // 只能 resolve 一次
+
+// Stream 的“一次性序列”
+const stream = response.body // 数据只能被顺序消费一次
+```
+
+两者都代表了异步计算的单次结果：
+
+- Promise：单个值的一次性产出
+- Stream：值序列的一次性产出
+
+### 6.2. 核心点 - 关注点不同
+
+- Promise 的值是已完成的结果，可以被多次访问 - 关注的是最终结果
+- Stream 的值是正在流动的数据，一旦被消费完就消失了 - 关注的是流动过程
+
+| 特性 | Promise | Stream |
+| --- | --- | --- |
+| 消费单位 | 单值（once-resolution） | 多值序列（chunks） |
+| 多消费者 | 可以多次 `.then()` | 一个流只能有一个 reader，可以通过 `tee()` 分流，让多个 reader 接入同一个流 |
+| 状态变化 | pending → fulfilled/rejected | readable → locked → closed |
+| 状态锁定 | 隐式（resolved 后状态固定） | 显式（locked 标志） |
+| 消费方式 | 一次性原子消费，消费后多个 `.then()` 共享同一个结果 | 渐进式顺序消费，消费时锁定并独占数据流，消费后无法被重复消费 |
+| 时间维度 | 时间点上的快照 | 时间线上的序列 |
+
+1. 消费粒度层面
+2. 时间维度层面
+3. 取消机制层面
+4. ……
+
+::: code-group
+
+```js [1]
+// Promise：原子性消费（全有或全无）
+promise.then((data) => console.log(data)) // 一次性获取全部
+
+// Stream：渐进式消费
+const reader = stream.getReader()
+reader.read().then(({ value, done }) => {
+  /* 逐块处理 */
+})
+
+// Promise 的消费是原子的：要么拿到完整结果，要么失败。
+// Stream 的消费是渐进的：每次 read() 获取一个 chunk，消费过程可以被暂停、恢复，并且可以提前取消。
+```
+
+```js [2]
+// Promise：时间点上的结果
+async function fetchData() {
+  return await promise // 等待结果完成
+}
+
+// Stream：时间线上的序列
+async function processStream() {
+  while (true) {
+    const { value, done } = await reader.read()
+    if (done) break
+    processChunk(value) // 每个chunk在不同时间点到达
+  }
+}
+
+// Promise 是时间点上的快照。
+// Stream 是时间线上的流动，体现了 时间作为第一类公民 的响应式思想。
+```
+
+```js [3]
+// Promise：原生无法取消（需要AbortController配合）
+const controller = new AbortController()
+fetch(url, { signal: controller.signal })
+
+// Stream：内置取消机制
+const reader = stream.getReader()
+// 可以通过 reader.cancel() 或不再调用 read() 来中断
+
+// Promise 的取消是暴力的（直接拒绝）
+// Stream 的取消是优雅的（可以通知上游停止生产）
+```
+
+:::
+
+两者内部状态机的伪代码示例：
+
+1. Promise 的内部状态机
+2. Stream 的内部状态机
+
+::: code-group
+
+```js [1]
+class SimplifiedPromise {
+  state = 'pending'
+  value = undefined
+  then(onFulfilled) {
+    if (this.state === 'fulfilled') {
+      // 已经resolved，直接返回值
+      queueMicrotask(() => onFulfilled(this.value))
+    }
+  }
+}
+```
+
+```js [2]
+class SimplifiedReadableStream {
+  state = 'readable'
+  locked = false // 关键区别：锁定标志
+  reader = null
+
+  getReader() {
+    if (this.locked) throw new TypeError('Stream already locked')
+    this.locked = true
+    return new Reader(this)
+  }
+}
+```
+
+:::
+
+## 7. 🤔 如果不关注背压机制，流处理可能会导致什么实际问题？
+
+### 7.1. 典型问题：内存溢出
 
 ```js
 // ❌ 没有背压控制的流
@@ -174,7 +341,7 @@ fastProducer.pipeTo(
 )
 ```
 
-### 5.2. 实际场景的问题
+### 7.2. 实际场景的问题
 
 | 场景           | 无背压的后果             | 正确做法                     |
 | -------------- | ------------------------ | ---------------------------- |
@@ -183,7 +350,7 @@ fastProducer.pipeTo(
 | 视频流转码     | CPU/内存飙升，浏览器崩溃 | 根据解码速度控制读取         |
 | WebSocket 消息 | 消息堆积，延迟越来越高   | 发送背压信号给服务器         |
 
-### 5.3. 背压的作用
+### 7.3. 背压的作用
 
 ```js
 // ✅ 有背压控制
@@ -203,9 +370,9 @@ const stream = new ReadableStream(
 
 关键：背压让生产速度自动匹配消费速度，避免内存无限增长。
 
-## 6. 🤔 Fetch 的 Response.body 为什么是 ReadableStream 而不是直接返回整个数据？
+## 8. 🤔 Fetch 的 Response.body 为什么是 ReadableStream 而不是直接返回整个数据？
 
-### 6.1. 核心原因：用户体验和资源效率
+### 8.1. 核心原因：用户体验和资源效率
 
 ```js
 // 传统方式：必须等待完整响应
@@ -222,7 +389,7 @@ while (true) {
 }
 ```
 
-### 6.2. 实际优势对比
+### 8.2. 实际优势对比
 
 | 对比项     | 完整加载            | 流式处理           |
 | ---------- | ------------------- | ------------------ |
@@ -232,7 +399,7 @@ while (true) {
 | 进度显示   | 需要 Content-Length | 实时计算           |
 | 大文件处理 | 可能内存溢出        | 流式处理无压力     |
 
-### 6.3. 典型应用场景
+### 8.3. 典型应用场景
 
 ```js
 // 场景1：带进度的文件下载
@@ -269,9 +436,9 @@ response.body
 
 Response.body 是流，让你可以在数据传输过程中就开始处理，而不是被动等待。
 
-## 7. 🤔 Web Streams 与 RxJS / Node.js Streams 的设计理念主要差异在哪里？
+## 9. 🤔 Web Streams 与 RxJS / Node.js Streams 的设计理念主要差异在哪里？
 
-### 7.1. 核心对比
+### 9.1. 核心对比
 
 | 对比维度 | Web Streams | RxJS | Node.js Streams |
 | --- | --- | --- | --- |
@@ -282,7 +449,7 @@ Response.body 是流，让你可以在数据传输过程中就开始处理，而
 | API 风格 | 简洁，Web 标准 | 丰富操作符（100+） | 类继承，事件驱动 |
 | 适用场景 | 浏览器文件/网络处理 | 前端事件流，状态管理 | 服务端文件/网络 I/O |
 
-### 7.2. 代码风格对比
+### 9.2. 代码风格对比
 
 ```js
 // Web Streams：管道化
@@ -307,7 +474,7 @@ const readable = fs.createReadStream(file)
 readable.pipe(decompressor).pipe(decoder).pipe(destination)
 ```
 
-### 7.3. 设计理念差异
+### 9.3. 设计理念差异
 
 Web Streams：
 
@@ -330,7 +497,7 @@ Node.js Streams：
 - 与文件系统深度集成
 - 继承自 EventEmitter
 
-### 7.4. 何时选择 Web Streams
+### 9.4. 何时选择 Web Streams
 
 ```js
 // ✅ 适合 Web Streams
@@ -345,7 +512,7 @@ state$.pipe(map, filter, distinctUntilChanged)
 
 Web Streams 是浏览器原生的字节流处理标准，与 RxJS/Node.js 定位不同，各有擅长领域。
 
-## 8. 💻 demos.1 - 对比传统 fetch().json() 与流式处理响应体
+## 10. 💻 demos.1 - 对比传统 fetch().json() 与流式处理响应体
 
 ::: code-group
 
@@ -355,7 +522,7 @@ Web Streams 是浏览器原生的字节流处理标准，与 RxJS/Node.js 定位
 
 :::
 
-## 9. 💻 demos.2 - 用三行代码创建并消费一个自定义可读流
+## 11. 💻 demos.2 - 用三行代码创建并消费一个自定义可读流
 
 ::: code-group
 
@@ -365,7 +532,7 @@ Web Streams 是浏览器原生的字节流处理标准，与 RxJS/Node.js 定位
 
 :::
 
-## 10. 🔗 引用
+## 12. 🔗 引用
 
 - [Streams API][1]
 - [Using readable streams][2]

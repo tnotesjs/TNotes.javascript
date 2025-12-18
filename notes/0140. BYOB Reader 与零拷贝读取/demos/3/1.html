@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二进制文件解析器</title>
+    <style>
+      body {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .output {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        min-height: 100px;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+      .file-info {
+        background: #f0f0f0;
+        padding: 10px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>高效二进制文件解析器</h1>
+    <p>使用 BYOB Reader 解析二进制文件头</p>
+
+    <div class="demo">
+      <h3>选择文件进行解析</h3>
+      <input type="file" id="fileInput" accept="*/*" />
+      <button onclick="parseFile()">解析文件</button>
+      <div class="file-info" id="fileInfo"></div>
+      <div class="output" id="output"></div>
+    </div>
+
+    <div class="demo">
+      <h3>模拟解析二进制数据</h3>
+      <p>解析自定义格式的二进制数据（模拟图片文件头）</p>
+      <button onclick="simulateParse()">模拟解析</button>
+      <div class="output" id="simulateOutput"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

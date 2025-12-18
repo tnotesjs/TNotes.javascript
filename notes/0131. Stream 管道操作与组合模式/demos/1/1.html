@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ETL 数据管道演示</title>
+    <style>
+      body {
+        font-family: system-ui;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      button {
+        padding: 8px 16px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .pipeline {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 4px;
+      }
+      .stage {
+        background: #f5f5f5;
+        padding: 10px;
+        margin: 5px 0;
+        border-left: 3px solid #3498db;
+      }
+      .output {
+        background: #ecf0f1;
+        padding: 15px;
+        margin: 10px 0;
+        max-height: 300px;
+        overflow-y: auto;
+        font-family: monospace;
+      }
+      .error {
+        color: #e74c3c;
+      }
+      .success {
+        color: #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ETL 数据管道演示</h1>
+
+    <div class="pipeline">
+      <h3>管道流程</h3>
+      <div class="stage">阶段 1：Extract - 提取 CSV 数据</div>
+      <div class="stage">阶段 2：Transform - 清洗和转换</div>
+      <div class="stage">阶段 3：Load - 加载到目标</div>
+    </div>
+
+    <button id="runBasic">运行基础 ETL</button>
+    <button id="runWithError">运行含错误数据</button>
+    <button id="runParallel">运行并行处理</button>
+    <button id="clear">清空输出</button>
+
+    <div class="output" id="output"></div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

@@ -110,7 +110,7 @@
 - [ ] [0056. 在 Worker 中使用 MessageChannel](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0056.%20%E5%9C%A8%20Worker%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20MessageChannel/README.md)
 - [ ] [0057. 使用 MessageChannel 实现父子窗口之间的互相通信](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0057.%20%E4%BD%BF%E7%94%A8%20MessageChannel%20%E5%AE%9E%E7%8E%B0%E7%88%B6%E5%AD%90%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E4%BA%92%E7%9B%B8%E9%80%9A%E4%BF%A1/README.md)
 - [ ] [0058. new 命令](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0058.%20new%20%E5%91%BD%E4%BB%A4/README.md)
-- [ ] [0059. 使用 Object.create() 创建实例对象](<https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0059.%20%E4%BD%BF%E7%94%A8%20Object.create()%20%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1/README.md>)
+- [ ] [0059. 使用 Object.create() 创建实例对象](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0059.%20%E4%BD%BF%E7%94%A8%20Object.create()%20%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1/README.md)
 - [ ] [0060. 构造函数](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0060.%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/README.md)
 
 ## 10. 模块化

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadableStream</title>
+    <style>
+      body {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .output {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-top: 15px;
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>从数组创建 ReadableStream 并逐个读取元素</h1>
+
+    <button onclick="demo1()">示例1：使用 reader.read() 读取</button>
+    <button onclick="demo2()">示例2：使用 for await...of 读取</button>
+    <button onclick="demo3()">示例3：尝试多个 reader（会报错）</button>
+
+    <div class="output" id="output"></div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

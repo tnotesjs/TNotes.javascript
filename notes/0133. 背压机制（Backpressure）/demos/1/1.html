@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>观察背压信号的触发时机</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .log {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+      }
+      .controls {
+        margin: 10px 0;
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>背压信号观察</h1>
+
+    <div class="demo">
+      <h3>Demo 1：观察 desiredSize 的变化</h3>
+      <div class="controls">
+        <label>
+          highWaterMark:
+          <input type="number" id="hwm1" value="3" min="1" />
+        </label>
+        <button onclick="demo1()">运行</button>
+        <button onclick="clearLog('log1')">清空日志</button>
+      </div>
+      <div class="log" id="log1"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 2：慢速消费触发背压</h3>
+      <div class="controls">
+        <label>
+          消费延迟(ms):
+          <input type="number" id="delay" value="500" min="0" />
+        </label>
+        <label>
+          highWaterMark:
+          <input type="number" id="hwm2" value="2" min="1" />
+        </label>
+        <button onclick="demo2()">运行</button>
+        <button onclick="clearLog('log2')">清空日志</button>
+      </div>
+      <div class="log" id="log2"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 3：管道链中的背压传播</h3>
+      <div class="controls">
+        <button onclick="demo3()">运行</button>
+        <button onclick="clearLog('log3')">清空日志</button>
+      </div>
+      <div class="log" id="log3"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

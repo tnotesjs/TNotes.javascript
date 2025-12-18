@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>支持背压的自定义流</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .log {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        max-height: 400px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+        background: #f9f9f9;
+      }
+      .controls {
+        margin: 10px 0;
+      }
+      button {
+        margin-right: 10px;
+      }
+      .stats {
+        background: #e8f4f8;
+        padding: 10px;
+        margin-top: 10px;
+        border-left: 3px solid #2196f3;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>实现支持背压的自定义流</h1>
+
+    <div class="demo">
+      <h3>Demo 1：分页数据库查询流</h3>
+      <p>模拟从数据库分页读取数据，响应背压信号</p>
+      <div class="controls">
+        <label>
+          每页大小:
+          <input type="number" id="pageSize" value="5" min="1" />
+        </label>
+        <label>
+          消费延迟(ms):
+          <input type="number" id="delay1" value="200" min="0" />
+        </label>
+        <button onclick="demo1()">运行</button>
+        <button onclick="clearLog('log1')">清空</button>
+      </div>
+      <div class="log" id="log1"></div>
+      <div class="stats" id="stats1"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 2：限速文件上传流</h3>
+      <p>模拟限速文件读取，同时响应下游背压</p>
+      <div class="controls">
+        <label>
+          限速(KB/s):
+          <input type="number" id="speed" value="50" min="1" />
+        </label>
+        <label>
+          文件大小(KB):
+          <input type="number" id="fileSize" value="200" min="1" />
+        </label>
+        <button onclick="demo2()">运行</button>
+        <button onclick="clearLog('log2')">清空</button>
+      </div>
+      <div class="log" id="log2"></div>
+      <div class="stats" id="stats2"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 3：批量处理转换流</h3>
+      <p>将输入数据批量处理，控制输出速率</p>
+      <div class="controls">
+        <label>
+          批量大小:
+          <input type="number" id="batchSize" value="3" min="1" />
+        </label>
+        <button onclick="demo3()">运行</button>
+        <button onclick="clearLog('log3')">清空</button>
+      </div>
+      <div class="log" id="log3"></div>
+      <div class="stats" id="stats3"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

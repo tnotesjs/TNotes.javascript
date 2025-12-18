@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自定义队列策略</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .log {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        max-height: 400px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+        background: #f9f9f9;
+      }
+      .controls {
+        margin: 10px 0;
+      }
+      .stats {
+        background: #fff3cd;
+        padding: 10px;
+        margin-top: 10px;
+        border-left: 3px solid #ffc107;
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>自定义队列策略示例</h1>
+
+    <div class="demo">
+      <h3>Demo 1：优先级队列策略</h3>
+      <p>高优先级消息占用更多队列空间，确保低优先级不会挤占资源</p>
+      <button onclick="demo1()">运行</button>
+      <button onclick="clearLog('log1')">清空</button>
+      <div class="log" id="log1"></div>
+      <div class="stats" id="stats1"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 2：字符串长度策略</h3>
+      <p>根据字符串长度控制队列，适合文本流处理</p>
+      <button onclick="demo2()">运行</button>
+      <button onclick="clearLog('log2')">清空</button>
+      <div class="log" id="log2"></div>
+      <div class="stats" id="stats2"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 3：混合策略</h3>
+      <p>智能识别数据类型，对不同类型应用不同的大小计算方式</p>
+      <button onclick="demo3()">运行</button>
+      <button onclick="clearLog('log3')">清空</button>
+      <div class="log" id="log3"></div>
+      <div class="stats" id="stats3"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

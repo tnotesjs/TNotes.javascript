@@ -402,7 +402,7 @@
     ]
   },
   {
-    "text": "12. Web Stream",
+    "text": "12. Web Streams",
     "collapsed": true,
     "items": [
       {
@@ -422,12 +422,12 @@
         "link": "/notes/0125. ReadableStream/README"
       },
       {
-        "text": "⏰ 0140. BYOB Reader 与零拷贝读取",
-        "link": "/notes/0140. BYOB Reader 与零拷贝读取/README"
-      },
-      {
         "text": "⏰ 0130. WritableStream 与 TransformStream",
         "link": "/notes/0130. WritableStream 与 TransformStream/README"
+      },
+      {
+        "text": "⏰ 0140. BYOB Reader 与零拷贝读取",
+        "link": "/notes/0140. BYOB Reader 与零拷贝读取/README"
       },
       {
         "text": "⏰ 0133. 背压机制（Backpressure）",
@@ -454,12 +454,12 @@
         "link": "/notes/0134. Stream 的错误处理与取消机制/README"
       },
       {
-        "text": "⏰ 0138. Stream 性能优化与最佳实践",
-        "link": "/notes/0138. Stream 性能优化与最佳实践/README"
-      },
-      {
         "text": "⏰ 0137. Stream 的实战应用场景",
         "link": "/notes/0137. Stream 的实战应用场景/README"
+      },
+      {
+        "text": "⏰ 0138. Stream 性能优化与最佳实践",
+        "link": "/notes/0138. Stream 性能优化与最佳实践/README"
       },
       {
         "text": "⏰ 0139. Stream 与其他 API 的集成",

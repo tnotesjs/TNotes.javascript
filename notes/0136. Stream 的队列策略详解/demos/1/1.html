@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对比内置队列策略</title>
+    <style>
+      body {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .log {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+        background: #f9f9f9;
+      }
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .side {
+        border: 1px solid #ddd;
+        padding: 15px;
+      }
+      .stats {
+        background: #e3f2fd;
+        padding: 10px;
+        margin-top: 10px;
+        border-left: 3px solid #2196f3;
+      }
+      button {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>队列策略对比演示</h1>
+
+    <div class="demo">
+      <h3>Demo 1：相同数据下的 desiredSize 差异</h3>
+      <button onclick="demo1()">运行对比</button>
+      <button onclick="clearLogs()">清空</button>
+      <div class="comparison">
+        <div class="side">
+          <h4>CountQueuingStrategy</h4>
+          <div class="log" id="log1a"></div>
+        </div>
+        <div class="side">
+          <h4>ByteLengthQueuingStrategy</h4>
+          <div class="log" id="log1b"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 2：内存占用对比</h3>
+      <p>生成 100 个随机大小的数据块，观察不同策略下的背压触发时机</p>
+      <button onclick="demo2()">运行对比</button>
+      <div class="comparison">
+        <div class="side">
+          <h4>CountQueuingStrategy</h4>
+          <div class="log" id="log2a"></div>
+          <div class="stats" id="stats2a"></div>
+        </div>
+        <div class="side">
+          <h4>ByteLengthQueuingStrategy</h4>
+          <div class="log" id="log2b"></div>
+          <div class="stats" id="stats2b"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 3：性能测试</h3>
+      <p>测试不同策略下 pull() 调用次数和总耗时</p>
+      <label>
+        数据块数量:
+        <input type="number" id="chunkCount" value="1000" min="100" />
+      </label>
+      <button onclick="demo3()">运行测试</button>
+      <div class="log" id="log3"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>创建并读取字节流</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .log {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+        background: #f9f9f9;
+      }
+      .controls {
+        margin: 10px 0;
+      }
+      button {
+        margin-right: 10px;
+      }
+      .hex-dump {
+        background: #263238;
+        color: #aed581;
+        padding: 10px;
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>字节流创建与读取</h1>
+
+    <div class="demo">
+      <h3>Demo 1：基本字节流</h3>
+      <p>创建一个简单的字节流，使用默认 Reader 读取</p>
+      <button onclick="demo1()">运行</button>
+      <button onclick="clearLog('log1')">清空</button>
+      <div class="log" id="log1"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 2：使用 BYOB Reader</h3>
+      <p>用户提供缓冲区进行零拷贝读取</p>
+      <button onclick="demo2()">运行</button>
+      <button onclick="clearLog('log2')">清空</button>
+      <div class="log" id="log2"></div>
+    </div>
+
+    <div class="demo">
+      <h3>Demo 3：读取文件为字节流</h3>
+      <div class="controls">
+        <input type="file" id="fileInput" />
+        <button onclick="demo3()">读取文件</button>
+        <button onclick="clearLog('log3')">清空</button>
+      </div>
+      <div class="log" id="log3"></div>
+      <div class="hex-dump" id="hexDump"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

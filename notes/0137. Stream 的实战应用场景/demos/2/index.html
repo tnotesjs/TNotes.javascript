@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>断点续传下载演示</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        padding: 20px;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 12px;
+        font-size: 28px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 32px;
+        font-size: 14px;
+      }
+
+      .file-list {
+        display: grid;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      .file-card {
+        background: linear-gradient(135deg, #667eea20 0%, #764ba220 100%);
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 20px;
+        transition: all 0.2s;
+      }
+
+      .file-card:hover {
+        border-color: #667eea;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .file-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .file-name {
+        font-weight: 700;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .file-size {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .file-actions {
+        display: flex;
+        gap: 8px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .btn-secondary:hover:not(:disabled) {
+        background: #5a6268;
+      }
+
+      .btn-danger {
+        background: #dc3545;
+        color: white;
+      }
+
+      .btn-danger:hover:not(:disabled) {
+        background: #c82333;
+      }
+
+      .btn-success {
+        background: #28a745;
+        color: white;
+      }
+
+      .progress-section {
+        margin-top: 16px;
+      }
+
+      .progress-label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 13px;
+        color: #666;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 24px;
+        background: #e9ecef;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        transition: width 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .download-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .stat {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .stat-label {
+        font-size: 11px;
+        color: #666;
+        margin-bottom: 4px;
+      }
+
+      .stat-value {
+        font-size: 16px;
+        font-weight: 700;
+        color: #f5576c;
+      }
+
+      .settings {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+      }
+
+      .settings-title {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 16px;
+      }
+
+      .setting-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+
+      .setting-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .setting-group label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      .setting-group input,
+      .setting-group select {
+        padding: 10px 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .log {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 16px;
+        border-radius: 8px;
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 13px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .log-entry {
+        margin-bottom: 4px;
+        padding: 4px 0;
+      }
+
+      .log-entry.info {
+        color: #4ec9b0;
+      }
+
+      .log-entry.success {
+        color: #b5cea8;
+      }
+
+      .log-entry.warning {
+        color: #dcdcaa;
+      }
+
+      .log-entry.error {
+        color: #f48771;
+      }
+
+      .chunks-view {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 12px;
+      }
+
+      .chunks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(24px, 1fr));
+        gap: 3px;
+      }
+
+      .chunk {
+        height: 24px;
+        background: #e9ecef;
+        border-radius: 3px;
+        position: relative;
+      }
+
+      .chunk.downloading {
+        background: linear-gradient(
+          45deg,
+          #ffc107 25%,
+          transparent 25%,
+          transparent 50%,
+          #ffc107 50%,
+          #ffc107 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 10px 10px;
+        animation: chunk-progress 0.5s linear infinite;
+      }
+
+      .chunk.success {
+        background: #28a745;
+      }
+
+      .chunk.error {
+        background: #dc3545;
+      }
+
+      @keyframes chunk-progress {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 10px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📥 断点续传下载</h1>
+      <p class="subtitle">支持断点续传、失败重试、分片并发下载演示</p>
+
+      <div class="settings">
+        <div class="settings-title">⚙️ 下载配置</div>
+        <div class="setting-row">
+          <div class="setting-group">
+            <label>分片大小</label>
+            <select id="chunkSize">
+              <option value="262144">256 KB</option>
+              <option value="524288">512 KB</option>
+              <option value="1048576" selected>1 MB</option>
+              <option value="2097152">2 MB</option>
+            </select>
+          </div>
+          <div class="setting-group">
+            <label>并发数</label>
+            <input type="number" id="concurrency" value="3" min="1" max="10" />
+          </div>
+          <div class="setting-group">
+            <label>最大重试</label>
+            <input type="number" id="maxRetries" value="3" min="0" max="10" />
+          </div>
+          <div class="setting-group">
+            <label>模拟失败率</label>
+            <select id="failureRate">
+              <option value="0">0% (正常)</option>
+              <option value="0.1">10%</option>
+              <option value="0.2" selected>20%</option>
+              <option value="0.3">30%</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="file-list" id="fileList"></div>
+
+      <div class="log" id="log"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

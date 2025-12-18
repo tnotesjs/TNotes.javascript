@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>扇出扇入模式演示</title>
+    <style>
+      body {
+        font-family: system-ui;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      button {
+        padding: 8px 16px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+      }
+      .panel {
+        flex: 1;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 4px;
+      }
+      .output {
+        background: #ecf0f1;
+        padding: 10px;
+        margin: 10px 0;
+        max-height: 200px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+      }
+      .diagram {
+        background: #f9f9f9;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 4px;
+        text-align: center;
+      }
+      .arrow {
+        margin: 5px 0;
+        font-size: 20px;
+      }
+      .stats {
+        background: #3498db;
+        color: white;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>扇出扇入模式演示</h1>
+
+    <div class="diagram">
+      <div>📥 源流</div>
+      <div class="arrow">⬇️</div>
+      <div>🔀 tee() 扇出</div>
+      <div class="arrow">⬇️ ⬇️ ⬇️</div>
+      <div>🔧 分支 1 | 🔧 分支 2 | 🔧 分支 3</div>
+      <div class="arrow">⬇️</div>
+      <div>🔗 扇入合并</div>
+      <div class="arrow">⬇️</div>
+      <div>📤 最终输出</div>
+    </div>
+
+    <button id="runFanOut">扇出：保存+显示+统计</button>
+    <button id="runFanIn">扇入：合并多源</button>
+    <button id="runRace">竞态：最快响应</button>
+    <button id="clear">清空输出</button>
+
+    <div class="container">
+      <div class="panel">
+        <h3>📋 主输出</h3>
+        <div class="output" id="mainOutput"></div>
+      </div>
+      <div class="panel">
+        <h3>📊 统计信息</h3>
+        <div class="stats" id="stats">等待运行...</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="panel">
+        <h3>💾 分支 1</h3>
+        <div class="output" id="branch1"></div>
+      </div>
+      <div class="panel">
+        <h3>📺 分支 2</h3>
+        <div class="output" id="branch2"></div>
+      </div>
+      <div class="panel">
+        <h3>📈 分支 3</h3>
+        <div class="output" id="branch3"></div>
+      </div>
+    </div>
+
+    <script src="2.js"></script>
+  </body>
+</html>

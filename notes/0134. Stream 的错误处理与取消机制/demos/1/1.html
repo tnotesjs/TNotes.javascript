@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>流错误处理演示</title>
+    <style>
+      body {
+        font-family: system-ui;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .scenario-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 20px 0;
+      }
+      .scenario {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+      .scenario h4 {
+        margin-top: 0;
+        color: #333;
+      }
+      .log {
+        background: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 12px;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+      .log-entry {
+        margin: 5px 0;
+        padding: 5px;
+        border-left: 3px solid #3498db;
+        padding-left: 10px;
+      }
+      .log-entry.error {
+        border-left-color: #e74c3c;
+        color: #e74c3c;
+      }
+      .log-entry.success {
+        border-left-color: #2ecc71;
+        color: #2ecc71;
+      }
+      .log-entry.warning {
+        border-left-color: #f39c12;
+        color: #f39c12;
+      }
+      .stats {
+        background: #ecf0f1;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 15px 0;
+      }
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>流错误处理演示</h1>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <h4>📋 数据验证错误</h4>
+        <button id="validationError">运行验证错误</button>
+        <p>处理类型不匹配、缺失字段、范围超限等验证错误</p>
+      </div>
+
+      <div class="scenario">
+        <h4>🌐 网络错误</h4>
+        <button id="networkError">模拟网络错误</button>
+        <p>处理请求失败、超时、连接中断等网络问题</p>
+      </div>
+
+      <div class="scenario">
+        <h4>📝 解析错误</h4>
+        <button id="parseError">运行解析错误</button>
+        <p>处理 JSON 解析失败、格式错误等解析问题</p>
+      </div>
+
+      <div class="scenario">
+        <h4>🔄 错误恢复</h4>
+        <button id="recovery">运行错误恢复</button>
+        <p>演示跳过错误数据并继续处理</p>
+      </div>
+
+      <div class="scenario">
+        <h4>🔀 管道错误传播</h4>
+        <button id="pipelineError">运行管道错误</button>
+        <p>演示错误在管道链中的传播</p>
+      </div>
+
+      <div class="scenario">
+        <h4>🛡️ 容错处理</h4>
+        <button id="faultTolerant">运行容错处理</button>
+        <p>演示带重试机制的容错流</p>
+      </div>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="stat-row">
+        <span>总处理项目:</span>
+        <span id="totalItems">0</span>
+      </div>
+      <div class="stat-row">
+        <span>成功项目:</span>
+        <span id="successItems">0</span>
+      </div>
+      <div class="stat-row">
+        <span>错误项目:</span>
+        <span id="errorItems">0</span>
+      </div>
+      <div class="stat-row">
+        <span>跳过项目:</span>
+        <span id="skippedItems">0</span>
+      </div>
+    </div>
+
+    <button id="clear">清空日志</button>
+
+    <div class="log" id="log"></div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

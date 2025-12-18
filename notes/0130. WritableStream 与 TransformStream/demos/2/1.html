@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>数据压缩流</title>
+    <style>
+      body {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+      }
+      .output {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        min-height: 60px;
+      }
+      .stats {
+        background: #f0f0f0;
+        padding: 8px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>数据压缩流示例</h1>
+
+    <div class="demo">
+      <h3>示例1：使用内置 CompressionStream 压缩</h3>
+      <textarea id="input1" placeholder="输入要压缩的文本...">
+Web Streams API 提供了强大的流式数据处理能力。通过 ReadableStream、WritableStream 和 TransformStream，我们可以高效地处理大量数据，而不会占用过多内存。这段文本将被压缩以演示流的强大功能。</textarea
+      >
+      <button onclick="demo1()">压缩文本</button>
+      <div class="output" id="output1"></div>
+    </div>
+
+    <div class="demo">
+      <h3>示例2：压缩后解压</h3>
+      <textarea id="input2" placeholder="输入文本...">
+Hello World! 这是一段测试文本。</textarea
+      >
+      <button onclick="demo2()">压缩并解压</button>
+      <div class="output" id="output2"></div>
+    </div>
+
+    <div class="demo">
+      <h3>示例3：自定义批量压缩流</h3>
+      <p>模拟将多个小数据块合并后再处理（简化的批处理流）</p>
+      <button onclick="demo3()">批量处理演示</button>
+      <div class="output" id="output3"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>

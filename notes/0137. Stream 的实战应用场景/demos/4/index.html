@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV 流式解析演示</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        padding: 20px;
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 12px;
+        font-size: 28px;
+      }
+
+      .subtitle {
+        color: #666;
+        margin-bottom: 32px;
+        font-size: 14px;
+      }
+
+      .upload-section {
+        border: 3px dashed #ddd;
+        border-radius: 12px;
+        padding: 32px;
+        text-align: center;
+        margin-bottom: 24px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .upload-section:hover {
+        border-color: #fa709a;
+        background: #fff8f9;
+      }
+
+      .upload-section.active {
+        border-color: #fa709a;
+        background: #fff0f3;
+      }
+
+      .upload-icon {
+        font-size: 48px;
+        margin-bottom: 12px;
+      }
+
+      .upload-text {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .generate-btn {
+        margin-top: 12px;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .generate-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      .controls {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+      }
+
+      .controls-title {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 16px;
+      }
+
+      .control-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .control-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .control-group label {
+        font-size: 13px;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      .control-group input,
+      .control-group select {
+        padding: 10px 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 12px;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(250, 112, 154, 0.4);
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+
+      .stat-card {
+        background: linear-gradient(135deg, #fa709a20 0%, #fee14020 100%);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+      }
+
+      .stat-label {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+
+      .stat-value {
+        font-size: 32px;
+        font-weight: 700;
+        color: #fa709a;
+      }
+
+      .progress-section {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 24px;
+        border: 2px solid #f0f0f0;
+      }
+
+      .progress-label {
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #333;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 28px;
+        background: #e9ecef;
+        border-radius: 14px;
+        overflow: hidden;
+        margin-bottom: 12px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+        transition: width 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      .data-preview {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 24px;
+        border: 2px solid #f0f0f0;
+      }
+
+      .preview-title {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 16px;
+      }
+
+      .preview-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        max-height: 400px;
+        overflow-y: auto;
+        display: block;
+      }
+
+      .preview-table thead {
+        background: #f8f9fa;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .preview-table th,
+      .preview-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .preview-table th {
+        font-weight: 700;
+        color: #333;
+      }
+
+      .preview-table tbody {
+        display: table;
+        width: 100%;
+      }
+
+      .preview-table tbody tr:hover {
+        background: #f8f9fa;
+      }
+
+      .row-error {
+        background: #fff5f5 !important;
+      }
+
+      .error-cell {
+        color: #dc3545;
+        font-size: 11px;
+      }
+
+      .log {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 16px;
+        border-radius: 8px;
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 13px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      .log-entry {
+        margin-bottom: 4px;
+      }
+
+      .log-entry.info {
+        color: #4ec9b0;
+      }
+
+      .log-entry.success {
+        color: #b5cea8;
+      }
+
+      .log-entry.warning {
+        color: #dcdcaa;
+      }
+
+      .log-entry.error {
+        color: #f48771;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📊 CSV 流式解析</h1>
+      <p class="subtitle">支持大文件流式解析、数据验证、转换和统计分析</p>
+
+      <div class="upload-section" id="uploadSection">
+        <div class="upload-icon">📁</div>
+        <div class="upload-text">点击选择 CSV 文件或拖拽到此处</div>
+        <button class="generate-btn" id="generateBtn">
+          生成测试 CSV (10万行)
+        </button>
+        <input type="file" id="fileInput" class="file-input" accept=".csv" />
+      </div>
+
+      <div class="controls">
+        <div class="controls-title">⚙️ 解析配置</div>
+        <div class="control-row">
+          <div class="control-group">
+            <label>分隔符</label>
+            <select id="delimiter">
+              <option value=",">逗号 (,)</option>
+              <option value=";">分号 (;)</option>
+              <option value="\t">制表符 (Tab)</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>编码</label>
+            <select id="encoding">
+              <option value="utf-8">UTF-8</option>
+              <option value="gbk">GBK</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>数据验证</label>
+            <select id="validation">
+              <option value="none">不验证</option>
+              <option value="basic">基础验证</option>
+              <option value="strict">严格验证</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>预览行数</label>
+            <input
+              type="number"
+              id="previewLimit"
+              value="100"
+              min="10"
+              max="1000"
+            />
+          </div>
+        </div>
+        <div class="action-buttons">
+          <button class="btn btn-primary" id="parseBtn" disabled>
+            开始解析
+          </button>
+          <button class="btn btn-secondary" id="pauseBtn" disabled>暂停</button>
+          <button class="btn btn-secondary" id="stopBtn" disabled>停止</button>
+          <button class="btn btn-secondary" id="exportBtn" disabled>
+            导出 JSON
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid" id="statsGrid" style="display: none">
+        <div class="stat-card">
+          <div class="stat-label">总行数</div>
+          <div class="stat-value" id="totalRows">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">有效行数</div>
+          <div class="stat-value" id="validRows">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">错误行数</div>
+          <div class="stat-value" id="errorRows">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">处理速度</div>
+          <div class="stat-value" id="processSpeed">0 行/秒</div>
+        </div>
+      </div>
+
+      <div class="progress-section" id="progressSection" style="display: none">
+        <div class="progress-label">解析进度</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill" style="width: 0%">
+            0%
+          </div>
+        </div>
+      </div>
+
+      <div class="data-preview" id="dataPreview" style="display: none">
+        <div class="preview-title">
+          📄 数据预览 (前
+          <span id="previewCount">0</span>
+          行)
+        </div>
+        <table class="preview-table">
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="log" id="log"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用 BYOB Reader 读取字节流</title>
+    <style>
+      body {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .demo {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+      .output {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        min-height: 80px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>使用 BYOB Reader 读取字节流</h1>
+
+    <div class="demo">
+      <h3>示例1：基本 BYOB Reader 使用</h3>
+      <p>创建字节流并使用 BYOB Reader 读取</p>
+      <button onclick="demo1()">运行示例</button>
+      <div class="output" id="output1"></div>
+    </div>
+
+    <div class="demo">
+      <h3>示例2：缓冲区复用</h3>
+      <p>演示如何复用同一块缓冲区</p>
+      <button onclick="demo2()">运行示例</button>
+      <div class="output" id="output2"></div>
+    </div>
+
+    <div class="demo">
+      <h3>示例3：处理缓冲区分离</h3>
+      <p>演示缓冲区分离的情况及处理方式</p>
+      <button onclick="demo3()">运行示例</button>
+      <div class="output" id="output3"></div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>
