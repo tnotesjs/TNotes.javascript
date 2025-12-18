@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对比传统 fetch().json() 与流式处理</title>
+    <style>
+      body {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .panel {
+        border: 1px solid #ccc;
+        padding: 15px;
+      }
+      .output {
+        border: 1px solid #ddd;
+        padding: 10px;
+        min-height: 150px;
+        margin-top: 10px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎯 对比传统 fetch().json() 与流式处理</h1>
+    <p>演示两种方式处理 JSON 数据的性能和用户体验差异</p>
+
+    <div class="container">
+      <!-- 传统方式 -->
+      <div class="panel">
+        <h3>❌ 传统方式：fetch().json()</h3>
+        <button onclick="traditionalFetch()">开始请求</button>
+        <div class="stats" id="traditional-stats">等待开始...</div>
+        <div class="output" id="traditional-output"></div>
+      </div>
+
+      <!-- 流式处理 -->
+      <div class="panel">
+        <h3>✅ 流式处理：ReadableStream</h3>
+        <button onclick="streamFetch()">开始请求</button>
+        <div class="stats" id="stream-stats">等待开始...</div>
+        <div class="output" id="stream-output"></div>
+      </div>
+    </div>
+
+    <script src="1.js"></script>
+  </body>
+</html>
