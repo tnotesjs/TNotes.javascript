@@ -15,12 +15,12 @@
 
 ## 1. 🎯 本节内容
 
-- pipeTo 方法
-- pipeThrough 方法
-- 流管道链
-- 并行流处理
-- 流分支技术
-- 流合并策略
+- pipeTo() 方法的用法与返回值
+- pipeThrough() 方法的用法与链式调用
+- 管道选项（preventClose、preventAbort、preventCancel）
+- tee() 方法实现流分支
+- 多流合并的实现策略
+- 管道中的错误传播机制
 
 ## 2. 🫧 评价
 

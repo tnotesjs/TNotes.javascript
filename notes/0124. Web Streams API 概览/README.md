@@ -16,14 +16,13 @@
 
 ## 1. 🎯 本节内容
 
-- 流式数据处理思想
-- ReadableStream / WritableStream / TransformStream 三核心接口
-- 浏览器原生支持情况
-- 流的不可重用性与锁定机制
-- 流与 Promise 的关系（流是“多值 Promise”）
-- 流的背压机制简述
-- 流与传统数据处理方式（如 ArrayBuffer、回调）的本质差异
-- 流在 Fetch、File API 等 Web 标准中的集成位置
+- Web Streams API 的三大核心接口
+- 流式数据处理的设计理念
+- 流的锁定机制与不可重用性
+- 流与 Promise 的关系对比
+- 背压机制的核心概念
+- 流在 Web 标准中的应用场景
+- 浏览器兼容性与 Polyfill 方案
 
 ## 2. 🫧 评价
 

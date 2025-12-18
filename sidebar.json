@@ -422,6 +422,10 @@
         "link": "/notes/0125. ReadableStream/README"
       },
       {
+        "text": "⏰ 0140. BYOB Reader 与零拷贝读取",
+        "link": "/notes/0140. BYOB Reader 与零拷贝读取/README"
+      },
+      {
         "text": "⏰ 0130. WritableStream 与 TransformStream",
         "link": "/notes/0130. WritableStream 与 TransformStream/README"
       },
@@ -654,10 +658,6 @@
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"
-      },
-      {
-        "text": "⏰ 0140. new",
-        "link": "/notes/0140. new/README"
       },
       {
         "text": "⏰ 0141. new",

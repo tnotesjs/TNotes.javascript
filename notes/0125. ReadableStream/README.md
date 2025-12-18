@@ -15,12 +15,12 @@
 
 ## 1. 🎯 本节内容
 
-- 流控制器
-- 队列管理
-- 读取器接口
-- 流锁定机制
-- 取消流操作
-- 异步迭代器
+- ReadableStreamDefaultController 控制器
+- 读取器（Reader）的类型与获取方式
+- 流锁定机制与 locked 状态
+- controller.enqueue() 的基本用法
+- cancel() 方法的基础调用
+- 异步迭代器遍历流数据
 
 ## 2. 🫧 评价
 

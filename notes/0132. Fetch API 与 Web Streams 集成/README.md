@@ -15,12 +15,12 @@
 
 ## 1. 🎯 本节内容
 
-- Response.body 流
-- Request.body 流
-- 流式响应处理
-- 分块上传
-- Progress 事件
-- 流式 JSON 解析
+- Response.body 的 ReadableStream 类型
+- Request.body 的构造与使用
+- 下载进度监控的实现方式
+- 分块上传的流式处理
+- 流式 JSON 解析的基础场景
+- SSE（Server-Sent Events）的流式处理
 
 ## 2. 🫧 评价
 
