@@ -13,11 +13,12 @@
 - [9. 数据类型](#9-数据类型)
 - [10. 模块化](#10-模块化)
 - [11. window 对象](#11-window-对象)
-- [12. css 属性](#12-css-属性)
-- [13. html 元素](#13-html-元素)
-- [14. prettier](#14-prettier)
-- [15. eslint](#15-eslint)
-- [16. pending](#16-pending)
+- [12. Web Stream](#12-web-stream)
+- [13. css 属性](#13-css-属性)
+- [14. html 元素](#14-html-元素)
+- [15. prettier](#15-prettier)
+- [16. eslint](#16-eslint)
+- [17. pending](#17-pending)
 
 <!-- endregion:toc -->
 
@@ -137,24 +138,35 @@
 - [x] [0081. postMessage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0081.%20postMessage/README.md)
 - [ ] [0108. DOMParser](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0108.%20DOMParser/README.md)
 - [ ] [0109. XSLTProcessor](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0109.%20XSLTProcessor/README.md)
-- [ ] [0072. web streams](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20web%20streams/README.md)
 
-## 12. css 属性
+## 12. Web Stream
+
+- [ ] [0072. Web Stream](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Stream/README.md)
+- [x] [0073. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20new/README.md)
+- [ ] [0124. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20new/README.md)
+- [ ] [0125. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20new/README.md)
+- [ ] [0130. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0130.%20new/README.md)
+- [ ] [0131. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0131.%20new/README.md)
+- [ ] [0132. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0132.%20new/README.md)
+- [ ] [0133. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0133.%20new/README.md)
+- [ ] [0134. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0134.%20new/README.md)
+
+## 13. css 属性
 
 - [ ] [0105. background](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0105.%20background/README.md)
 - [ ] [0106. clip-path](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0106.%20clip-path/README.md)
 
-## 13. html 元素
+## 14. html 元素
 
 - [ ] [0107. style 元素的 sheet 属性](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0107.%20style%20%E5%85%83%E7%B4%A0%E7%9A%84%20sheet%20%E5%B1%9E%E6%80%A7/README.md)
 - [ ] [0110. script 元素的 crossorigin 属性](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0110.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20crossorigin%20%E5%B1%9E%E6%80%A7/README.md)
 - [ ] [0111. script 元素的 type 属性](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0111.%20script%20%E5%85%83%E7%B4%A0%E7%9A%84%20type%20%E5%B1%9E%E6%80%A7/README.md)
 
-## 14. prettier
+## 15. prettier
 
 - [x] [0113. 学习 prettier 基本配置字段的书写](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0113.%20%E5%AD%A6%E4%B9%A0%20prettier%20%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%AD%97%E6%AE%B5%E7%9A%84%E4%B9%A6%E5%86%99/README.md)
 
-## 15. eslint
+## 16. eslint
 
 - [x] [0116. eslint 是什么？](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0116.%20eslint%20%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/README.md)
 - [ ] [0117. eslint 的配置文件的命名](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0117.%20eslint%20%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%91%BD%E5%90%8D/README.md)
@@ -163,7 +175,7 @@
 - [ ] [0120. eslint 配置格式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0120.%20eslint%20%E9%85%8D%E7%BD%AE%E6%A0%BC%E5%BC%8F/README.md)
 - [ ] [0121. 忽略文件 .eslintignore](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0121.%20%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6%20.eslintignore/README.md)
 
-## 16. pending
+## 17. pending
 
 - [ ] [0122. 自定义 color picker 组件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0122.%20%E8%87%AA%E5%AE%9A%E4%B9%89%20color%20picker%20%E7%BB%84%E4%BB%B6/README.md)
 - [ ] [0082. img 元素宽度撑满，防止溢出容器](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0082.%20img%20%E5%85%83%E7%B4%A0%E5%AE%BD%E5%BA%A6%E6%92%91%E6%BB%A1%EF%BC%8C%E9%98%B2%E6%AD%A2%E6%BA%A2%E5%87%BA%E5%AE%B9%E5%99%A8/README.md)
@@ -194,11 +206,3 @@
 - [ ] [0076. 使用 Array.form 来创建一个二维数组](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md)
 - [ ] [0077. encodeURIcomponent](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0077.%20encodeURIcomponent/README.md)
 - [ ] [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
-- [ ] [0073. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20new/README.md)
-- [ ] [0124. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20new/README.md)
-- [ ] [0125. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20new/README.md)
-- [ ] [0130. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0130.%20new/README.md)
-- [ ] [0131. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0131.%20new/README.md)
-- [ ] [0132. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0132.%20new/README.md)
-- [ ] [0133. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0133.%20new/README.md)
-- [ ] [0134. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0134.%20new/README.md)

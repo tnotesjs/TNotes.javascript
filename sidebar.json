@@ -398,15 +398,53 @@
       {
         "text": "⏰ 0109. XSLTProcessor",
         "link": "/notes/0109. XSLTProcessor/README"
-      },
-      {
-        "text": "⏰ 0072. web streams",
-        "link": "/notes/0072. web streams/README"
       }
     ]
   },
   {
-    "text": "12. css 属性",
+    "text": "12. Web Stream",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "⏰ 0072. Web Stream",
+        "link": "/notes/0072. Web Stream/README"
+      },
+      {
+        "text": "✅ 0073. Web Stream 核心概念",
+        "link": "/notes/0073. Web Stream 核心概念/README"
+      },
+      {
+        "text": "⏰ 0124. new",
+        "link": "/notes/0124. new/README"
+      },
+      {
+        "text": "⏰ 0125. new",
+        "link": "/notes/0125. new/README"
+      },
+      {
+        "text": "⏰ 0130. new",
+        "link": "/notes/0130. new/README"
+      },
+      {
+        "text": "⏰ 0131. new",
+        "link": "/notes/0131. new/README"
+      },
+      {
+        "text": "⏰ 0132. new",
+        "link": "/notes/0132. new/README"
+      },
+      {
+        "text": "⏰ 0133. new",
+        "link": "/notes/0133. new/README"
+      },
+      {
+        "text": "⏰ 0134. new",
+        "link": "/notes/0134. new/README"
+      }
+    ]
+  },
+  {
+    "text": "13. css 属性",
     "collapsed": true,
     "items": [
       {
@@ -420,7 +458,7 @@
     ]
   },
   {
-    "text": "13. html 元素",
+    "text": "14. html 元素",
     "collapsed": true,
     "items": [
       {
@@ -438,7 +476,7 @@
     ]
   },
   {
-    "text": "14. prettier",
+    "text": "15. prettier",
     "collapsed": true,
     "items": [
       {
@@ -448,7 +486,7 @@
     ]
   },
   {
-    "text": "15. eslint",
+    "text": "16. eslint",
     "collapsed": true,
     "items": [
       {
@@ -478,7 +516,7 @@
     ]
   },
   {
-    "text": "16. pending",
+    "text": "17. pending",
     "collapsed": true,
     "items": [
       {
@@ -596,38 +634,6 @@
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"
-      },
-      {
-        "text": "⏰ 0073. new",
-        "link": "/notes/0073. new/README"
-      },
-      {
-        "text": "⏰ 0124. new",
-        "link": "/notes/0124. new/README"
-      },
-      {
-        "text": "⏰ 0125. new",
-        "link": "/notes/0125. new/README"
-      },
-      {
-        "text": "⏰ 0130. new",
-        "link": "/notes/0130. new/README"
-      },
-      {
-        "text": "⏰ 0131. new",
-        "link": "/notes/0131. new/README"
-      },
-      {
-        "text": "⏰ 0132. new",
-        "link": "/notes/0132. new/README"
-      },
-      {
-        "text": "⏰ 0133. new",
-        "link": "/notes/0133. new/README"
-      },
-      {
-        "text": "⏰ 0134. new",
-        "link": "/notes/0134. new/README"
       }
     ]
   }
