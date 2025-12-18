@@ -141,8 +141,8 @@
 
 ## 12. Web Stream
 
-- [ ] [0072. Web Stream](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Stream/README.md)
-- [x] [0073. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20new/README.md)
+- [ ] [0072. Web Streams](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Streams/README.md)
+- [x] [0073. Web Streams 核心概念](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20Web%20Streams%20%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/README.md)
 - [ ] [0124. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20new/README.md)
 - [ ] [0125. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20new/README.md)
 - [ ] [0130. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0130.%20new/README.md)

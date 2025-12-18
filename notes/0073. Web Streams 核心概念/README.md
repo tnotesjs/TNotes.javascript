@@ -1,4 +1,4 @@
-# [0073. Web Stream 核心概念](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20Web%20Stream%20%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5)
+# [0073. Web Streams 核心概念](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20Web%20Streams%20%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5)
 
 <!-- region:toc -->
 

@@ -1,4 +1,4 @@
-# [0072. Web Stream](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Stream)
+# [0072. Web Streams](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Streams)
 
 <!-- region:toc -->
 
