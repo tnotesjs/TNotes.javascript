@@ -141,9 +141,9 @@
 
 ## 12. Web Streams
 
-- [ ] [0072. Web Streams](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Streams/README.md)
+- [x] [0072. Web Streams](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0072.%20Web%20Streams/README.md)
 - [x] [0073. Web Streams 核心概念](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0073.%20Web%20Streams%20%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/README.md)
-- [ ] [0125. ReadableStream](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20ReadableStream/README.md)
+- [x] [0125. ReadableStream](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0125.%20ReadableStream/README.md)
 - [ ] [0130. WritableStream 与 TransformStream](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0130.%20WritableStream%20%E4%B8%8E%20TransformStream/README.md)
 - [ ] [0140. BYOB Reader 与零拷贝读取](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0140.%20BYOB%20Reader%20%E4%B8%8E%E9%9B%B6%E6%8B%B7%E8%B4%9D%E8%AF%BB%E5%8F%96/README.md)
 - [ ] [0133. 背压机制（Backpressure）](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0133.%20%E8%83%8C%E5%8E%8B%E6%9C%BA%E5%88%B6%EF%BC%88Backpressure%EF%BC%89/README.md)

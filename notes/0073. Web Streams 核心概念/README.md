@@ -48,7 +48,6 @@
 - [14. 💻 demos.1 - 对比传统 `fetch().json()` 与流式处理响应体](#14--demos1---对比传统-fetchjson-与流式处理响应体)
 - [15. 🆚 `Web Streams` vs `RxJS` vs `Node.js Streams`](#15--web-streams-vs-rxjs-vs-nodejs-streams)
 - [16. 💻 demos.2 - 消费一个自定义可读流](#16--demos2---消费一个自定义可读流)
-- [17. 🔗 引用](#17--引用)
 
 <!-- endregion:toc -->
 
@@ -999,20 +998,6 @@ state$.pipe(map, filter, distinctUntilChanged)
 
 下面是一个简单的字符串流和字节流的转换示例：
 
-::: code-group
-
 <<< ./demos/2/1.js
 
-<<< ./demos/2/1.html
-
-:::
-
 ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-12-19-11-30-05.png)
-
-## 17. 🔗 引用
-
-- [mdn - Streams API][1]
-- [github - rxjs][2]
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/API/Streams_API
-[2]: https://github.com/ReactiveX/rxjs

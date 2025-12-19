@@ -48,14 +48,20 @@
 
 ## 5. 🔗 引用
 
+汇总 Web Streams 章节中的相关参考资料：
+
 - [JSONPlaceholder - 免费的在线 REST API 是笔记中用于测试的 API][5]
-- [Streams API][4]
-- [ReadableStream][1]
-- [WritableStream][2]
-- [TransformStream][3]
+- [Github - rxjs][6]
+- [MDN - Streams API][4]
+- [MDN - ReadableStream][1]
+- [MDN - WritableStream][2]
+- [MDN - TransformStream][3]
+- [MDN - dom-examples/streams][7]
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/WritableStream
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/TransformStream
 [4]: https://developer.mozilla.org/en-US/docs/Web/API/Streams_API
 [5]: https://jsonplaceholder.typicode.com/
+[6]: https://github.com/ReactiveX/rxjs
+[7]: https://github.com/mdn/dom-examples/tree/main/streams
