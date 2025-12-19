@@ -6,7 +6,8 @@
 - [2. 🫧 评价](#2--评价)
 - [3. 🔍 章节内容速查](#3--章节内容速查)
 - [4. 🔍 学习路线](#4--学习路线)
-- [5. 🔗 引用](#5--引用)
+- [5. 🤔 Web Streams 官方规范标准是？](#5--web-streams-官方规范标准是)
+- [6. 🔗 引用](#6--引用)
 
 <!-- endregion:toc -->
 
@@ -27,7 +28,6 @@
 ## 4. 🔍 学习路线
 
 - 基础概念：先建立整体认知，再看 API 全貌
-  - Web Streams 核心概念
   - Web Streams API 概览
 - 核心 API：掌握三大核心 API，为后续机制和实战打基础
   - ReadableStream
@@ -46,7 +46,16 @@
   - Stream 性能优化与最佳实践
   - Stream 与其他 API 的集成
 
-## 5. 🔗 引用
+## 5. 🤔 Web Streams 官方规范标准是？
+
+`https://streams.spec.whatwg.org/` 是 Web Streams API 的官方规范标准站点，由 WHATWG（Web 超文本应用技术工作小组）维护。
+
+这个网站是定义了所有现代浏览器中使用的 `ReadableStream`、`WritableStream` 和 `TransformStream` 接口的权威文档。其核心内容包括两大块：
+
+- 核心概念层面：清晰定义了数据块（chunk）、可读流、可写流、转换流、背压控制等核心概念
+- API 实现细节层面：是所有流 API 方法的最终依据，例如后续笔记中会介绍到的 `response.body.getReader()`、`pipeThrough()` 等方法的实现标准均源于此
+
+## 6. 🔗 引用
 
 汇总 Web Streams 章节中的相关参考资料：
 
@@ -57,6 +66,7 @@
 - [MDN - WritableStream][2]
 - [MDN - TransformStream][3]
 - [MDN - dom-examples/streams][7]
+- [WHATWG Streams 规范文档 - Web Streams API 的官方规范标准站点][8]
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/WritableStream
@@ -65,3 +75,4 @@
 [5]: https://jsonplaceholder.typicode.com/
 [6]: https://github.com/ReactiveX/rxjs
 [7]: https://github.com/mdn/dom-examples/tree/main/streams
+[8]: https://streams.spec.whatwg.org/
