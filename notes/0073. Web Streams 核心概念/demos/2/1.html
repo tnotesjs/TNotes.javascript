@@ -1,54 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>三行代码创建并消费自定义流</title>
-    <style>
-      body {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-      }
-      .output {
-        border: 1px solid #ccc;
-        padding: 15px;
-        margin-top: 15px;
-        min-height: 100px;
-      }
-      .chunk {
-        margin: 5px 0;
-      }
-    </style>
+    <title>Document</title>
   </head>
   <body>
-    <h1>🎯 用三行代码创建并消费一个自定义可读流</h1>
-
-    <p>演示 Web Streams API 的简洁性和强大功能</p>
-
-    <div class="code-example">
-      <pre><code>// 1. 创建流
-const stream = ReadableStream.from([1, 2, 3, 4, 5])
-
-// 2. 获取读取器  
-const reader = stream.getReader()
-
-// 3. 读取数据
-while (true) {
-  const {done, value} = await reader.read()
-  if (done) break
-  console.log(value)
-}</code></pre>
-    </div>
-
-    <h2>📝 示例演示</h2>
-    <button onclick="demo1()">示例 1：数字流</button>
-    <button onclick="demo2()">示例 2：字符串流</button>
-    <button onclick="demo3()">示例 3：自定义对象流</button>
-    <button onclick="clearOutput()">清空输出</button>
-
-    <div class="output" id="output">点击按钮运行示例...</div>
-
-    <script src="1.js"></script>
+    <h2>请打开控制台查看输出结果</h2>
+    <script src="./1.js"></script>
   </body>
 </html>

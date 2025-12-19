@@ -47,7 +47,7 @@
 - [13. 🤔 Fetch 的 Response.body 为什么是 ReadableStream 而不是直接返回整个数据？](#13--fetch-的-responsebody-为什么是-readablestream-而不是直接返回整个数据)
 - [14. 💻 demos.1 - 对比传统 `fetch().json()` 与流式处理响应体](#14--demos1---对比传统-fetchjson-与流式处理响应体)
 - [15. 🆚 `Web Streams` vs `RxJS` vs `Node.js Streams`](#15--web-streams-vs-rxjs-vs-nodejs-streams)
-- [16. 💻 demos.2 - 用三行代码创建并消费一个自定义可读流](#16--demos2---用三行代码创建并消费一个自定义可读流)
+- [16. 💻 demos.2 - 消费一个自定义可读流](#16--demos2---消费一个自定义可读流)
 - [17. 🔗 引用](#17--引用)
 
 <!-- endregion:toc -->
@@ -995,15 +995,19 @@ state$.pipe(map, filter, distinctUntilChanged)
 - Node.js Streams 专注服务端场景，API 设计更贴近 I/O 操作
 - Web Streams 作为浏览器标准，强调与 Web API 的深度集成、内存安全和规范化的背压机制，是浏览器环境下处理流式数据的首选方案
 
-## 16. 💻 demos.2 - 用三行代码创建并消费一个自定义可读流
+## 16. 💻 demos.2 - 消费一个自定义可读流
+
+下面是一个简单的字符串流和字节流的转换示例：
 
 ::: code-group
 
-<<< ./demos/2/1.html
-
 <<< ./demos/2/1.js
 
+<<< ./demos/2/1.html
+
 :::
+
+![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-12-19-11-30-05.png)
 
 ## 17. 🔗 引用
 

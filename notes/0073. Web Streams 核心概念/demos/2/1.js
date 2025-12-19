@@ -1,132 +1,82 @@
-// 清空输出
-function clearOutput() {
-  document.getElementById('output').innerHTML = '点击按钮运行示例...'
-}
+// 示例 - 字符串流和字节流的转换
 
-// 输出帮助函数
-function addOutput(text, isDone = false) {
-  const output = document.getElementById('output')
-  const div = document.createElement('div')
-  div.className = isDone ? 'done' : 'chunk'
-  div.textContent = text
-  output.appendChild(div)
-}
+// 创建流式编码器
+const encoderStream = new TextEncoderStream('utf-8') // 可以指定编码格式，默认为 'utf-8'
 
-// 示例 1：数字流
-async function demo1() {
-  clearOutput()
-  addOutput('📦 示例 1：创建数字流并读取')
-  addOutput('代码：const stream = ReadableStream.from([1, 2, 3, 4, 5])', false)
+// 创建解码器
+const decoder = new TextDecoder('utf-8')
 
-  // 三行核心代码
-  const stream = ReadableStream.from([1, 2, 3, 4, 5])
-  const reader = stream.getReader()
+// 创建数据源 - 一个包含文本的 ReadableStream
+const textStream = new ReadableStream({
+  start(controller) {
+    // 分块写入文本数据 - 此时是未编码的字符串
+    controller.enqueue('aaa 111 222 333 bbb')
+    controller.enqueue('foo foo foo bar bar bar')
+    controller.enqueue(
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. In, omnis.'
+    )
+    controller.close()
+  },
+})
 
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) {
-      addOutput('✅ 流读取完成', true)
-      break
-    }
-    // 添加延迟，让用户看清读取过程
-    await new Promise((r) => setTimeout(r, 300))
-    addOutput(`读取到值：${value}`)
-  }
-}
+// 将文本流通过编码器传输
+let __chunkIndex = 0
 
-// 示例 2：字符串流
-async function demo2() {
-  clearOutput()
-  addOutput('📦 示例 2：创建字符串流')
-  addOutput(
-    '代码：const stream = ReadableStream.from(["Hello", "Web", "Streams"])',
-    false
+textStream
+  .pipeThrough(encoderStream) // 这里进行编码转换，将字符串转换为 Uint8Array 字节流数据
+  .pipeTo(
+    new WritableStream({
+      write(chunk) {
+        __chunkIndex += 1
+
+        const isUint8Array = chunk instanceof Uint8Array
+        const typeText = isUint8Array
+          ? 'Uint8Array'
+          : Object.prototype.toString.call(chunk)
+
+        const hex = Array.from(chunk)
+          .map((b) => '0x' + b.toString(16).padStart(2, '0'))
+          .join(' ')
+
+        const bytes = Array.from(chunk).join('，')
+
+        console.group(`📦 第 ${__chunkIndex} 个分块`)
+        console.log(`类型：${typeText}`)
+        console.log(`字节长度：${chunk.byteLength ?? chunk.length ?? 0}`)
+        console.log('数据对象：', chunk)
+        console.log(`十六进制：${hex}`)
+        console.log(`字节列表：${bytes}`)
+
+        // 如果需要查看原始字符串，可以使用 TextDecoder 解码（流式解码）
+        const decodedText = decoder.decode(chunk, { stream: true })
+        console.log(`📝 解码文本：${decodedText}`)
+        console.groupEnd()
+      },
+      close() {
+        // 结束时刷新可能的未完成多字节字符
+        const rest = decoder.decode()
+        if (rest) {
+          console.log(`🧹 解码剩余：${rest}`)
+        }
+      },
+    })
   )
 
-  // 三行核心代码
-  const stream = ReadableStream.from(['Hello', 'Web', 'Streams'])
-  const reader = stream.getReader()
+/* TextEncoderStream 简介
+TextEncoderStream 是用于将字符串转换为Uint8Array字节流的TransformStream
+常用于处理文本数据的流式编码
 
-  let result = []
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) {
-      addOutput(`✅ 完整句子：${result.join(' ')}`, true)
-      break
-    }
-    await new Promise((r) => setTimeout(r, 300))
-    result.push(value)
-    addOutput(`读取到：${value}`)
-  }
-}
+关键点总结：
+1. TextEncoderStream 是 TransformStream，用于流式文本编码
+2. 输入：字符串 → 输出：Uint8Array（字节数组）
+3. 默认编码为 UTF-8，这是Web标准的推荐编码
+4. 自动处理背压（backpressure），内存效率高
+5. 适合处理大文件或流式数据，避免内存溢出
+6. 常与 Fetch API、文件API、网络Socket等结合使用
 
-// 示例 3：自定义对象流
-async function demo3() {
-  clearOutput()
-  addOutput('📦 示例 3：自定义对象流')
-
-  // 创建自定义流
-  const stream = new ReadableStream({
-    start(controller) {
-      // 模拟实时数据生成
-      const data = [
-        { type: 'user', name: 'Alice' },
-        { type: 'message', text: 'Hello!' },
-        { type: 'user', name: 'Bob' },
-        { type: 'message', text: 'Hi there!' },
-      ]
-
-      let index = 0
-      const interval = setInterval(() => {
-        if (index < data.length) {
-          controller.enqueue(data[index++])
-        } else {
-          clearInterval(interval)
-          controller.close()
-        }
-      }, 500)
-    },
-  })
-
-  // 读取流
-  const reader = stream.getReader()
-
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) {
-      addOutput('✅ 对话结束', true)
-      break
-    }
-
-    if (value.type === 'user') {
-      addOutput(`👤 ${value.name} 加入对话`)
-    } else {
-      addOutput(`💬 消息：${value.text}`)
-    }
-  }
-}
-
-// 页面加载提示
-console.log(`
-🎯 三行代码创建并消费流：
-
-1️⃣ 创建流：
-   const stream = ReadableStream.from([1, 2, 3])
-
-2️⃣ 获取读取器：
-   const reader = stream.getReader()
-
-3️⃣ 读取数据：
-   while (true) {
-     const {done, value} = await reader.read()
-     if (done) break
-     console.log(value)
-   }
-
-💡 关键点：
-- ReadableStream.from() 可以从任意可迭代对象创建流
-- getReader() 获取读取器并锁定流
-- read() 返回 Promise，异步读取下一个数据块
-
-🚀 点击按钮查看不同示例！
-`)
+使用场景：
+- 大文件上传前的分块编码
+- 实时文本传输（如WebSocket）
+- 流式处理JSON或其他文本格式
+- 将文本转换为二进制格式进行存储或传输
+*/
