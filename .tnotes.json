@@ -33,12 +33,13 @@
       "25.10": 43,
       "25.11": 43,
       "25.12": 41,
-      "26.01": 41
+      "26.01": 41,
+      "26.02": 41
     },
     "details": "前端三件套及跟前端相关的其它内容",
     "link": "https://tnotesjs.github.io/TNotes.javascript/",
     "created_at": 1740924811000,
-    "updated_at": 1767227723777,
+    "updated_at": 1769948362012,
     "days_since_birth": 9379
   },
   "menuItems": [
