@@ -3,7 +3,6 @@
   "tnotes": [],
   "yuque": ["javascript.0070"],
   "done": true,
-  "deprecated": false,
   "enableDiscussions": true,
   "description": "介绍了 CommonJS 规范的核心内容、模块导入导出方式、入口文件机制、同步加载特性、路径解析和缓存机制，并通过多个示例演示了 Node.js 中 CommonJS 的实际用法。",
   "id": "9a4cc3d9-bf9c-44dd-b05b-3934a0614672",
