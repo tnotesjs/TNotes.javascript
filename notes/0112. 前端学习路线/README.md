@@ -12,22 +12,31 @@
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
 - [3. 🔍 前端学习路线](#3--前端学习路线)
-- [4. 💻 学会自定义 roadmap](#4--学会自定义-roadmap)
+- [4. 🤔 如何自定义 roadmap？](#4--如何自定义-roadmap)
 - [5. 🔗 引用](#5--引用)
 
 <!-- endregion:toc -->
 
 ## 1. 🎯 本节内容
 
-- 了解前端 html-css-js 的一些学习路线
-- 知道如何自行编写 roadmap
+- js roadmap
+- html roadmap
+- css roadmap
+- 自定义 roadmap
 
 ## 2. 🫧 评价
 
-- 本文记录了前端 html css js 的学习路线，如果你不清楚前端的学习路线，可以在线搜索一下，类似这样的 roadmap 还是很多的。
-- 学会举一反三，在学习其它技术时，若不清楚学习路线，也可以自行上 roadmap 搜搜看。
-- 在 TNotes.yuque 上记录了 front-end roadmap 的 pdf 版本，你也可以自行上 roadmap 社区下载。
-- ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-15-54-51.png)
+本文记录了前端 html css js 的学习路线，如果你不清楚前端的学习路线，可以在线搜索一下，类似这样的 roadmap 还是很多的。
+
+学会举一反三，在学习其它技术时，若不清楚学习路线，也可以自行上 roadmap 搜搜看。
+
+::: details TNotes.yuque
+
+在 TNotes.yuque 上记录了 front-end roadmap 的 pdf 版本，你也可以自行上 roadmap 社区下载。
+
+![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-15-54-51.png)
+
+:::
 
 ## 3. 🔍 前端学习路线
 
@@ -41,9 +50,9 @@
 
 :::
 
-## 4. 💻 学会自定义 roadmap
+## 4. 🤔 如何自定义 roadmap？
 
-- 如果你已经掌握了某个技术，想要向他人分享学习路线，也可以基于 roadmap 来自己绘制路线图。
+如果你已经掌握了某个技术，想要向他人分享学习路线，也可以基于 roadmap 来自己绘制路线图。
 
 ::: swiper
 

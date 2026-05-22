@@ -1,26 +1,28 @@
 [
   {
-    "text": "1. 学习资料",
+    "text": "1. TNotes.javascript",
     "collapsed": true,
     "items": [
+      {
+        "text": "✅ 0141. TNotes.javascript",
+        "link": "/notes/0141. TNotes.javascript/README"
+      },
       {
         "text": "✅ 0112. 前端学习路线",
         "link": "/notes/0112. 前端学习路线/README"
-      }
-    ]
-  },
-  {
-    "text": "2. 程序执行环境",
-    "collapsed": true,
-    "items": [
+      },
       {
         "text": "✅ 0006. 常见的两个 JS 运行环境：浏览器、NodeJS",
         "link": "/notes/0006. 常见的两个 JS 运行环境：浏览器、NodeJS/README"
+      },
+      {
+        "text": "⏰ 0142. new",
+        "link": "/notes/0142. new/README"
       }
     ]
   },
   {
-    "text": "3. 变量",
+    "text": "2. 变量",
     "collapsed": true,
     "items": [
       {
@@ -46,7 +48,7 @@
     ]
   },
   {
-    "text": "4. 作用域",
+    "text": "3. 作用域",
     "collapsed": true,
     "items": [
       {
@@ -56,7 +58,7 @@
     ]
   },
   {
-    "text": "5. 语句和表达式",
+    "text": "4. 语句和表达式",
     "collapsed": true,
     "items": [
       {
@@ -66,7 +68,7 @@
     ]
   },
   {
-    "text": "6. 符号",
+    "text": "5. 符号",
     "collapsed": true,
     "items": [
       {
@@ -84,7 +86,7 @@
     ]
   },
   {
-    "text": "7. 流程控制语句",
+    "text": "6. 流程控制语句",
     "collapsed": true,
     "items": [
       {
@@ -142,7 +144,7 @@
     ]
   },
   {
-    "text": "8. 防抖、节流",
+    "text": "7. 防抖、节流",
     "collapsed": true,
     "items": [
       {
@@ -152,7 +154,7 @@
     ]
   },
   {
-    "text": "9. 数据类型",
+    "text": "8. 数据类型",
     "collapsed": true,
     "items": [
       {
@@ -310,7 +312,7 @@
     ]
   },
   {
-    "text": "10. 模块化",
+    "text": "9. 模块化",
     "collapsed": true,
     "items": [
       {
@@ -376,7 +378,7 @@
     ]
   },
   {
-    "text": "11. window 对象",
+    "text": "10. window 对象",
     "collapsed": true,
     "items": [
       {
@@ -402,7 +404,7 @@
     ]
   },
   {
-    "text": "12. Web Streams",
+    "text": "11. Web Streams",
     "collapsed": true,
     "items": [
       {
@@ -464,7 +466,7 @@
     ]
   },
   {
-    "text": "13. css 属性",
+    "text": "12. css 属性",
     "collapsed": true,
     "items": [
       {
@@ -478,7 +480,7 @@
     ]
   },
   {
-    "text": "14. html 元素",
+    "text": "13. html 元素",
     "collapsed": true,
     "items": [
       {
@@ -496,7 +498,7 @@
     ]
   },
   {
-    "text": "15. prettier",
+    "text": "14. prettier",
     "collapsed": true,
     "items": [
       {
@@ -506,7 +508,7 @@
     ]
   },
   {
-    "text": "16. eslint",
+    "text": "15. eslint",
     "collapsed": true,
     "items": [
       {
@@ -536,7 +538,7 @@
     ]
   },
   {
-    "text": "17. pending",
+    "text": "16. pending",
     "collapsed": true,
     "items": [
       {
@@ -654,14 +656,6 @@
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"
-      },
-      {
-        "text": "⏰ 0141. new",
-        "link": "/notes/0141. new/README"
-      },
-      {
-        "text": "⏰ 0142. new",
-        "link": "/notes/0142. new/README"
       },
       {
         "text": "⏰ 0143. new",
