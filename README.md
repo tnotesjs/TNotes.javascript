@@ -18,6 +18,7 @@
 - [14. prettier](#14-prettier)
 - [15. eslint](#15-eslint)
 - [16. pending](#16-pending)
+- [17. 前端音频处理](#17-前端音频处理)
 
 <!-- endregion:toc -->
 
@@ -136,6 +137,7 @@
 - [x] [0081. postMessage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0081.%20postMessage/README.md)
 - [ ] [0108. DOMParser](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0108.%20DOMParser/README.md)
 - [ ] [0109. XSLTProcessor](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0109.%20XSLTProcessor/README.md)
+- [ ] [0144. AudioContext](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0144.%20AudioContext/README.md)
 
 ## 11. Web Streams
 
@@ -209,5 +211,19 @@
 - [ ] [0076. 使用 Array.form 来创建一个二维数组](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0076.%20%E4%BD%BF%E7%94%A8%20Array.form%20%E6%9D%A5%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/README.md)
 - [ ] [0077. encodeURIcomponent](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0077.%20encodeURIcomponent/README.md)
 - [ ] [0123. 前端设计模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0123.%20%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/README.md)
-- [ ] [0143. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0143.%20new/README.md)
-- [ ] [0144. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0144.%20new/README.md)
+
+## 17. 前端音频处理
+
+- [ ] [0143. 前端音频处理](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0143.%20%E5%89%8D%E7%AB%AF%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/README.md)
+- [ ] [0124. HTMLMediaElement 播放控制](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0124.%20HTMLMediaElement%20%E6%92%AD%E6%94%BE%E6%8E%A7%E5%88%B6/README.md)
+- [ ] [0145. AudioContext 与音频节点图模型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0145.%20AudioContext%20%E4%B8%8E%E9%9F%B3%E9%A2%91%E8%8A%82%E7%82%B9%E5%9B%BE%E6%A8%A1%E5%9E%8B/README.md)
+- [ ] [0146. 音频资源加载、解码与播放](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0146.%20%E9%9F%B3%E9%A2%91%E8%B5%84%E6%BA%90%E5%8A%A0%E8%BD%BD%E3%80%81%E8%A7%A3%E7%A0%81%E4%B8%8E%E6%92%AD%E6%94%BE/README.md)
+- [ ] [0147. 音量控制、声像定位与空间音频](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0147.%20%E9%9F%B3%E9%87%8F%E6%8E%A7%E5%88%B6%E3%80%81%E5%A3%B0%E5%83%8F%E5%AE%9A%E4%BD%8D%E4%B8%8E%E7%A9%BA%E9%97%B4%E9%9F%B3%E9%A2%91/README.md)
+- [ ] [0148. 音频分析与实时可视化](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0148.%20%E9%9F%B3%E9%A2%91%E5%88%86%E6%9E%90%E4%B8%8E%E5%AE%9E%E6%97%B6%E5%8F%AF%E8%A7%86%E5%8C%96/README.md)
+- [ ] [0149. OscillatorNode 与声音合成](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0149.%20OscillatorNode%20%E4%B8%8E%E5%A3%B0%E9%9F%B3%E5%90%88%E6%88%90/README.md)
+- [ ] [0150. 滤波器、混响与音效处理链](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0150.%20%E6%BB%A4%E6%B3%A2%E5%99%A8%E3%80%81%E6%B7%B7%E5%93%8D%E4%B8%8E%E9%9F%B3%E6%95%88%E5%A4%84%E7%90%86%E9%93%BE/README.md)
+- [ ] [0151. MediaStream、getUserMedia 与 MediaRecorder](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0151.%20MediaStream%E3%80%81getUserMedia%20%E4%B8%8E%20MediaRecorder/README.md)
+- [ ] [0152. AudioWorklet 自定义音频处理器](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0152.%20AudioWorklet%20%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86%E5%99%A8/README.md)
+- [ ] [0153. Speech Synthesis 与 Speech Recognition](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0153.%20Speech%20Synthesis%20%E4%B8%8E%20Speech%20Recognition/README.md)
+- [ ] [0155. Media Session API 与媒体通知栏控制](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0155.%20Media%20Session%20API%20%E4%B8%8E%E5%AA%92%E4%BD%93%E9%80%9A%E7%9F%A5%E6%A0%8F%E6%8E%A7%E5%88%B6/README.md)
+- [ ] [0154. 音频应用综合项目实战](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0154.%20%E9%9F%B3%E9%A2%91%E5%BA%94%E7%94%A8%E7%BB%BC%E5%90%88%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/README.md)

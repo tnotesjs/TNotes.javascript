@@ -400,6 +400,10 @@
       {
         "text": "⏰ 0109. XSLTProcessor",
         "link": "/notes/0109. XSLTProcessor/README"
+      },
+      {
+        "text": "⏰ 0144. AudioContext",
+        "link": "/notes/0144. AudioContext/README"
       }
     ]
   },
@@ -656,14 +660,64 @@
       {
         "text": "⏰ 0123. 前端设计模式",
         "link": "/notes/0123. 前端设计模式/README"
+      }
+    ]
+  },
+  {
+    "text": "17. 前端音频处理",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "⏰ 0143. 前端音频处理",
+        "link": "/notes/0143. 前端音频处理/README"
       },
       {
-        "text": "⏰ 0143. new",
-        "link": "/notes/0143. new/README"
+        "text": "⏰ 0124. HTMLMediaElement 播放控制",
+        "link": "/notes/0124. HTMLMediaElement 播放控制/README"
       },
       {
-        "text": "⏰ 0144. new",
-        "link": "/notes/0144. new/README"
+        "text": "⏰ 0145. AudioContext 与音频节点图模型",
+        "link": "/notes/0145. AudioContext 与音频节点图模型/README"
+      },
+      {
+        "text": "⏰ 0146. 音频资源加载、解码与播放",
+        "link": "/notes/0146. 音频资源加载、解码与播放/README"
+      },
+      {
+        "text": "⏰ 0147. 音量控制、声像定位与空间音频",
+        "link": "/notes/0147. 音量控制、声像定位与空间音频/README"
+      },
+      {
+        "text": "⏰ 0148. 音频分析与实时可视化",
+        "link": "/notes/0148. 音频分析与实时可视化/README"
+      },
+      {
+        "text": "⏰ 0149. OscillatorNode 与声音合成",
+        "link": "/notes/0149. OscillatorNode 与声音合成/README"
+      },
+      {
+        "text": "⏰ 0150. 滤波器、混响与音效处理链",
+        "link": "/notes/0150. 滤波器、混响与音效处理链/README"
+      },
+      {
+        "text": "⏰ 0151. MediaStream、getUserMedia 与 MediaRecorder",
+        "link": "/notes/0151. MediaStream、getUserMedia 与 MediaRecorder/README"
+      },
+      {
+        "text": "⏰ 0152. AudioWorklet 自定义音频处理器",
+        "link": "/notes/0152. AudioWorklet 自定义音频处理器/README"
+      },
+      {
+        "text": "⏰ 0153. Speech Synthesis 与 Speech Recognition",
+        "link": "/notes/0153. Speech Synthesis 与 Speech Recognition/README"
+      },
+      {
+        "text": "⏰ 0155. Media Session API 与媒体通知栏控制",
+        "link": "/notes/0155. Media Session API 与媒体通知栏控制/README"
+      },
+      {
+        "text": "⏰ 0154. 音频应用综合项目实战",
+        "link": "/notes/0154. 音频应用综合项目实战/README"
       }
     ]
   }
