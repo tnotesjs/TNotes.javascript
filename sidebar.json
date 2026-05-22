@@ -16,8 +16,8 @@
         "link": "/notes/0006. 常见的两个 JS 运行环境：浏览器、NodeJS/README"
       },
       {
-        "text": "⏰ 0142. new",
-        "link": "/notes/0142. new/README"
+        "text": "✅ 0142. TC39 与 ECMA-262",
+        "link": "/notes/0142. TC39 与 ECMA-262/README"
       }
     ]
   },
@@ -378,7 +378,7 @@
     ]
   },
   {
-    "text": "10. window 对象",
+    "text": "10. window.xxx",
     "collapsed": true,
     "items": [
       {

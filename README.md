@@ -11,7 +11,7 @@
 - [7. 防抖、节流](#7-防抖节流)
 - [8. 数据类型](#8-数据类型)
 - [9. 模块化](#9-模块化)
-- [10. window 对象](#10-window-对象)
+- [10. window.xxx](#10-windowxxx)
 - [11. Web Streams](#11-web-streams)
 - [12. css 属性](#12-css-属性)
 - [13. html 元素](#13-html-元素)
@@ -26,7 +26,7 @@
 - [x] [0141. TNotes.javascript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0141.%20TNotes.javascript/README.md)
 - [x] [0112. 前端学习路线](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/README.md)
 - [x] [0006. 常见的两个 JS 运行环境：浏览器、NodeJS](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md)
-- [ ] [0142. new](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0142.%20new/README.md)
+- [x] [0142. TC39 与 ECMA-262](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0142.%20TC39%20%E4%B8%8E%20ECMA-262/README.md)
 
 ## 2. 变量
 
@@ -129,7 +129,7 @@
 - [ ] [0069. JS 导入断言](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0069.%20JS%20%E5%AF%BC%E5%85%A5%E6%96%AD%E8%A8%80/README.md)
 - [ ] [0127. 模块化 - 总结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0127.%20%E6%A8%A1%E5%9D%97%E5%8C%96%20-%20%E6%80%BB%E7%BB%93/README.md)
 
-## 10. window 对象
+## 10. window.xxx
 
 - [x] [0079. onbeforeunload](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0079.%20onbeforeunload/README.md)
 - [x] [0080. confirm](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0080.%20confirm/README.md)
