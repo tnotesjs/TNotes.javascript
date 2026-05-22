@@ -4,13 +4,19 @@
 
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
-- [3. 🤔 HTMLMediaElement 的 preload 属性有哪些取值，分别代表什么含义？](#3--htmlmediaelement-的-preload-属性有哪些取值分别代表什么含义)
-- [4. 🤔 如何使用 JavaScript 实现音频的播放、暂停和跳转到指定时间？](#4--如何使用-javascript-实现音频的播放暂停和跳转到指定时间)
-- [5. 🤔 audio 元素 的 timeupdate 事件的触发频率是多少？](#5--audio-元素-的-timeupdate-事件的触发频率是多少)
-- [6. 🤔 如何检测音频是否播放完毕并自动播放下一首？](#6--如何检测音频是否播放完毕并自动播放下一首)
-- [7. 🤔 playbackRate 属性设置为负值会发生什么？](#7--playbackrate-属性设置为负值会发生什么)
-- [8. 🤔 如何处理音频加载失败的情况并给出用户提示？](#8--如何处理音频加载失败的情况并给出用户提示)
-- [9. 🤔 不同浏览器对音频格式的支持有何差异，如何做兼容性处理？](#9--不同浏览器对音频格式的支持有何差异如何做兼容性处理)
+- [3. 🤔 HTMLMediaElement 是什么？](#3--htmlmediaelement-是什么)
+  - [3.1. 继承关系](#31-继承关系)
+  - [3.2. 核心属性](#32-核心属性)
+  - [3.3. 核心方法](#33-核心方法)
+  - [3.4. 常用事件](#34-常用事件)
+  - [3.5. 典型应用场景](#35-典型应用场景)
+- [4. 🤔 HTMLMediaElement 的 preload 属性有哪些取值，分别代表什么含义？](#4--htmlmediaelement-的-preload-属性有哪些取值分别代表什么含义)
+- [5. 🤔 如何使用 JavaScript 实现音频的播放、暂停和跳转到指定时间？](#5--如何使用-javascript-实现音频的播放暂停和跳转到指定时间)
+- [6. 🤔 audio 元素 的 timeupdate 事件的触发频率是多少？](#6--audio-元素-的-timeupdate-事件的触发频率是多少)
+- [7. 🤔 如何检测音频是否播放完毕并自动播放下一首？](#7--如何检测音频是否播放完毕并自动播放下一首)
+- [8. 🤔 playbackRate 属性设置为负值会发生什么？](#8--playbackrate-属性设置为负值会发生什么)
+- [9. 🤔 如何处理音频加载失败的情况并给出用户提示？](#9--如何处理音频加载失败的情况并给出用户提示)
+- [10. 🤔 不同浏览器对音频格式的支持有何差异，如何做兼容性处理？](#10--不同浏览器对音频格式的支持有何差异如何做兼容性处理)
 
 <!-- endregion:toc -->
 
@@ -30,7 +36,127 @@
 
 - todo
 
-## 3. 🤔 HTMLMediaElement 的 preload 属性有哪些取值，分别代表什么含义？
+## 3. 🤔 HTMLMediaElement 是什么？
+
+`HTMLMediaElement` 是 Web API 中的一个基础接口，为 `<audio>` 和 `<video>` 这两个 HTML 媒体元素提供了通用的属性、方法和事件。它本身不会被直接使用，而是作为 `HTMLAudioElement` 和 `HTMLVideoElement` 的父接口存在。
+
+简单来说，`HTMLMediaElement` 就是浏览器给所有媒体元素提供的统一操控面板，它跟 Web 上音视频交互的基础能力密切相关。
+
+### 3.1. 继承关系
+
+```
+EventTarget
+  └── Node
+        └── Element
+              └── HTMLElement
+                    └── HTMLMediaElement
+                          ├── HTMLAudioElement
+                          └── HTMLVideoElement
+```
+
+### 3.2. 核心属性
+
+| 属性           | 说明                                       |
+| -------------- | ------------------------------------------ |
+| `src`          | 媒体资源的 URL                             |
+| `currentTime`  | 当前播放时间（秒），可读可写               |
+| `duration`     | 媒体总时长（秒）                           |
+| `paused`       | 是否处于暂停状态                           |
+| `muted`        | 是否静音                                   |
+| `volume`       | 音量（0.0 ~ 1.0）                          |
+| `playbackRate` | 播放速率（1.0 为正常速度）                 |
+| `readyState`   | 媒体就绪程度（0~4）                        |
+| `networkState` | 网络状态                                   |
+| `ended`        | 是否已播放结束                             |
+| `loop`         | 是否循环播放                               |
+| `autoplay`     | 是否自动播放                               |
+| `preload`      | 预加载策略（`none` / `metadata` / `auto`） |
+| `buffered`     | 已缓冲的时间范围（`TimeRanges` 对象）      |
+
+### 3.3. 核心方法
+
+| 方法                | 说明                               |
+| ------------------- | ---------------------------------- |
+| `play()`            | 开始播放，返回 `Promise`           |
+| `pause()`           | 暂停播放                           |
+| `load()`            | 重新加载媒体                       |
+| `canPlayType(type)` | 检测浏览器是否能播放指定 MIME 类型 |
+
+```js
+const video = document.querySelector('video')
+
+// 播放
+await video.play()
+
+// 暂停
+video.pause()
+
+// 跳转到第 30 秒
+video.currentTime = 30
+
+// 2 倍速播放
+video.playbackRate = 2.0
+
+// 检测兼容性
+video.canPlayType('video/mp4; codecs="avc1.42E01E"')
+// 返回: "probably" | "maybe" | ""
+```
+
+### 3.4. 常用事件
+
+| 事件                 | 触发时机                                |
+| -------------------- | --------------------------------------- |
+| `loadstart`          | 开始加载资源                            |
+| `loadedmetadata`     | 元数据加载完成（时长、尺寸等已知）      |
+| `loadeddata`         | 首帧数据已加载                          |
+| `canplay`            | 可以开始播放（但可能还需缓冲）          |
+| `canplaythrough`     | 预计可以不间断播放到底                  |
+| `play`               | 开始播放                                |
+| `pause`              | 暂停                                    |
+| `timeupdate`         | `currentTime` 改变时触发（约每秒 4 次） |
+| `ended`              | 播放结束                                |
+| `volumechange`       | 音量或静音状态改变                      |
+| `seeking` / `seeked` | 跳转开始 / 完成                         |
+| `waiting`            | 因缓冲而暂停                            |
+| `error`              | 加载或播放出错                          |
+
+```js
+const audio = new Audio('song.mp3')
+
+audio.addEventListener('loadedmetadata', () => {
+  console.log(`总时长: ${audio.duration}秒`)
+})
+
+audio.addEventListener('timeupdate', () => {
+  const progress = (audio.currentTime / audio.duration) * 100
+  console.log(`进度: ${progress.toFixed(1)}%`)
+})
+
+audio.addEventListener('ended', () => {
+  console.log('播放完毕')
+})
+
+audio.play()
+```
+
+### 3.5. 典型应用场景
+
+1. 自定义播放器 UI — 隐藏浏览器默认控件，用 `currentTime`、`play()`、`pause()` 等自行构建进度条、播放按钮。
+2. 音视频同步 — 监听 `timeupdate` 实现字幕、歌词同步。
+3. 流媒体控制 — 通过 `buffered`、`readyState` 监控缓冲状态，做自适应码率切换。
+4. Web Audio API 桥接 — 将 `HTMLMediaElement` 作为 `AudioContext.createMediaElementSource()` 的输入源，进行音频可视化或实时处理。
+
+```js
+// Web Audio API 桥接示例
+const audioCtx = new AudioContext()
+const source = audioCtx.createMediaElementSource(audioElement)
+const analyser = audioCtx.createAnalyser()
+source.connect(analyser)
+analyser.connect(audioCtx.destination)
+// 现在可以通过 analyser 获取频谱数据做可视化
+```
+
+## 4. 🤔 HTMLMediaElement 的 preload 属性有哪些取值，分别代表什么含义？
 
 preload 属性用于提示浏览器是否应在页面加载时预加载音频资源。它有三个可选值：
 
@@ -63,7 +189,7 @@ audio.addEventListener('progress', () => {
 
 ---
 
-## 4. 🤔 如何使用 JavaScript 实现音频的播放、暂停和跳转到指定时间？
+## 5. 🤔 如何使用 JavaScript 实现音频的播放、暂停和跳转到指定时间？
 
 HTMLMediaElement 提供了直观的方法和属性来控制音频播放。
 
@@ -127,7 +253,7 @@ audio.play()
 
 ---
 
-## 5. 🤔 audio 元素 的 timeupdate 事件的触发频率是多少？
+## 6. 🤔 audio 元素 的 timeupdate 事件的触发频率是多少？
 
 timeupdate 事件在 currentTime 属性改变时由浏览器触发，但其触发频率并非由开发者控制，也没有统一的标准规定。
 
@@ -169,7 +295,7 @@ audio.addEventListener('seeking', () => {
 
 ---
 
-## 6. 🤔 如何检测音频是否播放完毕并自动播放下一首？
+## 7. 🤔 如何检测音频是否播放完毕并自动播放下一首？
 
 检测音频播放完毕使用 ended 事件。当音频播放到末尾（currentTime 达到 duration）时，浏览器会自动触发 ended 事件并设置 paused 为 true。
 
@@ -216,7 +342,7 @@ audio.addEventListener('ended', playNext)
 
 ---
 
-## 7. 🤔 playbackRate 属性设置为负值会发生什么？
+## 8. 🤔 playbackRate 属性设置为负值会发生什么？
 
 playbackRate 属性接受一个浮点数来控制播放速率。默认值为 1.0（正常速度），大于 1 为快进，0 到 1 之间为慢放，0 为暂停（静止），等于 -1 为反向播放。
 
@@ -257,7 +383,7 @@ for (let ch = 0; ch < buffer.numberOfChannels; ch++) {
 
 ---
 
-## 8. 🤔 如何处理音频加载失败的情况并给出用户提示？
+## 9. 🤔 如何处理音频加载失败的情况并给出用户提示？
 
 HTMLMediaElement 提供了 error 事件和 error 属性来捕获和诊断加载失败。
 
@@ -331,7 +457,7 @@ window.addEventListener('online', () => {
 
 ---
 
-## 9. 🤔 不同浏览器对音频格式的支持有何差异，如何做兼容性处理？
+## 10. 🤔 不同浏览器对音频格式的支持有何差异，如何做兼容性处理？
 
 浏览器对音频格式的支持差异是音频开发中最常见的兼容性问题。各浏览器支持的格式取决于其内置的解码器：
 
