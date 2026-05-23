@@ -40,10 +40,6 @@
       {
         "text": "⏰ 0159. JavaScript版本",
         "link": "/notes/0159. JavaScript版本/README"
-      },
-      {
-        "text": "⏰ 0160. 小结",
-        "link": "/notes/0160. 小结/README"
       }
     ]
   },
@@ -70,10 +66,6 @@
       {
         "text": "⏰ 0165. noscript元素",
         "link": "/notes/0165. noscript元素/README"
-      },
-      {
-        "text": "⏰ 0166. 小结",
-        "link": "/notes/0166. 小结/README"
       }
     ]
   },
@@ -112,10 +104,6 @@
       {
         "text": "⏰ 0174. 函数",
         "link": "/notes/0174. 函数/README"
-      },
-      {
-        "text": "⏰ 0175. 小结",
-        "link": "/notes/0175. 小结/README"
       }
     ]
   },
@@ -138,10 +126,6 @@
       {
         "text": "⏰ 0179. 垃圾回收",
         "link": "/notes/0179. 垃圾回收/README"
-      },
-      {
-        "text": "⏰ 0180. 小结",
-        "link": "/notes/0180. 小结/README"
       }
     ]
   },
@@ -168,10 +152,6 @@
       {
         "text": "⏰ 0185. 单例内置对象",
         "link": "/notes/0185. 单例内置对象/README"
-      },
-      {
-        "text": "⏰ 0186. 小结",
-        "link": "/notes/0186. 小结/README"
       }
     ]
   },
@@ -214,10 +194,6 @@
       {
         "text": "⏰ 0195. 迭代与扩展操作",
         "link": "/notes/0195. 迭代与扩展操作/README"
-      },
-      {
-        "text": "⏰ 0196. 小结",
-        "link": "/notes/0196. 小结/README"
       }
     ]
   },
@@ -240,10 +216,6 @@
       {
         "text": "⏰ 0200. 生成器",
         "link": "/notes/0200. 生成器/README"
-      },
-      {
-        "text": "⏰ 0201. 小结",
-        "link": "/notes/0201. 小结/README"
       }
     ]
   },
@@ -270,10 +242,6 @@
       {
         "text": "⏰ 0206. 类",
         "link": "/notes/0206. 类/README"
-      },
-      {
-        "text": "⏰ 0207. 小结",
-        "link": "/notes/0207. 小结/README"
       }
     ]
   },
@@ -296,10 +264,6 @@
       {
         "text": "⏰ 0211. 代理模式",
         "link": "/notes/0211. 代理模式/README"
-      },
-      {
-        "text": "⏰ 0212. 小结",
-        "link": "/notes/0212. 小结/README"
       }
     ]
   },
@@ -374,10 +338,6 @@
       {
         "text": "⏰ 0229. 私有变量",
         "link": "/notes/0229. 私有变量/README"
-      },
-      {
-        "text": "⏰ 0230. 小结",
-        "link": "/notes/0230. 小结/README"
       }
     ]
   },
@@ -400,10 +360,6 @@
       {
         "text": "⏰ 0234. 异步函数",
         "link": "/notes/0234. 异步函数/README"
-      },
-      {
-        "text": "⏰ 0235. 小结",
-        "link": "/notes/0235. 小结/README"
       }
     ]
   },
@@ -434,10 +390,6 @@
       {
         "text": "⏰ 0241. history对象",
         "link": "/notes/0241. history对象/README"
-      },
-      {
-        "text": "⏰ 0242. 小结",
-        "link": "/notes/0242. 小结/README"
       }
     ]
   },
@@ -460,10 +412,6 @@
       {
         "text": "⏰ 0246. 软件与硬件检测",
         "link": "/notes/0246. 软件与硬件检测/README"
-      },
-      {
-        "text": "⏰ 0247. 小结",
-        "link": "/notes/0247. 小结/README"
       }
     ]
   },
@@ -486,10 +434,6 @@
       {
         "text": "⏰ 0251. MutationObserver接口",
         "link": "/notes/0251. MutationObserver接口/README"
-      },
-      {
-        "text": "⏰ 0252. 小结",
-        "link": "/notes/0252. 小结/README"
       }
     ]
   },
@@ -516,10 +460,6 @@
       {
         "text": "⏰ 0257. 专有扩展",
         "link": "/notes/0257. 专有扩展/README"
-      },
-      {
-        "text": "⏰ 0258. 小结",
-        "link": "/notes/0258. 小结/README"
       }
     ]
   },
@@ -546,10 +486,6 @@
       {
         "text": "⏰ 0263. 范围",
         "link": "/notes/0263. 范围/README"
-      },
-      {
-        "text": "⏰ 0264. 小结",
-        "link": "/notes/0264. 小结/README"
       }
     ]
   },
@@ -584,10 +520,6 @@
       {
         "text": "⏰ 0271. 模拟事件",
         "link": "/notes/0271. 模拟事件/README"
-      },
-      {
-        "text": "⏰ 0272. 小结",
-        "link": "/notes/0272. 小结/README"
       }
     ]
   },
@@ -614,10 +546,6 @@
       {
         "text": "⏰ 0277. WebGL",
         "link": "/notes/0277. WebGL/README"
-      },
-      {
-        "text": "⏰ 0278. 小结",
-        "link": "/notes/0278. 小结/README"
       }
     ]
   },
@@ -648,10 +576,6 @@
       {
         "text": "⏰ 0284. 富文本编辑",
         "link": "/notes/0284. 富文本编辑/README"
-      },
-      {
-        "text": "⏰ 0285. 小结",
-        "link": "/notes/0285. 小结/README"
       }
     ]
   },
@@ -710,10 +634,6 @@
       {
         "text": "⏰ 0298. Web Cryptography API",
         "link": "/notes/0298. Web Cryptography API/README"
-      },
-      {
-        "text": "⏰ 0299. 小结",
-        "link": "/notes/0299. 小结/README"
       }
     ]
   },
@@ -740,10 +660,6 @@
       {
         "text": "⏰ 0304. 旧版IE的常见错误",
         "link": "/notes/0304. 旧版IE的常见错误/README"
-      },
-      {
-        "text": "⏰ 0305. 小结",
-        "link": "/notes/0305. 小结/README"
       }
     ]
   },
@@ -766,10 +682,6 @@
       {
         "text": "⏰ 0309. 浏览器对XSLT的支持",
         "link": "/notes/0309. 浏览器对XSLT的支持/README"
-      },
-      {
-        "text": "⏰ 0310. 小结",
-        "link": "/notes/0310. 小结/README"
       }
     ]
   },
@@ -788,10 +700,6 @@
       {
         "text": "⏰ 0313. 解析与序列化",
         "link": "/notes/0313. 解析与序列化/README"
-      },
-      {
-        "text": "⏰ 0314. 小结",
-        "link": "/notes/0314. 小结/README"
       }
     ]
   },
@@ -834,10 +742,6 @@
       {
         "text": "⏰ 0323. 安全",
         "link": "/notes/0323. 安全/README"
-      },
-      {
-        "text": "⏰ 0324. 小结",
-        "link": "/notes/0324. 小结/README"
       }
     ]
   },
@@ -860,10 +764,6 @@
       {
         "text": "⏰ 0328. IndexedDB",
         "link": "/notes/0328. IndexedDB/README"
-      },
-      {
-        "text": "⏰ 0329. 小结",
-        "link": "/notes/0329. 小结/README"
       }
     ]
   },
@@ -890,10 +790,6 @@
       {
         "text": "⏰ 0334. 使用ES6模块",
         "link": "/notes/0334. 使用ES6模块/README"
-      },
-      {
-        "text": "⏰ 0335. 小结",
-        "link": "/notes/0335. 小结/README"
       }
     ]
   },
@@ -920,10 +816,6 @@
       {
         "text": "⏰ 0340. 服务工作者线程",
         "link": "/notes/0340. 服务工作者线程/README"
-      },
-      {
-        "text": "⏰ 0341. 小结",
-        "link": "/notes/0341. 小结/README"
       }
     ]
   },
@@ -946,10 +838,6 @@
       {
         "text": "⏰ 0345. 部署",
         "link": "/notes/0345. 部署/README"
-      },
-      {
-        "text": "⏰ 0346. 小结",
-        "link": "/notes/0346. 小结/README"
       }
     ]
   },

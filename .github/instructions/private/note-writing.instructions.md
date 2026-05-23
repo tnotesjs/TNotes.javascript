@@ -1,6 +1,6 @@
 ---
 name: 'TNotes 笔记写作规范'
-description: '在编辑 notes/{笔记目录}/README.md 时使用。覆盖笔记结构、标题层级、中文标点、代码示例、VitePress Markdown、引用格式和 TOC 维护边界。'
+description: '在编辑 notes/{笔记目录}/README.md 时使用。覆盖笔记结构、标题层级、中文标点、代码示例、VitePress Markdown 和 TOC 维护边界。'
 applyTo:
   - 'notes/**/README.md'
 ---
@@ -29,14 +29,12 @@ applyTo:
 ## 3. 🤔 正文问题？
 
 ...
-
-## N. 🔗 引用
 ```
 
 - 标题格式为 `# [编号. 主题名称](GitHub 仓库对应目录链接)`。
 - 「评价」以经验丰富的开发者口吻，用一到两句话对本篇笔记内容做一个精简的评价。
 - 正文优先以问答形式组织，一个 `## N. 🤔 问题？` 解决一个核心知识点或一个核心问题。
-- 「引用」列出 MDN 或其它核心参考资料。
+- 如果现有笔记包含「引用」区块，则该区块默认由用户自行维护。
 - 不要手写 `<!-- region:toc -->` 与 `<!-- endregion:toc -->` 之间的目录内容。
 
 ## 标题层级
@@ -107,27 +105,11 @@ console.log('hello')
 :::
 ````
 
-## 引用
-
-- 引用统一使用引用式链接。
-- 项目内文档优先使用相对路径。
-- 外链以官方资料为主，优先选择 MDN、ECMA-262、TC39 提案、HTML Standard、WHATWG 文档和 GitHub 官方仓库。
-- 不要引用泛滥，只需要 1-2 个核心参考资料即可。
-- 引用格式如下：
-
-```markdown
-- [MDN - Promise][1]
-- [ECMA-262 - Promise Objects][2]
-
-[1]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
-[2]: https://tc39.es/ecma262/#sec-promise-objects
-```
-
 ## 完成检查
 
 - 所有以 `🤔` 开头的小节标题都是问句形式。
 - 标题范围只能是 2 到 4 级。
 - 示例代码满足代码规范。
 - 中文正文中不出现不必要的英文标点。
-- 引用链接都是有效的。
+- 若现有文件保留「引用」区块，确认本次改动没有误改该区块。
 - 若笔记中出现明显错误、例外或兼容性风险，必须给出提醒。

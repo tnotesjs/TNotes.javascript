@@ -64,7 +64,6 @@
 - [ ] [0157. 简短的历史回顾](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0157.%20%E7%AE%80%E7%9F%AD%E7%9A%84%E5%8E%86%E5%8F%B2%E5%9B%9E%E9%A1%BE/README.md)
 - [ ] [0158. JavaScript实现](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0158.%20JavaScript%E5%AE%9E%E7%8E%B0/README.md)
 - [ ] [0159. JavaScript版本](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0159.%20JavaScript%E7%89%88%E6%9C%AC/README.md)
-- [ ] [0160. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0160.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 3. HTML中的JavaScript
 
@@ -73,7 +72,6 @@
 - [ ] [0163. 行内代码与外部文件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0163.%20%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81%E4%B8%8E%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6/README.md)
 - [ ] [0164. 文档模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0164.%20%E6%96%87%E6%A1%A3%E6%A8%A1%E5%BC%8F/README.md)
 - [ ] [0165. noscript元素](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0165.%20noscript%E5%85%83%E7%B4%A0/README.md)
-- [ ] [0166. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0166.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 4. 语言基础
 
@@ -85,7 +83,6 @@
 - [ ] [0172. 操作符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0172.%20%E6%93%8D%E4%BD%9C%E7%AC%A6/README.md)
 - [ ] [0173. 语句](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0173.%20%E8%AF%AD%E5%8F%A5/README.md)
 - [ ] [0174. 函数](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0174.%20%E5%87%BD%E6%95%B0/README.md)
-- [ ] [0175. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0175.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 5. 变量、作用域与内存
 
@@ -93,7 +90,6 @@
 - [ ] [0177. 原始值与引用值](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0177.%20%E5%8E%9F%E5%A7%8B%E5%80%BC%E4%B8%8E%E5%BC%95%E7%94%A8%E5%80%BC/README.md)
 - [ ] [0178. 执行上下文与作用域](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0178.%20%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md)
 - [ ] [0179. 垃圾回收](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0179.%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/README.md)
-- [ ] [0180. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0180.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 6. 基本引用类型
 
@@ -102,7 +98,6 @@
 - [ ] [0183. RegExp](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0183.%20RegExp/README.md)
 - [ ] [0184. 原始值包装类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0184.%20%E5%8E%9F%E5%A7%8B%E5%80%BC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/README.md)
 - [ ] [0185. 单例内置对象](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0185.%20%E5%8D%95%E4%BE%8B%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/README.md)
-- [ ] [0186. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0186.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 7. 集合引用类型
 
@@ -115,7 +110,6 @@
 - [ ] [0193. Set](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0193.%20Set/README.md)
 - [ ] [0194. WeakSet](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0194.%20WeakSet/README.md)
 - [ ] [0195. 迭代与扩展操作](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0195.%20%E8%BF%AD%E4%BB%A3%E4%B8%8E%E6%89%A9%E5%B1%95%E6%93%8D%E4%BD%9C/README.md)
-- [ ] [0196. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0196.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 8. 迭代器与生成器
 
@@ -123,7 +117,6 @@
 - [ ] [0198. 理解迭代](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0198.%20%E7%90%86%E8%A7%A3%E8%BF%AD%E4%BB%A3/README.md)
 - [ ] [0199. 迭代器模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0199.%20%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/README.md)
 - [ ] [0200. 生成器](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0200.%20%E7%94%9F%E6%88%90%E5%99%A8/README.md)
-- [ ] [0201. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0201.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 9. 对象、类与面向对象编程
 
@@ -132,7 +125,6 @@
 - [ ] [0204. 创建对象](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0204.%20%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1/README.md)
 - [ ] [0205. 继承](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0205.%20%E7%BB%A7%E6%89%BF/README.md)
 - [ ] [0206. 类](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0206.%20%E7%B1%BB/README.md)
-- [ ] [0207. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0207.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 10. 代理与反射
 
@@ -140,7 +132,6 @@
 - [ ] [0209. 代理基础](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0209.%20%E4%BB%A3%E7%90%86%E5%9F%BA%E7%A1%80/README.md)
 - [ ] [0210. 代理捕获器与反射方法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0210.%20%E4%BB%A3%E7%90%86%E6%8D%95%E8%8E%B7%E5%99%A8%E4%B8%8E%E5%8F%8D%E5%B0%84%E6%96%B9%E6%B3%95/README.md)
 - [ ] [0211. 代理模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0211.%20%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/README.md)
-- [ ] [0212. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0212.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 11. 函数
 
@@ -161,7 +152,6 @@
 - [ ] [0227. 闭包](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0227.%20%E9%97%AD%E5%8C%85/README.md)
 - [ ] [0228. 立即调用的函数表达式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0228.%20%E7%AB%8B%E5%8D%B3%E8%B0%83%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md)
 - [ ] [0229. 私有变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0229.%20%E7%A7%81%E6%9C%89%E5%8F%98%E9%87%8F/README.md)
-- [ ] [0230. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0230.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 12. 期约与异步函数
 
@@ -169,7 +159,6 @@
 - [ ] [0232. 异步编程](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0232.%20%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/README.md)
 - [ ] [0233. 期约](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0233.%20%E6%9C%9F%E7%BA%A6/README.md)
 - [ ] [0234. 异步函数](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0234.%20%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0/README.md)
-- [ ] [0235. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0235.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 13. BOM
 
@@ -179,7 +168,6 @@
 - [ ] [0239. navigator对象](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0239.%20navigator%E5%AF%B9%E8%B1%A1/README.md)
 - [ ] [0240. screen对象](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0240.%20screen%E5%AF%B9%E8%B1%A1/README.md)
 - [ ] [0241. history对象](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0241.%20history%E5%AF%B9%E8%B1%A1/README.md)
-- [ ] [0242. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0242.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 14. 客户端检测
 
@@ -187,7 +175,6 @@
 - [ ] [0244. 能力检测](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0244.%20%E8%83%BD%E5%8A%9B%E6%A3%80%E6%B5%8B/README.md)
 - [ ] [0245. 用户代理检测](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0245.%20%E7%94%A8%E6%88%B7%E4%BB%A3%E7%90%86%E6%A3%80%E6%B5%8B/README.md)
 - [ ] [0246. 软件与硬件检测](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0246.%20%E8%BD%AF%E4%BB%B6%E4%B8%8E%E7%A1%AC%E4%BB%B6%E6%A3%80%E6%B5%8B/README.md)
-- [ ] [0247. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0247.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 15. DOM
 
@@ -195,7 +182,6 @@
 - [ ] [0249. 节点层级](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0249.%20%E8%8A%82%E7%82%B9%E5%B1%82%E7%BA%A7/README.md)
 - [ ] [0250. DOM编程](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0250.%20DOM%E7%BC%96%E7%A8%8B/README.md)
 - [ ] [0251. MutationObserver接口](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0251.%20MutationObserver%E6%8E%A5%E5%8F%A3/README.md)
-- [ ] [0252. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0252.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 16. DOM扩展
 
@@ -204,7 +190,6 @@
 - [ ] [0255. 元素遍历](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0255.%20%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/README.md)
 - [ ] [0256. HTML5](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0256.%20HTML5/README.md)
 - [ ] [0257. 专有扩展](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0257.%20%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/README.md)
-- [ ] [0258. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0258.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 17. DOM2和DOM3
 
@@ -213,7 +198,6 @@
 - [ ] [0261. 样式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0261.%20%E6%A0%B7%E5%BC%8F/README.md)
 - [ ] [0262. 遍历](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0262.%20%E9%81%8D%E5%8E%86/README.md)
 - [ ] [0263. 范围](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0263.%20%E8%8C%83%E5%9B%B4/README.md)
-- [ ] [0264. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0264.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 18. 事件
 
@@ -224,7 +208,6 @@
 - [ ] [0269. 事件类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0269.%20%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B/README.md)
 - [ ] [0270. 内存与性能](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0270.%20%E5%86%85%E5%AD%98%E4%B8%8E%E6%80%A7%E8%83%BD/README.md)
 - [ ] [0271. 模拟事件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0271.%20%E6%A8%A1%E6%8B%9F%E4%BA%8B%E4%BB%B6/README.md)
-- [ ] [0272. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0272.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 19. 动画与Canvas图形
 
@@ -233,7 +216,6 @@
 - [ ] [0275. 基本的画布功能](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0275.%20%E5%9F%BA%E6%9C%AC%E7%9A%84%E7%94%BB%E5%B8%83%E5%8A%9F%E8%83%BD/README.md)
 - [ ] [0276. 2D绘图上下文](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0276.%202D%E7%BB%98%E5%9B%BE%E4%B8%8A%E4%B8%8B%E6%96%87/README.md)
 - [ ] [0277. WebGL](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0277.%20WebGL/README.md)
-- [ ] [0278. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0278.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 20. 表单脚本
 
@@ -243,7 +225,6 @@
 - [ ] [0282. 选择框编程](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0282.%20%E9%80%89%E6%8B%A9%E6%A1%86%E7%BC%96%E7%A8%8B/README.md)
 - [ ] [0283. 表单序列化](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0283.%20%E8%A1%A8%E5%8D%95%E5%BA%8F%E5%88%97%E5%8C%96/README.md)
 - [ ] [0284. 富文本编辑](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0284.%20%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91/README.md)
-- [ ] [0285. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0285.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 21. JavaScript API
 
@@ -260,7 +241,6 @@
 - [ ] [0296. 计时API](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0296.%20%E8%AE%A1%E6%97%B6API/README.md)
 - [ ] [0297. Web组件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0297.%20Web%E7%BB%84%E4%BB%B6/README.md)
 - [ ] [0298. Web Cryptography API](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0298.%20Web%20Cryptography%20API/README.md)
-- [ ] [0299. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0299.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 22. 错误处理与调试
 
@@ -269,7 +249,6 @@
 - [ ] [0302. 错误处理](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0302.%20%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/README.md)
 - [ ] [0303. 调试技术](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0303.%20%E8%B0%83%E8%AF%95%E6%8A%80%E6%9C%AF/README.md)
 - [ ] [0304. 旧版IE的常见错误](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0304.%20%E6%97%A7%E7%89%88IE%E7%9A%84%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/README.md)
-- [ ] [0305. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0305.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 23. 处理XML
 
@@ -277,14 +256,12 @@
 - [ ] [0307. 浏览器对XML DOM的支持](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0307.%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9XML%20DOM%E7%9A%84%E6%94%AF%E6%8C%81/README.md)
 - [ ] [0308. 浏览器对XPath的支持](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0308.%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9XPath%E7%9A%84%E6%94%AF%E6%8C%81/README.md)
 - [ ] [0309. 浏览器对XSLT的支持](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0309.%20%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9XSLT%E7%9A%84%E6%94%AF%E6%8C%81/README.md)
-- [ ] [0310. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0310.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 24. JSON
 
 - [ ] [0311. JSON](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0311.%20JSON/README.md)
 - [ ] [0312. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0312.%20%E8%AF%AD%E6%B3%95/README.md)
 - [ ] [0313. 解析与序列化](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0313.%20%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%BA%8F%E5%88%97%E5%8C%96/README.md)
-- [ ] [0314. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0314.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 25. 网络请求与远程资源
 
@@ -297,7 +274,6 @@
 - [ ] [0321. Beacon API](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0321.%20Beacon%20API/README.md)
 - [ ] [0322. Web Socket](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0322.%20Web%20Socket/README.md)
 - [ ] [0323. 安全](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0323.%20%E5%AE%89%E5%85%A8/README.md)
-- [ ] [0324. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0324.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 26. 客户端存储
 
@@ -305,7 +281,6 @@
 - [ ] [0326. cookie](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0326.%20cookie/README.md)
 - [ ] [0327. Web Storage](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0327.%20Web%20Storage/README.md)
 - [ ] [0328. IndexedDB](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0328.%20IndexedDB/README.md)
-- [ ] [0329. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0329.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 27. 模块
 
@@ -314,7 +289,6 @@
 - [ ] [0332. 凑合的模块系统](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0332.%20%E5%87%91%E5%90%88%E7%9A%84%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F/README.md)
 - [ ] [0333. 使用ES6之前的模块加载器](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0333.%20%E4%BD%BF%E7%94%A8ES6%E4%B9%8B%E5%89%8D%E7%9A%84%E6%A8%A1%E5%9D%97%E5%8A%A0%E8%BD%BD%E5%99%A8/README.md)
 - [ ] [0334. 使用ES6模块](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0334.%20%E4%BD%BF%E7%94%A8ES6%E6%A8%A1%E5%9D%97/README.md)
-- [ ] [0335. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0335.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 28. 工作者线程
 
@@ -323,7 +297,6 @@
 - [ ] [0338. 专用工作者线程](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0338.%20%E4%B8%93%E7%94%A8%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/README.md)
 - [ ] [0339. 共享工作者线程](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0339.%20%E5%85%B1%E4%BA%AB%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/README.md)
 - [ ] [0340. 服务工作者线程](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0340.%20%E6%9C%8D%E5%8A%A1%E5%B7%A5%E4%BD%9C%E8%80%85%E7%BA%BF%E7%A8%8B/README.md)
-- [ ] [0341. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0341.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 29. 最佳实践
 
@@ -331,7 +304,6 @@
 - [ ] [0343. 可维护性](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0343.%20%E5%8F%AF%E7%BB%B4%E6%8A%A4%E6%80%A7/README.md)
 - [ ] [0344. 性能](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0344.%20%E6%80%A7%E8%83%BD/README.md)
 - [ ] [0345. 部署](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0345.%20%E9%83%A8%E7%BD%B2/README.md)
-- [ ] [0346. 小结](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0346.%20%E5%B0%8F%E7%BB%93/README.md)
 
 ## 30. pending
 
