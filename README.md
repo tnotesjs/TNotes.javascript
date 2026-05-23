@@ -57,6 +57,7 @@
 - [x] [0112. 前端学习路线](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0112.%20%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/README.md)
 - [x] [0006. 常见的两个 JS 运行环境：浏览器、NodeJS](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0006.%20%E5%B8%B8%E8%A7%81%E7%9A%84%E4%B8%A4%E4%B8%AA%20JS%20%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E3%80%81NodeJS/README.md)
 - [x] [0142. TC39 与 ECMA-262](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0142.%20TC39%20%E4%B8%8E%20ECMA-262/README.md)
+- [x] [0160. JavaScript高级程序设计（第4版）](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0160.%20JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/README.md)
 
 ## 2. 什么是JavaScript
 
