@@ -2,10 +2,10 @@
   "bilibili": [],
   "tnotes": [],
   "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
-  "description": "",
+  "done": true,
+  "enableDiscussions": true,
+  "description": "这一节不是在讲“行内一定错、外链一定对”，而是在帮你建立取舍标准。把脚本放哪儿，本质上是在平衡维护成本、缓存收益和页面加载行为。",
   "id": "6d628667-b51d-4588-bf31-6f296f779f26",
   "created_at": 1779505366469,
-  "updated_at": 1779505366469
+  "updated_at": 1779615184536
 }
