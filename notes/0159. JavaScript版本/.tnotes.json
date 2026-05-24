@@ -2,10 +2,10 @@
   "bilibili": [],
   "tnotes": [],
   "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
-  "description": "",
+  "done": true,
+  "enableDiscussions": true,
+  "description": "在现代日常开发中，跟着 ECMAScript 标准版本走即可，主要关注 ECMAScript 年度版本和具体特性的支持状态。",
   "id": "f285d5f9-bba0-4f90-ba63-7a80e6c66674",
   "created_at": 1779505366468,
-  "updated_at": 1779505366468
+  "updated_at": 1779597856035
 }
