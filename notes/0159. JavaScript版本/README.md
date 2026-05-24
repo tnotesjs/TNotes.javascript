@@ -4,8 +4,10 @@
 
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
-- [3. 🤔 为什么 JavaScript 版本容易混淆？](#3--为什么-javascript-版本容易混淆)
-- [4. 🤔 Netscape 和 Mozilla 的 JavaScript 版本号说明了什么？](#4--netscape-和-mozilla-的-javascript-版本号说明了什么)
+- [3. 🤔 现代开发中如何描述 JavaScript 语言版本？](#3--现代开发中如何描述-javascript-语言版本)
+  - [3.1. 历史问题](#31-历史问题)
+  - [3.2. 现代开发统一口径](#32-现代开发统一口径)
+- [4. 🤔 最初的 JavaScript 1.x 版本是谁在维护？](#4--最初的-javascript-1x-版本是谁在维护)
 - [5. 🤔 ECMAScript 的版本演进有哪些关键节点？](#5--ecmascript-的版本演进有哪些关键节点)
 - [6. 🤔 浏览器支持应该怎么看？](#6--浏览器支持应该怎么看)
 
@@ -23,36 +25,46 @@
 
 JavaScript 的版本问题容易混淆，因为它同时涉及浏览器实现版本和 ECMAScript 标准版本。日常开发更应该关注 ECMAScript 年度版本和具体特性的支持状态。
 
-## 3. 🤔 为什么 JavaScript 版本容易混淆？
+## 3. 🤔 现代开发中如何描述 JavaScript 语言版本？
 
-JavaScript 的版本不是一个单一口径。历史上至少有三种常见说法：
+答：跟 ECMAScript 标准走。
 
-| 口径               | 含义                                        |
-| ------------------ | ------------------------------------------- |
-| JavaScript 1.x     | Netscape 和 Mozilla 延续的实现版本号        |
-| JScript            | 微软早期 JavaScript 实现的版本体系          |
-| ECMAScript Edition | ECMA-262 标准文档的版本，也就是语言规范版本 |
+### 3.1. 历史问题
 
-这几种版本号并不一一对应。比如，Firefox 曾经使用 JavaScript 1.5、1.6、1.7、1.8 等版本号，而 IE 使用的是 JScript 版本号。它们都不是今天讨论 JavaScript 新特性的主要方式。
+为什么 JavaScript 版本容易混淆？
 
-现代开发里，更常见的说法是 `ES5`、`ES2015`、`ES2019`、`ES2023` 等。这些名字对应的是 ECMAScript 标准版本，而不是某个浏览器自己的 JavaScript 版本号。
+历史上，JavaScript 的版本并非一个单一口径，至少存在三种常见的版本说法：
 
-## 4. 🤔 Netscape 和 Mozilla 的 JavaScript 版本号说明了什么？
+| 口径               | 含义                                     |
+| ------------------ | ---------------------------------------- |
+| JavaScript 1.x     | Netscape 和 Mozilla 延续使用的实现版本号 |
+| JScript            | 微软早期 JavaScript 实现所采用的版本体系 |
+| ECMAScript Edition | ECMA-262 标准文档的版本，即语言规范版本  |
 
-Netscape 是 JavaScript 的最初推动者，后来 Mozilla 继承了这条版本线。
+这三种版本号之间并不存在一一对应关系。例如，Firefox 曾使用 JavaScript 1.5、1.6、1.7、1.8 等版本号，而 IE 则使用 JScript 的版本号。这些都不是当前讨论 JavaScript 新特性的主要方式。
 
-早期版本大致可以这样理解：
+### 3.2. 现代开发统一口径
+
+在现代开发中，更常见的说法是 `ES5`、`ES2015`、`ES2019`、`ES2023` 等。
+
+这些名称对应的是 ECMAScript 标准版本，而非某个浏览器自己定义的 JavaScript 版本号。
+
+## 4. 🤔 最初的 JavaScript 1.x 版本是谁在维护？
+
+Netscape 是 JavaScript 的最初推动者，后来 Mozilla 继承并延续了这条版本线。
+
+早期版本大致对应如下：
 
 | 浏览器阶段              | JavaScript 版本特点                   |
 | ----------------------- | ------------------------------------- |
 | Netscape Navigator 2    | 发布 JavaScript 1.0                   |
 | Netscape Navigator 3    | 发布 JavaScript 1.1                   |
 | Netscape Navigator 4    | 继续推进 JavaScript 1.2 和 1.3        |
-| Mozilla 与 Firefox 早期 | 延续 JavaScript 1.5 到 1.8.x 的版本号 |
+| Mozilla 与 Firefox 早期 | 延续 JavaScript 1.5 至 1.8.x 的版本号 |
 
-这些版本号记录了浏览器实现的历史，但今天不建议再用它们来判断语言能力。
+这些版本号记录了浏览器实现的历史演进，但今天已不建议用它们来判断语言能力。
 
-原因很简单：现代 JavaScript 的语言核心已经由 ECMAScript 标准维护。你关心一个语法或 API 是否可用时，更应该查它属于哪个 ECMAScript 版本，以及目标运行环境是否支持。
+原因在于：现代 JavaScript 的语言核心已由 ECMAScript 标准统一维护。当你关心某个语法或 API 是否可用时，更合理的做法是确认它属于哪个 ECMAScript 版本，以及目标运行环境是否提供了相应支持。
 
 ## 5. 🤔 ECMAScript 的版本演进有哪些关键节点？
 
