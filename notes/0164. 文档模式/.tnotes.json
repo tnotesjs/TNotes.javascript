@@ -2,10 +2,10 @@
   "bilibili": [],
   "tnotes": [],
   "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
-  "description": "",
+  "done": true,
+  "enableDiscussions": true,
+  "description": "对今天的开发者来说，记住「始终声明 <!DOCTYPE html>」就够了，如果你想要简单了解这个结论背后的原因，可以瞅瞅这篇笔记记录的一些内容。",
   "id": "9609fd26-ea9a-489e-9ecd-96cc8ad6cf4c",
   "created_at": 1779505366469,
-  "updated_at": 1779505366469
+  "updated_at": 1779632691459
 }
