@@ -6,6 +6,7 @@
   function sayScript() {
     console.log('</script>')
   }
+  sayScript()
 </script>
 
 浏览器解析行内脚本的方式决定了它在看到字符串 </script> 时，会将其当成结束的 </script> 标签。
@@ -16,4 +17,5 @@
   function sayScript() {
     console.log('<\/script>')
   }
+  sayScript()
 </script>
