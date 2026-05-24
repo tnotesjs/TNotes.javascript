@@ -2,10 +2,10 @@
   "bilibili": [],
   "tnotes": [],
   "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
-  "description": "",
+  "done": true,
+  "enableDiscussions": true,
+  "description": "script 元元素用于在 HTML 文档中嵌入或引用可执行的 JavaScript 代码，使网页具备动态交互能力。",
   "id": "d0667cc6-76bb-4e5f-95aa-a2c473b133be",
   "created_at": 1779505366469,
-  "updated_at": 1779505366469
+  "updated_at": 1779612856235
 }

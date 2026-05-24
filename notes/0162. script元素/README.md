@@ -11,7 +11,12 @@
 - [7. 🤔 script 应该放在页面什么位置？](#7--script-应该放在页面什么位置)
 - [8. 🤔 `defer` 和 `async` 到底怎么选？](#8--defer-和-async-到底怎么选)
 - [9. 🤔 动态创建 script 有什么特点？](#9--动态创建-script-有什么特点)
+  - [9.1. 显式设置 `async = false` 有什么用？](#91-显式设置-async--false-有什么用)
+  - [9.2. 「浏览器预加载器通常看不到它」是什么意思？](#92-浏览器预加载器通常看不到它是什么意思)
+  - [9.3. `preload` 预加载动态脚本](#93-preload-预加载动态脚本)
 - [10. 🤔 XHTML 和旧式注释语法今天还需要了解吗？](#10--xhtml-和旧式注释语法今天还需要了解吗)
+  - [10.1. 先给结论](#101-先给结论)
+  - [10.2. 在《JavaScript高级程序设计（第4版）》书中提到两类遗留问题](#102-在javascript高级程序设计第4版书中提到两类遗留问题)
 
 <!-- endregion:toc -->
 
@@ -153,18 +158,146 @@ document.head.appendChild(script)
 
 不过它有两个特点需要记住：
 
-- 动态创建的脚本默认按异步方式加载
-- 浏览器预加载器通常看不到它，因此资源优先级可能更低
+- 动态创建的脚本默认按异步方式加载，如果你需要更可控的顺序，通常要显式设置 `script.async = false`。
+- 浏览器预加载器通常看不到它，因此资源优先级可能更低，如果你很在意性能，还可能会配合 `preload` 提前告诉浏览器相关资源的存在。
 
-如果你需要更可控的顺序，通常要显式设置 `script.async = false`。如果你很在意性能，还可能会配合 `preload` 提前告诉浏览器相关资源的存在。
+### 9.1. 显式设置 `async = false` 有什么用？
+
+动态插入的脚本默认是异步的，这意味着浏览器会尽快下载、下载完立刻执行，不等别的脚本。如果同时插入多个动态脚本，执行顺序就不可预测：
+
+```js
+const s1 = document.createElement('script')
+s1.src = 'jquery.js'
+
+const s2 = document.createElement('script')
+s2.src = 'plugin.js' // 依赖 jquery.js
+
+document.head.appendChild(s1)
+document.head.appendChild(s2)
+```
+
+两个脚本同时开始下载，谁先下好谁先执行。如果 `plugin.js` 体积小，它可能先执行，但此时 `jquery.js` 还没加载完，就会报错。
+
+显式设置 `async = false` 后：
+
+```js
+const s1 = document.createElement('script')
+s1.src = 'jquery.js'
+s1.async = false
+
+const s2 = document.createElement('script')
+s2.src = 'plugin.js'
+s2.async = false
+
+document.head.appendChild(s1)
+document.head.appendChild(s2)
+```
+
+浏览器仍然会尽早下载它们，但执行时会「按插入顺序来执行」：
+
+1. 先等 `jquery.js` 下载并执行完
+2. 再执行 `plugin.js`
+
+这样顺序就有了保证。
+
+`async = false` 把动态脚本的执行行为从「谁先下好谁先跑」变成了「按我插入的顺序排队」，实现可控的执行流程。
+
+### 9.2. 「浏览器预加载器通常看不到它」是什么意思？
+
+浏览器有两种扫描 HTML 的机制：
+
+1. 主解析器（HTML Parser）
+
+按顺序逐行解析 HTML，构建 DOM 树。这是常规的解析流程，速度受到脚本阻塞等因素的制约。
+
+2. 预加载扫描器（Preload Scanner）
+
+当主解析器被脚本阻塞停下来的间隙，预加载扫描器会“偷看后面的 HTML 文本”，提前发现其中引用的资源（CSS、图片、脚本等），尽早发起网络请求。
+
+举个例子：
+
+```html
+<script src="app.js"></script>
+<img src="hero.jpg" />
+```
+
+主解析器遇到 `<script src="app.js">` 后阻塞了，但它停下来的这段时间里，预加载扫描器会扫到后面的 `hero.jpg`，提前发起下载。等 `app.js` 执行完，`hero.jpg` 可能已经下好了。
+
+关键在于：预加载扫描器只扫描“已经写在 HTML 文本里的”资源标记。动态脚本是 JavaScript 在运行时才通过 `document.createElement('script')` 创建的，此时扫描器根本不知道它的存在。
+
+```js
+// 这行代码运行时才创建脚本，预加载扫描器的扫描窗口早已过去
+const script = document.createElement('script')
+script.src = 'plugin.js'
+document.head.appendChild(script)
+```
+
+所以“看不到”的后果是：资源发现的时机晚了，浏览器没有机会提前发起请求，加载效率不如静态声明的脚本。
+
+### 9.3. `preload` 预加载动态脚本
+
+前面说过，动态脚本是运行时才创建的，预加载扫描器扫不到它。这意味着浏览器要等到那段 JavaScript 代码真正运行、创建出 `<script>` 元素并插入 DOM 之后，才会发现“哦，原来还需要下载这个文件”。
+
+`preload` 的作用就是提前通知浏览器：这个资源马上会用到，现在就开始下载。
+
+```html
+<head>
+  <!-- 告诉浏览器：后面会用到 plugin.js，现在就下载 -->
+  <link rel="preload" href="plugin.js" as="script" />
+</head>
+```
+
+`<link rel="preload">` 是写在 HTML 文本里的静态标记，预加载扫描器可以直接看到它。浏览器在主解析器被阻塞的间隙就会提前发起 `plugin.js` 的下载请求。
+
+等到运行时 JavaScript 真正创建动态脚本并设置 `src` 为 `plugin.js` 时，这个文件可能已经下好了，省去了一段等待时间。
+
+整个流程的对比：
+
+```
+没有 preload
+-> 主解析器阻塞
+-> 扫描器扫不到任何东西
+-> JS 运行
+-> 创建 script 元素
+-> 发现需要下载 plugin.js
+-> 开始下载
+-> 等待
+
+有 preload
+-> 主解析器阻塞
+-> 扫描器发现 <link rel="preload" href="plugin.js">
+-> 提前下载 plugin.js
+-> JS 运行
+-> 创建 script 元素
+-> plugin.js 可能已经下好了
+-> 直接执行
+```
+
+`preload` 预加载动态脚本的作用是弥补动态脚本「被发现时机过晚」这个痛点，让浏览器尽早知道有哪些资源需要提前下载好。
 
 ## 10. 🤔 XHTML 和旧式注释语法今天还需要了解吗？
 
-这部分今天更多是“看得懂历史代码”而不是“继续照着写”。
+### 10.1. 先给结论
 
-书里提到两类遗留问题：
+基本不需要。除非你在维护十几年前的老项目，遇到了 `application/xhtml+xml` 这种罕见的 MIME 类型，或者在阅读一些历史代码时碰到了用 HTML 注释包裹脚本的写法。在现代项目中，这些都是过时的遗留问题，不应该继续使用。
+
+唯一值得知道的一件事：如果有人给你看这样的代码，你能认出它是历史上用来隐藏脚本的写法、不是真正的注释，就够了。不需要主动使用它。
+
+如果你感兴趣，可以继续查看下文，了解一下这里指的历史问题是什么。
+
+### 10.2. 在《JavaScript高级程序设计（第4版）》书中提到两类遗留问题
 
 - XHTML 中脚本内容会受 XML 规则影响，因此曾经需要 `CDATA` 或把 `<` 改写成实体
 - 很早期为了兼容不支持 JavaScript 的浏览器，开发者会把脚本包进 HTML 注释里
 
 这些写法在现代 HTML 里都不应该继续作为默认方案。你知道它们存在，是为了理解历史代码和一些书籍里的背景解释；真正写新页面时，使用标准 HTML5 文档、正常的 script 声明就够了。
+
+对应书中的描述：
+
+::: swiper
+
+![P16](https://cdn.jsdelivr.net/gh/tnotesjs/imgs-2026@main/2026-05-24-16-49-40.png)
+
+![P17](https://cdn.jsdelivr.net/gh/tnotesjs/imgs-2026@main/2026-05-24-16-49-58.png)
+
+:::
