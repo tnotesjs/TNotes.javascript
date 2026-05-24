@@ -63,7 +63,7 @@
 
 - [ ] [0156. 什么是JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0156.%20%E4%BB%80%E4%B9%88%E6%98%AFJavaScript/README.md)
 - [x] [0157. 简短的历史回顾](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0157.%20%E7%AE%80%E7%9F%AD%E7%9A%84%E5%8E%86%E5%8F%B2%E5%9B%9E%E9%A1%BE/README.md)
-- [ ] [0158. JavaScript实现](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0158.%20JavaScript%E5%AE%9E%E7%8E%B0/README.md)
+- [x] [0158. JavaScript实现](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0158.%20JavaScript%E5%AE%9E%E7%8E%B0/README.md)
 - [ ] [0159. JavaScript版本](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0159.%20JavaScript%E7%89%88%E6%9C%AC/README.md)
 
 ## 3. HTML中的JavaScript

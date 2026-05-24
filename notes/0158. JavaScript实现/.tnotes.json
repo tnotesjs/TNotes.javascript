@@ -2,10 +2,10 @@
   "bilibili": [],
   "tnotes": [],
   "yuque": [],
-  "done": false,
-  "enableDiscussions": false,
-  "description": "",
+  "done": true,
+  "enableDiscussions": true,
+  "description": "JavaScript 的完整实现不是单一标准能解释完的。把 ECMAScript、DOM 和 BOM 分开看，是理解浏览器中 JavaScript 能力来源的关键。",
   "id": "9e78fcd6-3841-4e8c-b34f-03794715b4c7",
   "created_at": 1779505366468,
-  "updated_at": 1779505366468
+  "updated_at": 1779590590919
 }
