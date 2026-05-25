@@ -112,7 +112,93 @@
     ]
   },
   {
-    "text": "5. 变量、作用域与内存",
+    "text": "5. 流程控制语句",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "✅ 0008. 条件语句 - if 结构",
+        "link": "/notes/0008. 条件语句 - if 结构/README"
+      },
+      {
+        "text": "✅ 0009. 条件语句 - if...else 结构",
+        "link": "/notes/0009. 条件语句 - if...else 结构/README"
+      },
+      {
+        "text": "✅ 0010. 条件语句 - switch 结构",
+        "link": "/notes/0010. 条件语句 - switch 结构/README"
+      },
+      {
+        "text": "✅ 0011. 条件语句 - 三元运算符",
+        "link": "/notes/0011. 条件语句 - 三元运算符/README"
+      },
+      {
+        "text": "✅ 0012. 条件语句 - 练习",
+        "link": "/notes/0012. 条件语句 - 练习/README"
+      },
+      {
+        "text": "✅ 0015. 循环语句 - for 循环",
+        "link": "/notes/0015. 循环语句 - for 循环/README"
+      },
+      {
+        "text": "✅ 0016. 循环语句 - while 循环",
+        "link": "/notes/0016. 循环语句 - while 循环/README"
+      },
+      {
+        "text": "✅ 0017. 循环语句 - do...while 循环",
+        "link": "/notes/0017. 循环语句 - do...while 循环/README"
+      },
+      {
+        "text": "✅ 0018. 循环语句 - break 语句和 continue 语句",
+        "link": "/notes/0018. 循环语句 - break 语句和 continue 语句/README"
+      },
+      {
+        "text": "✅ 0019. 循环语句 - 标签（label）",
+        "link": "/notes/0019. 循环语句 - 标签（label）/README"
+      },
+      {
+        "text": "✅ 0020. 循环语句 - 练习",
+        "link": "/notes/0020. 循环语句 - 练习/README"
+      },
+      {
+        "text": "✅ 0021. 注释",
+        "link": "/notes/0021. 注释/README"
+      },
+      {
+        "text": "✅ 0022. 字面量",
+        "link": "/notes/0022. 字面量/README"
+      }
+    ]
+  },
+  {
+    "text": "6. 语句和表达式",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "✅ 0007. 语句和表达式",
+        "link": "/notes/0007. 语句和表达式/README"
+      }
+    ]
+  },
+  {
+    "text": "7. 符号",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "✅ 0078. JS 中的符号",
+        "link": "/notes/0078. JS 中的符号/README"
+      },
+      {
+        "text": "✅ 0013. 转义符",
+        "link": "/notes/0013. 转义符/README"
+      },
+      {
+        "text": "✅ 0014. 标识符",
+        "link": "/notes/0014. 标识符/README"
+      }
+    ]
+  },
+  {
+    "text": "8. 变量、作用域与内存",
     "collapsed": true,
     "items": [
       {
@@ -134,7 +220,43 @@
     ]
   },
   {
-    "text": "6. 基本引用类型",
+    "text": "9. 作用域",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "✅ 0005. 区块和块级作用域",
+        "link": "/notes/0005. 区块和块级作用域/README"
+      }
+    ]
+  },
+  {
+    "text": "10. 变量",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "✅ 0001. var 关键字和变量",
+        "link": "/notes/0001. var 关键字和变量/README"
+      },
+      {
+        "text": "✅ 0003. let 关键字",
+        "link": "/notes/0003. let 关键字/README"
+      },
+      {
+        "text": "✅ 0004. const 关键字",
+        "link": "/notes/0004. const 关键字/README"
+      },
+      {
+        "text": "✅ 0002. 变量声明提升和暂时性死区",
+        "link": "/notes/0002. 变量声明提升和暂时性死区/README"
+      },
+      {
+        "text": "✅ 0114. 深入理解“提升”【扩展】",
+        "link": "/notes/0114. 深入理解“提升”【扩展】/README"
+      }
+    ]
+  },
+  {
+    "text": "11. 基本引用类型",
     "collapsed": true,
     "items": [
       {
@@ -160,7 +282,7 @@
     ]
   },
   {
-    "text": "7. 集合引用类型",
+    "text": "12. 集合引用类型",
     "collapsed": true,
     "items": [
       {
@@ -202,7 +324,7 @@
     ]
   },
   {
-    "text": "8. 迭代器与生成器",
+    "text": "13. 迭代器与生成器",
     "collapsed": true,
     "items": [
       {
@@ -224,7 +346,7 @@
     ]
   },
   {
-    "text": "9. 对象、类与面向对象编程",
+    "text": "14. 对象、类与面向对象编程",
     "collapsed": true,
     "items": [
       {
@@ -250,7 +372,7 @@
     ]
   },
   {
-    "text": "10. 代理与反射",
+    "text": "15. 代理与反射",
     "collapsed": true,
     "items": [
       {
@@ -272,7 +394,7 @@
     ]
   },
   {
-    "text": "11. 函数",
+    "text": "16. 函数",
     "collapsed": true,
     "items": [
       {
@@ -346,7 +468,7 @@
     ]
   },
   {
-    "text": "12. 期约与异步函数",
+    "text": "17. 期约与异步函数",
     "collapsed": true,
     "items": [
       {
@@ -368,7 +490,7 @@
     ]
   },
   {
-    "text": "13. BOM",
+    "text": "18. BOM",
     "collapsed": true,
     "items": [
       {
@@ -398,7 +520,7 @@
     ]
   },
   {
-    "text": "14. 客户端检测",
+    "text": "19. 客户端检测",
     "collapsed": true,
     "items": [
       {
@@ -420,7 +542,7 @@
     ]
   },
   {
-    "text": "15. DOM",
+    "text": "20. DOM",
     "collapsed": true,
     "items": [
       {
@@ -442,7 +564,7 @@
     ]
   },
   {
-    "text": "16. DOM扩展",
+    "text": "21. DOM扩展",
     "collapsed": true,
     "items": [
       {
@@ -468,7 +590,7 @@
     ]
   },
   {
-    "text": "17. DOM2和DOM3",
+    "text": "22. DOM2和DOM3",
     "collapsed": true,
     "items": [
       {
@@ -494,7 +616,7 @@
     ]
   },
   {
-    "text": "18. 事件",
+    "text": "23. 事件",
     "collapsed": true,
     "items": [
       {
@@ -528,7 +650,7 @@
     ]
   },
   {
-    "text": "19. 动画与Canvas图形",
+    "text": "24. 动画与Canvas图形",
     "collapsed": true,
     "items": [
       {
@@ -554,7 +676,7 @@
     ]
   },
   {
-    "text": "20. 表单脚本",
+    "text": "25. 表单脚本",
     "collapsed": true,
     "items": [
       {
@@ -584,7 +706,7 @@
     ]
   },
   {
-    "text": "21. JavaScript API",
+    "text": "26. JavaScript API",
     "collapsed": true,
     "items": [
       {
@@ -642,7 +764,65 @@
     ]
   },
   {
-    "text": "22. 错误处理与调试",
+    "text": "27. 音频处理",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "⏰ 0143. 音频处理",
+        "link": "/notes/0143. 音频处理/README"
+      },
+      {
+        "text": "⏰ 0124. HTMLMediaElement 播放控制",
+        "link": "/notes/0124. HTMLMediaElement 播放控制/README"
+      },
+      {
+        "text": "⏰ 0145. AudioContext 与音频节点图模型",
+        "link": "/notes/0145. AudioContext 与音频节点图模型/README"
+      },
+      {
+        "text": "⏰ 0146. 音频资源加载、解码与播放",
+        "link": "/notes/0146. 音频资源加载、解码与播放/README"
+      },
+      {
+        "text": "⏰ 0147. 音量控制、声像定位与空间音频",
+        "link": "/notes/0147. 音量控制、声像定位与空间音频/README"
+      },
+      {
+        "text": "⏰ 0148. 音频分析与实时可视化",
+        "link": "/notes/0148. 音频分析与实时可视化/README"
+      },
+      {
+        "text": "⏰ 0149. OscillatorNode 与声音合成",
+        "link": "/notes/0149. OscillatorNode 与声音合成/README"
+      },
+      {
+        "text": "⏰ 0150. 滤波器、混响与音效处理链",
+        "link": "/notes/0150. 滤波器、混响与音效处理链/README"
+      },
+      {
+        "text": "⏰ 0151. MediaStream、getUserMedia 与 MediaRecorder",
+        "link": "/notes/0151. MediaStream、getUserMedia 与 MediaRecorder/README"
+      },
+      {
+        "text": "⏰ 0152. AudioWorklet 自定义音频处理器",
+        "link": "/notes/0152. AudioWorklet 自定义音频处理器/README"
+      },
+      {
+        "text": "⏰ 0153. Speech Synthesis 与 Speech Recognition",
+        "link": "/notes/0153. Speech Synthesis 与 Speech Recognition/README"
+      },
+      {
+        "text": "⏰ 0155. Media Session API 与媒体通知栏控制",
+        "link": "/notes/0155. Media Session API 与媒体通知栏控制/README"
+      },
+      {
+        "text": "⏰ 0154. 音频应用综合项目实战",
+        "link": "/notes/0154. 音频应用综合项目实战/README"
+      }
+    ]
+  },
+  {
+    "text": "28. 错误处理与调试",
     "collapsed": true,
     "items": [
       {
@@ -668,7 +848,7 @@
     ]
   },
   {
-    "text": "23. 处理XML",
+    "text": "29. 处理XML",
     "collapsed": true,
     "items": [
       {
@@ -690,7 +870,7 @@
     ]
   },
   {
-    "text": "24. JSON",
+    "text": "30. JSON",
     "collapsed": true,
     "items": [
       {
@@ -708,7 +888,7 @@
     ]
   },
   {
-    "text": "25. 网络请求与远程资源",
+    "text": "31. 网络请求与远程资源",
     "collapsed": true,
     "items": [
       {
@@ -750,7 +930,7 @@
     ]
   },
   {
-    "text": "26. 客户端存储",
+    "text": "32. 客户端存储",
     "collapsed": true,
     "items": [
       {
@@ -772,7 +952,7 @@
     ]
   },
   {
-    "text": "27. 模块",
+    "text": "33. 模块",
     "collapsed": true,
     "items": [
       {
@@ -798,7 +978,7 @@
     ]
   },
   {
-    "text": "28. 工作者线程",
+    "text": "34. 工作者线程",
     "collapsed": true,
     "items": [
       {
@@ -824,7 +1004,7 @@
     ]
   },
   {
-    "text": "29. 最佳实践",
+    "text": "35. 最佳实践",
     "collapsed": true,
     "items": [
       {
@@ -846,133 +1026,11 @@
     ]
   },
   {
-    "text": "30. pending",
+    "text": "36. pending",
     "collapsed": true,
     "items": [
       {
-        "text": "30.1. 变量",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "✅ 0001. var 关键字和变量",
-            "link": "/notes/0001. var 关键字和变量/README"
-          },
-          {
-            "text": "✅ 0003. let 关键字",
-            "link": "/notes/0003. let 关键字/README"
-          },
-          {
-            "text": "✅ 0004. const 关键字",
-            "link": "/notes/0004. const 关键字/README"
-          },
-          {
-            "text": "✅ 0002. 变量声明提升和暂时性死区",
-            "link": "/notes/0002. 变量声明提升和暂时性死区/README"
-          },
-          {
-            "text": "✅ 0114. 深入理解“提升”【扩展】",
-            "link": "/notes/0114. 深入理解“提升”【扩展】/README"
-          }
-        ]
-      },
-      {
-        "text": "30.2. 作用域",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "✅ 0005. 区块和块级作用域",
-            "link": "/notes/0005. 区块和块级作用域/README"
-          }
-        ]
-      },
-      {
-        "text": "30.3. 语句和表达式",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "✅ 0007. 语句和表达式",
-            "link": "/notes/0007. 语句和表达式/README"
-          }
-        ]
-      },
-      {
-        "text": "30.4. 符号",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "✅ 0078. JS 中的符号",
-            "link": "/notes/0078. JS 中的符号/README"
-          },
-          {
-            "text": "✅ 0013. 转义符",
-            "link": "/notes/0013. 转义符/README"
-          },
-          {
-            "text": "✅ 0014. 标识符",
-            "link": "/notes/0014. 标识符/README"
-          }
-        ]
-      },
-      {
-        "text": "30.5. 流程控制语句",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "✅ 0008. 条件语句 - if 结构",
-            "link": "/notes/0008. 条件语句 - if 结构/README"
-          },
-          {
-            "text": "✅ 0009. 条件语句 - if...else 结构",
-            "link": "/notes/0009. 条件语句 - if...else 结构/README"
-          },
-          {
-            "text": "✅ 0010. 条件语句 - switch 结构",
-            "link": "/notes/0010. 条件语句 - switch 结构/README"
-          },
-          {
-            "text": "✅ 0011. 条件语句 - 三元运算符",
-            "link": "/notes/0011. 条件语句 - 三元运算符/README"
-          },
-          {
-            "text": "✅ 0012. 条件语句 - 练习",
-            "link": "/notes/0012. 条件语句 - 练习/README"
-          },
-          {
-            "text": "✅ 0015. 循环语句 - for 循环",
-            "link": "/notes/0015. 循环语句 - for 循环/README"
-          },
-          {
-            "text": "✅ 0016. 循环语句 - while 循环",
-            "link": "/notes/0016. 循环语句 - while 循环/README"
-          },
-          {
-            "text": "✅ 0017. 循环语句 - do...while 循环",
-            "link": "/notes/0017. 循环语句 - do...while 循环/README"
-          },
-          {
-            "text": "✅ 0018. 循环语句 - break 语句和 continue 语句",
-            "link": "/notes/0018. 循环语句 - break 语句和 continue 语句/README"
-          },
-          {
-            "text": "✅ 0019. 循环语句 - 标签（label）",
-            "link": "/notes/0019. 循环语句 - 标签（label）/README"
-          },
-          {
-            "text": "✅ 0020. 循环语句 - 练习",
-            "link": "/notes/0020. 循环语句 - 练习/README"
-          },
-          {
-            "text": "✅ 0021. 注释",
-            "link": "/notes/0021. 注释/README"
-          },
-          {
-            "text": "✅ 0022. 字面量",
-            "link": "/notes/0022. 字面量/README"
-          }
-        ]
-      },
-      {
-        "text": "30.6. 防抖、节流",
+        "text": "36.1. 防抖、节流",
         "collapsed": true,
         "items": [
           {
@@ -982,7 +1040,7 @@
         ]
       },
       {
-        "text": "30.7. 数据类型",
+        "text": "36.2. 数据类型",
         "collapsed": true,
         "items": [
           {
@@ -1140,7 +1198,7 @@
         ]
       },
       {
-        "text": "30.8. 模块化",
+        "text": "36.3. 模块化",
         "collapsed": true,
         "items": [
           {
@@ -1206,7 +1264,7 @@
         ]
       },
       {
-        "text": "30.9. window.xxx",
+        "text": "36.4. window.xxx",
         "collapsed": true,
         "items": [
           {
@@ -1236,7 +1294,7 @@
         ]
       },
       {
-        "text": "30.10. Web Streams",
+        "text": "36.5. Web Streams",
         "collapsed": true,
         "items": [
           {
@@ -1298,7 +1356,7 @@
         ]
       },
       {
-        "text": "30.11. css 属性",
+        "text": "36.6. css 属性",
         "collapsed": true,
         "items": [
           {
@@ -1312,7 +1370,7 @@
         ]
       },
       {
-        "text": "30.12. html 元素",
+        "text": "36.7. html 元素",
         "collapsed": true,
         "items": [
           {
@@ -1330,7 +1388,7 @@
         ]
       },
       {
-        "text": "30.13. prettier",
+        "text": "36.8. prettier",
         "collapsed": true,
         "items": [
           {
@@ -1340,7 +1398,7 @@
         ]
       },
       {
-        "text": "30.14. eslint",
+        "text": "36.9. eslint",
         "collapsed": true,
         "items": [
           {
@@ -1370,7 +1428,7 @@
         ]
       },
       {
-        "text": "30.15. pending",
+        "text": "36.10. pending",
         "collapsed": true,
         "items": [
           {
@@ -1488,64 +1546,6 @@
           {
             "text": "⏰ 0123. 前端设计模式",
             "link": "/notes/0123. 前端设计模式/README"
-          }
-        ]
-      },
-      {
-        "text": "30.16. 前端音频处理",
-        "collapsed": true,
-        "items": [
-          {
-            "text": "⏰ 0143. 前端音频处理",
-            "link": "/notes/0143. 前端音频处理/README"
-          },
-          {
-            "text": "⏰ 0124. HTMLMediaElement 播放控制",
-            "link": "/notes/0124. HTMLMediaElement 播放控制/README"
-          },
-          {
-            "text": "⏰ 0145. AudioContext 与音频节点图模型",
-            "link": "/notes/0145. AudioContext 与音频节点图模型/README"
-          },
-          {
-            "text": "⏰ 0146. 音频资源加载、解码与播放",
-            "link": "/notes/0146. 音频资源加载、解码与播放/README"
-          },
-          {
-            "text": "⏰ 0147. 音量控制、声像定位与空间音频",
-            "link": "/notes/0147. 音量控制、声像定位与空间音频/README"
-          },
-          {
-            "text": "⏰ 0148. 音频分析与实时可视化",
-            "link": "/notes/0148. 音频分析与实时可视化/README"
-          },
-          {
-            "text": "⏰ 0149. OscillatorNode 与声音合成",
-            "link": "/notes/0149. OscillatorNode 与声音合成/README"
-          },
-          {
-            "text": "⏰ 0150. 滤波器、混响与音效处理链",
-            "link": "/notes/0150. 滤波器、混响与音效处理链/README"
-          },
-          {
-            "text": "⏰ 0151. MediaStream、getUserMedia 与 MediaRecorder",
-            "link": "/notes/0151. MediaStream、getUserMedia 与 MediaRecorder/README"
-          },
-          {
-            "text": "⏰ 0152. AudioWorklet 自定义音频处理器",
-            "link": "/notes/0152. AudioWorklet 自定义音频处理器/README"
-          },
-          {
-            "text": "⏰ 0153. Speech Synthesis 与 Speech Recognition",
-            "link": "/notes/0153. Speech Synthesis 与 Speech Recognition/README"
-          },
-          {
-            "text": "⏰ 0155. Media Session API 与媒体通知栏控制",
-            "link": "/notes/0155. Media Session API 与媒体通知栏控制/README"
-          },
-          {
-            "text": "⏰ 0154. 音频应用综合项目实战",
-            "link": "/notes/0154. 音频应用综合项目实战/README"
           }
         ]
       }
