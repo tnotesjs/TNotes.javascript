@@ -1,9 +1,15 @@
-# [0175. Web Audio API - Perfect Timing and Latency](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0175.%20Web%20Audio%20API%20-%20Perfect%20Timing%20and%20Latency)
+# [0175. Web Audio API - 精确的时值与延迟](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0175.%20Web%20Audio%20API%20-%20%E7%B2%BE%E7%A1%AE%E7%9A%84%E6%97%B6%E5%80%BC%E4%B8%8E%E5%BB%B6%E8%BF%9F)
 
 <!-- region:toc -->
 
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
+- [3. 🤔 Web Audio API 的时间模型有什么特别？](#3--web-audio-api-的时间模型有什么特别)
+- [4. 🤔 如何精确播放、暂停和恢复声音？](#4--如何精确播放暂停和恢复声音)
+- [5. 🤔 如何调度稳定的节奏？](#5--如何调度稳定的节奏)
+- [6. 🤔 `AudioParam` 为什么比普通属性更适合控制声音？](#6--audioparam-为什么比普通属性更适合控制声音)
+- [7. 🤔 如何做淡入、淡出和交叉淡化？](#7--如何做淡入淡出和交叉淡化)
+- [8. 🤔 自定义时间曲线和 LFO 能解决什么问题？](#8--自定义时间曲线和-lfo-能解决什么问题)
 
 <!-- endregion:toc -->
 

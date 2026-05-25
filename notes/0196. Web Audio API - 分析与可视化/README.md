@@ -1,9 +1,17 @@
-# [0196. Web Audio API - Analysis and Visualization](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0196.%20Web%20Audio%20API%20-%20Analysis%20and%20Visualization)
+# [0196. Web Audio API - 分析与可视化](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0196.%20Web%20Audio%20API%20-%20%E5%88%86%E6%9E%90%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96)
 
 <!-- region:toc -->
 
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
+- [3. 🤔 音频分析能用来做什么？](#3--音频分析能用来做什么)
+- [4. 🤔 `AnalyserNode` 在音频图中扮演什么角色？](#4--analysernode-在音频图中扮演什么角色)
+- [5. 🤔 `AnalyserNode` 的几个核心参数分别控制什么？](#5--analysernode-的几个核心参数分别控制什么)
+- [6. 🤔 如何读取频域数据？](#6--如何读取频域数据)
+- [7. 🤔 如何读取时域数据？](#7--如何读取时域数据)
+- [8. 🤔 为什么可视化要用 `requestAnimationFrame()`？](#8--为什么可视化要用-requestanimationframe)
+- [9. 🤔 如何画一个简单的频谱图？](#9--如何画一个简单的频谱图)
+- [10. 🤔 音频可视化有哪些局限？](#10--音频可视化有哪些局限)
 
 <!-- endregion:toc -->
 

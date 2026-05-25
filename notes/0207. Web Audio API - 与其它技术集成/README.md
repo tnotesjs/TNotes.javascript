@@ -1,4 +1,4 @@
-# [0207. Web Audio API - Integrating with Other Technologies](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0207.%20Web%20Audio%20API%20-%20Integrating%20with%20Other%20Technologies)
+# [0207. Web Audio API - 与其它技术集成](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0207.%20Web%20Audio%20API%20-%20%E4%B8%8E%E5%85%B6%E5%AE%83%E6%8A%80%E6%9C%AF%E9%9B%86%E6%88%90)
 
 <!-- region:toc -->
 

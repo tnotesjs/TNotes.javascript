@@ -1,4 +1,4 @@
-# [0180. Web Audio API - Volume and Loundness](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0180.%20Web%20Audio%20API%20-%20Volume%20and%20Loundness)
+# [0180. Web Audio API - 音量与响度](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0180.%20Web%20Audio%20API%20-%20%E9%9F%B3%E9%87%8F%E4%B8%8E%E5%93%8D%E5%BA%A6)
 
 <!-- region:toc -->
 

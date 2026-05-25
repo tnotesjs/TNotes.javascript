@@ -1,4 +1,4 @@
-# [0166. Web Audio API - Fundamentals](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0166.%20Web%20Audio%20API%20-%20Fundamentals)
+# [0166. Web Audio API - 基础知识](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0166.%20Web%20Audio%20API%20-%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86)
 
 <!-- region:toc -->
 
@@ -25,7 +25,7 @@
 
 ## 2. 🫧 评价
 
-- 这是 Web Audio API 的入口章节，重点不是记 API 名称，而是建立“音频图”的思维方式。只要理解声音会从源节点一路流向目标节点，后面的滤波、混音、分析和空间化都会顺很多。
+这是 Web Audio API 的入口章节，重点不是记 API 名称，而是建立“音频图”的思维方式。只要理解声音会从源节点一路流向目标节点，后面的滤波、混音、分析和空间化都会顺很多。
 
 ## 3. 🤔 为什么 `<audio>` 还不够用？
 

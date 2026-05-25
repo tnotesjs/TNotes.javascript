@@ -1,9 +1,15 @@
-# [0186. Web Audio API - Pitch and the Frequency Domain](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0186.%20Web%20Audio%20API%20-%20Pitch%20and%20the%20Frequency%20Domain)
+# [0186. Web Audio API - 音高与频域](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0186.%20Web%20Audio%20API%20-%20%E9%9F%B3%E9%AB%98%E4%B8%8E%E9%A2%91%E5%9F%9F)
 
 <!-- region:toc -->
 
 - [1. 🎯 本节内容](#1--本节内容)
 - [2. 🫧 评价](#2--评价)
+- [3. 🤔 音高和频率是什么关系？](#3--音高和频率是什么关系)
+- [4. 🤔 如何用 `playbackRate` 和 `detune` 改变音高？](#4--如何用-playbackrate-和-detune-改变音高)
+- [5. 🤔 如何让重复音效听起来不机械？](#5--如何让重复音效听起来不机械)
+- [6. 🤔 什么是时域和频域？](#6--什么是时域和频域)
+- [7. 🤔 如何用 `OscillatorNode` 直接合成声音？](#7--如何用-oscillatornode-直接合成声音)
+- [8. 🤔 这一章和后续内容有什么关系？](#8--这一章和后续内容有什么关系)
 
 <!-- endregion:toc -->
 
