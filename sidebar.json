@@ -822,7 +822,45 @@
     ]
   },
   {
-    "text": "28. 错误处理与调试",
+    "text": "28. 《Web Audio API》",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "⏰ 0166. Web Audio API - Fundamentals",
+        "link": "/notes/0166. Web Audio API - Fundamentals/README"
+      },
+      {
+        "text": "⏰ 0175. Web Audio API - Perfect Timing and Latency",
+        "link": "/notes/0175. Web Audio API - Perfect Timing and Latency/README"
+      },
+      {
+        "text": "⏰ 0180. Web Audio API - Volume and Loundness",
+        "link": "/notes/0180. Web Audio API - Volume and Loundness/README"
+      },
+      {
+        "text": "⏰ 0186. Web Audio API - Pitch and the Frequency Domain",
+        "link": "/notes/0186. Web Audio API - Pitch and the Frequency Domain/README"
+      },
+      {
+        "text": "⏰ 0196. Web Audio API - Analysis and Visualization",
+        "link": "/notes/0196. Web Audio API - Analysis and Visualization/README"
+      },
+      {
+        "text": "⏰ 0201. Web Audio API - Advanced Topics",
+        "link": "/notes/0201. Web Audio API - Advanced Topics/README"
+      },
+      {
+        "text": "⏰ 0207. Web Audio API - Integrating with Other Technologies",
+        "link": "/notes/0207. Web Audio API - Integrating with Other Technologies/README"
+      },
+      {
+        "text": "⏰ 0212. Web Audio API - Conclusion",
+        "link": "/notes/0212. Web Audio API - Conclusion/README"
+      }
+    ]
+  },
+  {
+    "text": "29. 错误处理与调试",
     "collapsed": true,
     "items": [
       {
@@ -848,7 +886,7 @@
     ]
   },
   {
-    "text": "29. 处理XML",
+    "text": "30. 处理XML",
     "collapsed": true,
     "items": [
       {
@@ -870,7 +908,7 @@
     ]
   },
   {
-    "text": "30. JSON",
+    "text": "31. JSON",
     "collapsed": true,
     "items": [
       {
@@ -888,7 +926,7 @@
     ]
   },
   {
-    "text": "31. 网络请求与远程资源",
+    "text": "32. 网络请求与远程资源",
     "collapsed": true,
     "items": [
       {
@@ -930,7 +968,7 @@
     ]
   },
   {
-    "text": "32. 客户端存储",
+    "text": "33. 客户端存储",
     "collapsed": true,
     "items": [
       {
@@ -952,7 +990,7 @@
     ]
   },
   {
-    "text": "33. 模块",
+    "text": "34. 模块",
     "collapsed": true,
     "items": [
       {
@@ -978,7 +1016,7 @@
     ]
   },
   {
-    "text": "34. 工作者线程",
+    "text": "35. 工作者线程",
     "collapsed": true,
     "items": [
       {
@@ -1004,7 +1042,7 @@
     ]
   },
   {
-    "text": "35. 最佳实践",
+    "text": "36. 最佳实践",
     "collapsed": true,
     "items": [
       {
@@ -1026,11 +1064,11 @@
     ]
   },
   {
-    "text": "36. pending",
+    "text": "37. pending",
     "collapsed": true,
     "items": [
       {
-        "text": "36.1. 防抖、节流",
+        "text": "37.1. 防抖、节流",
         "collapsed": true,
         "items": [
           {
@@ -1040,7 +1078,7 @@
         ]
       },
       {
-        "text": "36.2. 数据类型",
+        "text": "37.2. 数据类型",
         "collapsed": true,
         "items": [
           {
@@ -1198,7 +1236,7 @@
         ]
       },
       {
-        "text": "36.3. 模块化",
+        "text": "37.3. 模块化",
         "collapsed": true,
         "items": [
           {
@@ -1264,7 +1302,7 @@
         ]
       },
       {
-        "text": "36.4. window.xxx",
+        "text": "37.4. window.xxx",
         "collapsed": true,
         "items": [
           {
@@ -1294,7 +1332,7 @@
         ]
       },
       {
-        "text": "36.5. Web Streams",
+        "text": "37.5. Web Streams",
         "collapsed": true,
         "items": [
           {
@@ -1356,7 +1394,7 @@
         ]
       },
       {
-        "text": "36.6. css 属性",
+        "text": "37.6. css 属性",
         "collapsed": true,
         "items": [
           {
@@ -1370,7 +1408,7 @@
         ]
       },
       {
-        "text": "36.7. html 元素",
+        "text": "37.7. html 元素",
         "collapsed": true,
         "items": [
           {
@@ -1388,7 +1426,7 @@
         ]
       },
       {
-        "text": "36.8. prettier",
+        "text": "37.8. prettier",
         "collapsed": true,
         "items": [
           {
@@ -1398,7 +1436,7 @@
         ]
       },
       {
-        "text": "36.9. eslint",
+        "text": "37.9. eslint",
         "collapsed": true,
         "items": [
           {
@@ -1428,7 +1466,7 @@
         ]
       },
       {
-        "text": "36.10. pending",
+        "text": "37.10. pending",
         "collapsed": true,
         "items": [
           {
