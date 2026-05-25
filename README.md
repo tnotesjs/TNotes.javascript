@@ -76,7 +76,7 @@
 ## 4. 语言基础
 
 - [ ] [0167. 语言基础](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0167.%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/README.md)
-- [ ] [0168. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0168.%20%E8%AF%AD%E6%B3%95/README.md)
+- [x] [0168. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0168.%20%E8%AF%AD%E6%B3%95/README.md)
 - [x] [0078. 符号](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0078.%20%E7%AC%A6%E5%8F%B7/README.md)
 - [x] [0013. 转义符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md)
 - [x] [0014. 标识符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md)
