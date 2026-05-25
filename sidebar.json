@@ -86,6 +86,18 @@
         "link": "/notes/0168. 语法/README"
       },
       {
+        "text": "✅ 0078. 符号",
+        "link": "/notes/0078. 符号/README"
+      },
+      {
+        "text": "✅ 0013. 转义符",
+        "link": "/notes/0013. 转义符/README"
+      },
+      {
+        "text": "✅ 0014. 标识符",
+        "link": "/notes/0014. 标识符/README"
+      },
+      {
         "text": "⏰ 0169. 关键字与保留字",
         "link": "/notes/0169. 关键字与保留字/README"
       },
@@ -180,25 +192,7 @@
     ]
   },
   {
-    "text": "7. 符号",
-    "collapsed": true,
-    "items": [
-      {
-        "text": "✅ 0078. JS 中的符号",
-        "link": "/notes/0078. JS 中的符号/README"
-      },
-      {
-        "text": "✅ 0013. 转义符",
-        "link": "/notes/0013. 转义符/README"
-      },
-      {
-        "text": "✅ 0014. 标识符",
-        "link": "/notes/0014. 标识符/README"
-      }
-    ]
-  },
-  {
-    "text": "8. 变量、作用域与内存",
+    "text": "7. 变量、作用域与内存",
     "collapsed": true,
     "items": [
       {
@@ -220,7 +214,7 @@
     ]
   },
   {
-    "text": "9. 作用域",
+    "text": "8. 作用域",
     "collapsed": true,
     "items": [
       {
@@ -230,7 +224,7 @@
     ]
   },
   {
-    "text": "10. 变量",
+    "text": "9. 变量",
     "collapsed": true,
     "items": [
       {
@@ -256,7 +250,7 @@
     ]
   },
   {
-    "text": "11. 基本引用类型",
+    "text": "10. 基本引用类型",
     "collapsed": true,
     "items": [
       {
@@ -282,7 +276,7 @@
     ]
   },
   {
-    "text": "12. 集合引用类型",
+    "text": "11. 集合引用类型",
     "collapsed": true,
     "items": [
       {
@@ -324,7 +318,7 @@
     ]
   },
   {
-    "text": "13. 迭代器与生成器",
+    "text": "12. 迭代器与生成器",
     "collapsed": true,
     "items": [
       {
@@ -346,7 +340,7 @@
     ]
   },
   {
-    "text": "14. 对象、类与面向对象编程",
+    "text": "13. 对象、类与面向对象编程",
     "collapsed": true,
     "items": [
       {
@@ -372,7 +366,7 @@
     ]
   },
   {
-    "text": "15. 代理与反射",
+    "text": "14. 代理与反射",
     "collapsed": true,
     "items": [
       {
@@ -394,7 +388,7 @@
     ]
   },
   {
-    "text": "16. 函数",
+    "text": "15. 函数",
     "collapsed": true,
     "items": [
       {
@@ -468,7 +462,7 @@
     ]
   },
   {
-    "text": "17. 期约与异步函数",
+    "text": "16. 期约与异步函数",
     "collapsed": true,
     "items": [
       {
@@ -490,7 +484,7 @@
     ]
   },
   {
-    "text": "18. BOM",
+    "text": "17. BOM",
     "collapsed": true,
     "items": [
       {
@@ -520,7 +514,7 @@
     ]
   },
   {
-    "text": "19. 客户端检测",
+    "text": "18. 客户端检测",
     "collapsed": true,
     "items": [
       {
@@ -542,7 +536,7 @@
     ]
   },
   {
-    "text": "20. DOM",
+    "text": "19. DOM",
     "collapsed": true,
     "items": [
       {
@@ -564,7 +558,7 @@
     ]
   },
   {
-    "text": "21. DOM扩展",
+    "text": "20. DOM扩展",
     "collapsed": true,
     "items": [
       {
@@ -590,7 +584,7 @@
     ]
   },
   {
-    "text": "22. DOM2和DOM3",
+    "text": "21. DOM2和DOM3",
     "collapsed": true,
     "items": [
       {
@@ -616,7 +610,7 @@
     ]
   },
   {
-    "text": "23. 事件",
+    "text": "22. 事件",
     "collapsed": true,
     "items": [
       {
@@ -650,7 +644,7 @@
     ]
   },
   {
-    "text": "24. 动画与Canvas图形",
+    "text": "23. 动画与Canvas图形",
     "collapsed": true,
     "items": [
       {
@@ -676,7 +670,7 @@
     ]
   },
   {
-    "text": "25. 表单脚本",
+    "text": "24. 表单脚本",
     "collapsed": true,
     "items": [
       {
@@ -706,7 +700,7 @@
     ]
   },
   {
-    "text": "26. JavaScript API",
+    "text": "25. JavaScript API",
     "collapsed": true,
     "items": [
       {
@@ -764,7 +758,7 @@
     ]
   },
   {
-    "text": "27. 音频处理",
+    "text": "26. 音频处理",
     "collapsed": true,
     "items": [
       {
@@ -854,7 +848,7 @@
     ]
   },
   {
-    "text": "28. 错误处理与调试",
+    "text": "27. 错误处理与调试",
     "collapsed": true,
     "items": [
       {
@@ -880,7 +874,7 @@
     ]
   },
   {
-    "text": "29. 处理XML",
+    "text": "28. 处理XML",
     "collapsed": true,
     "items": [
       {
@@ -902,7 +896,7 @@
     ]
   },
   {
-    "text": "30. JSON",
+    "text": "29. JSON",
     "collapsed": true,
     "items": [
       {
@@ -920,7 +914,7 @@
     ]
   },
   {
-    "text": "31. 网络请求与远程资源",
+    "text": "30. 网络请求与远程资源",
     "collapsed": true,
     "items": [
       {
@@ -962,7 +956,7 @@
     ]
   },
   {
-    "text": "32. 客户端存储",
+    "text": "31. 客户端存储",
     "collapsed": true,
     "items": [
       {
@@ -984,7 +978,7 @@
     ]
   },
   {
-    "text": "33. 模块",
+    "text": "32. 模块",
     "collapsed": true,
     "items": [
       {
@@ -1010,7 +1004,7 @@
     ]
   },
   {
-    "text": "34. 工作者线程",
+    "text": "33. 工作者线程",
     "collapsed": true,
     "items": [
       {
@@ -1036,7 +1030,7 @@
     ]
   },
   {
-    "text": "35. 最佳实践",
+    "text": "34. 最佳实践",
     "collapsed": true,
     "items": [
       {
@@ -1058,11 +1052,11 @@
     ]
   },
   {
-    "text": "36. pending",
+    "text": "35. pending",
     "collapsed": true,
     "items": [
       {
-        "text": "36.1. 防抖、节流",
+        "text": "35.1. 防抖、节流",
         "collapsed": true,
         "items": [
           {
@@ -1072,7 +1066,7 @@
         ]
       },
       {
-        "text": "36.2. 数据类型",
+        "text": "35.2. 数据类型",
         "collapsed": true,
         "items": [
           {
@@ -1230,7 +1224,7 @@
         ]
       },
       {
-        "text": "36.3. 模块化",
+        "text": "35.3. 模块化",
         "collapsed": true,
         "items": [
           {
@@ -1296,7 +1290,7 @@
         ]
       },
       {
-        "text": "36.4. window.xxx",
+        "text": "35.4. window.xxx",
         "collapsed": true,
         "items": [
           {
@@ -1326,7 +1320,7 @@
         ]
       },
       {
-        "text": "36.5. Web Streams",
+        "text": "35.5. Web Streams",
         "collapsed": true,
         "items": [
           {
@@ -1388,7 +1382,7 @@
         ]
       },
       {
-        "text": "36.6. css 属性",
+        "text": "35.6. css 属性",
         "collapsed": true,
         "items": [
           {
@@ -1402,7 +1396,7 @@
         ]
       },
       {
-        "text": "36.7. html 元素",
+        "text": "35.7. html 元素",
         "collapsed": true,
         "items": [
           {
@@ -1420,7 +1414,7 @@
         ]
       },
       {
-        "text": "36.8. prettier",
+        "text": "35.8. prettier",
         "collapsed": true,
         "items": [
           {
@@ -1430,7 +1424,7 @@
         ]
       },
       {
-        "text": "36.9. eslint",
+        "text": "35.9. eslint",
         "collapsed": true,
         "items": [
           {
@@ -1460,7 +1454,7 @@
         ]
       },
       {
-        "text": "36.10. pending",
+        "text": "35.10. pending",
         "collapsed": true,
         "items": [
           {
