@@ -16,9 +16,15 @@
 - [5. 🤔 转义符是什么？有什么用？](#5--转义符是什么有什么用)
   - [5.1. 转义符是什么](#51-转义符是什么)
   - [5.2. 转义符有什么用](#52-转义符有什么用)
-  - [5.3. 转义符的英文为啥叫 `escape character`](#53-转义符的英文为啥叫-escape-character)
-  - [5.4. 转义符 `\r\n` 诞生的背景 - 旧版打字机【不重要】](#54-转义符-rn-诞生的背景---旧版打字机不重要)
-- [6. 🤔 标识符应该怎样命名？](#6--标识符应该怎样命名)
+  - [5.3. 在 JavaScript 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？](#53-在-javascript-的字符串中-反斜杠表示转义如何不转义输入反斜杠呢)
+  - [5.4. 练习：按照指定格式打印系统时间](#54-练习按照指定格式打印系统时间)
+  - [5.5. 转义符的英文为啥叫 `escape character`？](#55-转义符的英文为啥叫-escape-character)
+  - [5.6. 转义符 `\r\n` 诞生的背景 - 旧版打字机【不重要】](#56-转义符-rn-诞生的背景---旧版打字机不重要)
+- [6. 🤔 标识符是什么？标识符的命名规则是？](#6--标识符是什么标识符的命名规则是)
+  - [6.1. 标识符是什么](#61-标识符是什么)
+  - [6.2. 标识符的命名规则](#62-标识符的命名规则)
+  - [6.3. 语义化](#63-语义化)
+  - [6.4. 练习：判断以下哪些标识符是合法的？](#64-练习判断以下哪些标识符是合法的)
 - [7. 🤔 注释和严格模式怎么用？](#7--注释和严格模式怎么用)
   - [7.1. 注释](#71-注释)
   - [7.2. 严格模式](#72-严格模式)
@@ -177,7 +183,58 @@ In computing and telecommunication, an escape character is a character that invo
 | `\n`   | 换行           |
 | ……     | ……             |
 
-### 5.3. 转义符的英文为啥叫 `escape character`
+### 5.3. 在 JavaScript 的字符串中，`\` 反斜杠表示转义，如何不转义，输入反斜杠呢？
+
+在 JavaScript 中，如果你想要在字符串中包含一个实际的反斜杠（`\`），你需要使用双反斜杠（`\\`）来表示。
+
+```js
+// 常见的两种使用场景：打印文件路径
+
+// 在字符串中表示一个包含反斜杠的文件路径
+const filePath = 'C:\\Program Files\\MyApp\\config.ini'
+console.log(filePath)
+// 输出: C:\Program Files\MyApp\config.ini
+
+// 使用模板字符串时也需要转义反斜杠
+const message = `The config file is located at: C:\\Program Files\\MyApp\\config.ini`
+console.log(message)
+// 输出: The config file is located at: C:\Program Files\MyApp\config.ini
+
+// 在正则表达式中匹配包含反斜杠的路径
+const pathPattern = /C:\\Program Files\\MyApp\\/
+console.log(pathPattern.test(filePath))
+// 输出: true
+```
+
+### 5.4. 练习：按照指定格式打印系统时间
+
+```js
+/*
+请打印以下内容：
+
+现在时间是'24.06.05'
+下午"11:30"
+
+要求：
+1. 使用 console.log 来打印
+2. 只能传入一个参数
+3. 不能使用模板字符串
+*/
+```
+
+输出示例：
+
+![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2024-12-28-12-09-17.png)
+
+::: details 参考答案
+
+```js
+console.log('现在时间是\'24.06.05\'\r\n下午"11:30"')
+```
+
+:::
+
+### 5.5. 转义符的英文为啥叫 `escape character`？
 
 `escape` 表示逃离的意思，`escape character` 表示转义字符（可以理解为逃离计算机的翻译）。
 
@@ -185,7 +242,7 @@ In computing and telecommunication, an escape character is a character that invo
 
 在阅读外文文档的时候，需要知道这个短语 `escape character` 表示的是转义符的含义，知道这一点能帮助咱们更好地查阅资料。
 
-### 5.4. 转义符 `\r\n` 诞生的背景 - 旧版打字机【不重要】
+### 5.6. 转义符 `\r\n` 诞生的背景 - 旧版打字机【不重要】
 
 ![图 0](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-08-19-21-52-20.png)
 
@@ -228,15 +285,23 @@ In computing and telecommunication, an escape character is a character that invo
 
 - 尽管现代计算机和打印技术不再需要物理的“回车”和“换行”操作，`\r\n` 作为行结束符的约定仍然在 Windows 系统中保留。这种历史遗留的特性意味着跨平台软件开发和网络通信协议（如 HTTP 和电子邮件标准）中仍需考虑不同的行结束符处理。
 
-## 6. 🤔 标识符应该怎样命名？
+## 6. 🤔 标识符是什么？标识符的命名规则是？
 
-标识符就是变量、函数、属性或参数的名称。
+### 6.1. 标识符是什么
+
+标识符（identifier）指的是用来识别各种值的合法名称。
+
+标识符其实就是一个名字，程序中需要你指定名字的地方有很多，比如：变量名、函数名、参数名、属性名等等，这些都是标识符。
+
+JavaScript 遵循 ECMAScript 标准，标识符的大小写是敏感的，所以 `a` 和 `A` 是两个不同的标识符。
+
+### 6.2. 标识符的命名规则
 
 基本规则是：
 
-- 第一个字符必须是字母、下划线 `_` 或美元符号 `$`。
-- 后续字符可以是字母、下划线、美元符号或数字。
-- 不能使用关键字、保留字、`true`、`false` 和 `null`。
+- 第一个字符必须是字母、下划线 `_` 或美元符号 `$`
+- 后续字符可以是字母、下划线 `_`、美元符 `$` 号或数字
+- 不能使用关键字、保留字、`true`、`false` 和 `null`
 
 ECMAScript 允许在标识符里使用某些扩展字符和 Unicode 字符，但日常开发中不推荐这样做。
 
@@ -251,13 +316,80 @@ console.log(用户名) // 'abc'
 最常见、也最容易协作的风格是驼峰命名：
 
 ```js
+// 小驼峰：除了第一个单词的首字母不用大写，后续单词的首字母都要大写。
 let firstName = 'Ada'
 let currentUser = { name: 'Ada' }
 
 function doSomethingImportant() {}
+
+// 大驼峰：每个单词首字母大写
+class UserProfile {
+  constructor(name) {
+    this.name = name
+  }
+}
+
+const FooBar = 'foobar'
 ```
 
-命名本身不是语法功能，但好的命名能降低代码理解成本。
+除了驼峰命名，还有很多其它的命名风格，比如下划线命名（`foo_bar`）也很常见，尤其是在一些特定的领域或团队中。
+
+命名风格本身不是语法功能，但好的命名能降低代码理解成本。
+
+### 6.3. 语义化
+
+标识符应该做到望文知义（语义化），比如：
+
+- 宽度：width
+- 高度：height
+- 尺寸：size
+- 性别：gender、sex、isMale
+- 横坐标：x
+- ……
+
+一个完整的程序中，会涉及成百上千的标识符，好的名称不仅可以减少名称冲突，更有利于程序的阅读和维护。
+
+### 6.4. 练习：判断以下哪些标识符是合法的？
+
+```js
+// 问：以下哪些标识符是合法的？
+// var a1 = $
+// var a2 = _
+// var a3 = 1$
+// var a4 = list-style
+// var a5 = list_style
+// var a6 = list style
+// var a7 = $$
+// var a8 = $emit
+// var a9 = var
+```
+
+::: details 参考答案
+
+```js
+// var a1 = $ // ✅
+// var a2 = _ // ✅
+// var a5 = list_style // ✅
+// var a7 = $$ // ✅
+// var a8 = $emit // ✅
+
+// var a3 = 1$
+// ❌
+// 必须以字母或下划线打头
+
+// var a4 = list-style
+// var a6 = list style
+// ❌
+// 开头位置：只能以英文字母、下划线 _ 、美元符 $ 开头
+// 其他位置：其他位置可以出现数字、英文字母、下划线、$
+// 其他任何符号都是非法的
+
+// var a9 = var
+// ❌
+// 标识符不可以与关键字、保留词重复
+```
+
+:::
 
 ## 7. 🤔 注释和严格模式怎么用？
 

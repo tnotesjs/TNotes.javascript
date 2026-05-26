@@ -86,12 +86,8 @@
         "link": "/notes/0168. 语法/README"
       },
       {
-        "text": "✅ 0013. 转义符",
-        "link": "/notes/0013. 转义符/README"
-      },
-      {
-        "text": "✅ 0014. 标识符",
-        "link": "/notes/0014. 标识符/README"
+        "text": "✅ 0021. 注释",
+        "link": "/notes/0021. 注释/README"
       },
       {
         "text": "⏰ 0169. 关键字与保留字",
@@ -166,10 +162,6 @@
       {
         "text": "✅ 0020. 循环语句 - 练习",
         "link": "/notes/0020. 循环语句 - 练习/README"
-      },
-      {
-        "text": "✅ 0021. 注释",
-        "link": "/notes/0021. 注释/README"
       },
       {
         "text": "✅ 0022. 字面量",

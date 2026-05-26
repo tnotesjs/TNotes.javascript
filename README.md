@@ -77,8 +77,7 @@
 
 - [ ] [0167. 语言基础](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0167.%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/README.md)
 - [x] [0168. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0168.%20%E8%AF%AD%E6%B3%95/README.md)
-- [x] [0013. 转义符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0013.%20%E8%BD%AC%E4%B9%89%E7%AC%A6/README.md)
-- [x] [0014. 标识符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0014.%20%E6%A0%87%E8%AF%86%E7%AC%A6/README.md)
+- [x] [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
 - [ ] [0169. 关键字与保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
 - [ ] [0170. 变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0170.%20%E5%8F%98%E9%87%8F/README.md)
 - [ ] [0171. 数据类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0171.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/README.md)
@@ -99,7 +98,6 @@
 - [x] [0018. 循环语句 - break 语句和 continue 语句](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0018.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20break%20%E8%AF%AD%E5%8F%A5%E5%92%8C%20continue%20%E8%AF%AD%E5%8F%A5/README.md)
 - [x] [0019. 循环语句 - 标签（label）](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0019.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E6%A0%87%E7%AD%BE%EF%BC%88label%EF%BC%89/README.md)
 - [x] [0020. 循环语句 - 练习](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0020.%20%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%20-%20%E7%BB%83%E4%B9%A0/README.md)
-- [x] [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
 - [x] [0022. 字面量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0022.%20%E5%AD%97%E9%9D%A2%E9%87%8F/README.md)
 
 ## 6. 语句和表达式
