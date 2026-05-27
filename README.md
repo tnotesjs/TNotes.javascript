@@ -78,7 +78,7 @@
 - [ ] [0167. 语言基础](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0167.%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/README.md)
 - [x] [0168. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0168.%20%E8%AF%AD%E6%B3%95/README.md)
 - [x] [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
-- [ ] [0169. 关键字与保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
+- [ ] [0169. 保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
 - [ ] [0170. 变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0170.%20%E5%8F%98%E9%87%8F/README.md)
 - [ ] [0171. 数据类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0171.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/README.md)
 - [ ] [0172. 操作符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0172.%20%E6%93%8D%E4%BD%9C%E7%AC%A6/README.md)
@@ -277,7 +277,7 @@
 ## 26. 音频处理
 
 - [ ] [0143. 音频处理](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0143.%20%E9%9F%B3%E9%A2%91%E5%A4%84%E7%90%86/README.md)
-- [ ] [0166. Web Audio API - 基础知识](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0166.%20Web%20Audio%20API%20-%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/README.md)
+- [x] [0166. Web Audio API - 基础知识](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0166.%20Web%20Audio%20API%20-%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/README.md)
 - [ ] [0175. Web Audio API - 精确的时值与延迟](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0175.%20Web%20Audio%20API%20-%20%E7%B2%BE%E7%A1%AE%E7%9A%84%E6%97%B6%E5%80%BC%E4%B8%8E%E5%BB%B6%E8%BF%9F/README.md)
 - [ ] [0180. Web Audio API - 音量与响度](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0180.%20Web%20Audio%20API%20-%20%E9%9F%B3%E9%87%8F%E4%B8%8E%E5%93%8D%E5%BA%A6/README.md)
 - [ ] [0186. Web Audio API - 音高与频域](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0186.%20Web%20Audio%20API%20-%20%E9%9F%B3%E9%AB%98%E4%B8%8E%E9%A2%91%E5%9F%9F/README.md)

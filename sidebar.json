@@ -90,8 +90,8 @@
         "link": "/notes/0021. 注释/README"
       },
       {
-        "text": "⏰ 0169. 关键字与保留字",
-        "link": "/notes/0169. 关键字与保留字/README"
+        "text": "⏰ 0169. 保留字",
+        "link": "/notes/0169. 保留字/README"
       },
       {
         "text": "⏰ 0170. 变量",
@@ -754,7 +754,7 @@
         "link": "/notes/0143. 音频处理/README"
       },
       {
-        "text": "⏰ 0166. Web Audio API - 基础知识",
+        "text": "✅ 0166. Web Audio API - 基础知识",
         "link": "/notes/0166. Web Audio API - 基础知识/README"
       },
       {
