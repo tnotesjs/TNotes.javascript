@@ -78,7 +78,7 @@
 - [ ] [0167. 语言基础](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0167.%20%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/README.md)
 - [x] [0168. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0168.%20%E8%AF%AD%E6%B3%95/README.md)
 - [x] [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
-- [ ] [0169. 保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
+- [x] [0169. 保留字、关键字、未来保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E6%9C%AA%E6%9D%A5%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
 - [ ] [0170. 变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0170.%20%E5%8F%98%E9%87%8F/README.md)
 - [ ] [0171. 数据类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0171.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/README.md)
 - [ ] [0172. 操作符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0172.%20%E6%93%8D%E4%BD%9C%E7%AC%A6/README.md)
