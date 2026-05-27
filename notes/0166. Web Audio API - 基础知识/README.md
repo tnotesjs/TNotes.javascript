@@ -32,24 +32,35 @@
   - [7.3. 怎么用](#73-怎么用)
   - [7.4. 总结](#74-总结)
 - [8. 🤔 数字音频需要理解哪些基础概念？](#8--数字音频需要理解哪些基础概念)
+  - [8.1. 采样率（Sample Rate）](#81-采样率sample-rate)
+  - [8.2. 采样（Sample）](#82-采样sample)
+  - [8.3. 采样数（Sample Count / Frame Count）](#83-采样数sample-count--frame-count)
+  - [8.4. 位深度（Bit Depth）](#84-位深度bit-depth)
+  - [8.5. 声道数（Channels）](#85-声道数channels)
+  - [8.6. AudioBuffer 对象](#86-audiobuffer-对象)
+  - [8.7. 这些概念之间的关系](#87-这些概念之间的关系)
+  - [8.8. 总结](#88-总结)
 - [9. 🤔 如何加载并播放一段声音？](#9--如何加载并播放一段声音)
+  - [9.1. `AudioBuffer` 和 `AudioBufferSourceNode`](#91-audiobuffer-和-audiobuffersourcenode)
+  - [9.2. 小结](#92-小结)
 - [10. 🤔 为什么要用模块化路由组织声音？](#10--为什么要用模块化路由组织声音)
+- [11. 🔗 引用](#11--引用)
 
 <!-- endregion:toc -->
 
 ## 1. 🎯 本节内容
 
-- 了解 Web 上音频能力的发展：从早期标签、Flash、`<audio>` 到 Web Audio API。
-- 理解 `AudioContext`、音频图和 `AudioNode` 的基本模型。
-- 掌握常见音频节点类型：源节点、处理节点、分析节点和目标节点。
-- 学会用 `connect()`、`disconnect()` 组织音频路由。
-- 理解声音数字化的基础概念：采样率、位深、PCM、`AudioBuffer` 和音频编码格式。
-- 掌握加载、解码和播放音频文件的基本流程。
-- 了解多路音频、主音量和模块化路由在游戏、交互应用中的价值。
+- 了解 Web 上音频能力的发展：从早期标签、Flash、`<audio>` 到 Web Audio API
+- 理解 `AudioContext`、音频图和 `AudioNode` 的基本模型
+- 掌握常见音频节点类型：源节点、处理节点、分析节点和目标节点
+- 学会用 `connect()`、`disconnect()` 组织音频路由
+- 理解声音数字化的基础概念：采样率、位深、PCM、`AudioBuffer` 和音频编码格式
+- 掌握加载、解码和播放音频文件的基本流程
+- 了解多路音频、主音量和模块化路由在游戏、交互应用中的价值
 
 ## 2. 🫧 评价
 
-这是 Web Audio API 的入口章节，重点不是记 API 名称，而是建立“音频图”的思维方式。只要理解声音会从源节点一路流向目标节点，后面的滤波、混音、分析和空间化都会顺很多。
+这是 Web Audio API 的入口章节，重点不是记 API 名称，而是建立“音频图”的思维方式。只要理解声音会从源节点一路流向目标节点，后面的滤波、混音、分析和空间化都会顺很多。同时也要注意一些基础的数字音频概念，这些是理解 Web Audio API 基本使用所必要的前置知识。
 
 ## 3. 🤔 使用 `<audio>` 都有哪些局限性？为什么还需要 Web Audio API？
 
@@ -686,58 +697,209 @@ console.log(buffer) // AudioBuffer，包含处理后的音频数据
 
 真实世界中的声音是空气中的压力波。麦克风会把这种压力变化转换成电信号，计算机再把连续变化的模拟信号采样成一串数字。
 
-理解 Web Audio API 时，下面几个概念很重要。
+### 8.1. 采样率（Sample Rate）
 
-| 概念          | 含义                                                      |
-| ------------- | --------------------------------------------------------- |
-| 采样率        | 每秒采集多少次声音样本，常见值是 `44100Hz` 或 `48000Hz`。 |
-| 位深          | 每个样本用多少位保存，位深越高，可表示的动态范围越大。    |
-| PCM           | 把声音表示成样本数组的常见数字音频方式。                  |
-| `AudioBuffer` | Web Audio API 中保存 PCM 音频数据的对象。                 |
-| 声道          | 一段音频可以有一个或多个声道，例如单声道、立体声。        |
+采样率（Sample Rate）表示把连续的声音波形转成数字信号时，每秒需要测量多少次。
+
+采样率 = 44100 Hz -> 每秒测量 44100 次
+
+| 常见采样率 | 用途                          |
+| ---------- | ----------------------------- |
+| 44100 Hz   | CD 音质，许多系统的默认采样率 |
+| 48000 Hz   | 视频/电影行业标准             |
+| 22050 Hz   | 语音，对音质要求不高的场景    |
+| 96000 Hz   | 专业录音，高保真              |
+
+```js
+const ctx = new AudioContext()
+console.log(ctx.sampleRate) // 实际值取决于系统，可能是 44100 或 48000
+```
+
+采样率越高，能记录的频率范围越广。根据 [奈奎斯特–香农采样定理][1]，采样率能记录的最高频率是它的一半，44100 Hz 的采样率最高能记录 22050 Hz 的声音，覆盖了人耳的听觉范围（20 Hz ~ 20000 Hz）。
+
+### 8.2. 采样（Sample）
+
+一个采样就是某一个时刻记录下来的一个振幅值。
+
+- 单声道：一帧 = 一个采样 = 一个数值
+- 双声道：一帧 = 两个采样 = 两个数值（左 + 右）
+
+一段音频的本质就是一长串采样值：`[-0.12, 0.45, 0.78, 0.33, -0.56, ...]`（数万个这样的数值）
+
+::: tip “采样（sample）” vs “帧（frame）”
+
+在严格术语中，单个通道的一个值叫“采样（sample）”，同一时刻所有通道的值合在一起叫“帧（frame）”。
+
+日常使用中这两个术语经常混用。
+
+:::
+
+### 8.3. 采样数（Sample Count / Frame Count）
+
+一段音频包含多少个采样点。
+
+假设采样率是 44100 Hz，持续 5 秒 -> 44100 × 5 = 220500 个采样。
+
+创建 `OfflineAudioContext` 时需要指定的就是这个值：
+
+```javascript
+new OfflineAudioContext(
+  2, // 通道数
+  220500, // 采样数 44100 × 5
+  44100, // 采样率
+)
+
+// 也有对象形式，可读性更好：
+new OfflineAudioContext({
+  numberOfChannels: 2,
+  length: 220500, // 44100 × 5
+  sampleRate: 44100,
+})
+```
+
+### 8.4. 位深度（Bit Depth）
+
+每次采样用多少个二进制位来记录振幅值。位深度 = 16 bit -> 每个采样值有 $2^{16} = 65536$ 个级别。
+
+| 常见位深度     | 说明                             |
+| -------------- | -------------------------------- |
+| 16 bit         | CD 音质，动态范围约 96 dB        |
+| 32 bit（浮点） | Web Audio API 内部处理使用的精度 |
+
+位深度越高，振幅的精度越高，噪底越低。Web Audio API 内部用 32 位浮点数处理，确保中间计算不会损失精度。
+
+```js
+// 无论源文件是 8 bit、16 bit、24 bit 还是 32 bit
+// 解码后全部变成 Float32Array
+const channelData = audioBuffer.getChannelData(0)
+console.log(channelData.constructor.name) // "Float32Array"
+// 你拿到的永远是一个 Float32Array，后续的增益、滤波、混响等处理完全不关心原始位深度
+// 不同位深度的文件解码后，在使用 web audio api 来处理时，做法都是一样的，没有本质区别
+```
+
+解码是把原始采样值映射到 Float32 的范围内（-1.0 到 1.0），不同位深度的源文件在这个映射中保留的精度不同：
+
+| 原始位深度 | 每个采样点的原始精度 | 映射到 Float32 后                        |
+| ---------- | -------------------- | ---------------------------------------- |
+| 8 bit      | 256 级               | 精度充裕，无损                           |
+| 16 bit     | 65,536 级            | 精度充裕，无损                           |
+| 24 bit     | ~1677 万级           | Float32 有效尾数 24 位，刚好能容纳       |
+| 32 bit int | ~43 亿级             | Float32 有效尾数只有 24 位，会有精度损失 |
+
+位深度（Bit Depth）不同对 web audio api 的影响维度主要体现在精度层面：
+
+| 维度 | 是否有区别 |
+| --- | --- |
+| 使用层面：API 使用方式 | 无区别 |
+| 使用层面：音频处理流程 | 无区别 |
+| 精度层面：解码后数据精度 | 有区别，源文件位深度越高，Float32 中承载的有效信息越多 |
+
+### 8.5. 声道数（Channels）
+
+- 单声道：1 个通道
+- 双声道：2 个通道（左 + 右），左右声道可以包含不同的信息，用来产生空间感
+- 多声道：5.1 环绕声通常是 6 个通道（左前、右前、中央、低频、左后、右后）
+
+Web Audio API 支持最多 32 个通道。
+
+### 8.6. AudioBuffer 对象
+
+当你调用 `decodeAudioData()` 时，得到的 `AudioBuffer` 会暴露 `sampleRate`、`numberOfChannels`、`length`、`duration` 这几个属性：
+
+```js
+const context = new AudioContext()
+const response = await fetch('audio.wav')
+const arrayBuffer = await response.arrayBuffer()
+const audioBuffer = await context.decodeAudioData(arrayBuffer)
+
+console.log(audioBuffer.sampleRate) // 采样率（Sample Rate）
+console.log(audioBuffer.numberOfChannels) // 声道数（Channels）
+console.log(audioBuffer.length) // 总帧数（Sample Count）
+console.log(audioBuffer.duration) // 时长（Duration）
+```
+
+你可以直接访问和修改每个通道的采样数据：
+
+```javascript
+const channelData = audioBuffer.getChannelData(0) // Float32Array，左声道
+console.log(channelData[0]) // 第一个采样值，范围 -1.0 ~ 1.0
+```
+
+### 8.7. 这些概念之间的关系
+
+- $一个声道的采样数 = 时长 \times 采样率$
+- $总采样点数 = 一个声道的采样数 \times 声道数$
+- $文件大小（位） = 采样率 \times 位深度 \times 声道数 \times 时长$
+
+以一首 CD 音质的歌为例：（WAV 格式）
+
+```
+44100 Hz × 16 bit × 2 通道 × 300 秒（5分钟）
+= 44100 × 16 × 2 × 300
+= 423,360,000 bit
+≈ 50 MB（未压缩）
+```
+
+可见一首未压缩的 CD 音质歌曲文件是非常大的，这也解释了为什么音乐文件通常需要压缩编码（MP3/AAC 有损压缩）。
+
+### 8.8. 总结
+
+| 概念 | 含义 | 类比 | Web Audio API 中的体现 |
+| --- | --- | --- | --- |
+| 采样率 | 每秒采集多少次声音样本，常见值是 `44100Hz` 或 `48000Hz`。 | 每秒拍多少张照片 | `audioBuffer.sampleRate`，采样率 |
+| 采样 | 每次采集的声音样本值，通常是一个浮点数，范围大致是 `-1` 到 `1`。 | 一张照片 | `Float32Array` 中的一个数值，比如 `audioBuffer.getChannelData(0)[0]` |
+| 位深度 | 每个样本用多少位保存，位深越高，可表示的动态范围越大。 | 每张照片的分辨率 | 内部 32 位浮点处理 |
+| PCM | 把声音表示成样本数组的常见数字音频方式。 |  |  |
+| `AudioBuffer` | Web Audio API 中保存 PCM 音频数据的对象。 | 存放照片的相册 | `audioBuffer`，存放采样数据的容器 |
+| 声道数 | 一段音频可以有一个或多个声道，例如单声道、双声道。 | 摄像机的数量 | `audioBuffer.numberOfChannels` |
 
 在 Web Audio API 中，`AudioBuffer` 内部的数据通常是归一化的浮点数，范围大致是 `-1` 到 `1`。如果信号超过这个范围，输出时就可能削波，听起来会失真。
 
-音频文件本身通常不会直接保存原始 PCM，因为体积很大。常见做法是使用压缩编码格式，例如 MP3、AAC、OGG、FLAC 或 WAV。浏览器能否解码某种格式，取决于浏览器和平台支持情况。
+音频文件本身通常不会直接保存原始 PCM（WAV/AIFF），因为体积很大。音频文件通常会使用压缩编码来减小体积，例如 MP3、AAC、OGG 等有损格式，或 FLAC 等无损压缩格式。WAV/AIFF 通常直接存储未压缩的 PCM 数据，音质最好但文件也最大。浏览器能否解码某种格式，取决于浏览器和平台支持情况。
+
+理解了这些，后面看到 `decodeAudioData`、`AudioBuffer`、`AnalyserNode` 返回的数据时，就知道它们到底在给你什么东西了。
 
 ## 9. 🤔 如何加载并播放一段声音？
 
+### 9.1. `AudioBuffer` 和 `AudioBufferSourceNode`
+
 Web Audio API 把“音频资源”和“播放状态”分开看待：
 
-- `AudioBuffer` 像唱片，保存声音数据。
-- `AudioBufferSourceNode` 像唱针，负责播放某次声音。
+- `AudioBuffer` -> 是数据（存放音频采样值的容器）
+- `AudioBufferSourceNode` -> 是播放器（从 `AudioBuffer` 读取数据并发送到音频图的节点）
 
-这意味着同一个 `AudioBuffer` 可以被多个 source 同时播放。游戏里的碰撞音效、枪声音效、按键反馈都很依赖这个模式。
+把 AudioBuffer 想象成一张 CD，AudioBufferSourceNode 想象成一台 CD 播放器：
+
+- CD `AudioBuffer` -> 静态的数据，可以反复使用
+- CD 播放器 `AudioBufferSourceNode` -> 消耗品，播一次就报废
+
+一张 CD 可以放进不同的播放器，这意味着同一个 `AudioBuffer` 可以被多个 `AudioBufferSourceNode` 同时播放。游戏里的碰撞音效、枪声音效、按键反馈都很依赖这个模式。
 
 现代写法通常使用 `fetch()` 加载音频，再用 `decodeAudioData()` 解码：
 
 ```js
-async function loadAudioBuffer(audioContext, url) {
-  const response = await fetch(url)
-  const arrayBuffer = await response.arrayBuffer()
-
-  return audioContext.decodeAudioData(arrayBuffer)
-}
+// AudioBuffer - 存储数据
+const response = await fetch('music.mp3')
+const arrayBuffer = await response.arrayBuffer()
+const audioBuffer = await ctx.decodeAudioData(arrayBuffer)
+// audioBuffer 是 AudioBuffer，数据已经在这里面了
 ```
 
 播放时，每次都创建新的 `AudioBufferSourceNode`：
 
 ```js
-function playSound(
-  audioContext,
-  audioBuffer,
-  destination = audioContext.destination,
-) {
-  const source = audioContext.createBufferSource()
-  source.buffer = audioBuffer
-  source.connect(destination)
-  source.start()
-
-  return source
-}
+// AudioBufferSourceNode - 用来播放
+const source = ctx.createBufferSource()
+source.buffer = audioBuffer // 把数据“放进去”
+source.connect(ctx.destination)
+source.start()
 ```
 
+::: tip
+
 这里有一个很容易踩的点：`AudioBufferSourceNode` 是一次性的。调用 `start()` 播放完之后，这个 source 不能再次播放。如果要重复播放同一个声音，你应该复用 `AudioBuffer`，但重新创建 source。
+
+:::
 
 如果要循环播放背景音乐，可以设置 `loop`：
 
@@ -753,15 +915,47 @@ function playLoop(audioContext, audioBuffer) {
 }
 ```
 
+### 9.2. 小结
+
+| 维度 | AudioBuffer | AudioBufferSourceNode |
+| --- | --- | --- |
+| 本质 | 数据容器 | 音频图中的节点 |
+| 类比 | CD 光盘 | CD 播放器 |
+| 通过什么创建 | `decodeAudioData()` / `new AudioBuffer()` | `ctx.createBufferSource()` |
+| 可重复使用 | ✅ 可以 | ❌ 只能用一次 |
+
+典型的使用流程：
+
+```
+decodeAudioData()          -> AudioBuffer（数据，可复用）
+    ↓
+createBufferSource()       -> AudioBufferSourceNode（播放器，用一次）
+source.buffer = audioBuffer   建立关联
+source.connect(destination)   连接到音频图
+source.start()                开始播放
+    ↓
+播放结束                    -> AudioBufferSourceNode 销毁，AudioBuffer 仍在
+```
+
 ## 10. 🤔 为什么要用模块化路由组织声音？
 
-一个真实应用往往不是只播放一条声音。比如游戏中可能同时有：
+Web Audio API 的设计借鉴了硬件音频设备的理念。想象一下音乐工作室里那些实体设备：
 
-- 背景音乐。
-- 角色动作音效。
-- UI 点击反馈。
-- 环境声。
-- 语音聊天。
+- 麦克风 -> 前置放大器 -> 均衡器 -> 压缩器 -> 混响器 -> 音箱
+- 吉他 -> 效果器1 -> 效果器2 -> 功放 -> 音箱
+
+每台设备只做一件事，通过线缆自由连接。Web Audio API 把这个模式搬到了代码里：
+
+- `SourceNode` -> `GainNode` -> `BiquadFilterNode` -> `ConvolverNode` -> `DestinationNode`
+
+一个真实应用往往不是只播放一条声音，比如游戏中可能同时有：
+
+- 背景音乐
+- 角色动作音效
+- UI 点击反馈
+- 环境声
+- 语音聊天
+- ……
 
 如果所有声音都直接连到 `context.destination`，后续很难单独控制。更好的方式是给不同声音通道配置独立的 `GainNode`，再汇总到一个主音量节点。
 
@@ -782,6 +976,15 @@ uiGain.gain.value = 0.4
 masterGain.gain.value = 0.9
 ```
 
-这样你既可以让用户关闭背景音乐，又可以保留关键提示音；也可以在游戏暂停、切换场景或进入菜单时统一压低整体音量。
+这种模块化路由组织的方式，可以实现：
+
+- 可以让用户关闭背景音乐，但保留关键提示音
+- 可以在游戏暂停、切换场景或进入菜单时统一压低整体音量
 
 Web Audio API 的强大之处不只是“能播放声音”，而是你可以像设计一套信号处理管线一样设计声音系统。
+
+## 11. 🔗 引用
+
+- [wikipedia - 奈奎斯特–香农采样定理][1]
+
+[1]: https://zh.wikipedia.org/wiki/%E9%87%87%E6%A0%B7%E5%AE%9A%E7%90%86
