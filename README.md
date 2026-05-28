@@ -79,8 +79,6 @@
 - [x] [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
 - [x] [0169. 保留字、关键字、未来保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E6%9C%AA%E6%9D%A5%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
 - [ ] [0170. 变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0170.%20%E5%8F%98%E9%87%8F/README.md)
-- [x] [0002. 变量声明提升和暂时性死区](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0002.%20%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E5%92%8C%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA/README.md)
-- [x] [0114. 深入理解“提升”【扩展】](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0114.%20%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E2%80%9C%E6%8F%90%E5%8D%87%E2%80%9D%E3%80%90%E6%89%A9%E5%B1%95%E3%80%91/README.md)
 - [ ] [0171. 数据类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0171.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/README.md)
 - [ ] [0172. 操作符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0172.%20%E6%93%8D%E4%BD%9C%E7%AC%A6/README.md)
 - [ ] [0173. 语句](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0173.%20%E8%AF%AD%E5%8F%A5/README.md)
