@@ -8,7 +8,7 @@
 - [4. 语言基础](#4-语言基础)
 - [5. 流程控制语句](#5-流程控制语句)
 - [6. 语句和表达式](#6-语句和表达式)
-- [7. 变量、作用域与内存](#7-变量作用域与内存)
+- [7. 作用域与内存](#7-作用域与内存)
 - [8. 作用域](#8-作用域)
 - [9. 基本引用类型](#9-基本引用类型)
 - [10. 集合引用类型](#10-集合引用类型)
@@ -78,7 +78,7 @@
 - [x] [0168. 语法](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0168.%20%E8%AF%AD%E6%B3%95/README.md)
 - [x] [0021. 注释](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0021.%20%E6%B3%A8%E9%87%8A/README.md)
 - [x] [0169. 保留字、关键字、未来保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E6%9C%AA%E6%9D%A5%E4%BF%9D%E7%95%99%E5%AD%97/README.md)
-- [ ] [0170. 变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0170.%20%E5%8F%98%E9%87%8F/README.md)
+- [x] [0170. 变量](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0170.%20%E5%8F%98%E9%87%8F/README.md)
 - [ ] [0171. 数据类型](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0171.%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/README.md)
 - [ ] [0172. 操作符](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0172.%20%E6%93%8D%E4%BD%9C%E7%AC%A6/README.md)
 - [ ] [0173. 语句](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0173.%20%E8%AF%AD%E5%8F%A5/README.md)
@@ -103,9 +103,9 @@
 
 - [x] [0007. 语句和表达式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0007.%20%E8%AF%AD%E5%8F%A5%E5%92%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F/README.md)
 
-## 7. 变量、作用域与内存
+## 7. 作用域与内存
 
-- [ ] [0176. 变量、作用域与内存](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0176.%20%E5%8F%98%E9%87%8F%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98/README.md)
+- [ ] [0176. 作用域与内存](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0176.%20%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98/README.md)
 - [ ] [0177. 原始值与引用值](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0177.%20%E5%8E%9F%E5%A7%8B%E5%80%BC%E4%B8%8E%E5%BC%95%E7%94%A8%E5%80%BC/README.md)
 - [ ] [0178. 执行上下文与作用域](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0178.%20%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E%E4%BD%9C%E7%94%A8%E5%9F%9F/README.md)
 - [ ] [0179. 垃圾回收](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0179.%20%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6/README.md)
