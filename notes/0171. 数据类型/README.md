@@ -30,7 +30,7 @@
 
 ## 3. 🤔 ECMAScript 有哪些数据类型？
 
-ECMAScript 有 6 种原始类型：
+ECMAScript 有 7 种原始类型：
 
 - `Undefined`
 - `Null`
@@ -38,6 +38,7 @@ ECMAScript 有 6 种原始类型：
 - `Number`
 - `String`
 - `Symbol`
+- `BigInt`
 
 还有一种复杂数据类型：`Object`。
 
@@ -64,6 +65,7 @@ value = { text: 'one' }
 | `typeof 'hello'`        | `'string'`    |
 | `typeof 123`            | `'number'`    |
 | `typeof Symbol()`       | `'symbol'`    |
+| `typeof 10n`            | `'bigint'`    |
 | `typeof function () {}` | `'function'`  |
 | `typeof {}`             | `'object'`    |
 | `typeof null`           | `'object'`    |
@@ -98,11 +100,12 @@ let currentUser = null
 常见假值包括：
 
 - `false`
-- `0`
+- `0`（包括 `-0`）
 - `NaN`
 - 空字符串
 - `null`
 - `undefined`
+- `0n`（BigInt 零值）
 
 除这些之外，大多数值都是真值，包括空对象和空数组：
 
@@ -180,6 +183,21 @@ lang = lang + 'Script'
 const name = 'Ada'
 const message = `Hello, ${name}`
 ```
+
+::: tip 关于字符串长度的陷阱 `String` 底层以 16 位代码单元（code unit）为基本单位。对于超出基本多语言平面（BMP）的字符，例如大部分 Emoji 表情或生僻汉字，JavaScript 会使用两个 16 位代码单元（代理对，Surrogate Pairs）来表示。这会导致 `.length` 属性统计结果大于实际可见字符数：
+
+```js
+'😀'.length // 2
+```
+
+如果需要获取实际字符数量，可以使用扩展运算符或 `Array.from`：
+
+```js
+;[...'😀'].length // 1
+Array.from('😀').length // 1
+```
+
+:::
 
 ## 9. 🤔 Symbol 类型解决什么问题？
 
