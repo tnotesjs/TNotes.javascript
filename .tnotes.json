@@ -33,13 +33,14 @@
       "26.02": 41,
       "26.03": 41,
       "26.04": 41,
-      "26.05": 49
+      "26.05": 49,
+      "26.06": 49
     },
     "details": "前端三件套及跟前端相关的其它内容",
     "link": "https://tnotesjs.github.io/TNotes.javascript/",
     "created_at": 1740924811000,
-    "updated_at": 1779978958000,
-    "days_since_birth": 9831
+    "updated_at": 1780376940000,
+    "days_since_birth": 9836
   },
   "menuItems": [
     {
