@@ -2,25 +2,25 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 Web Audio API 的时间模型有什么特别？](#3--web-audio-api-的时间模型有什么特别)
-- [4. 🤔 如何精确播放、暂停和恢复声音？](#4--如何精确播放暂停和恢复声音)
-- [5. 🤔 如何调度稳定的节奏？](#5--如何调度稳定的节奏)
-- [6. 🤔 `AudioParam` 为什么比普通属性更适合控制声音？](#6--audioparam-为什么比普通属性更适合控制声音)
-- [7. 🤔 如何做淡入、淡出和交叉淡化？](#7--如何做淡入淡出和交叉淡化)
-- [8. 🤔 自定义时间曲线和 LFO 能解决什么问题？](#8--自定义时间曲线和-lfo-能解决什么问题)
-- [9. 💻 demos.1 - AudioContext 时间轴 vs setTimeout](#9--demos1---audiocontext-时间轴-vs-settimeout)
-- [10. 💻 demos.2 - AudioParam 定时赋值与 cancelScheduledValues](#10--demos2---audioparam-定时赋值与-cancelscheduledvalues)
-- [11. 💻 demos.3 - 淡入、淡出与交叉淡化](#11--demos3---淡入淡出与交叉淡化)
-- [12. 💻 demos.4 - start(when, offset, duration) 精确控制播放](#12--demos4---startwhen-offset-duration-精确控制播放)
-- [13. 💻 demos.5 - 暂停与恢复（记录偏移量 + 重建 source）](#13--demos5---暂停与恢复记录偏移量--重建-source)
-- [14. 💻 demos.6 - 短窗口节奏调度器](#14--demos6---短窗口节奏调度器)
-- [15. 💻 demos.7 - 自定义时间曲线与 LFO 调制](#15--demos7---自定义时间曲线与-lfo-调制)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. Web Audio API 的时间模型有什么特别？](#3-web-audio-api-的时间模型有什么特别)
+- [4. 如何精确播放、暂停和恢复声音？](#4-如何精确播放暂停和恢复声音)
+- [5. 如何调度稳定的节奏？](#5-如何调度稳定的节奏)
+- [6. `AudioParam` 为什么比普通属性更适合控制声音？](#6-audioparam-为什么比普通属性更适合控制声音)
+- [7. 如何做淡入、淡出和交叉淡化？](#7-如何做淡入淡出和交叉淡化)
+- [8. 自定义时间曲线和 LFO 能解决什么问题？](#8-自定义时间曲线和-lfo-能解决什么问题)
+- [9. demos.1 - AudioContext 时间轴 vs setTimeout](#9-demos1---audiocontext-时间轴-vs-settimeout)
+- [10. demos.2 - AudioParam 定时赋值与 cancelScheduledValues](#10-demos2---audioparam-定时赋值与-cancelscheduledvalues)
+- [11. demos.3 - 淡入、淡出与交叉淡化](#11-demos3---淡入淡出与交叉淡化)
+- [12. demos.4 - start(when, offset, duration) 精确控制播放](#12-demos4---startwhen-offset-duration-精确控制播放)
+- [13. demos.5 - 暂停与恢复（记录偏移量 + 重建 source）](#13-demos5---暂停与恢复记录偏移量--重建-source)
+- [14. demos.6 - 短窗口节奏调度器](#14-demos6---短窗口节奏调度器)
+- [15. demos.7 - 自定义时间曲线与 LFO 调制](#15-demos7---自定义时间曲线与-lfo-调制)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 理解 Web Audio API 的时间模型，以及它和 `setTimeout()`、`setInterval()` 的区别。
 - 掌握用 `AudioContext.currentTime` 和 `start(when, offset, duration)` 精确调度声音。
@@ -30,11 +30,11 @@
 - 理解线性渐变、指数渐变、自定义曲线和 LFO 调制的使用场景。
 - 了解低延迟对游戏、乐器和交互反馈的重要性。
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 这一章是 Web Audio API 区别于普通网页定时器的关键。声音系统对时间非常敏感，只有把调度放到音频上下文的时间轴上，节奏、淡入淡出和交互反馈才会稳定。
 
-## 3. 🤔 Web Audio API 的时间模型有什么特别？
+## 3. Web Audio API 的时间模型有什么特别？
 
 `AudioContext` 有自己的时间轴，可以通过 `audioContext.currentTime` 读取当前时间。这个时间以秒为单位，不是毫秒，而且是高精度浮点数。
 
@@ -51,7 +51,7 @@ Web Audio API 的很多方法都接收这个时间坐标，例如 `source.start(
 
 低延迟对交互应用尤其重要。一次按键、点击、碰撞或乐器触发，如果声音延迟太明显，用户会立刻感到不跟手。书中提到，人耳对几十毫秒级别的延迟已经可能有感知，具体阈值还会受场景影响。
 
-## 4. 🤔 如何精确播放、暂停和恢复声音？
+## 4. 如何精确播放、暂停和恢复声音？
 
 `AudioBufferSourceNode.start()` 的第一个参数是播放时间。如果这个时间早于当前时间，声音会立即播放；如果是未来时间，声音会被安排到那个时间点播放。
 
@@ -101,7 +101,7 @@ function pause(audioContext) {
 
 这里的核心不是“暂停 source”，而是“停止当前 source，记住偏移量，下次用新的 source 从偏移量继续”。
 
-## 5. 🤔 如何调度稳定的节奏？
+## 5. 如何调度稳定的节奏？
 
 Web Audio API 可以把多个声音提前安排到未来的精确时间点。比如一个简单的 4/4 鼓点，可以把底鼓、军鼓和踩镲分别放到对应节拍上。
 
@@ -139,7 +139,7 @@ function playSound(audioBuffer, when) {
 - 声音实际播放时间由 Web Audio API 保证精度。
 - 应用状态变化时，只需要停止继续安排未来事件。
 
-## 6. 🤔 `AudioParam` 为什么比普通属性更适合控制声音？
+## 6. `AudioParam` 为什么比普通属性更适合控制声音？
 
 很多 Web Audio 节点都有可调参数，例如 `GainNode.gain`、`OscillatorNode.frequency`、`BiquadFilterNode.frequency`。这些参数通常是 `AudioParam`，它们不只是普通数值，还能被安排到音频时间轴上变化。
 
@@ -168,7 +168,7 @@ gainNode.gain.linearRampToValueAtTime(0, now + 0.5)
 
 这个模式常用于打断正在进行的淡入淡出，避免新旧自动化曲线互相干扰。
 
-## 7. 🤔 如何做淡入、淡出和交叉淡化？
+## 7. 如何做淡入、淡出和交叉淡化？
 
 突然改变音量可能产生听感上的突兀，甚至出现点击声。更自然的方式是让 `AudioParam` 随时间平滑变化。
 
@@ -204,7 +204,7 @@ function crossfade(fromGain, toGain, duration) {
 
 音乐播放器、游戏场景切换、背景音乐强度变化都经常用到这个技巧。
 
-## 8. 🤔 自定义时间曲线和 LFO 能解决什么问题？
+## 8. 自定义时间曲线和 LFO 能解决什么问题？
 
 如果线性曲线和指数曲线都不够用，可以用 `setValueCurveAtTime()` 提供一段自定义曲线。例如颤音、震音、扫频这类周期性变化，都可以先生成一个数组，再把它应用到某个 `AudioParam`。
 
@@ -241,7 +241,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 这体现了 Web Audio API 一个很有意思的设计：音频流不仅可以进入 `AudioNode`，也可以进入 `AudioParam`，从而把“控制参数”也变成音频图的一部分。
 
-## 9. 💻 demos.1 - AudioContext 时间轴 vs setTimeout
+## 9. demos.1 - AudioContext 时间轴 vs setTimeout
 
 ```html
 <!doctype html>
@@ -323,7 +323,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 ---
 
-## 10. 💻 demos.2 - AudioParam 定时赋值与 cancelScheduledValues
+## 10. demos.2 - AudioParam 定时赋值与 cancelScheduledValues
 
 ```html
 <!doctype html>
@@ -406,7 +406,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 ---
 
-## 11. 💻 demos.3 - 淡入、淡出与交叉淡化
+## 11. demos.3 - 淡入、淡出与交叉淡化
 
 ```html
 <!doctype html>
@@ -495,7 +495,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 ---
 
-## 12. 💻 demos.4 - start(when, offset, duration) 精确控制播放
+## 12. demos.4 - start(when, offset, duration) 精确控制播放
 
 ```html
 <!doctype html>
@@ -591,7 +591,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 ---
 
-## 13. 💻 demos.5 - 暂停与恢复（记录偏移量 + 重建 source）
+## 13. demos.5 - 暂停与恢复（记录偏移量 + 重建 source）
 
 ```html
 <!doctype html>
@@ -677,7 +677,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 ---
 
-## 14. 💻 demos.6 - 短窗口节奏调度器
+## 14. demos.6 - 短窗口节奏调度器
 
 ```html
 <!doctype html>
@@ -770,7 +770,7 @@ function connectTremolo(targetGain, frequency, depth) {
 
 ---
 
-## 15. 💻 demos.7 - 自定义时间曲线与 LFO 调制
+## 15. demos.7 - 自定义时间曲线与 LFO 调制
 
 ```html
 <!doctype html>

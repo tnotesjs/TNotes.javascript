@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 CountQueuingStrategy 和 ByteLengthQueuingStrategy 的主要区别是什么 ？](#3--countqueuingstrategy-和-bytelengthqueuingstrategy-的主要区别是什么-)
   - [3.1. CountQueuingStrategy 的计算方式](#31-countqueuingstrategy-的计算方式)
   - [3.2. ByteLengthQueuingStrategy 的计算方式](#32-bytelengthqueuingstrategy-的计算方式)
@@ -33,11 +33,11 @@
   - [6.6. 实际内存监控](#66-实际内存监控)
 - [7. 💻 demos.1 - 对比两种内置队列策略的行为差异](#7--demos1---对比两种内置队列策略的行为差异)
 - [8. 💻 demos.2 - 实现一个基于优先级的自定义队列策略](#8--demos2---实现一个基于优先级的自定义队列策略)
-- [9. 🔗 引用](#9--引用)
+- [9. 引用](#9-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - QueuingStrategy 接口定义
 - CountQueuingStrategy 的使用场景
@@ -46,7 +46,7 @@
 - highWaterMark 的配置方式
 - 自定义队列策略的实现
 
-## 2. 🫧 评价
+## 2. 评价
 
 队列策略是 Web Streams 流量控制的基础，通过 size() 函数和 highWaterMark 决定队列容量计算方式。CountQueuingStrategy 按块计数，适合固定大小数据；ByteLengthQueuingStrategy 按字节计数，适合二进制流。理解两者差异和自定义策略的实现方法，能够精准控制内存使用，优化不同场景下的流处理性能。
 
@@ -69,7 +69,7 @@ const stream = new ReadableStream(
       console.log(controller.desiredSize) // 5 - 3 = 2
     },
   },
-  countStrategy
+  countStrategy,
 )
 // 无论块内容是什么，每个块都计为 1
 ```
@@ -88,7 +88,7 @@ const stream = new ReadableStream(
       console.log(controller.desiredSize) // 1024 - 600 = 424
     },
   },
-  byteStrategy
+  byteStrategy,
 )
 // 根据 ArrayBufferView 的 byteLength 计算
 ```
@@ -116,7 +116,7 @@ const countStream = new ReadableStream(
       // ⚠️ 实际占用约 1MB，但队列认为只用了 2 个位置
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 5 })
+  new CountQueuingStrategy({ highWaterMark: 5 }),
 )
 
 // ByteLengthQueuingStrategy：按实际字节数
@@ -129,7 +129,7 @@ const byteStream = new ReadableStream(
       // ✅ 准确反映内存占用，触发背压
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 2048 })
+  new ByteLengthQueuingStrategy({ highWaterMark: 2048 }),
 )
 ```
 
@@ -165,7 +165,7 @@ const messageStream = new ReadableStream(
       controller.enqueue({ type: 'update', timestamp: Date.now() })
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 10 })
+  new CountQueuingStrategy({ highWaterMark: 10 }),
 )
 // 每条消息大小相近，用块数量控制即可
 
@@ -181,7 +181,7 @@ const mixedStream = new ReadableStream(
       controller.enqueue(randomData())
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 64 * 1024 })
+  new ByteLengthQueuingStrategy({ highWaterMark: 64 * 1024 }),
 )
 ```
 
@@ -206,7 +206,7 @@ function createWebSocketStream(ws) {
         ws.onmessage = (e) => controller.enqueue(e.data)
       },
     },
-    new CountQueuingStrategy({ highWaterMark: 20 })
+    new CountQueuingStrategy({ highWaterMark: 20 }),
   )
 }
 
@@ -225,7 +225,7 @@ function createUploadStream(file) {
         if (offset >= file.size) controller.close()
       },
     },
-    new ByteLengthQueuingStrategy({ highWaterMark: 256 * 1024 }) // 256KB 缓冲
+    new ByteLengthQueuingStrategy({ highWaterMark: 256 * 1024 }), // 256KB 缓冲
   )
 }
 
@@ -244,7 +244,7 @@ function createLogStream() {
         controller.enqueue(log)
       },
     },
-    new CountQueuingStrategy({ highWaterMark: 50 })
+    new CountQueuingStrategy({ highWaterMark: 50 }),
   )
 }
 ```
@@ -260,7 +260,7 @@ const badStream = new ReadableStream(
       controller.enqueue(new Uint8Array(Math.random() * 10 * 1024 * 1024))
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 5 })
+  new CountQueuingStrategy({ highWaterMark: 5 }),
 )
 // 问题：可能缓冲 50MB 数据，但队列认为只用了 5 个位置
 
@@ -271,7 +271,7 @@ const goodStream = new ReadableStream(
       controller.enqueue(new Uint8Array(Math.random() * 10 * 1024 * 1024))
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 16 * 1024 * 1024 }) // 16MB
+  new ByteLengthQueuingStrategy({ highWaterMark: 16 * 1024 * 1024 }), // 16MB
 )
 // 精确控制内存，超过 16MB 触发背压
 ```
@@ -329,7 +329,7 @@ const stream = new ReadableStream(
       console.log(controller.desiredSize) // 10 - 4 = 6
     },
   },
-  new PropertyCountStrategy(10)
+  new PropertyCountStrategy(10),
 )
 ```
 
@@ -360,7 +360,7 @@ const textStream = new ReadableStream(
       console.log(controller.desiredSize) // 1000 - 13 = 987
     },
   },
-  new StringLengthStrategy({ highWaterMark: 1000 })
+  new StringLengthStrategy({ highWaterMark: 1000 }),
 )
 ```
 
@@ -389,7 +389,7 @@ const priorityStream = new ReadableStream(
       console.log(controller.desiredSize) // 100 - 11 = 89
     },
   },
-  new WeightedStrategy(100, { high: 10, normal: 5, low: 1 })
+  new WeightedStrategy(100, { high: 10, normal: 5, low: 1 }),
 )
 ```
 
@@ -422,7 +422,7 @@ const hybridStream = new ReadableStream(
       console.log(controller.desiredSize) // hwm - 112
     },
   },
-  new HybridStrategy(1024)
+  new HybridStrategy(1024),
 )
 ```
 
@@ -487,7 +487,7 @@ const stream1 = new ReadableStream(
       controller.enqueue(new Uint8Array(1024 * 1024))
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 10 })
+  new CountQueuingStrategy({ highWaterMark: 10 }),
 )
 // 理论队列大小：10 个块
 // 实际内存占用：10MB（策略未考虑）
@@ -499,7 +499,7 @@ const stream2 = new ReadableStream(
       controller.enqueue(new Uint8Array(1024 * 1024))
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 10 * 1024 * 1024 })
+  new ByteLengthQueuingStrategy({ highWaterMark: 10 * 1024 * 1024 }),
 )
 // 理论队列大小：10MB
 // 实际内存占用：≈10MB（准确）
@@ -517,7 +517,7 @@ const tooSmall = new ReadableStream(
       // pull() 会在每次消费后立即调用，无法批量化
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 1 })
+  new CountQueuingStrategy({ highWaterMark: 1 }),
 )
 
 // 适中的 highWaterMark：批量处理
@@ -529,7 +529,7 @@ const balanced = new ReadableStream(
       // 队列可容纳多个块，减少网络请求频率
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 10 })
+  new CountQueuingStrategy({ highWaterMark: 10 }),
 )
 
 // 过大的 highWaterMark：内存浪费
@@ -539,7 +539,7 @@ const tooBig = new ReadableStream(
       controller.enqueue(new Uint8Array(1024 * 1024))
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 * 1024 }) // 1GB
+  new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 * 1024 }), // 1GB
 )
 // 允许缓冲 1GB 数据，对大多数应用来说过度
 ```
@@ -559,7 +559,7 @@ async function benchmarkStrategy(strategy, name) {
         if (pullCount >= 1000) controller.close()
       },
     },
-    strategy
+    strategy,
   )
 
   await stream.pipeTo(
@@ -567,7 +567,7 @@ async function benchmarkStrategy(strategy, name) {
       write() {
         // 空处理
       },
-    })
+    }),
   )
 
   const elapsed = performance.now() - startTime
@@ -577,15 +577,15 @@ async function benchmarkStrategy(strategy, name) {
 // 测试不同策略
 await benchmarkStrategy(
   new CountQueuingStrategy({ highWaterMark: 1 }),
-  'Count(1)'
+  'Count(1)',
 )
 await benchmarkStrategy(
   new CountQueuingStrategy({ highWaterMark: 10 }),
-  'Count(10)'
+  'Count(10)',
 )
 await benchmarkStrategy(
   new ByteLengthQueuingStrategy({ highWaterMark: 10 * 1024 }),
-  'Byte(10KB)'
+  'Byte(10KB)',
 )
 ```
 
@@ -606,7 +606,7 @@ const audioStream = new ReadableStream(
       controller.enqueue(audioChunk)
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 2 })
+  new CountQueuingStrategy({ highWaterMark: 2 }),
 )
 
 // 视频转码：吞吐量优先
@@ -617,7 +617,7 @@ const videoStream = new ReadableStream(
       controller.enqueue(frame)
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 10 * 1024 * 1024 }) // 10MB
+  new ByteLengthQueuingStrategy({ highWaterMark: 10 * 1024 * 1024 }), // 10MB
 )
 ```
 
@@ -667,10 +667,10 @@ async function monitorMemory(stream) {
 
 // 对比不同策略的内存使用
 const stream1 = createStreamWithStrategy(
-  new CountQueuingStrategy({ highWaterMark: 100 })
+  new CountQueuingStrategy({ highWaterMark: 100 }),
 )
 const stream2 = createStreamWithStrategy(
-  new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 })
+  new ByteLengthQueuingStrategy({ highWaterMark: 1024 * 1024 }),
 )
 
 await monitorMemory(stream1)
@@ -699,7 +699,7 @@ await monitorMemory(stream2)
 
 :::
 
-## 9. 🔗 引用
+## 9. 引用
 
 - [Streams API - Web APIs | MDN][1]
 - [QueuingStrategy - Web APIs | MDN][2]

@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 AudioWorklet 相比已废弃的 ScriptProcessorNode 在架构上有什么根本性优势？](#3--audioworklet-相比已废弃的-scriptprocessornode-在架构上有什么根本性优势)
 - [4. 🤔 AudioWorkletProcessor 的 process() 方法接收的三个参数分别是什么？](#4--audioworkletprocessor-的-process-方法接收的三个参数分别是什么)
 - [5. 🤔 process() 方法返回 false 会触发什么行为？](#5--process-方法返回-false-会触发什么行为)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - AudioWorklet 替代 ScriptProcessorNode 的背景
 - AudioWorkletNode 主线程端
@@ -27,7 +27,7 @@
 - SharedArrayBuffer 共享内存
 - 实时音频处理性能与限制
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

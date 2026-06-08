@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🔍 术语表](#3--术语表)
   - [3.1. 流类型](#31-流类型)
   - [3.2. 角色与组件](#32-角色与组件)
@@ -51,7 +51,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 流的相关术语
 - 流的核心概念
@@ -59,7 +59,7 @@
 - Stream vs Promise
 - Web Streams vs RxJS vs Node.js Streams
 
-## 2. 🫧 评价
+## 2. 评价
 
 这篇笔记介绍了 Web Streams API 的核心概念，包括可读流、可写流、转换流的基本原理和使用方法，以及流式处理相较于传统数据处理方式的优势。并通过多组对比示例，来深入了解流的一些特性。
 
@@ -791,7 +791,7 @@ fastProducer.pipeTo(
       await new Promise((r) => setTimeout(r, 1000)) // 处理需要 1s
       // ⚠️ 内部队列会无限增长，最终内存溢出
     },
-  })
+  }),
 )
 ```
 
@@ -818,7 +818,7 @@ const stream = new ReadableStream(
       // 如果 desiredSize <= 0，说明消费者处理不过来，暂停生产
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 10 })
+  new CountQueuingStrategy({ highWaterMark: 10 }),
 ) // 队列最多 10 个 chunk
 // 背压让生产速度自动匹配消费速度，避免内存无限增长。
 ```
@@ -903,7 +903,7 @@ response.body
       write(obj) {
         updateUI(obj) // 每条数据到达即更新 UI
       },
-    })
+    }),
   )
 // 网络数据流      → 解码为文本         → 解析为JSON对象  → 实时更新UI
 //      ↓              ↓                  ↓                ↓
@@ -965,7 +965,7 @@ fromFetch(url)
     switchMap((r) => r.body),
     map(decompress),
     map(decode),
-    tap(destination)
+    tap(destination),
   )
   .subscribe()
 

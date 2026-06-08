@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 SpeechSynthesisUtterance 的 rate 和 pitch 属性的取值范围和默认值分别是什么？](#3--speechsynthesisutterance-的-rate-和-pitch-属性的取值范围和默认值分别是什么)
 - [4. 🤔 getVoices() 返回空数组的常见原因是什么，如何等待语音列表加载完成？](#4--getvoices-返回空数组的常见原因是什么如何等待语音列表加载完成)
 - [5. 🤔 如何实现一段长文本的分段朗读并追踪每段的朗读进度？](#5--如何实现一段长文本的分段朗读并追踪每段的朗读进度)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - SpeechSynthesis 接口与 window.speechSynthesis
 - SpeechSynthesisUtterance 对象
@@ -28,7 +28,7 @@
 - 识别结果 transcript 与 confidence
 - 浏览器兼容性限制
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

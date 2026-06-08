@@ -2,19 +2,19 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 📒 `window.onbeforeunload`](#3--windowonbeforeunload)
 - [4. 💻 demos.1 - `window.onbeforeunload` 基本使用](#4--demos1---windowonbeforeunload-基本使用)
-- [5. 🔗 引用](#5--引用)
+- [5. 引用](#5-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `window.onbeforeunload`
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `window.onbeforeunload` 可以在用户离开页面前强制弹出一个关闭页面的提示框；
 - 不过提示内容是浏览器写死的（在 chrome 下测试的结果）；
@@ -58,7 +58,7 @@ window.onbeforeunload = () => ''
 - 在离开页面之前，会弹出如下提示框：
   - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-01-02-09-46-36.png)
 
-## 5. 🔗 引用
+## 5. 引用
 
 - [mdn - window.onbeforeunload][1]
 

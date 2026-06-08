@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 AudioContext 为什么必须在用户交互事件中创建或恢复？](#3--audiocontext-为什么必须在用户交互事件中创建或恢复)
 - [4. 🤔 connect() 方法的调用顺序对音频处理有影响吗？](#4--connect-方法的调用顺序对音频处理有影响吗)
 - [5. 🤔 AudioContext 的状态有哪些，如何从 suspended 切换到 running？](#5--audiocontext-的状态有哪些如何从-suspended-切换到-running)
@@ -13,7 +13,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - AudioContext 创建与生命周期
 - suspended、running、closed 状态
@@ -26,7 +26,7 @@
 - 浏览器自动播放策略与用户手势要求
 - currentTime 只读时钟与 sampleRate
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

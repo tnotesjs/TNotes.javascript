@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 如何使用流实现大文件的分片上传 ？](#3--如何使用流实现大文件的分片上传-)
   - [3.1. 基本分片上传](#31-基本分片上传)
   - [3.2. 使用流式上传](#32-使用流式上传)
@@ -27,11 +27,11 @@
   - [7.2. demos/2: 断点续传下载](#72-demos2-断点续传下载)
   - [7.3. demos/3: 视频流背压控制](#73-demos3-视频流背压控制)
   - [7.4. demos/4: CSV 流式解析](#74-demos4-csv-流式解析)
-- [8. 🔗 引用](#8--引用)
+- [8. 引用](#8-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 大文件上传与分片处理
 - 大文件下载与断点续传
@@ -40,7 +40,7 @@
 - WebSocket 数据流处理
 - 日志流的实时处理
 
-## 2. 🫧 评价
+## 2. 评价
 
 流式处理在实战中解决了大数据量场景的内存和性能问题。大文件上传通过分片和 ReadableStream 实现，避免一次性加载全部内容。断点续传利用 Range 请求头配合流式下载。视频流利用背压机制平衡缓冲区，防止内存溢出。CSV 流式解析通过逐行处理支持 GB 级文件。掌握这些实战场景能显著提升应用的性能和用户体验。
 
@@ -75,7 +75,7 @@ async function uploadFileInChunks(file, url, chunkSize = 1024 * 1024) {
     }
 
     console.log(
-      `已上传: ${(((chunkIndex + 1) / totalChunks) * 100).toFixed(1)}%`
+      `已上传: ${(((chunkIndex + 1) / totalChunks) * 100).toFixed(1)}%`,
     )
   }
 
@@ -173,7 +173,7 @@ class ChunkedUploader {
       } catch (error) {
         retries++
         console.warn(
-          `分片 ${index} 上传失败（尝试 ${retries}/${this.maxRetries}）`
+          `分片 ${index} 上传失败（尝试 ${retries}/${this.maxRetries}）`,
         )
 
         if (retries >= this.maxRetries) {
@@ -262,7 +262,7 @@ async function parallelChunkUpload(file, url, concurrency = 3) {
       await Promise.race(tasks.map((t) => t.catch(() => {})))
       tasks.splice(
         tasks.findIndex((t) => uploadedChunks.has(tasks.indexOf(t))),
-        1
+        1,
       )
     }
   }
@@ -503,7 +503,7 @@ const downloader = new ResumableDownloader(
     onProgress: (progress) => {
       console.log(`下载进度: ${progress.progress.toFixed(1)}%`)
     },
-  }
+  },
 )
 
 await downloader.download()
@@ -532,7 +532,7 @@ async function streamDownload(url, fileName) {
           console.log(`进度: ${((downloaded / totalSize) * 100).toFixed(1)}%`)
           controller.enqueue(chunk)
         },
-      })
+      }),
     )
     .pipeTo(writable)
 
@@ -568,7 +568,7 @@ class VideoStreamPlayer {
     })
 
     this.sourceBuffer = this.mediaSource.addSourceBuffer(
-      'video/mp4; codecs="avc1.64001f"'
+      'video/mp4; codecs="avc1.64001f"',
     )
 
     this.sourceBuffer.addEventListener('updateend', () => {
@@ -603,7 +603,7 @@ class VideoStreamPlayer {
 
             controller.enqueue(chunk)
           },
-        })
+        }),
       )
       .pipeTo(
         new WritableStream({
@@ -611,7 +611,7 @@ class VideoStreamPlayer {
             this.buffer.push(chunk)
             this.processBuffer()
           },
-        })
+        }),
       )
   }
 
@@ -695,7 +695,7 @@ class AdaptiveVideoBuffer {
 
           controller.enqueue(chunk)
         },
-      })
+      }),
     )
   }
 }
@@ -819,7 +819,7 @@ async function parseCSV(file) {
             console.log('行数据:', item.data)
           }
         },
-      })
+      }),
     )
 }
 ```
@@ -894,7 +894,7 @@ await stream
           saveToDatabase(item.data)
         }
       },
-    })
+    }),
   )
 ```
 
@@ -969,7 +969,7 @@ await stream
       ...row,
       age: parseInt(row.age, 10),
       createdAt: new Date().toISOString(),
-    }))
+    })),
   )
   .pipeThrough(createCSVAggregator())
   .pipeTo(
@@ -981,7 +981,7 @@ await stream
           processRow(item.data)
         }
       },
-    })
+    }),
   )
 ```
 
@@ -1046,7 +1046,7 @@ await stream
 
 打开 [demos/4/index.html](demos/4/index.html) 查看演示。
 
-## 8. 🔗 引用
+## 8. 引用
 
 - [Using Readable Streams - MDN][1]
 - [Streams API Concepts - MDN][2]

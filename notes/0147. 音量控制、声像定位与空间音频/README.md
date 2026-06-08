@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 GainNode 的 gain 属性为什么是 AudioParam 而不是普通数值类型？](#3--gainnode-的-gain-属性为什么是-audioparam-而不是普通数值类型)
 - [4. 🤔 如何使用 AudioParam 的时间调度方法实现音频淡入淡出效果？](#4--如何使用-audioparam-的时间调度方法实现音频淡入淡出效果)
 - [5. 🤔 PannerNode 的 HRTF 和 equalpower 模式有什么区别？](#5--pannernode-的-hrtf-和-equalpower-模式有什么区别)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - GainNode 与 gain AudioParam
 - AudioParam 时间调度方法（setValueAtTime、linearRampToValueAtTime 等）
@@ -26,7 +26,7 @@
 - ChannelSplitterNode 与 ChannelMergerNode
 - 多路音频混音
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

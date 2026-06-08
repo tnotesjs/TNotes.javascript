@@ -9,7 +9,7 @@
 
 :::
 
-- [1. 🎯 本节内容](#1--本节内容)
+- [1. 本节内容](#1-本节内容)
 - [2. 🫧 评论](#2--评论)
 - [3. 🤔 CMD 是什么？](#3--cmd-是什么)
   - [3.1. CMD](#31-cmd)
@@ -17,11 +17,11 @@
   - [3.3. 基本用法](#33-基本用法)
   - [3.4. 🆚 AMD vs CMD](#34--amd-vs-cmd)
 - [4. 💻 demos.1 - Sea.js 的基本使用](#4--demos1---seajs-的基本使用)
-- [5. 🔗 引用](#5--引用)
+- [5. 引用](#5-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - CMD 规范
 
@@ -132,7 +132,7 @@ define(function (require, exports, module) {
 
 ![图 1](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-19-08-34-40.png)
 
-## 5. 🔗 引用
+## 5. 引用
 
 - [Common Module Definition / draft][3]
   - CMD 规范草案

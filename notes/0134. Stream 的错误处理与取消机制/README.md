@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 流处理中可能出现哪些类型的错误 ？](#3--流处理中可能出现哪些类型的错误-)
   - [3.1. 数据验证错误](#31-数据验证错误)
   - [3.2. 网络错误](#32-网络错误)
@@ -45,11 +45,11 @@
 - [8. 💻 demos.1 - 处理流中的各类错误场景](#8--demos1---处理流中的各类错误场景)
 - [9. 💻 demos.2 - 实现可恢复的错误处理机制](#9--demos2---实现可恢复的错误处理机制)
 - [10. 💻 demos.3 - 正确清理带有外部资源的流](#10--demos3---正确清理带有外部资源的流)
-- [11. 🔗 引用](#11--引用)
+- [11. 引用](#11-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 流中的错误类型与来源
 - controller.error() 方法的使用
@@ -58,7 +58,7 @@
 - 错误恢复策略
 - 资源清理与内存释放
 
-## 2. 🫧 评价
+## 2. 评价
 
 错误处理是流式处理的重要环节，包括数据错误、网络错误、解析错误等多种类型。controller.error() 会立即终止流并传播错误，而 try-catch 适合处理可恢复的错误。取消操作通过 AbortController 触发，会自动沿管道链传播。cancel() 的 reason 参数携带取消原因，便于调试和记录。资源清理需在 cancel() 回调中执行，确保连接关闭、定时器清除、内存释放。
 
@@ -177,7 +177,7 @@ const memoryLimitStream = new TransformStream({
     // 检查数据块大小
     if (size > 10 * 1024 * 1024) {
       controller.error(
-        new Error(`数据块过大: ${(size / 1024 / 1024).toFixed(2)} MB`)
+        new Error(`数据块过大: ${(size / 1024 / 1024).toFixed(2)} MB`),
       )
       return
     }
@@ -195,7 +195,7 @@ const businessValidationStream = new TransformStream({
     // 库存检查
     if (order.quantity > order.stock) {
       controller.error(
-        new Error(`库存不足: 需要 ${order.quantity}，仅剩 ${order.stock}`)
+        new Error(`库存不足: 需要 ${order.quantity}，仅剩 ${order.stock}`),
       )
       return
     }
@@ -1085,7 +1085,7 @@ class ManagedStream {
             case 'event':
               window.removeEventListener(
                 item.resource.event,
-                item.resource.handler
+                item.resource.handler,
               )
               break
           }
@@ -1223,7 +1223,7 @@ cancel(reason) {
 }
 ```
 
-## 11. 🔗 引用
+## 11. 引用
 
 - [Streams Standard - Error Handling][1]
 - [MDN - ReadableStreamDefaultController.error()][2]

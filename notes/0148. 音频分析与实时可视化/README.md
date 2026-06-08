@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 AnalyserNode 的 fftSize 为什么必须是 2 的幂次方？](#3--analysernode-的-fftsize-为什么必须是-2-的幂次方)
 - [4. 🤔 frequencyBinCount 和 fftSize 之间是什么关系？](#4--frequencybincount-和-fftsize-之间是什么关系)
 - [5. 🤔 getByteFrequencyData 和 getFloatFrequencyData 返回的数据有什么区别？](#5--getbytefrequencydata-和-getfloatfrequencydata-返回的数据有什么区别)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - AnalyserNode 创建与配置
 - fftSize 与频率分辨率
@@ -27,7 +27,7 @@
 - smoothingTimeConstant 平滑系数
 - RMS 音量计算
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 getUserMedia 请求麦克风权限时，如何设置只获取音频而不获取视频？](#3--getusermedia-请求麦克风权限时如何设置只获取音频而不获取视频)
 - [4. 🤔 echoCancellation、noiseSuppression、autoGainControl 这三个约束分别有什么作用？](#4--echocancellationnoisesuppressionautogaincontrol-这三个约束分别有什么作用)
 - [5. 🤔 如何将 getUserMedia 获取的麦克风流接入 Web Audio API 音频图中进行实时处理？](#5--如何将-getusermedia-获取的麦克风流接入-web-audio-api-音频图中进行实时处理)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - navigator.mediaDevices.getUserMedia() 用法
 - constraints 约束对象配置
@@ -28,7 +28,7 @@
 - URL.createObjectURL() 音频导出与下载
 - timeslice 参数与分片录制
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

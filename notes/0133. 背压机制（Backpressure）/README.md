@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 什么是背压机制，为什么流处理中需要它 ？](#3--什么是背压机制为什么流处理中需要它-)
   - [3.1. 背压机制的核心原理](#31-背压机制的核心原理)
   - [3.2. 为什么流处理需要背压](#32-为什么流处理需要背压)
@@ -34,11 +34,11 @@
   - [7.6. 实战示例：限速文件读取](#76-实战示例限速文件读取)
 - [8. 💻 demos.1 - 观察背压信号的触发时机](#8--demos1---观察背压信号的触发时机)
 - [9. 💻 demos.2 - 实现一个支持背压的自定义流](#9--demos2---实现一个支持背压的自定义流)
-- [10. 🔗 引用](#10--引用)
+- [10. 引用](#10-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 背压机制的原理与必要性
 - desiredSize 的计算公式
@@ -47,7 +47,7 @@
 - 背压信号的传播路径
 - 生产者与消费者的速率平衡
 
-## 2. 🫧 评价
+## 2. 评价
 
 背压机制是 Web Streams 的核心设计之一，通过 desiredSize 和 highWaterMark 实现生产者与消费者的速率平衡。理解队列大小的计算公式、负值的含义，以及信号在管道链中的传播路径，是构建高性能流处理应用的关键。实际开发中需重点关注慢速生产者的暂停逻辑，避免内存堆积导致的性能问题。
 
@@ -113,7 +113,7 @@ const stream = new ReadableStream(
       console.log('剩余容量:', controller.desiredSize)
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 5 })
+  new CountQueuingStrategy({ highWaterMark: 5 }),
 )
 // highWaterMark: 5 表示队列最多容纳 5 个块
 ```
@@ -149,7 +149,7 @@ const stream = new ReadableStream(
       console.log(controller.desiredSize) // -1（超出上限）
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 3 })
+  new CountQueuingStrategy({ highWaterMark: 3 }),
 )
 ```
 
@@ -172,7 +172,7 @@ const stream = new ReadableStream(
       controller.enqueue(await fetchData())
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 1 })
+  new CountQueuingStrategy({ highWaterMark: 1 }),
 )
 ```
 
@@ -187,7 +187,7 @@ new ReadableStream(
       console.log(controller.desiredSize) // highWaterMark - 1
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 10 })
+  new CountQueuingStrategy({ highWaterMark: 10 }),
 )
 
 // ByteLengthQueuingStrategy：块大小为字节数
@@ -198,7 +198,7 @@ new ReadableStream(
       console.log(controller.desiredSize) // 16384 - 1024 = 15360
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 16 * 1024 })
+  new ByteLengthQueuingStrategy({ highWaterMark: 16 * 1024 }),
 )
 ```
 
@@ -222,7 +222,7 @@ const stream = new ReadableStream(
       }
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 2 })
+  new CountQueuingStrategy({ highWaterMark: 2 }),
 )
 
 await stream.pipeTo(
@@ -230,7 +230,7 @@ await stream.pipeTo(
     write(chunk) {
       console.table(chunks)
     },
-  })
+  }),
 )
 // 输出队列大小从 0 → 1 → 2 → 1 → 0 的变化过程
 ```
@@ -252,7 +252,7 @@ const strictStream = new ReadableStream(
       controller.enqueue(Math.random())
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 1 })
+  new CountQueuingStrategy({ highWaterMark: 1 }),
 )
 // desiredSize > 0 时才调用 pull()
 // 队列只能容纳 1 个块，消费后才会再次 pull()
@@ -264,7 +264,7 @@ const bufferedStream = new ReadableStream(
       controller.enqueue(Math.random())
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 10 })
+  new CountQueuingStrategy({ highWaterMark: 10 }),
 )
 // 队列可容纳 10 个块，减少 pull() 调用频率
 ```
@@ -289,7 +289,7 @@ async function testHighWaterMark(hwm) {
         if (pullCount >= 100) controller.close()
       },
     },
-    new CountQueuingStrategy({ highWaterMark: hwm })
+    new CountQueuingStrategy({ highWaterMark: hwm }),
   )
 
   await stream.pipeTo(
@@ -297,7 +297,7 @@ async function testHighWaterMark(hwm) {
       write() {
         // 模拟慢速消费
       },
-    })
+    }),
   )
 
   return pullCount
@@ -320,7 +320,7 @@ const byteStream = new ReadableStream(
       controller.enqueue(buffer)
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 64 * 1024 }) // 64KB
+  new ByteLengthQueuingStrategy({ highWaterMark: 64 * 1024 }), // 64KB
 )
 ```
 
@@ -335,7 +335,7 @@ const tooSmall = new ReadableStream(
       controller.enqueue(data)
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 1 })
+  new CountQueuingStrategy({ highWaterMark: 1 }),
 )
 // 每次只缓冲 1 个块，网络请求无法批量化
 
@@ -346,7 +346,7 @@ const tooBig = new ReadableStream(
       controller.enqueue(new Uint8Array(1024 * 1024)) // 1MB
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 1000 })
+  new CountQueuingStrategy({ highWaterMark: 1000 }),
 )
 // 队列可容纳 1000 个 1MB 块 = 1GB 内存
 ```
@@ -362,7 +362,7 @@ const uploadStream = new ReadableStream(
       controller.enqueue(chunk)
     },
   },
-  new ByteLengthQueuingStrategy({ highWaterMark: 256 * 1024 }) // 256KB
+  new ByteLengthQueuingStrategy({ highWaterMark: 256 * 1024 }), // 256KB
 )
 
 // 实时日志：较小 highWaterMark 降低延迟
@@ -372,7 +372,7 @@ const logStream = new ReadableStream(
       controller.enqueue(getLatestLog())
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 3 })
+  new CountQueuingStrategy({ highWaterMark: 3 }),
 )
 ```
 
@@ -438,7 +438,7 @@ const source = new ReadableStream(
       controller.enqueue('data')
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 2 })
+  new CountQueuingStrategy({ highWaterMark: 2 }),
 )
 
 const transform1 = new TransformStream(
@@ -447,7 +447,7 @@ const transform1 = new TransformStream(
       controller.enqueue(chunk.toUpperCase())
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 3 })
+  new CountQueuingStrategy({ highWaterMark: 3 }),
 )
 
 const transform2 = new TransformStream(
@@ -456,7 +456,7 @@ const transform2 = new TransformStream(
       controller.enqueue(`[${chunk}]`)
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 1 }) // ⚠️ 最小缓冲
+  new CountQueuingStrategy({ highWaterMark: 1 }), // ⚠️ 最小缓冲
 )
 
 const sink = new WritableStream(
@@ -465,7 +465,7 @@ const sink = new WritableStream(
       return new Promise((resolve) => setTimeout(resolve, 500))
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 4 })
+  new CountQueuingStrategy({ highWaterMark: 4 }),
 )
 
 await source.pipeThrough(transform1).pipeThrough(transform2).pipeTo(sink)
@@ -507,7 +507,7 @@ function createInstrumentedStream(name, hwm) {
         controller.enqueue(chunk)
       },
     },
-    new CountQueuingStrategy({ highWaterMark: hwm })
+    new CountQueuingStrategy({ highWaterMark: hwm }),
   )
 }
 
@@ -520,7 +520,7 @@ const pipeline = source
       write() {
         return new Promise((resolve) => setTimeout(resolve, 100))
       },
-    })
+    }),
   )
 // 输出队列大小从下游到上游的变化
 ```
@@ -702,13 +702,13 @@ function createThrottledFileStream(file, bytesPerSecond) {
         }
 
         const chunk = await file.read(
-          Math.min(maxBytes, controller.desiredSize)
+          Math.min(maxBytes, controller.desiredSize),
         )
         controller.enqueue(chunk)
         lastTime = now
       },
     },
-    new ByteLengthQueuingStrategy({ highWaterMark: 64 * 1024 })
+    new ByteLengthQueuingStrategy({ highWaterMark: 64 * 1024 }),
   )
 }
 ```
@@ -735,7 +735,7 @@ function createThrottledFileStream(file, bytesPerSecond) {
 
 :::
 
-## 10. 🔗 引用
+## 10. 引用
 
 - [Streams API - Web APIs | MDN][1]
 - [Backpressure - MDN Web Docs Glossary][2]

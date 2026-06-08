@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 如何使用流式处理来显示下载进度 ？](#3--如何使用流式处理来显示下载进度-)
   - [3.1. 基本实现](#31-基本实现)
   - [3.2. 使用 TransformStream 实现](#32-使用-transformstream-实现)
@@ -30,11 +30,11 @@
   - [6.5. 处理服务器发送事件（SSE）](#65-处理服务器发送事件sse)
 - [7. 💻 demos.1 - 实现带进度条的文件下载](#7--demos1---实现带进度条的文件下载)
 - [8. 💻 demos.2 - 流式处理服务器发送事件 SSE](#8--demos2---流式处理服务器发送事件-sse)
-- [9. 🔗 引用](#9--引用)
+- [9. 引用](#9-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - Response.body 的 ReadableStream 类型
 - Request.body 的构造与使用
@@ -43,7 +43,7 @@
 - 流式 JSON 解析的基础场景
 - SSE（Server-Sent Events）的流式处理
 
-## 2. 🫧 评价
+## 2. 评价
 
 Fetch API 与 Web Streams 的集成是现代网络应用的核心能力。Response.body 和 Request.body 都是 ReadableStream，支持流式读取和写入。下载进度通过读取器逐块统计实现，上传进度需配合服务器支持。流式 JSON 解析适合处理大型数组或 NDJSON 格式。理解流锁定机制很重要，Response.body 一旦被读取就会锁定，需用 tee() 实现多次消费。
 
@@ -134,7 +134,7 @@ async function downloadWithProgressStream(url) {
       write(chunk) {
         saveChunk(chunk)
       },
-    })
+    }),
   )
 }
 ```
@@ -218,7 +218,7 @@ async function downloadImageWithProgress(url, imgElement, progressCallback) {
         })
         controller.enqueue(chunk)
       },
-    })
+    }),
   )
 
   // 转换为 Blob
@@ -235,7 +235,7 @@ downloadImageWithProgress(
   ({ loaded, total }) => {
     const percent = ((loaded / total) * 100).toFixed(1)
     document.getElementById('progress').textContent = `${percent}%`
-  }
+  },
 )
 ```
 
@@ -312,7 +312,7 @@ async function fetchAndCache(url) {
       url,
       new Response(cacheStream, {
         headers: response.headers,
-      })
+      }),
     )
     console.log('✅ 缓存完成')
   })
@@ -342,7 +342,7 @@ async function multipleConsumers(url) {
       write(chunk) {
         updateHash(chunk)
       },
-    })
+    }),
   )
 
   // 消费者 2：保存到文件
@@ -354,7 +354,7 @@ async function multipleConsumers(url) {
       write(chunk) {
         console.log(chunk)
       },
-    })
+    }),
   )
 
   await Promise.all([hashPromise, savePromise, displayPromise])
@@ -659,7 +659,7 @@ async function processNDJSON(url) {
           console.log('解析对象:', obj)
           processObject(obj)
         },
-      })
+      }),
     )
 }
 ```
@@ -726,7 +726,7 @@ async function processJSONArray(url) {
         write(item) {
           console.log('数组项:', item)
         },
-      })
+      }),
     )
 }
 ```
@@ -784,7 +784,7 @@ async function fetchLargeDataset(url) {
             controller.enqueue(obj)
           }
         },
-      })
+      }),
     )
     .pipeTo(
       new WritableStream({
@@ -805,7 +805,7 @@ async function fetchLargeDataset(url) {
           }
           console.log(`处理完成: ${stats.count} 条记录`)
         },
-      })
+      }),
     )
 }
 ```
@@ -850,7 +850,7 @@ async function listenToSSE(url) {
           console.log('SSE 事件:', event)
           handleEvent(event)
         },
-      })
+      }),
     )
 }
 ```
@@ -949,7 +949,7 @@ await stream
   .pipeTo(new WritableStream({ write: handleEvent }))
 ```
 
-## 9. 🔗 引用
+## 9. 引用
 
 - [Fetch Standard - Request Body][1]
 - [Fetch Standard - Response Body][2]

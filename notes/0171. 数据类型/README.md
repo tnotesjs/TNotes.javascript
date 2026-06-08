@@ -2,20 +2,20 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 ECMAScript 有哪些数据类型？](#3--ecmascript-有哪些数据类型)
-- [4. 🤔 `typeof` 能判断哪些类型？](#4--typeof-能判断哪些类型)
-- [5. 🤔 `undefined` 和 `null` 应该怎样区分？](#5--undefined-和-null-应该怎样区分)
-- [6. 🤔 Boolean 转换为什么重要？](#6--boolean-转换为什么重要)
-- [7. 🤔 Number 类型有哪些关键细节？](#7--number-类型有哪些关键细节)
-- [8. 🤔 String 类型除了保存文本还有哪些特点？](#8--string-类型除了保存文本还有哪些特点)
-- [9. 🤔 Symbol 类型解决什么问题？](#9--symbol-类型解决什么问题)
-- [10. 🤔 Object 类型为什么是所有对象的基础？](#10--object-类型为什么是所有对象的基础)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. ECMAScript 有哪些数据类型？](#3-ecmascript-有哪些数据类型)
+- [4. `typeof` 能判断哪些类型？](#4-typeof-能判断哪些类型)
+- [5. `undefined` 和 `null` 应该怎样区分？](#5-undefined-和-null-应该怎样区分)
+- [6. Boolean 转换为什么重要？](#6-boolean-转换为什么重要)
+- [7. Number 类型有哪些关键细节？](#7-number-类型有哪些关键细节)
+- [8. String 类型除了保存文本还有哪些特点？](#8-string-类型除了保存文本还有哪些特点)
+- [9. Symbol 类型解决什么问题？](#9-symbol-类型解决什么问题)
+- [10. Object 类型为什么是所有对象的基础？](#10-object-类型为什么是所有对象的基础)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - ECMAScript 的原始类型和对象类型
 - `typeof` 的返回结果
@@ -24,11 +24,11 @@
 - Number、String、Symbol 和 Object 的核心行为
 - 常见类型转换入口
 
-## 2. 🫧 评价
+## 2. 评价
 
 数据类型是 JavaScript 最容易“看起来会、用起来坑”的部分。你不需要一次记住所有转换细节，但必须知道哪些值是假值、`typeof null` 为什么怪、`NaN` 为什么不等于自己，以及字符串和数值什么时候会被自动转换。
 
-## 3. 🤔 ECMAScript 有哪些数据类型？
+## 3. ECMAScript 有哪些数据类型？
 
 ECMAScript 有 7 种原始类型：
 
@@ -52,7 +52,7 @@ value = 'one'
 value = { text: 'one' }
 ```
 
-## 4. 🤔 `typeof` 能判断哪些类型？
+## 4. `typeof` 能判断哪些类型？
 
 `typeof` 是用来判断值类型的操作符，返回的是字符串。
 
@@ -72,7 +72,7 @@ value = { text: 'one' }
 
 `typeof null` 返回 `'object'` 是 JavaScript 中非常著名的历史行为。你可以记住结论：`typeof` 适合判断原始类型和函数，但不适合精确区分对象的具体类型。
 
-## 5. 🤔 `undefined` 和 `null` 应该怎样区分？
+## 5. `undefined` 和 `null` 应该怎样区分？
 
 `undefined` 表示变量声明了但没有初始化，或者某些访问没有得到值。
 
@@ -91,7 +91,7 @@ let currentUser = null
 
 `null == undefined` 是 `true`，但它们语义不同。实践中，不需要主动把变量设为 `undefined`；如果你想表达“暂时没有对象”，用 `null` 更清楚。
 
-## 6. 🤔 Boolean 转换为什么重要？
+## 6. Boolean 转换为什么重要？
 
 `Boolean` 类型只有两个字面值：`true` 和 `false`。
 
@@ -117,7 +117,7 @@ Boolean('') // false
 
 这也是为什么条件判断里要明确自己到底是在判断“是否存在”、还是判断“是否等于某个具体值”。
 
-## 7. 🤔 Number 类型有哪些关键细节？
+## 7. Number 类型有哪些关键细节？
 
 JavaScript 不区分整数和浮点数，统一使用 `Number` 类型表示数值。
 
@@ -154,7 +154,7 @@ Number.isNaN(NaN) // true
 parseInt('10', 10) // 10
 ```
 
-## 8. 🤔 String 类型除了保存文本还有哪些特点？
+## 8. String 类型除了保存文本还有哪些特点？
 
 `String` 表示零个或多个 16 位 Unicode 字符序列。字符串可以使用单引号、双引号或反引号定义。
 
@@ -199,7 +199,7 @@ Array.from('😀').length // 1
 
 :::
 
-## 9. 🤔 Symbol 类型解决什么问题？
+## 9. Symbol 类型解决什么问题？
 
 `Symbol` 是 ES6 新增的原始类型。每个通过 `Symbol()` 创建的符号都是唯一且不可变的。
 
@@ -229,7 +229,7 @@ Symbol.keyFor(shared) // 'shared-id'
 
 此外，内置符号如 `Symbol.iterator`、`Symbol.toPrimitive`、`Symbol.toStringTag` 等可以影响语言内部行为。它们会在迭代器、对象转换、类和集合等后续内容中继续出现。
 
-## 10. 🤔 Object 类型为什么是所有对象的基础？
+## 10. Object 类型为什么是所有对象的基础？
 
 `Object` 是复杂数据类型，是一组属性和方法的集合。
 

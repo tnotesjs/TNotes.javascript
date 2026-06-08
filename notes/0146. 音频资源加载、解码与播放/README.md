@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 为什么 AudioBufferSourceNode 是一次性的，播放结束后不能重新 start？](#3--为什么-audiobuffersourcenode-是一次性的播放结束后不能重新-start)
 - [4. 🤔 如何使用 fetch + decodeAudioData 加载并播放一个音频文件？](#4--如何使用-fetch--decodeaudiodata-加载并播放一个音频文件)
 - [5. 🤔 MediaElementAudioSourceNode 和 AudioBufferSourceNode 各适用于什么场景？](#5--mediaelementaudiosourcenode-和-audiobuffersourcenode-各适用于什么场景)
@@ -13,7 +13,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - decodeAudioData() 方法
 - ArrayBuffer 与音频二进制数据
@@ -25,7 +25,7 @@
 - 多 AudioBuffer 管理与音频池模式
 - 采样率匹配与重采样
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

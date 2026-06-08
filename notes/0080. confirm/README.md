@@ -2,20 +2,20 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 📒 `window.confirm()`](#3--windowconfirm)
 - [4. 💻 demos.1 - 使用 `window.confirm()` 弹出确认提示框](#4--demos1---使用-windowconfirm-弹出确认提示框)
 - [5. 💻 demos.2 - 自定义 confirm 效果](#5--demos2---自定义-confirm-效果)
-- [6. 🔗 引用](#6--引用)
+- [6. 引用](#6-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `window.confirm()`
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 很简单的一个 API，类似 `window.alert()`，两者的区别是 `window.alert()` 是一个 `void` 类型的函数，而 `window.confirm()` 返回一个 `boolean` 类型的值。
 - 实际开发中 confirm 提示框大多是直接使用 UI 组件库中封装好的 confirm 组件，或者自行封装，比如 `demos.2`。
@@ -57,7 +57,7 @@
 
 - ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/2025-09-03-21-53-50.png)
 
-## 6. 🔗 引用
+## 6. 引用
 
 - [mdn - window.confirm][1]
 

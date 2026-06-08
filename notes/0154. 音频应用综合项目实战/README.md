@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 Media Session API 的核心作用是什么，它解决了什么用户体验问题？](#3--media-session-api-的核心作用是什么它解决了什么用户体验问题)
 - [4. 🤔 如何通过 Media Session API 在系统通知栏显示当前播放的歌曲封面和信息？](#4--如何通过-media-session-api-在系统通知栏显示当前播放的歌曲封面和信息)
 - [5. 🤔 setActionHandler 注册的回调函数在什么条件下会被系统触发？](#5--setactionhandler-注册的回调函数在什么条件下会被系统触发)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - navigator.mediaSession 接口
 - MediaMetadata（title、artist、album、artwork）
@@ -26,7 +26,7 @@
 - 与 HTMLMediaElement 的自动集成机制
 - artwork 图片尺寸与格式要求
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

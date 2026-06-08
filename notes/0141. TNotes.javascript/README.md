@@ -2,25 +2,25 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤖 Prompt - 精读笔记生成 DEMO](#3--prompt---精读笔记生成-demo)
-- [4. 🤖 Prompt - 分析对话记录优化笔记内容](#4--prompt---分析对话记录优化笔记内容)
-- [5. 🔗 引用](#5--引用)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 提示词：精读笔记生成 DEMO](#3-提示词精读笔记生成-demo)
+- [4. 提示词：分析对话记录优化笔记内容](#4-提示词分析对话记录优化笔记内容)
+- [5. 引用](#5-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - TNotes.javascript 知识库简介
 
-## 2. 🫧 评价
+## 2. 评价
 
 TNotes.javascript 是一个基于 [@tnotesjs/core][1] 实现的一个 javascript 开源知识库。
 
 接下来主要会在这个知识库中记录一些和 JS、HTML、CSS 相关的知识点。
 
-## 3. 🤖 Prompt - 精读笔记生成 DEMO
+## 3. 提示词：精读笔记生成 DEMO
 
 ::: tip 使用场景
 
@@ -45,7 +45,7 @@ TNotes.javascript 是一个基于 [@tnotesjs/core][1] 实现的一个 javascript
 - 知识点的解释说明直接通过注释的形式写入到示例中，不要啰嗦，精简明了地解释每个知识点的核心概念和关键细节
 - 具体格式要求：
 
-## 💻 demos.1 - 知识点 1 的名称
+## demos.1 - 知识点 1 的名称
 
 ```html
 <!doctype html>
@@ -65,9 +65,9 @@ TNotes.javascript 是一个基于 [@tnotesjs/core][1] 实现的一个 javascript
 // DEMO 的内容
 ```
 
-## 💻 ...
+## ...
 
-## 💻 demos.n - 知识点 n 的名称
+## demos.n - 知识点 n 的名称
 
 ---
 
@@ -76,7 +76,7 @@ TNotes.javascript 是一个基于 [@tnotesjs/core][1] 实现的一个 javascript
 <!-- 在此复制笔记内容 -->
 ````
 
-## 4. 🤖 Prompt - 分析对话记录优化笔记内容
+## 4. 提示词：分析对话记录优化笔记内容
 
 ::: tip 使用场景
 
@@ -125,7 +125,7 @@ TNotes.javascript 是一个基于 [@tnotesjs/core][1] 实现的一个 javascript
 ```
 ````
 
-## 5. 🔗 引用
+## 5. 引用
 
 - [@tnotesjs/core][1]
 

@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 📒 break 语句和 continue 语句](#3--break-语句和-continue-语句)
 - [4. 💻 demos.1 - 在 while 中使用 break](#4--demos1---在-while-中使用-break)
 - [5. 💻 demos.2 - 在 for 中使用 break](#5--demos2---在-for-中使用-break)
@@ -12,11 +12,11 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 掌握 break 语句和 continue 语句的基本使用
 
-## 2. 🫧 评价
+## 2. 评价
 
 - break、continue 是循环中的常客，属于重点内容，必须掌握。
 

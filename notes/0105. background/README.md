@@ -2,12 +2,12 @@
 
 <!-- region:toc -->
 
-- [1. 🫧 评价](#1--评价)
+- [1. 评价](#1-评价)
 - [2. 💻 demos.1 - 使用 background-image 设置背景](#2--demos1---使用-background-image-设置背景)
 
 <!-- endregion:toc -->
 
-## 1. 🫧 评价
+## 1. 评价
 
 - ⏰ background-_ 忘记哪个就找些 demo 来看看，并汇总到 demos._ 中。
 - MDN background

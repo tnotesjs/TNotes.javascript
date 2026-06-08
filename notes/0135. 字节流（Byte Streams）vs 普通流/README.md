@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 字节流与普通流在数据处理上有什么本质区别 ？](#3--字节流与普通流在数据处理上有什么本质区别-)
   - [3.1. 数据类型限制](#31-数据类型限制)
   - [3.2. Reader 类型差异](#32-reader-类型差异)
@@ -32,11 +32,11 @@
   - [6.6. 性能对比](#66-性能对比)
 - [7. 💻 demos.1 - 创建并读取一个字节流](#7--demos1---创建并读取一个字节流)
 - [8. 💻 demos.2 - 对比字节流与普通流的性能差异](#8--demos2---对比字节流与普通流的性能差异)
-- [9. 🔗 引用](#9--引用)
+- [9. 引用](#9-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 字节流与普通流的核心差异
 - ReadableStreamBYOBReader 读取器
@@ -45,7 +45,7 @@
 - autoAllocateChunkSize 参数
 - 字节流的性能优势
 
-## 2. 🫧 评价
+## 2. 评价
 
 字节流通过 type: 'bytes' 标识，专为二进制数据优化，支持 BYOB Reader 实现零拷贝读取。与普通流相比，字节流在处理文件、网络数据等二进制场景下内存效率更高，但限制了数据类型为 ArrayBufferView。理解两者差异和适用场景，是选择正确流类型的关键。
 
@@ -355,7 +355,7 @@ const autoByteStream = new ReadableStream(
   {
     // 自动分配的块大小
     autoAllocateChunkSize: 64 * 1024, // 64KB
-  }
+  },
 )
 
 // 使用默认 Reader
@@ -418,7 +418,7 @@ function createFileStream(file) {
         const buffer = await slice.arrayBuffer()
 
         new Uint8Array(view.buffer, view.byteOffset, view.byteLength).set(
-          new Uint8Array(buffer)
+          new Uint8Array(buffer),
         )
 
         offset += buffer.byteLength
@@ -476,7 +476,7 @@ const strategicStream = new ReadableStream(
   },
   new ByteLengthQueuingStrategy({
     highWaterMark: 128 * 1024, // 128KB 缓冲
-  })
+  }),
 )
 
 console.log(strategicStream.constructor.name) // ReadableStream
@@ -684,7 +684,7 @@ BYOB 通过让用户控制缓冲区分配，实现零拷贝和内存复用，显
 
 :::
 
-## 9. 🔗 引用
+## 9. 引用
 
 - [Streams API - Web APIs | MDN][1]
 - [Using readable byte streams - MDN][2]

@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 BiquadFilterNode 的 Q 值对滤波器的频率响应曲线有什么影响？](#3--biquadfilternode-的-q-值对滤波器的频率响应曲线有什么影响)
 - [4. 🤔 如何使用多个 BiquadFilterNode 构建一个参数均衡器（Parametric EQ）？](#4--如何使用多个-biquadfilternode-构建一个参数均衡器parametric-eq)
 - [5. 🤔 ConvolverNode 的卷积混响原理是什么，为什么需要 impulse response 音频文件？](#5--convolvernode-的卷积混响原理是什么为什么需要-impulse-response-音频文件)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - BiquadFilterNode 与滤波器类型
 - lowpass、highpass、bandpass、notch、allpass、peaking、lowshelf、highshelf
@@ -27,7 +27,7 @@
 - DynamicsCompressorNode 动态压缩
 - 音效处理链的串联与并联拓扑
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

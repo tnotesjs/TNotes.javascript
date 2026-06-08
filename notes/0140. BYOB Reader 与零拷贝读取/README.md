@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 BYOB（Bring Your Own Buffer）模式的核心优势是什么 ？](#3--byobbring-your-own-buffer模式的核心优势是什么-)
   - [3.1. 传统模式 vs BYOB 模式](#31-传统模式-vs-byob-模式)
   - [3.2. 性能对比](#32-性能对比)
@@ -36,11 +36,11 @@
 - [8. 💻 demos.1 - 使用 BYOB Reader 读取字节流](#8--demos1---使用-byob-reader-读取字节流)
 - [9. 💻 demos.2 - 对比 BYOB Reader 与默认 Reader 的内存使用](#9--demos2---对比-byob-reader-与默认-reader-的内存使用)
 - [10. 💻 demos.3 - 实现高效的二进制文件解析器](#10--demos3---实现高效的二进制文件解析器)
-- [11. 🔗 引用](#11--引用)
+- [11. 引用](#11-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - BYOB Reader 的工作原理
 - ReadableStreamBYOBReader 的获取方式
@@ -49,7 +49,7 @@
 - BYOB 模式的性能优化效果
 - BYOB Reader 的使用限制
 
-## 2. 🫧 评价
+## 2. 评价
 
 BYOB（Bring Your Own Buffer）Reader 是 Web Streams API 中的高级特性，专为高性能二进制数据处理设计。它允许开发者提供自己的缓冲区，让流直接将数据写入该缓冲区，避免了额外的内存分配和数据拷贝。对于处理大量二进制数据（如视频流、大文件）的场景，BYOB Reader 能显著降低内存占用和 GC 压力。
 
@@ -383,7 +383,7 @@ await reader.read(buffer)
 
 // ✅ 正确：使用新缓冲区或复用 ArrayBuffer
 const newBuffer = new Uint8Array(
-  buffer.buffer.byteLength ? buffer.buffer : new ArrayBuffer(1024)
+  buffer.buffer.byteLength ? buffer.buffer : new ArrayBuffer(1024),
 )
 await reader.read(newBuffer)
 ```
@@ -502,7 +502,7 @@ while (true) {
   if (done) break
   await videoDecoder.decode(value) // ✅ 零拷贝，高性能
   buffer = new Uint8Array(
-    buffer.buffer.byteLength ? buffer.buffer : new ArrayBuffer(64 * 1024)
+    buffer.buffer.byteLength ? buffer.buffer : new ArrayBuffer(64 * 1024),
   )
 }
 ```
@@ -565,7 +565,7 @@ console.timeEnd('byob') // 约 500ms，内存峰值 64KB
 
 :::
 
-## 11. 🔗 引用
+## 11. 引用
 
 - [Streams API - Web APIs | MDN][1]
 - [ReadableStreamBYOBReader - Web APIs | MDN][2]

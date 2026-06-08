@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 OscillatorNode 的四种内置波形分别模拟什么样的音色特征？](#3--oscillatornode-的四种内置波形分别模拟什么样的音色特征)
 - [4. 🤔 如何使用 OscillatorNode 演奏一个指定 MIDI 音符编号对应的音高？](#4--如何使用-oscillatornode-演奏一个指定-midi-音符编号对应的音高)
 - [5. 🤔 PeriodicWave 是如何通过傅里叶系数定义自定义波形的？](#5--periodicwave-是如何通过傅里叶系数定义自定义波形的)
@@ -14,7 +14,7 @@
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - OscillatorNode 创建与 type 属性
 - sine、square、sawtooth、triangle 波形
@@ -27,7 +27,7 @@
 - 多振荡器叠加与和弦
 - AudioBuffer 生成白噪声
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 

@@ -2,8 +2,8 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
 - [3. 🤔 AudioContext 是什么，它在 Web Audio API 中扮演什么角色？](#3--audiocontext-是什么它在-web-audio-api-中扮演什么角色)
 - [4. 🤔 如何创建一个 AudioContext，构造函数接受哪些参数？](#4--如何创建一个-audiocontext构造函数接受哪些参数)
 - [5. 🤔 AudioContext 的 state 有哪几种状态，分别在什么情况下切换？](#5--audiocontext-的-state-有哪几种状态分别在什么情况下切换)
@@ -49,15 +49,15 @@
 - [45. 🤔 AudioContext 和 Web Workers 之间如何协作，offscreen audio processing 该怎么做？](#45--audiocontext-和-web-workers-之间如何协作offscreen-audio-processing-该怎么做)
 - [46. 🤔 有哪些第三方库对 AudioContext 做了封装（如 Tone.js、Howler.js），各自的适用场景是什么？](#46--有哪些第三方库对-audiocontext-做了封装如-tonejshowlerjs各自的适用场景是什么)
 - [47. 🤔 如何对音频可视化做性能优化，避免 requestAnimationFrame 掉帧？](#47--如何对音频可视化做性能优化避免-requestanimationframe-掉帧)
-- [48. 🔗 引用](#48--引用)
+- [48. 引用](#48-引用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - todo
 
-## 2. 🫧 评价
+## 2. 评价
 
 - todo
 
@@ -151,7 +151,7 @@
 
 ## 47. 🤔 如何对音频可视化做性能优化，避免 requestAnimationFrame 掉帧？
 
-## 48. 🔗 引用
+## 48. 引用
 
 - [MDN AudioContext][1]
 
