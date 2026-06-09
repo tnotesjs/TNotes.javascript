@@ -4,8 +4,8 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 📒 `window.onbeforeunload`](#3--windowonbeforeunload)
-- [4. 💻 demos.1 - `window.onbeforeunload` 基本使用](#4--demos1---windowonbeforeunload-基本使用)
+- [3. `window.onbeforeunload`](#3-windowonbeforeunload)
+- [4. demos.1 - `window.onbeforeunload` 基本使用](#4-demos1---windowonbeforeunload-基本使用)
 - [5. 引用](#5-引用)
 
 <!-- endregion:toc -->
@@ -19,7 +19,7 @@
 - `window.onbeforeunload` 可以在用户离开页面前强制弹出一个关闭页面的提示框；
 - 不过提示内容是浏览器写死的（在 chrome 下测试的结果）；
 
-## 3. 📒 `window.onbeforeunload`
+## 3. `window.onbeforeunload`
 
 - `window.onbeforeunload`
   - `window.onbeforeunload` 是一个事件处理器，它用于在窗口、页面或标签即将卸载时触发。
@@ -45,7 +45,7 @@ window.onbeforeunload = () => ''
 // 应用场景：可以用于检查是否有未保存的工作。
 ```
 
-## 4. 💻 demos.1 - `window.onbeforeunload` 基本使用
+## 4. demos.1 - `window.onbeforeunload` 基本使用
 
 ::: code-group
 

@@ -2,20 +2,20 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `location` 对象是什么？](#3--location-对象是什么)
-- [4. 🤔 `location` 能拆出 URL 的哪些部分？](#4--location-能拆出-url-的哪些部分)
-- [5. 🤔 如何解析查询字符串？](#5--如何解析查询字符串)
-- [6. 🤔 `URLSearchParams` 如何使用？](#6--urlsearchparams-如何使用)
-- [7. 🤔 如何通过 `location` 导航到新地址？](#7--如何通过-location-导航到新地址)
-- [8. 🤔 修改 `location` 属性会发生什么？](#8--修改-location-属性会发生什么)
-- [9. 🤔 `replace()` 和普通导航有什么不同？](#9--replace-和普通导航有什么不同)
-- [10. 🤔 `reload()` 有什么注意点？](#10--reload-有什么注意点)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `location` 对象是什么？](#3-location-对象是什么)
+- [4. `location` 能拆出 URL 的哪些部分？](#4-location-能拆出-url-的哪些部分)
+- [5. 如何解析查询字符串？](#5-如何解析查询字符串)
+- [6. `URLSearchParams` 如何使用？](#6-urlsearchparams-如何使用)
+- [7. 如何通过 `location` 导航到新地址？](#7-如何通过-location-导航到新地址)
+- [8. 修改 `location` 属性会发生什么？](#8-修改-location-属性会发生什么)
+- [9. `replace()` 和普通导航有什么不同？](#9-replace-和普通导航有什么不同)
+- [10. `reload()` 有什么注意点？](#10-reload-有什么注意点)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `location` 对象的双重访问入口
 - URL 各组成部分对应的属性
@@ -24,11 +24,11 @@
 - 地址导航和属性修改
 - `assign()`、`replace()`、`reload()`
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `location` 是读 URL 和改 URL 的核心入口。它看起来只是几个字符串属性，但一旦写入这些属性，就可能触发真实导航，这一点尤其要谨慎。
 
-## 3. 🤔 `location` 对象是什么？
+## 3. `location` 对象是什么？
 
 `location` 是 BOM 中非常常用的对象，它保存当前窗口加载文档的 URL 信息，并提供导航能力。
 
@@ -40,7 +40,7 @@ console.log(window.location === document.location) // true
 
 因此，`window.location` 和 `document.location` 指向同一个对象。实际开发中通常直接写 `location`。
 
-## 4. 🤔 `location` 能拆出 URL 的哪些部分？
+## 4. `location` 能拆出 URL 的哪些部分？
 
 假设当前地址是：
 
@@ -66,7 +66,7 @@ https://user:pass@example.com:8080/path/page.html?q=javascript#content
 
 `location.toString()` 通常返回的也是完整 URL，效果接近读取 `location.href`。
 
-## 5. 🤔 如何解析查询字符串？
+## 5. 如何解析查询字符串？
 
 `location.search` 会返回从问号开始的查询字符串。
 
@@ -98,7 +98,7 @@ function getQueryStringArgs() {
 
 这种写法能说明原理，但真实项目里更推荐使用标准 API。
 
-## 6. 🤔 `URLSearchParams` 如何使用？
+## 6. `URLSearchParams` 如何使用？
 
 `URLSearchParams` 提供了处理查询字符串的标准方法。
 
@@ -124,7 +124,7 @@ for (const [name, value] of searchParams) {
 
 相比手写解析，`URLSearchParams` 更安全、可读，也更少出错。
 
-## 7. 🤔 如何通过 `location` 导航到新地址？
+## 7. 如何通过 `location` 导航到新地址？
 
 最直接的方法是 `assign()`。
 
@@ -141,7 +141,7 @@ location.href = 'https://example.com'
 
 这几种方式都会在浏览器历史记录中新增一条记录。用户通常可以通过后退按钮回到原页面。
 
-## 8. 🤔 修改 `location` 属性会发生什么？
+## 8. 修改 `location` 属性会发生什么？
 
 修改 `location` 的部分属性，也会更新当前 URL。
 
@@ -157,7 +157,7 @@ location.port = '8080'
 
 `hash` 的变化也可能向浏览器历史记录中增加新条目，这也是早期单页应用常用它实现路由的原因。
 
-## 9. 🤔 `replace()` 和普通导航有什么不同？
+## 9. `replace()` 和普通导航有什么不同？
 
 `replace()` 会导航到新地址，但不会新增历史记录，而是替换当前历史记录。
 
@@ -173,7 +173,7 @@ location.replace('https://example.com')
 - 旧地址永久跳转到新地址。
 - 不希望用户回到中间过渡页。
 
-## 10. 🤔 `reload()` 有什么注意点？
+## 10. `reload()` 有什么注意点？
 
 `reload()` 用于重新加载当前页面。
 

@@ -2,20 +2,20 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `JSON.stringify()` 做了什么？](#3--jsonstringify-做了什么)
-- [4. 🤔 `JSON.parse()` 做了什么？](#4--jsonparse-做了什么)
-- [5. 🤔 如何用数组过滤序列化字段？](#5--如何用数组过滤序列化字段)
-- [6. 🤔 如何用函数过滤或替换序列化结果？](#6--如何用函数过滤或替换序列化结果)
-- [7. 🤔 如何让序列化结果更易读？](#7--如何让序列化结果更易读)
-- [8. 🤔 `toJSON()` 如何自定义序列化？](#8--tojson-如何自定义序列化)
-- [9. 🤔 `JSON.parse()` 的 reviver 有什么用？](#9--jsonparse-的-reviver-有什么用)
-- [10. 🤔 JSON 能不能用来深拷贝对象？](#10--json-能不能用来深拷贝对象)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `JSON.stringify()` 做了什么？](#3-jsonstringify-做了什么)
+- [4. `JSON.parse()` 做了什么？](#4-jsonparse-做了什么)
+- [5. 如何用数组过滤序列化字段？](#5-如何用数组过滤序列化字段)
+- [6. 如何用函数过滤或替换序列化结果？](#6-如何用函数过滤或替换序列化结果)
+- [7. 如何让序列化结果更易读？](#7-如何让序列化结果更易读)
+- [8. `toJSON()` 如何自定义序列化？](#8-tojson-如何自定义序列化)
+- [9. `JSON.parse()` 的 reviver 有什么用？](#9-jsonparse-的-reviver-有什么用)
+- [10. JSON 能不能用来深拷贝对象？](#10-json-能不能用来深拷贝对象)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `JSON.stringify()`
 - `JSON.parse()`
@@ -25,11 +25,11 @@
 - `toJSON()` 自定义序列化
 - `reviver` 还原函数
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `JSON.stringify()` 和 `JSON.parse()` 是非常日常的 API，但它们的第二、第三个参数藏着不少实用能力，尤其适合做字段过滤、格式化和日期还原。
 
-## 3. 🤔 `JSON.stringify()` 做了什么？
+## 3. `JSON.stringify()` 做了什么？
 
 `JSON.stringify()` 会把 JavaScript 值序列化成 JSON 字符串。
 
@@ -65,7 +65,7 @@ console.log(jsonText)
 - 数组中的 `undefined`、函数等不能表示为 JSON 的值通常会变成 `null`。
 - `Date` 会通过自身的 `toJSON()` 转换成 ISO 格式字符串。
 
-## 4. 🤔 `JSON.parse()` 做了什么？
+## 4. `JSON.parse()` 做了什么？
 
 `JSON.parse()` 会把 JSON 字符串解析成 JavaScript 值。
 
@@ -93,7 +93,7 @@ try {
 
 不要使用 `eval()` 解析 JSON。`JSON.parse()` 只解析数据，`eval()` 会执行代码，安全风险完全不同。
 
-## 5. 🤔 如何用数组过滤序列化字段？
+## 5. 如何用数组过滤序列化字段？
 
 `JSON.stringify()` 的第二个参数可以是数组，用来指定保留哪些属性。
 
@@ -118,7 +118,7 @@ console.log(jsonText)
 
 这种方式适合简单白名单场景，例如只导出对象中的部分公开字段。
 
-## 6. 🤔 如何用函数过滤或替换序列化结果？
+## 6. 如何用函数过滤或替换序列化结果？
 
 `JSON.stringify()` 的第二个参数也可以是函数。这个函数称为 replacer，会接收 `key` 和 `value`，并返回用于序列化的新值。
 
@@ -156,7 +156,7 @@ const jsonText = JSON.stringify(book, (key, value) => {
 
 replacer 第一次调用时，`key` 是空字符串，`value` 是整个待序列化对象。因此默认分支通常要返回 `value`，否则可能把整个结果过滤掉。
 
-## 7. 🤔 如何让序列化结果更易读？
+## 7. 如何让序列化结果更易读？
 
 `JSON.stringify()` 的第三个参数用于控制缩进。
 
@@ -185,7 +185,7 @@ const jsonText = JSON.stringify(book, null, '--')
 
 这种格式适合调试、日志和配置文件。接口传输时通常仍使用无额外空白的紧凑格式。
 
-## 8. 🤔 `toJSON()` 如何自定义序列化？
+## 8. `toJSON()` 如何自定义序列化？
 
 对象可以定义 `toJSON()` 方法。`JSON.stringify()` 会先调用它，再继续序列化返回值。
 
@@ -220,7 +220,7 @@ console.log(JSON.stringify(book))
 
 `toJSON()` 依赖 `this`，不适合用箭头函数定义。
 
-## 9. 🤔 `JSON.parse()` 的 reviver 有什么用？
+## 9. `JSON.parse()` 的 reviver 有什么用？
 
 `JSON.parse()` 可以接收第二个参数 reviver。它会在解析过程中访问每个键值对，并允许你替换或删除值。
 
@@ -252,7 +252,7 @@ reviver 常用于：
 - 删除不需要的字段。
 - 对解析结果做统一清洗。
 
-## 10. 🤔 JSON 能不能用来深拷贝对象？
+## 10. JSON 能不能用来深拷贝对象？
 
 很多代码会用 `JSON.stringify()` 加 `JSON.parse()` 做简单深拷贝。
 

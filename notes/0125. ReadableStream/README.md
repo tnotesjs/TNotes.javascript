@@ -2,23 +2,23 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 ReadableStream 是什么？](#3--readablestream-是什么)
-- [4. 🤔 从一个可读流中读取 `read()` 数据，会得到哪些可能的结果？](#4--从一个可读流中读取-read-数据会得到哪些可能的结果)
-- [5. 🤔 如何手动控制 ReadableStream 的数据生产速度？](#5--如何手动控制-readablestream-的数据生产速度)
-- [6. 🆚 `start()` vs `pull()`](#6--start-vs-pull)
-- [7. 🤔 当多个读取器尝试读取同一个流时会发生什么？](#7--当多个读取器尝试读取同一个流时会发生什么)
-- [8. 🤔 如何使用异步迭代器遍历流数据？](#8--如何使用异步迭代器遍历流数据)
-- [9. 🤔 流的取消操作 `cancel()` 会触发哪些回调？](#9--流的取消操作-cancel-会触发哪些回调)
-- [10. 🆚 `cancel()` vs `close()` vs `error()`](#10--cancel-vs-close-vs-error)
-- [11. 🤔 实际开发中都有哪些值得注意的事项？](#11--实际开发中都有哪些值得注意的事项)
-- [12. 💻 demos.1 - 从数组创建 ReadableStream 并逐个读取元素](#12--demos1---从数组创建-readablestream-并逐个读取元素)
-- [13. 💻 demos.2 - 实现一个无限数据生成器流](#13--demos2---实现一个无限数据生成器流)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. ReadableStream 是什么？](#3-readablestream-是什么)
+- [4. 从一个可读流中读取 `read()` 数据，会得到哪些可能的结果？](#4-从一个可读流中读取-read-数据会得到哪些可能的结果)
+- [5. 如何手动控制 ReadableStream 的数据生产速度？](#5-如何手动控制-readablestream-的数据生产速度)
+- [6. `start()` vs `pull()`](#6-start-vs-pull)
+- [7. 当多个读取器尝试读取同一个流时会发生什么？](#7-当多个读取器尝试读取同一个流时会发生什么)
+- [8. 如何使用异步迭代器遍历流数据？](#8-如何使用异步迭代器遍历流数据)
+- [9. 流的取消操作 `cancel()` 会触发哪些回调？](#9-流的取消操作-cancel-会触发哪些回调)
+- [10. `cancel()` vs `close()` vs `error()`](#10-cancel-vs-close-vs-error)
+- [11. 实际开发中都有哪些值得注意的事项？](#11-实际开发中都有哪些值得注意的事项)
+- [12. demos.1 - 从数组创建 ReadableStream 并逐个读取元素](#12-demos1---从数组创建-readablestream-并逐个读取元素)
+- [13. demos.2 - 实现一个无限数据生成器流](#13-demos2---实现一个无限数据生成器流)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `ReadableStreamDefaultController` 控制器
 - `controller.enqueue()` 的基本用法
@@ -29,11 +29,11 @@
 - 流的关闭操作
 - 异步迭代器遍历流数据的写法
 
-## 2. 🫧 评价
+## 2. 评价
 
 这篇笔记介绍了 `ReadableStream` 相关的核心概念及一些常见的基本操作。
 
-## 3. 🤔 ReadableStream 是什么？
+## 3. ReadableStream 是什么？
 
 ReadableStream 是 Web Streams API 的核心接口，代表可读取的数据源。它抽象了数据的生产过程，让开发者可以控制数据何时产生、如何分块、何时停止。这种设计让流可以适配各种场景：从简单的数组转换，到复杂的网络响应处理。
 
@@ -72,11 +72,11 @@ const stream = new ReadableStream(
     highWaterMark: 3,
     // size 返回每个入队分块的体积估算值 与高水位线共同决定背压
     size: () => 1,
-  }
+  },
 )
 ```
 
-## 4. 🤔 从一个可读流中读取 `read()` 数据，会得到哪些可能的结果？
+## 4. 从一个可读流中读取 `read()` 数据，会得到哪些可能的结果？
 
 ```js
 const { done, value } = await reader.read()
@@ -86,7 +86,7 @@ const { done, value } = await reader.read()
 // 3. 如果流发生错误 - 拒绝访问，抛出错误
 ```
 
-## 5. 🤔 如何手动控制 ReadableStream 的数据生产速度？
+## 5. 如何手动控制 ReadableStream 的数据生产速度？
 
 可以通过 `pull()` 方法实现按需生产，只在消费者请求时才生成数据。
 
@@ -127,7 +127,7 @@ while (true) {
 }
 ```
 
-## 6. 🆚 `start()` vs `pull()`
+## 6. `start()` vs `pull()`
 
 ```js
 // start() 中同步入队：无法控制速度
@@ -153,7 +153,7 @@ const controlledStream = new ReadableStream({
 })
 ```
 
-## 7. 🤔 当多个读取器尝试读取同一个流时会发生什么？
+## 7. 当多个读取器尝试读取同一个流时会发生什么？
 
 流会被第一个读取器锁定，后续尝试获取读取器会抛出错误。
 
@@ -212,7 +212,7 @@ const reader1 = body1.getReader()
 const reader2 = body2.getReader()
 ```
 
-## 8. 🤔 如何使用异步迭代器遍历流数据？
+## 8. 如何使用异步迭代器遍历流数据？
 
 ReadableStream 实现了异步迭代协议（Async Iteration Protocol），可以直接使用 for await...of 遍历，比手动 Promise 链更清晰简洁。
 
@@ -292,7 +292,7 @@ for await (const chunk of stream) {
 
 :::
 
-## 9. 🤔 流的取消操作 `cancel()` 会触发哪些回调？
+## 9. 流的取消操作 `cancel()` 会触发哪些回调？
 
 调用 `cancel()` 会触发 ReadableStream 的 `cancel()` 回调，并传入取消原因。
 
@@ -369,7 +369,7 @@ setTimeout(() => {
 }, 5000)
 ```
 
-## 10. 🆚 `cancel()` vs `close()` vs `error()`
+## 10. `cancel()` vs `close()` vs `error()`
 
 | 操作       | 触发方式             | 回调        | 数据状态       |
 | ---------- | -------------------- | ----------- | -------------- |
@@ -389,7 +389,7 @@ const { done } = await reader.read() // done: true，但数据可能未读完
 
 `cancel()` 回调是清理资源的关键点，确保及时释放文件句柄、网络连接等。
 
-## 11. 🤔 实际开发中都有哪些值得注意的事项？
+## 11. 实际开发中都有哪些值得注意的事项？
 
 实践中最常见的误区是忘记 `close()` 流，导致消费者永远等待。另一个常见问题是在 `start()` 中同步入队大量数据，忽略了背压机制。建议优先使用 `pull()` 方法按需生产数据，只在数据量确定且较小时才在 `start()` 中一次性入队。
 
@@ -399,7 +399,7 @@ const { done } = await reader.read() // done: true，但数据可能未读完
 
 备注：上图截于 25.12，如有需要，可自行访问 MDN 查看最新的兼容性数据。
 
-## 12. 💻 demos.1 - 从数组创建 ReadableStream 并逐个读取元素
+## 12. demos.1 - 从数组创建 ReadableStream 并逐个读取元素
 
 ::: code-group
 
@@ -425,7 +425,7 @@ const { done } = await reader.read() // done: true，但数据可能未读完
 
 :::
 
-## 13. 💻 demos.2 - 实现一个无限数据生成器流
+## 13. demos.2 - 实现一个无限数据生成器流
 
 ::: code-group
 

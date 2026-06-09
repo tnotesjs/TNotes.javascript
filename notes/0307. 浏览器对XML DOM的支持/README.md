@@ -2,17 +2,17 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 DOM Level 2 Core 如何创建 XML 文档？](#3--dom-level-2-core-如何创建-xml-文档)
-- [4. 🤔 `DOMParser` 如何解析 XML 字符串？](#4--domparser-如何解析-xml-字符串)
-- [5. 🤔 如何检测 XML 解析错误？](#5--如何检测-xml-解析错误)
-- [6. 🤔 `XMLSerializer` 如何序列化 DOM？](#6--xmlserializer-如何序列化-dom)
-- [7. 🤔 XML DOM 和 HTML DOM 有什么使用差异？](#7--xml-dom-和-html-dom-有什么使用差异)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. DOM Level 2 Core 如何创建 XML 文档？](#3-dom-level-2-core-如何创建-xml-文档)
+- [4. `DOMParser` 如何解析 XML 字符串？](#4-domparser-如何解析-xml-字符串)
+- [5. 如何检测 XML 解析错误？](#5-如何检测-xml-解析错误)
+- [6. `XMLSerializer` 如何序列化 DOM？](#6-xmlserializer-如何序列化-dom)
+- [7. XML DOM 和 HTML DOM 有什么使用差异？](#7-xml-dom-和-html-dom-有什么使用差异)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - DOM Level 2 Core 创建 XML 文档
 - `document.implementation.createDocument()`
@@ -20,11 +20,11 @@
 - XML 解析错误检测
 - `XMLSerializer` 序列化 DOM 文档
 
-## 2. 🫧 评价
+## 2. 评价
 
 - XML DOM 的 API 看起来像在操作普通 DOM，这正是它的价值；只要文档被解析成节点树，后续读写就回到了熟悉的 DOM 编程模型。
 
-## 3. 🤔 DOM Level 2 Core 如何创建 XML 文档？
+## 3. DOM Level 2 Core 如何创建 XML 文档？
 
 DOM Level 2 Core 在 `document.implementation` 上提供了 `createDocument()`，可以创建一个新的 XML 文档。
 
@@ -52,7 +52,7 @@ xmlDocument.documentElement.appendChild(child)
 
 实践中，凭空创建 XML 文档再一点点拼节点并不常见。更常见的需求是把已有 XML 字符串解析成 DOM，或者把 DOM 序列化回 XML 字符串。
 
-## 4. 🤔 `DOMParser` 如何解析 XML 字符串？
+## 4. `DOMParser` 如何解析 XML 字符串？
 
 `DOMParser` 用于把字符串解析成 DOM 文档。
 
@@ -78,7 +78,7 @@ console.log(children.length) // 2
 
 解析 XML 时，内容类型应该使用 `text/xml`、`application/xml` 或具体 XML MIME 类型。不要把 XML 解析当成 HTML 解析；XML 要求格式良好，标签闭合、大小写、嵌套结构都更严格。
 
-## 5. 🤔 如何检测 XML 解析错误？
+## 5. 如何检测 XML 解析错误？
 
 `DOMParser` 只能可靠解析格式良好的 XML。解析失败时，不同浏览器的历史行为并不完全一致：有的会返回包含 `parsererror` 元素的文档，有的早期实现可能直接抛错。
 
@@ -106,7 +106,7 @@ try {
 
 这里的重点不是完全统一所有浏览器的错误格式，而是不要在解析失败后继续把错误文档当成正常 XML 使用。
 
-## 6. 🤔 `XMLSerializer` 如何序列化 DOM？
+## 6. `XMLSerializer` 如何序列化 DOM？
 
 `XMLSerializer` 做的是 `DOMParser` 的反向工作：把 DOM 节点序列化成 XML 字符串。
 
@@ -131,7 +131,7 @@ try {
 }
 ```
 
-## 7. 🤔 XML DOM 和 HTML DOM 有什么使用差异？
+## 7. XML DOM 和 HTML DOM 有什么使用差异？
 
 XML DOM 和 HTML DOM 都是节点树，但 XML 的规则更严格。
 

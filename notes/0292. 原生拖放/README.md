@@ -2,18 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 原生拖放由哪些部分组成？](#3--原生拖放由哪些部分组成)
-- [4. 🤔 拖动源会触发哪些事件？](#4--拖动源会触发哪些事件)
-- [5. 🤔 放置目标会触发哪些事件？](#5--放置目标会触发哪些事件)
-- [6. 🤔 `dataTransfer` 如何传递数据？](#6--datatransfer-如何传递数据)
-- [7. 🤔 `dropEffect` 和 `effectAllowed` 有什么关系？](#7--dropeffect-和-effectallowed-有什么关系)
-- [8. 🤔 还有哪些拖放辅助能力？](#8--还有哪些拖放辅助能力)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 原生拖放由哪些部分组成？](#3-原生拖放由哪些部分组成)
+- [4. 拖动源会触发哪些事件？](#4-拖动源会触发哪些事件)
+- [5. 放置目标会触发哪些事件？](#5-放置目标会触发哪些事件)
+- [6. `dataTransfer` 如何传递数据？](#6-datatransfer-如何传递数据)
+- [7. `dropEffect` 和 `effectAllowed` 有什么关系？](#7-dropeffect-和-effectallowed-有什么关系)
+- [8. 还有哪些拖放辅助能力？](#8-还有哪些拖放辅助能力)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - HTML 原生拖放模型
 - 拖动源事件与放置目标事件
@@ -21,11 +21,11 @@
 - `dataTransfer` 传递数据
 - `dropEffect`、`effectAllowed` 和 `draggable`
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 原生拖放 API 历史味很浓，但理解事件流和 `dataTransfer` 后，它仍然能很好地处理文件拖入、列表重排和跨区域移动这类场景。
 
-## 3. 🤔 原生拖放由哪些部分组成？
+## 3. 原生拖放由哪些部分组成？
 
 HTML 原生拖放主要由三部分组成：
 
@@ -40,7 +40,7 @@ HTML 原生拖放主要由三部分组成：
 <div id="dropZone">放到这里</div>
 ```
 
-## 4. 🤔 拖动源会触发哪些事件？
+## 4. 拖动源会触发哪些事件？
 
 拖动源常见事件包括：
 
@@ -63,7 +63,7 @@ card.addEventListener('dragstart', (event) => {
 
 `effectAllowed` 表示拖动源允许的操作，例如 `copy`、`move`、`link`、`copyMove`、`all` 等。
 
-## 5. 🤔 放置目标会触发哪些事件？
+## 5. 放置目标会触发哪些事件？
 
 放置目标常见事件包括：
 
@@ -96,7 +96,7 @@ dropZone.addEventListener('drop', (event) => {
 
 如果不阻止默认行为，很多元素不会触发你期望的 `drop` 处理。
 
-## 6. 🤔 `dataTransfer` 如何传递数据？
+## 6. `dataTransfer` 如何传递数据？
 
 `dataTransfer` 是拖放事件里最关键的对象。它可以存取拖放数据，也可以描述拖放效果。
 
@@ -125,7 +125,7 @@ dropZone.addEventListener('drop', (event) => {
 })
 ```
 
-## 7. 🤔 `dropEffect` 和 `effectAllowed` 有什么关系？
+## 7. `dropEffect` 和 `effectAllowed` 有什么关系？
 
 `effectAllowed` 由拖动源设置，表示允许哪些操作。`dropEffect` 通常由放置目标设置，表示当前放置将执行什么操作。
 
@@ -149,7 +149,7 @@ dropZone.addEventListener('dragover', (event) => {
 - `move`：移动。
 - `link`：创建链接。
 
-## 8. 🤔 还有哪些拖放辅助能力？
+## 8. 还有哪些拖放辅助能力？
 
 `draggable` 控制元素是否可拖。
 

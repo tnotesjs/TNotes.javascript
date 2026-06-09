@@ -2,18 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 为什么需要流式处理？](#3--为什么需要流式处理)
-- [4. 🤔 块、队列和反压是什么？](#4--块队列和反压是什么)
-- [5. 🤔 如何创建和读取 `ReadableStream`？](#5--如何创建和读取-readablestream)
-- [6. 🤔 如何创建和写入 `WritableStream`？](#6--如何创建和写入-writablestream)
-- [7. 🤔 `TransformStream` 如何转换数据？](#7--transformstream-如何转换数据)
-- [8. 🤔 `pipeThrough()` 和 `pipeTo()` 有什么区别？](#8--pipethrough-和-pipeto-有什么区别)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 为什么需要流式处理？](#3-为什么需要流式处理)
+- [4. 块、队列和反压是什么？](#4-块队列和反压是什么)
+- [5. 如何创建和读取 `ReadableStream`？](#5-如何创建和读取-readablestream)
+- [6. 如何创建和写入 `WritableStream`？](#6-如何创建和写入-writablestream)
+- [7. `TransformStream` 如何转换数据？](#7-transformstream-如何转换数据)
+- [8. `pipeThrough()` 和 `pipeTo()` 有什么区别？](#8-pipethrough-和-pipeto-有什么区别)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - Streams API 的核心概念
 - 块、内部队列、反压和高水位线
@@ -21,11 +21,11 @@
 - `getReader()`、`getWriter()` 与读写循环
 - `pipeThrough()` 和 `pipeTo()` 管道连接
 
-## 2. 🫧 评价
+## 2. 评价
 
 - Streams API 的抽象一开始有点绕，但它解决的是很朴素的问题：数据不必等全部到齐，应用可以边到、边处理、边输出。
 
-## 3. 🤔 为什么需要流式处理？
+## 3. 为什么需要流式处理？
 
 很多数据不是一次性完整出现的。网络响应、文件读取、压缩结果、编码解码、实时日志都可能是一块一块到达。如果等所有数据都加载完再处理，会增加内存占用，也会延迟用户看到结果的时间。
 
@@ -35,7 +35,7 @@ Streams API 允许 JavaScript 以流的方式处理数据：
 - 可写流负责消费数据块。
 - 转换流负责把输入块转换成输出块。
 
-## 4. 🤔 块、队列和反压是什么？
+## 4. 块、队列和反压是什么？
 
 流中的每一小段数据称为 chunk，也就是块。块可以是字符串、对象、定型数组或其他值，具体取决于流的设计。
 
@@ -43,7 +43,7 @@ Streams API 允许 JavaScript 以流的方式处理数据：
 
 高水位线用于描述队列期望的最大积压量。队列达到高水位线后，流会通过状态信号告诉生产者别再继续塞数据。
 
-## 5. 🤔 如何创建和读取 `ReadableStream`？
+## 5. 如何创建和读取 `ReadableStream`？
 
 `ReadableStream` 表示可读数据源。
 
@@ -80,7 +80,7 @@ const response = await fetch('/api/logs')
 const reader = response.body.getReader()
 ```
 
-## 6. 🤔 如何创建和写入 `WritableStream`？
+## 6. 如何创建和写入 `WritableStream`？
 
 `WritableStream` 表示可写目标。创建时可以提供 `write()`、`close()` 和 `abort()` 等方法。
 
@@ -108,7 +108,7 @@ await writer.close()
 
 `writer.ready` 会在内部队列适合继续写入时解决，这就是反压在写入端的体现。
 
-## 7. 🤔 `TransformStream` 如何转换数据？
+## 7. `TransformStream` 如何转换数据？
 
 `TransformStream` 同时有可写端和可读端。写入端接收输入块，转换后从可读端输出。
 
@@ -124,7 +124,7 @@ const doubleStream = new TransformStream({
 
 Encoding API 的 `TextDecoderStream` 就是典型转换流：输入字节块，输出字符串块。
 
-## 8. 🤔 `pipeThrough()` 和 `pipeTo()` 有什么区别？
+## 8. `pipeThrough()` 和 `pipeTo()` 有什么区别？
 
 管道可以把流连接起来。
 

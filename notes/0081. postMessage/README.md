@@ -3,9 +3,9 @@
 <!-- region:toc -->
 
 - [1. 本节内容](#1-本节内容)
-- [2. 🫧 评论](#2--评论)
-- [3. 📒 `postMessage`](#3--postmessage)
-- [4. 💻 demos.1 - 使用 postMessage 实现跨标签页通信](#4--demos1---使用-postmessage-实现跨标签页通信)
+- [2. 评论](#2-评论)
+- [3. `postMessage`](#3-postmessage)
+- [4. demos.1 - 使用 postMessage 实现跨标签页通信](#4-demos1---使用-postmessage-实现跨标签页通信)
 - [5. 引用](#5-引用)
 
 <!-- endregion:toc -->
@@ -14,18 +14,18 @@
 
 - `postMessage`
 
-## 2. 🫧 评论
+## 2. 评论
 
 - 面试题可能会遇到：你都知道哪些实现跨标签通信的方式？
   - 要知道，使用 `postMessage` 是实现跨标签页通信的一种方案。
 - demos.1 通过 `postMessage` 来模拟了两个页面之间的通信效果。
 
-## 3. 📒 `postMessage`
+## 3. `postMessage`
 
 - `postMessage` API 可用于实现不同窗口、标签页或 iframe 之间的安全通信。
 - `postMessage` 允许你向另一个浏览上下文（如新打开的窗口、iframe 等）发送消息，并可以接收来自这些上下文的消息。
 
-## 4. 💻 demos.1 - 使用 postMessage 实现跨标签页通信
+## 4. demos.1 - 使用 postMessage 实现跨标签页通信
 
 ::: code-group
 

@@ -4,13 +4,13 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 OscillatorNode 的四种内置波形分别模拟什么样的音色特征？](#3--oscillatornode-的四种内置波形分别模拟什么样的音色特征)
-- [4. 🤔 如何使用 OscillatorNode 演奏一个指定 MIDI 音符编号对应的音高？](#4--如何使用-oscillatornode-演奏一个指定-midi-音符编号对应的音高)
-- [5. 🤔 PeriodicWave 是如何通过傅里叶系数定义自定义波形的？](#5--periodicwave-是如何通过傅里叶系数定义自定义波形的)
-- [6. 🤔 如何用 GainNode 实现 ADSR 包络来模拟钢琴的音色衰减？](#6--如何用-gainnode-实现-adsr-包络来模拟钢琴的音色衰减)
-- [7. 🤔 detune 属性的单位是什么，如何用它实现微分音演奏？](#7--detune-属性的单位是什么如何用它实现微分音演奏)
-- [8. 🤔 如何使用多个 OscillatorNode 同时发声来合成一个和弦？](#8--如何使用多个-oscillatornode-同时发声来合成一个和弦)
-- [9. 🤔 如何使用 AudioBuffer 生成白噪声并用滤波器将其变为粉噪声？](#9--如何使用-audiobuffer-生成白噪声并用滤波器将其变为粉噪声)
+- [3. OscillatorNode 的四种内置波形分别模拟什么样的音色特征？](#3-oscillatornode-的四种内置波形分别模拟什么样的音色特征)
+- [4. 如何使用 OscillatorNode 演奏一个指定 MIDI 音符编号对应的音高？](#4-如何使用-oscillatornode-演奏一个指定-midi-音符编号对应的音高)
+- [5. PeriodicWave 是如何通过傅里叶系数定义自定义波形的？](#5-periodicwave-是如何通过傅里叶系数定义自定义波形的)
+- [6. 如何用 GainNode 实现 ADSR 包络来模拟钢琴的音色衰减？](#6-如何用-gainnode-实现-adsr-包络来模拟钢琴的音色衰减)
+- [7. detune 属性的单位是什么，如何用它实现微分音演奏？](#7-detune-属性的单位是什么如何用它实现微分音演奏)
+- [8. 如何使用多个 OscillatorNode 同时发声来合成一个和弦？](#8-如何使用多个-oscillatornode-同时发声来合成一个和弦)
+- [9. 如何使用 AudioBuffer 生成白噪声并用滤波器将其变为粉噪声？](#9-如何使用-audiobuffer-生成白噪声并用滤波器将其变为粉噪声)
 
 <!-- endregion:toc -->
 
@@ -31,7 +31,7 @@
 
 - todo
 
-## 3. 🤔 OscillatorNode 的四种内置波形分别模拟什么样的音色特征？
+## 3. OscillatorNode 的四种内置波形分别模拟什么样的音色特征？
 
 OscillatorNode 提供四种内置波形：`sine`、`square`、`sawtooth`、`triangle`。它们的区别在于谐波成分的组成不同，直接决定了音色特征。
 
@@ -49,7 +49,7 @@ OscillatorNode 提供四种内置波形：`sine`、`square`、`sawtooth`、`tria
 
 在实际使用中，单一振荡器的音色通常比较单薄。合成器通常通过叠加多个振荡器（如一个锯齿波 + 一个正弦波做低音增强）、添加滤波器（去掉高频谐波让音色变暗）和包络控制（让音色随时间变化）来创造更丰富的音色。
 
-## 4. 🤔 如何使用 OscillatorNode 演奏一个指定 MIDI 音符编号对应的音高？
+## 4. 如何使用 OscillatorNode 演奏一个指定 MIDI 音符编号对应的音高？
 
 MIDI 音符编号是一个标准体系，编号 0 到 127 对应从 C-1 到 G9 的全部音高。其中编号 60 对应中央 C（C4），编号 69 对应标准音高 A4（440Hz）。
 
@@ -113,7 +113,7 @@ osc.detune.value = (midiNote - 69) * 100
 
 常用 MIDI 编号速查：60 = C4（中央 C），64 = E4，67 = G4，72 = C5，48 = C3（低八度），36 = C2（低两个八度）。
 
-## 5. 🤔 PeriodicWave 是如何通过傅里叶系数定义自定义波形的？
+## 5. PeriodicWave 是如何通过傅里叶系数定义自定义波形的？
 
 `PeriodicWave` 允许通过傅里叶级数的系数来定义任意周期波形。傅里叶级数的核心思想是：任何周期信号都可以分解为一系列不同频率和幅度的正弦波的叠加。反过来，通过指定这些正弦波的系数，就可以合成出任意波形。
 
@@ -185,7 +185,7 @@ const wave = ctx.createPeriodicWave(real, imag, { disableNormalization: true })
 
 数组越长（谐波数越多），合成的波形越精确。通常 20 到 40 个谐波就能很好地还原大多数波形。
 
-## 6. 🤔 如何用 GainNode 实现 ADSR 包络来模拟钢琴的音色衰减？
+## 6. 如何用 GainNode 实现 ADSR 包络来模拟钢琴的音色衰减？
 
 ADSR 包络是声音合成中最基本的音量变化模型，由四个阶段组成：
 
@@ -319,7 +319,7 @@ function playRichPianoNote(frequency) {
 }
 ```
 
-## 7. 🤔 detune 属性的单位是什么，如何用它实现微分音演奏？
+## 7. detune 属性的单位是什么，如何用它实现微分音演奏？
 
 `detune` 属性的单位是音分（cent）。一个八度被等分为 1200 音分，因此一个半音等于 100 音分。`detune` 的默认值为 0，正值表示升高音高，负值表示降低音高。
 
@@ -399,7 +399,7 @@ osc2.detune.value = -12
 
 `detune` 的取值范围通常没有硬性限制，但超过 ±2400 音分（两个八度）的效果在实际使用中很少有意义。
 
-## 8. 🤔 如何使用多个 OscillatorNode 同时发声来合成一个和弦？
+## 8. 如何使用多个 OscillatorNode 同时发声来合成一个和弦？
 
 和弦由多个音同时发声组成。最基本的实现方式是为和弦中的每个音创建独立的 OscillatorNode，同时连接到目标节点。
 
@@ -505,7 +505,7 @@ gain.connect(convolver)
 
 自动停止与清理。务必在所有 OscillatorNode 播放结束后断开连接，避免节点泄漏。可以监听最后一个 OscillatorNode 的 `ended` 事件进行统一清理。
 
-## 9. 🤔 如何使用 AudioBuffer 生成白噪声并用滤波器将其变为粉噪声？
+## 9. 如何使用 AudioBuffer 生成白噪声并用滤波器将其变为粉噪声？
 
 白噪声（White Noise）是包含所有频率且各频率能量相等的随机信号。粉噪声（Pink Noise，又称 1/f 噪声）是低频能量高于高频的噪声，每倍频程（频率翻倍）能量衰减 3dB。粉噪声在自然界中非常常见（如瀑布声、风声、心跳声），听感比白噪声更「温暖」、更舒适。
 

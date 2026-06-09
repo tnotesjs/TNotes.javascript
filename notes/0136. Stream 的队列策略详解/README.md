@@ -4,19 +4,19 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 CountQueuingStrategy 和 ByteLengthQueuingStrategy 的主要区别是什么 ？](#3--countqueuingstrategy-和-bytelengthqueuingstrategy-的主要区别是什么-)
+- [3. CountQueuingStrategy 和 ByteLengthQueuingStrategy 的主要区别是什么 ？](#3-countqueuingstrategy-和-bytelengthqueuingstrategy-的主要区别是什么-)
   - [3.1. CountQueuingStrategy 的计算方式](#31-countqueuingstrategy-的计算方式)
   - [3.2. ByteLengthQueuingStrategy 的计算方式](#32-bytelengthqueuingstrategy-的计算方式)
   - [3.3. 对比表格](#33-对比表格)
   - [3.4. 实际行为差异](#34-实际行为差异)
   - [3.5. size() 函数的实现](#35-size-函数的实现)
-- [4. 🤔 如何为不同类型的数据选择合适的队列策略 ？](#4--如何为不同类型的数据选择合适的队列策略-)
+- [4. 如何为不同类型的数据选择合适的队列策略 ？](#4-如何为不同类型的数据选择合适的队列策略-)
   - [4.1. 数据类型决策树](#41-数据类型决策树)
   - [4.2. 选择矩阵](#42-选择矩阵)
   - [4.3. 实际场景示例](#43-实际场景示例)
   - [4.4. 错误选择的后果](#44-错误选择的后果)
   - [4.5. 性能考量](#45-性能考量)
-- [5. 🤔 自定义队列策略需要实现哪些方法 ？](#5--自定义队列策略需要实现哪些方法-)
+- [5. 自定义队列策略需要实现哪些方法 ？](#5-自定义队列策略需要实现哪些方法-)
   - [5.1. QueuingStrategy 接口定义](#51-queuingstrategy-接口定义)
   - [5.2. 最小实现](#52-最小实现)
   - [5.3. 实战示例：字符串长度策略](#53-实战示例字符串长度策略)
@@ -24,15 +24,15 @@
   - [5.5. 组合策略](#55-组合策略)
   - [5.6. 注意事项](#56-注意事项)
   - [5.7. 使用工厂函数](#57-使用工厂函数)
-- [6. 🤔 队列策略如何影响内存占用和性能 ？](#6--队列策略如何影响内存占用和性能-)
+- [6. 队列策略如何影响内存占用和性能 ？](#6-队列策略如何影响内存占用和性能-)
   - [6.1. 内存占用计算](#61-内存占用计算)
   - [6.2. highWaterMark 对性能的影响](#62-highwatermark-对性能的影响)
   - [6.3. 性能测试对比](#63-性能测试对比)
   - [6.4. 内存与延迟的权衡](#64-内存与延迟的权衡)
   - [6.5. 策略选择对 GC 压力的影响](#65-策略选择对-gc-压力的影响)
   - [6.6. 实际内存监控](#66-实际内存监控)
-- [7. 💻 demos.1 - 对比两种内置队列策略的行为差异](#7--demos1---对比两种内置队列策略的行为差异)
-- [8. 💻 demos.2 - 实现一个基于优先级的自定义队列策略](#8--demos2---实现一个基于优先级的自定义队列策略)
+- [7. demos.1 - 对比两种内置队列策略的行为差异](#7-demos1---对比两种内置队列策略的行为差异)
+- [8. demos.2 - 实现一个基于优先级的自定义队列策略](#8-demos2---实现一个基于优先级的自定义队列策略)
 - [9. 引用](#9-引用)
 
 <!-- endregion:toc -->
@@ -50,7 +50,7 @@
 
 队列策略是 Web Streams 流量控制的基础，通过 size() 函数和 highWaterMark 决定队列容量计算方式。CountQueuingStrategy 按块计数，适合固定大小数据；ByteLengthQueuingStrategy 按字节计数，适合二进制流。理解两者差异和自定义策略的实现方法，能够精准控制内存使用，优化不同场景下的流处理性能。
 
-## 3. 🤔 CountQueuingStrategy 和 ByteLengthQueuingStrategy 的主要区别是什么 ？
+## 3. CountQueuingStrategy 和 ByteLengthQueuingStrategy 的主要区别是什么 ？
 
 CountQueuingStrategy 将每个块的大小计为 1，ByteLengthQueuingStrategy 根据字节长度计算块大小。
 
@@ -151,7 +151,7 @@ console.log(byteStrategy.size(new Uint16Array(50))) // 100（50 * 2 字节）
 
 CountQueuingStrategy 忽略数据大小，适合块大小均匀的场景；ByteLengthQueuingStrategy 精确计量，适合二进制数据流。
 
-## 4. 🤔 如何为不同类型的数据选择合适的队列策略 ？
+## 4. 如何为不同类型的数据选择合适的队列策略 ？
 
 根据数据类型、大小分布和内存敏感度选择策略。
 
@@ -292,7 +292,7 @@ byte.size(chunk) // 读取 chunk.byteLength 属性
 
 选择策略的核心原则：数据大小均匀用 Count，大小不一用 ByteLength，追求极致性能可自定义。
 
-## 5. 🤔 自定义队列策略需要实现哪些方法 ？
+## 5. 自定义队列策略需要实现哪些方法 ？
 
 必须实现 size(chunk) 方法并提供 highWaterMark 属性。
 
@@ -472,7 +472,7 @@ const stream = new ReadableStream({ pull(controller) {} }, strategy)
 
 自定义策略的 size() 方法必须同步执行，返回非负数，且应尽量高效。
 
-## 6. 🤔 队列策略如何影响内存占用和性能 ？
+## 6. 队列策略如何影响内存占用和性能 ？
 
 队列策略通过 highWaterMark 和 size() 控制缓冲区大小，直接影响内存使用和调度频率。
 
@@ -679,7 +679,7 @@ await monitorMemory(stream2)
 
 队列策略是性能调优的关键杠杆，需根据数据特征、内存限制和延迟要求综合权衡。
 
-## 7. 💻 demos.1 - 对比两种内置队列策略的行为差异
+## 7. demos.1 - 对比两种内置队列策略的行为差异
 
 ::: code-group
 
@@ -689,7 +689,7 @@ await monitorMemory(stream2)
 
 :::
 
-## 8. 💻 demos.2 - 实现一个基于优先级的自定义队列策略
+## 8. demos.2 - 实现一个基于优先级的自定义队列策略
 
 ::: code-group
 

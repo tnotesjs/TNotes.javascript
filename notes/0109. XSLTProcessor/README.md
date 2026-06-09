@@ -12,8 +12,8 @@
   - [4.1. 示例：使用 transformToFragment](#41-示例使用-transformtofragment)
 - [5. `XSLTProcessor` 在 Blockly 代码中的作用](#5-xsltprocessor-在-blockly-代码中的作用)
   - [5.1. `XSLTProcessor` 的优缺点](#51-xsltprocessor-的优缺点)
-- [6. ✅ 优点](#6--优点)
-- [7. ❌ 缺点](#7--缺点)
+- [6. 优点](#6-优点)
+- [7. 缺点](#7-缺点)
   - [7.1. 现代替代方案](#71-现代替代方案)
 
 <!-- endregion:toc -->
@@ -27,9 +27,7 @@
 - `Blockly` 使用 `XSLTProcessor` 解析 **工具箱 XML**，但 **IE 9+ 不支持**，因此需要兼容处理。
 - 在现代 JavaScript 中，通常使用 **DOMParser** 或 **前端框架（React/Vue）** 代替 `XSLTProcessor` 进行 XML 解析和渲染。
 
-虽然 `XSLTProcessor` **在某些场景仍然有效**，但由于其 **跨浏览器兼容性问题**，它已经逐渐被 **现代 JavaScript 解析技术** 所取代。
-XSLTProcessor 介绍
-
+虽然 `XSLTProcessor` **在某些场景仍然有效**，但由于其 **跨浏览器兼容性问题**，它已经逐渐被 **现代 JavaScript 解析技术** 所取代。XSLTProcessor 介绍
 
 ## 2. `XSLTProcessor` 的工作流程
 
@@ -126,11 +124,11 @@ transformXML()
 
 ## 4. `XSLTProcessor` 主要方法
 
-| 方法                                    | 作用                                            |
-| --------------------------------------- | ----------------------------------------------- |
-| `importStylesheet(xslDoc)`              | 导入 XSLT 样式表（XSL 文档对象）                |
+| 方法 | 作用 |
+| --- | --- |
+| `importStylesheet(xslDoc)` | 导入 XSLT 样式表（XSL 文档对象） |
 | `transformToFragment(xmlDoc, document)` | 将 XML 转换为 **HTML 片段（DocumentFragment）** |
-| `transformToDocument(xmlDoc)`           | 将 XML 转换为 **完整的 HTML 文档（Document）**  |
+| `transformToDocument(xmlDoc)` | 将 XML 转换为 **完整的 HTML 文档（Document）** |
 
 ### 4.1. 示例：使用 transformToFragment
 
@@ -162,13 +160,13 @@ if (typeof XSLTProcessor == 'undefined' && tree.outerHTML) {
 
 ### 5.1. `XSLTProcessor` 的优缺点
 
-## 6. ✅ 优点
+## 6. 优点
 
 - **支持结构化转换**：适用于 XML 到 HTML 的结构化转换。
 - **浏览器原生支持**（但不包括 IE9+）。
 - **适用于数据模板**：可以用 XSLT 模板渲染 XML 数据，而不依赖 JavaScript。
 
-## 7. ❌ 缺点
+## 7. 缺点
 
 - **不支持所有浏览器**（IE 9+ 不支持 `XSLTProcessor`）。
 - **性能较低**（相比 JavaScript 操作 DOM）。
@@ -178,13 +176,7 @@ if (typeof XSLTProcessor == 'undefined' && tree.outerHTML) {
 
 ### 7.1. 现代替代方案
 
-由于 `XSLTProcessor` 在 **现代 JavaScript 开发中使用较少**，以下是更常见的替代方案：
-| 方法 | 说明 |
-|------|------|
-| **DOMParser** | 使用 `DOMParser().parseFromString(xmlString, "text/xml")` 解析 XML |
-| **JavaScript 操作 DOM** | 使用 `document.createElement()` 直接构造 HTML 结构 |
-| **JavaScript 模板** | 使用 `Handlebars.js`、`Mustache.js` 进行 XML/HTML 渲染 |
-| **React/Vue** | 使用 React/Vue 解析 XML 并渲染组件 |
+由于 `XSLTProcessor` 在 **现代 JavaScript 开发中使用较少**，以下是更常见的替代方案：| 方法 | 说明 | |------|------| | **DOMParser** | 使用 `DOMParser().parseFromString(xmlString, "text/xml")` 解析 XML | | **JavaScript 操作 DOM** | 使用 `document.createElement()` 直接构造 HTML 结构 | | **JavaScript 模板** | 使用 `Handlebars.js`、`Mustache.js` 进行 XML/HTML 渲染 | | **React/Vue** | 使用 React/Vue 解析 XML 并渲染组件 |
 
 示例：使用 `DOMParser` 手动解析 XML：
 

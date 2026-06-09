@@ -2,36 +2,36 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 流处理中容易导致内存泄漏的常见模式有哪些 ？](#3--流处理中容易导致内存泄漏的常见模式有哪些-)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 流处理中容易导致内存泄漏的常见模式有哪些 ？](#3-流处理中容易导致内存泄漏的常见模式有哪些-)
   - [3.1. 未释放 Reader](#31-未释放-reader)
   - [3.2. 未取消的流](#32-未取消的流)
   - [3.3. TransformStream 中积累数据](#33-transformstream-中积累数据)
   - [3.4. 事件监听器泄漏](#34-事件监听器泄漏)
   - [3.5. 循环引用](#35-循环引用)
-- [4. 🤔 如何选择合适的 Chunk 大小以平衡性能和内存 ？](#4--如何选择合适的-chunk-大小以平衡性能和内存-)
+- [4. 如何选择合适的 Chunk 大小以平衡性能和内存 ？](#4-如何选择合适的-chunk-大小以平衡性能和内存-)
   - [4.1. 不同场景的推荐大小](#41-不同场景的推荐大小)
   - [4.2. 动态调整 Chunk 大小](#42-动态调整-chunk-大小)
   - [4.3. 基于内存限制调整](#43-基于内存限制调整)
   - [4.4. 性能测试工具](#44-性能测试工具)
-- [5. 🤔 在什么情况下可以安全地复用流 ？](#5--在什么情况下可以安全地复用流-)
+- [5. 在什么情况下可以安全地复用流 ？](#5-在什么情况下可以安全地复用流-)
   - [5.1. 使用 tee() 创建多个读取器](#51-使用-tee-创建多个读取器)
   - [5.2. 缓存流数据](#52-缓存流数据)
   - [5.3. 流的条件复用](#53-流的条件复用)
   - [5.4. ⚠️ 不能复用的情况](#54-️-不能复用的情况)
-- [6. 🤔 如何监控和调试流的性能问题 ？](#6--如何监控和调试流的性能问题-)
+- [6. 如何监控和调试流的性能问题 ？](#6-如何监控和调试流的性能问题-)
   - [6.1. 使用 Performance API](#61-使用-performance-api)
   - [6.2. 监控内存使用](#62-监控内存使用)
   - [6.3. 流量统计](#63-流量统计)
   - [6.4. 实时监控仪表板](#64-实时监控仪表板)
-- [7. 💻 demos.1 - 诊断并修复内存泄漏问题](#7--demos1---诊断并修复内存泄漏问题)
-- [8. 💻 demos.2 - Chunk 大小对性能的影响对比](#8--demos2---chunk-大小对性能的影响对比)
-- [9. 💻 demos.3 - 使用 Performance API 监控流性能](#9--demos3---使用-performance-api-监控流性能)
+- [7. demos.1 - 诊断并修复内存泄漏问题](#7-demos1---诊断并修复内存泄漏问题)
+- [8. demos.2 - Chunk 大小对性能的影响对比](#8-demos2---chunk-大小对性能的影响对比)
+- [9. demos.3 - 使用 Performance API 监控流性能](#9-demos3---使用-performance-api-监控流性能)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 内存泄漏的常见原因
 - Chunk 大小的优化策略
@@ -40,11 +40,11 @@
 - 性能监控与调试工具
 - 最佳实践清单
 
-## 2. 🫧 评价
+## 2. 评价
 
 流的性能优化需要在内存占用、处理速度和代码复杂度之间权衡。内存泄漏多源于未正确释放 reader 或忘记取消流。Chunk 大小直接影响性能，太小增加开销，太大占用内存。流的复用需谨慎，必须确保流未被锁定。使用 Performance API 和 Memory Profiler 可有效诊断问题。遵循最佳实践能避免大部分性能陷阱。
 
-## 3. 🤔 流处理中容易导致内存泄漏的常见模式有哪些 ？
+## 3. 流处理中容易导致内存泄漏的常见模式有哪些 ？
 
 主要包括未释放 reader、未取消流、在 TransformStream 中积累数据、事件监听器未移除等。
 
@@ -187,7 +187,7 @@ function goodReference() {
 }
 ```
 
-## 4. 🤔 如何选择合适的 Chunk 大小以平衡性能和内存 ？
+## 4. 如何选择合适的 Chunk 大小以平衡性能和内存 ？
 
 需要根据数据类型、网络条件、内存限制进行测试和调整。
 
@@ -337,7 +337,7 @@ async function benchmarkChunkSizes(stream, sizes) {
           chunkCount++
           controller.enqueue(chunk)
         },
-      })
+      }),
     )
 
     await testStream.pipeTo(new WritableStream({ write() {} }))
@@ -363,7 +363,7 @@ const results = await benchmarkChunkSizes(myStream, sizes)
 console.table(results)
 ```
 
-## 5. 🤔 在什么情况下可以安全地复用流 ？
+## 5. 在什么情况下可以安全地复用流 ？
 
 流只能被读取一次，但可以通过 `tee()` 创建副本或缓存数据后重放。
 
@@ -501,7 +501,7 @@ const reader1 = stream.getReader()
 const reader2 = stream.getReader() // ❌ 错误：只能有一个 reader
 ```
 
-## 6. 🤔 如何监控和调试流的性能问题 ？
+## 6. 如何监控和调试流的性能问题 ？
 
 使用 Performance API、Memory Profiler、自定义日志和可视化工具。
 
@@ -562,7 +562,7 @@ await stream
         controller.enqueue(processChunk(chunk))
         monitor.mark('transform-end')
       },
-    })
+    }),
   )
   .pipeTo(destination)
 
@@ -667,14 +667,14 @@ function createStatsTransform() {
       console.log(`总分片: ${stats.chunkCount}`)
       console.log(
         `平均分片大小: ${(stats.totalBytes / stats.chunkCount / 1024).toFixed(
-          2
-        )} KB`
+          2,
+        )} KB`,
       )
       console.log(`最小分片: ${(stats.minChunkSize / 1024).toFixed(2)} KB`)
       console.log(`最大分片: ${(stats.maxChunkSize / 1024).toFixed(2)} KB`)
       console.log(`耗时: ${duration.toFixed(2)}s`)
       console.log(
-        `吞吐量: ${(stats.totalBytes / duration / 1024 / 1024).toFixed(2)} MB/s`
+        `吞吐量: ${(stats.totalBytes / duration / 1024 / 1024).toFixed(2)} MB/s`,
       )
     },
   })
@@ -740,19 +740,19 @@ class StreamDashboard {
 
 监控和调试需要结合多种工具，关注内存、性能和流量指标。
 
-## 7. 💻 demos.1 - 诊断并修复内存泄漏问题
+## 7. demos.1 - 诊断并修复内存泄漏问题
 
 演示如何诊断和修复流处理中的内存泄漏。包含 6 个场景，展示 3 种常见的内存泄漏模式及其正确的修复方法。实时监控内存使用情况，通过图表可视化内存增长趋势。
 
 [查看演示代码](./demos/1/)
 
-## 8. 💻 demos.2 - Chunk 大小对性能的影响对比
+## 8. demos.2 - Chunk 大小对性能的影响对比
 
 对比不同 Chunk 大小（4KB ~ 5MB）对流处理性能的影响。测试吞吐量、延迟、Chunk 数量等关键指标，通过图表展示最优 Chunk 大小。支持自定义数据大小和测试轮次。
 
 [查看演示代码](./demos/2/)
 
-## 9. 💻 demos.3 - 使用 Performance API 监控流性能
+## 9. demos.3 - 使用 Performance API 监控流性能
 
 实时监控流的性能指标，包括活跃 Stream 数量、总吞吐量、平均延迟、内存使用等。通过可视化图表展示性能趋势，帮助识别性能瓶颈。支持模拟多个并发流。
 

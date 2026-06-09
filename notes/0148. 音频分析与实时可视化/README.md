@@ -4,13 +4,13 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 AnalyserNode 的 fftSize 为什么必须是 2 的幂次方？](#3--analysernode-的-fftsize-为什么必须是-2-的幂次方)
-- [4. 🤔 frequencyBinCount 和 fftSize 之间是什么关系？](#4--frequencybincount-和-fftsize-之间是什么关系)
-- [5. 🤔 getByteFrequencyData 和 getFloatFrequencyData 返回的数据有什么区别？](#5--getbytefrequencydata-和-getfloatfrequencydata-返回的数据有什么区别)
-- [6. 🤔 如何使用 Canvas 绘制实时音频频谱柱状图？](#6--如何使用-canvas-绘制实时音频频谱柱状图)
-- [7. 🤔 如何从 AnalyserNode 的数据中计算当前音频的整体响度？](#7--如何从-analysernode-的数据中计算当前音频的整体响度)
-- [8. 🤔 smoothingTimeConstant 属性对可视化效果有什么影响？](#8--smoothingtimeconstant-属性对可视化效果有什么影响)
-- [9. 🤔 如何实现一个跟随音乐节奏脉动的动画效果？](#9--如何实现一个跟随音乐节奏脉动的动画效果)
+- [3. AnalyserNode 的 fftSize 为什么必须是 2 的幂次方？](#3-analysernode-的-fftsize-为什么必须是-2-的幂次方)
+- [4. frequencyBinCount 和 fftSize 之间是什么关系？](#4-frequencybincount-和-fftsize-之间是什么关系)
+- [5. getByteFrequencyData 和 getFloatFrequencyData 返回的数据有什么区别？](#5-getbytefrequencydata-和-getfloatfrequencydata-返回的数据有什么区别)
+- [6. 如何使用 Canvas 绘制实时音频频谱柱状图？](#6-如何使用-canvas-绘制实时音频频谱柱状图)
+- [7. 如何从 AnalyserNode 的数据中计算当前音频的整体响度？](#7-如何从-analysernode-的数据中计算当前音频的整体响度)
+- [8. smoothingTimeConstant 属性对可视化效果有什么影响？](#8-smoothingtimeconstant-属性对可视化效果有什么影响)
+- [9. 如何实现一个跟随音乐节奏脉动的动画效果？](#9-如何实现一个跟随音乐节奏脉动的动画效果)
 
 <!-- endregion:toc -->
 
@@ -31,7 +31,7 @@
 
 - todo
 
-## 3. 🤔 AnalyserNode 的 fftSize 为什么必须是 2 的幂次方？
+## 3. AnalyserNode 的 fftSize 为什么必须是 2 的幂次方？
 
 这是因为 AnalyserNode 内部使用的是 FFT（快速傅里叶变换）算法，而 FFT 算法的工作原理决定了输入数据的长度必须是 2 的幂次方。
 
@@ -53,7 +53,7 @@ fftSize 的大小直接影响频率分辨率和时间分辨率之间的权衡：
 
 fftSize 越大，频率分辨率越高（能区分更细微的频率差异），但时间分辨率越低（每帧需要更多采样数据，更新更慢）。fftSize 越小则反之。对于音乐可视化，2048 是一个常用平衡点。对于需要快速响应的语音分析，可以使用 512 或 1024。
 
-## 4. 🤔 frequencyBinCount 和 fftSize 之间是什么关系？
+## 4. frequencyBinCount 和 fftSize 之间是什么关系？
 
 `frequencyBinCount` 是 `fftSize` 的一半，即 `frequencyBinCount = fftSize / 2`。
 
@@ -88,7 +88,7 @@ console.log(dataArray.length) // 1024
 
 需要注意，`frequencyBinCount` 是只读属性，不能手动设置。它完全由 `fftSize` 决定。如果想改变数据的长度或精度，只能通过修改 `fftSize` 来间接实现。
 
-## 5. 🤔 getByteFrequencyData 和 getFloatFrequencyData 返回的数据有什么区别？
+## 5. getByteFrequencyData 和 getFloatFrequencyData 返回的数据有什么区别？
 
 两个方法返回的都是频率域数据（频谱），但数据格式和精度不同。
 
@@ -123,7 +123,7 @@ analyser.getFloatFrequencyData(floatData)
 
 还有第三个方法 `getFloatTimeDomainData()`，返回时域的浮点波形数据（-1 到 1），适合需要精确波形分析的场景（如过零率计算、波形显示）。
 
-## 6. 🤔 如何使用 Canvas 绘制实时音频频谱柱状图？
+## 6. 如何使用 Canvas 绘制实时音频频谱柱状图？
 
 频谱柱状图是最常见的音频可视化形式。核心流程是：在每一帧中从 AnalyserNode 获取频率数据，然后映射为柱子的高度绘制到 Canvas 上。
 
@@ -211,7 +211,7 @@ function drawLogSpectrum() {
 
 渐变色和倒影效果。将每个柱子的颜色从底部到顶部设置为渐变，并在柱子下方绘制半透明的倒影，可以显著提升视觉效果。
 
-## 7. 🤔 如何从 AnalyserNode 的数据中计算当前音频的整体响度？
+## 7. 如何从 AnalyserNode 的数据中计算当前音频的整体响度？
 
 整体响度的计算通常使用 RMS（均方根）方法。RMS 代表信号的有效幅度值，与人耳感知的响度有较好的对应关系。
 
@@ -284,7 +284,7 @@ function weightedLoudness(analyser) {
 }
 ```
 
-## 8. 🤔 smoothingTimeConstant 属性对可视化效果有什么影响？
+## 8. smoothingTimeConstant 属性对可视化效果有什么影响？
 
 `smoothingTimeConstant` 是 AnalyserNode 的一个属性，取值范围为 0 到 1（含边界），默认值为 0.8。它控制频谱数据在相邻帧之间的平滑程度。
 
@@ -332,7 +332,7 @@ function updateLoudness(analyser) {
 }
 ```
 
-## 9. 🤔 如何实现一个跟随音乐节奏脉动的动画效果？
+## 9. 如何实现一个跟随音乐节奏脉动的动画效果？
 
 节奏脉动动画的核心思路是：将音频的实时响度映射为某个视觉元素的缩放比例、亮度或其他视觉属性，使元素「跟随」音乐的节拍产生呼吸般的脉动效果。
 

@@ -2,19 +2,19 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 什么是富文本编辑？](#3--什么是富文本编辑)
-- [4. 🤔 `designMode` 是怎么工作的？](#4--designmode-是怎么工作的)
-- [5. 🤔 `contenteditable` 为什么更常用？](#5--contenteditable-为什么更常用)
-- [6. 🤔 `execCommand()` 能做什么？](#6--execcommand-能做什么)
-- [7. 🤔 如何查询当前命令状态？](#7--如何查询当前命令状态)
-- [8. 🤔 如何通过 Selection 和 Range 操作选区？](#8--如何通过-selection-和-range-操作选区)
-- [9. 🤔 富文本内容如何随表单提交？](#9--富文本内容如何随表单提交)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 什么是富文本编辑？](#3-什么是富文本编辑)
+- [4. `designMode` 是怎么工作的？](#4-designmode-是怎么工作的)
+- [5. `contenteditable` 为什么更常用？](#5-contenteditable-为什么更常用)
+- [6. `execCommand()` 能做什么？](#6-execcommand-能做什么)
+- [7. 如何查询当前命令状态？](#7-如何查询当前命令状态)
+- [8. 如何通过 Selection 和 Range 操作选区？](#8-如何通过-selection-和-range-操作选区)
+- [9. 富文本内容如何随表单提交？](#9-富文本内容如何随表单提交)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 富文本编辑的基本实现方式
 - `designMode` 与 `contenteditable`
@@ -22,11 +22,11 @@
 - Selection 与 Range 操作选区
 - 富文本内容如何随表单提交
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 富文本编辑是典型的历史包袱型能力：原生 API 能做不少事，但输出 HTML 和浏览器行为都不够稳定，真正产品化时要格外谨慎。
 
-## 3. 🤔 什么是富文本编辑？
+## 3. 什么是富文本编辑？
 
 富文本编辑也就是所见即所得编辑。用户看到的是格式化后的内容，可以直接加粗、斜体、插入链接、调整列表，而不是手写 HTML。
 
@@ -37,7 +37,7 @@
 
 这两种方式都不是普通表单字段。用户编辑的是 DOM 内容，而不是 `<input>` 或 `<textarea>` 的 `value`。因此，提交给服务器前通常需要额外把 HTML 同步到隐藏字段中。
 
-## 4. 🤔 `designMode` 是怎么工作的？
+## 4. `designMode` 是怎么工作的？
 
 `designMode` 是文档级别的开关。把某个文档的 `designMode` 设置为 `on` 后，整个文档会变成可编辑区域。
 
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
 这种方式来自早期浏览器实现。它的好处是编辑内容被隔离在 `iframe` 文档中，坏处是要处理额外文档、样式、焦点和跨窗口访问问题。
 
-## 5. 🤔 `contenteditable` 为什么更常用？
+## 5. `contenteditable` 为什么更常用？
 
 `contenteditable` 可以让页面中的任意元素变成可编辑区域，不需要额外的 `iframe`。
 
@@ -81,7 +81,7 @@ editor.contentEditable = 'true'
 
 `contenteditable` 比 `designMode` 更轻量，也更容易和页面布局集成，所以更常见。不过它仍然会产生复杂问题，例如粘贴内容清洗、撤销栈、选区恢复、输入法兼容、浏览器生成 HTML 不一致等。
 
-## 6. 🤔 `execCommand()` 能做什么？
+## 6. `execCommand()` 能做什么？
 
 富文本编辑历史上主要通过 `document.execCommand()` 执行格式化命令。它接收三个参数：命令名、是否显示浏览器 UI、命令值。为了兼容，第二个参数通常传 `false`。
 
@@ -111,7 +111,7 @@ document.execCommand('formatBlock', false, 'h1')
 
 因此，`execCommand()` 适合理解原生富文本能力和维护旧项目。新项目如果需要复杂编辑器，通常会选择成熟编辑器框架或基于 Selection、Range 和输入事件自行建模。
 
-## 7. 🤔 如何查询当前命令状态？
+## 7. 如何查询当前命令状态？
 
 与 `execCommand()` 配套的还有几个查询方法。
 
@@ -135,7 +135,7 @@ const fontSize = document.queryCommandValue('fontSize')
 
 这些方法和 `execCommand()` 一样存在浏览器差异。它们适合作为历史 API 使用，不能指望它们提供完全一致的编辑器状态模型。
 
-## 8. 🤔 如何通过 Selection 和 Range 操作选区？
+## 8. 如何通过 Selection 和 Range 操作选区？
 
 现代浏览器可以通过 `getSelection()` 获取当前选区。它返回 `Selection` 对象，包含选区开始、结束、是否折叠和范围数量等信息。
 
@@ -166,7 +166,7 @@ if (selection.rangeCount > 0) {
 
 这段代码直接操作 DOM 范围，比单纯执行格式命令更可控。不过它也会遇到复杂边界，例如选区跨越多个不同父节点时，`surroundContents()` 可能抛错。
 
-## 9. 🤔 富文本内容如何随表单提交？
+## 9. 富文本内容如何随表单提交？
 
 富文本编辑区不是普通表单字段，因此它的内容不会自动随表单提交。常见做法是在表单中放一个隐藏字段，在提交前把编辑区 HTML 写进去。
 

@@ -2,18 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `cookie` 的基本工作流程是什么？](#3--cookie-的基本工作流程是什么)
-- [4. 🤔 `cookie` 有哪些常见限制？](#4--cookie-有哪些常见限制)
-- [5. 🤔 一个 `cookie` 由哪些部分组成？](#5--一个-cookie-由哪些部分组成)
-- [6. 🤔 如何用 JavaScript 读写 `cookie`？](#6--如何用-javascript-读写-cookie)
-- [7. 🤔 什么是子 `cookie`？](#7--什么是子-cookie)
-- [8. 🤔 使用 `cookie` 时要注意什么？](#8--使用-cookie-时要注意什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `cookie` 的基本工作流程是什么？](#3-cookie-的基本工作流程是什么)
+- [4. `cookie` 有哪些常见限制？](#4-cookie-有哪些常见限制)
+- [5. 一个 `cookie` 由哪些部分组成？](#5-一个-cookie-由哪些部分组成)
+- [6. 如何用 JavaScript 读写 `cookie`？](#6-如何用-javascript-读写-cookie)
+- [7. 什么是子 `cookie`？](#7-什么是子-cookie)
+- [8. 使用 `cookie` 时要注意什么？](#8-使用-cookie-时要注意什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - HTTP `cookie` 的基本流程
 - `Set-Cookie` 和 `Cookie` 请求头
@@ -22,11 +22,11 @@
 - 子 `cookie` 的历史用途
 - 使用 `cookie` 的限制和注意事项
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `cookie` 是客户端存储里最容易被误用的一种：它既是存储机制，也是 HTTP 请求状态机制，所以大小、作用域和安全属性都必须格外克制。
 
-## 3. 🤔 `cookie` 的基本工作流程是什么？
+## 3. `cookie` 的基本工作流程是什么？
 
 HTTP `cookie` 最初是为保存会话信息设计的。服务器通过响应头设置 `cookie`，浏览器保存后，会在后续匹配的请求中自动把它带回服务器。
 
@@ -47,7 +47,7 @@ Cookie: sessionId=abc123
 
 这个自动往返能力让 `cookie` 很适合保存会话标识，但也意味着它会增加请求头大小，并且可能引入 CSRF、泄露和滥存数据的问题。
 
-## 4. 🤔 `cookie` 有哪些常见限制？
+## 4. `cookie` 有哪些常见限制？
 
 `cookie` 会绑定到特定域，并受浏览器限制。原书中给出的经验值包括：总数量有限、单个 `cookie` 通常约 4KB、每个域能保存的数量和总大小也有限。
 
@@ -57,7 +57,7 @@ Cookie: sessionId=abc123
 
 因为 `cookie` 会自动随请求发送，保存得越多，请求头越大。对同一个域下的每个请求来说，这都是额外成本。
 
-## 5. 🤔 一个 `cookie` 由哪些部分组成？
+## 5. 一个 `cookie` 由哪些部分组成？
 
 一个 `cookie` 至少包含名称和值，还可以包含一组属性。
 
@@ -80,7 +80,7 @@ Set-Cookie: theme=dark; Max-Age=2592000; Path=/; Secure; SameSite=Lax
 
 `Domain`、`Path`、过期时间和安全属性用于告诉浏览器何时保存、删除、发送或隐藏这个 `cookie`。真正发回服务器的通常只有名值对。
 
-## 6. 🤔 如何用 JavaScript 读写 `cookie`？
+## 6. 如何用 JavaScript 读写 `cookie`？
 
 浏览器提供的接口是 `document.cookie`。读取它时，会得到当前页面可访问的所有非 `HttpOnly` `cookie`，格式是分号分隔的字符串。
 
@@ -152,7 +152,7 @@ const Cookie = {
 
 :::
 
-## 7. 🤔 什么是子 `cookie`？
+## 7. 什么是子 `cookie`？
 
 子 `cookie` 是一种历史技巧：把多个小型名值对塞进同一个 `cookie` 的值里。
 
@@ -164,7 +164,7 @@ data=name=Nicholas&book=Professional%20JavaScript
 
 但子 `cookie` 仍然受单个 `cookie` 大小限制，而且整个值仍然会随请求发送。现代开发中，如果数据只给前端使用，通常应该改用 Web Storage 或 IndexedDB。
 
-## 8. 🤔 使用 `cookie` 时要注意什么？
+## 8. 使用 `cookie` 时要注意什么？
 
 第一，不要把大量数据放入 `cookie`。它会随着匹配请求自动发送，数据越大，请求负担越重。
 

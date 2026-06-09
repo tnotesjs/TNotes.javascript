@@ -2,20 +2,20 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 WebGL 是什么？](#3--webgl-是什么)
-- [4. 🤔 如何取得 WebGL 上下文？](#4--如何取得-webgl-上下文)
-- [5. 🤔 WebGL 的常量、命名和视口有什么特点？](#5--webgl-的常量命名和视口有什么特点)
-- [6. 🤔 缓冲区和定型数组有什么关系？](#6--缓冲区和定型数组有什么关系)
-- [7. 🤔 WebGL 如何报告错误？](#7--webgl-如何报告错误)
-- [8. 🤔 着色器和程序如何组成绘图管线？](#8--着色器和程序如何组成绘图管线)
-- [9. 🤔 WebGL 如何绘图、使用纹理和读取像素？](#9--webgl-如何绘图使用纹理和读取像素)
-- [10. 🤔 WebGL1 和 WebGL2 有哪些差异？](#10--webgl1-和-webgl2-有哪些差异)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. WebGL 是什么？](#3-webgl-是什么)
+- [4. 如何取得 WebGL 上下文？](#4-如何取得-webgl-上下文)
+- [5. WebGL 的常量、命名和视口有什么特点？](#5-webgl-的常量命名和视口有什么特点)
+- [6. 缓冲区和定型数组有什么关系？](#6-缓冲区和定型数组有什么关系)
+- [7. WebGL 如何报告错误？](#7-webgl-如何报告错误)
+- [8. 着色器和程序如何组成绘图管线？](#8-着色器和程序如何组成绘图管线)
+- [9. WebGL 如何绘图、使用纹理和读取像素？](#9-webgl-如何绘图使用纹理和读取像素)
+- [10. WebGL1 和 WebGL2 有哪些差异？](#10-webgl1-和-webgl2-有哪些差异)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - WebGL 与 OpenGL ES 的关系
 - WebGL 上下文、选项、常量和方法命名
@@ -23,11 +23,11 @@
 - GLSL、着色器、程序、uniform 和 attribute
 - 绘图、纹理、像素读取与 WebGL1 / WebGL2 差异
 
-## 2. 🫧 评价
+## 2. 评价
 
 - WebGL 很容易让人觉得陡峭，因为它不是普通 DOM API，而是一套图形管线接口；先抓住上下文、缓冲区、着色器和绘图命令这几根主线，理解成本会低很多。
 
-## 3. 🤔 WebGL 是什么？
+## 3. WebGL 是什么？
 
 WebGL 是 `<canvas>` 的 3D 绘图上下文。它不是 W3C 制定的标准，而是由 Khronos Group 维护，基础来自 OpenGL ES。简单来说，WebGL 把一部分图形硬件能力暴露给浏览器，让 JavaScript 可以通过 GPU 绘制 2D 或 3D 图形。
 
@@ -41,7 +41,7 @@ WebGL 和 2D 上下文的思维方式很不一样：
 
 本书不会完整展开 OpenGL ES 的所有概念，而是从浏览器中使用 WebGL 的角度介绍必要基础。
 
-## 4. 🤔 如何取得 WebGL 上下文？
+## 4. 如何取得 WebGL 上下文？
 
 WebGL 上下文同样通过 `<canvas>` 的 `getContext()` 获取。常见名称包括 `webgl` 和 `webgl2`。
 
@@ -91,7 +91,7 @@ const gl = canvas.getContext('webgl', {
 
 多数场景使用默认值即可，尤其不要随意打开 `preserveDrawingBuffer`，因为它可能影响性能。
 
-## 5. 🤔 WebGL 的常量、命名和视口有什么特点？
+## 5. WebGL 的常量、命名和视口有什么特点？
 
 OpenGL 中很多常量以 `GL_` 开头，WebGL 中则通过上下文对象访问，并去掉 `GL_` 前缀。例如 OpenGL 的 `GL_COLOR_BUFFER_BIT` 在 WebGL 中写作 `gl.COLOR_BUFFER_BIT`。
 
@@ -119,7 +119,7 @@ gl.viewport(0, 0, canvas.width, canvas.height)
 
 也就是说，WebGL 的默认绘制坐标不是网页里的像素坐标，而是图形管线中的裁剪坐标。
 
-## 6. 🤔 缓冲区和定型数组有什么关系？
+## 6. 缓冲区和定型数组有什么关系？
 
 WebGL 绘图需要把顶点数据交给 GPU。JavaScript 里的顶点数据通常保存在定型数组中，例如 `Float32Array`。然后再通过缓冲区传给 WebGL。
 
@@ -150,7 +150,7 @@ gl.deleteBuffer(vertexBuffer)
 
 WebGL 资源通常跟上下文生命周期绑定。页面卸载会释放资源，但长期运行的应用仍然应该主动清理不用的缓冲区、纹理和程序。
 
-## 7. 🤔 WebGL 如何报告错误？
+## 7. WebGL 如何报告错误？
 
 WebGL 的很多错误不会像普通 JavaScript 那样直接抛异常。你需要调用 `gl.getError()` 查询最近的错误状态。
 
@@ -176,7 +176,7 @@ while (errorCode !== gl.NO_ERROR) {
 
 调试 WebGL 时，错误检查很重要。一个状态设置错误可能不会立刻暴露，却会导致后续绘制完全没有输出。
 
-## 8. 🤔 着色器和程序如何组成绘图管线？
+## 8. 着色器和程序如何组成绘图管线？
 
 WebGL 中至少需要两类着色器：
 
@@ -261,7 +261,7 @@ gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0)
 
 `uniform` 适合传递常量，例如颜色、矩阵、时间。`attribute` 适合传递每个顶点不同的数据，例如顶点位置。
 
-## 9. 🤔 WebGL 如何绘图、使用纹理和读取像素？
+## 9. WebGL 如何绘图、使用纹理和读取像素？
 
 WebGL 最终只能直接绘制点、线和三角形。其他复杂形状都要拆成这些基本图元。
 
@@ -316,7 +316,7 @@ gl.readPixels(0, 0, 25, 25, gl.RGBA, gl.UNSIGNED_BYTE, pixels)
 
 如果希望绘制完成后还能读取上一帧内容，可能需要创建上下文时设置 `preserveDrawingBuffer: true`，但这个选项会影响性能，应该谨慎使用。
 
-## 10. 🤔 WebGL1 和 WebGL2 有哪些差异？
+## 10. WebGL1 和 WebGL2 有哪些差异？
 
 WebGL1 代码大多可以迁移到 WebGL2。主要差异之一是，WebGL1 中很多能力需要通过扩展启用，而 WebGL2 把不少扩展能力变成了标准功能。
 

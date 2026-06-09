@@ -4,13 +4,13 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 SpeechSynthesisUtterance 的 rate 和 pitch 属性的取值范围和默认值分别是什么？](#3--speechsynthesisutterance-的-rate-和-pitch-属性的取值范围和默认值分别是什么)
-- [4. 🤔 getVoices() 返回空数组的常见原因是什么，如何等待语音列表加载完成？](#4--getvoices-返回空数组的常见原因是什么如何等待语音列表加载完成)
-- [5. 🤔 如何实现一段长文本的分段朗读并追踪每段的朗读进度？](#5--如何实现一段长文本的分段朗读并追踪每段的朗读进度)
-- [6. 🤔 SpeechRecognition 的 interimResults 设为 true 和 false 有什么行为差异？](#6--speechrecognition-的-interimresults-设为-true-和-false-有什么行为差异)
-- [7. 🤔 如何处理语音识别的 continuous 模式以实现持续监听？](#7--如何处理语音识别的-continuous-模式以实现持续监听)
-- [8. 🤔 语音识别结果中的 confidence 值代表什么，通常多高才算可靠？](#8--语音识别结果中的-confidence-值代表什么通常多高才算可靠)
-- [9. 🤔 在移动端浏览器上使用 Speech API 有哪些需要注意的限制和兼容性问题？](#9--在移动端浏览器上使用-speech-api-有哪些需要注意的限制和兼容性问题)
+- [3. SpeechSynthesisUtterance 的 rate 和 pitch 属性的取值范围和默认值分别是什么？](#3-speechsynthesisutterance-的-rate-和-pitch-属性的取值范围和默认值分别是什么)
+- [4. getVoices() 返回空数组的常见原因是什么，如何等待语音列表加载完成？](#4-getvoices-返回空数组的常见原因是什么如何等待语音列表加载完成)
+- [5. 如何实现一段长文本的分段朗读并追踪每段的朗读进度？](#5-如何实现一段长文本的分段朗读并追踪每段的朗读进度)
+- [6. SpeechRecognition 的 interimResults 设为 true 和 false 有什么行为差异？](#6-speechrecognition-的-interimresults-设为-true-和-false-有什么行为差异)
+- [7. 如何处理语音识别的 continuous 模式以实现持续监听？](#7-如何处理语音识别的-continuous-模式以实现持续监听)
+- [8. 语音识别结果中的 confidence 值代表什么，通常多高才算可靠？](#8-语音识别结果中的-confidence-值代表什么通常多高才算可靠)
+- [9. 在移动端浏览器上使用 Speech API 有哪些需要注意的限制和兼容性问题？](#9-在移动端浏览器上使用-speech-api-有哪些需要注意的限制和兼容性问题)
 
 <!-- endregion:toc -->
 
@@ -32,7 +32,7 @@
 
 - todo
 
-## 3. 🤔 SpeechSynthesisUtterance 的 rate 和 pitch 属性的取值范围和默认值分别是什么？
+## 3. SpeechSynthesisUtterance 的 rate 和 pitch 属性的取值范围和默认值分别是什么？
 
 `rate` 属性控制语速，类型为浮点数。根据 W3C 规范，取值范围为 0.1 到 10，默认值为 1。值 1 代表正常语速，0.1 是最慢的语速（约为正常的十分之一），10 是最快的语速（约为正常的十倍）。
 
@@ -71,7 +71,7 @@ utterance.pitch = 1.5 // 较高
 
 ---
 
-## 4. 🤔 getVoices() 返回空数组的常见原因是什么，如何等待语音列表加载完成？
+## 4. getVoices() 返回空数组的常见原因是什么，如何等待语音列表加载完成？
 
 `getVoices()` 在首次调用时经常返回空数组，这是最让开发者困惑的问题之一。原因在于语音列表的加载是异步的，浏览器需要时间从操作系统获取已安装的语音数据，`getVoices()` 的调用可能早于加载完成。
 
@@ -151,7 +151,7 @@ voices.forEach((v) => {
 
 ---
 
-## 5. 🤔 如何实现一段长文本的分段朗读并追踪每段的朗读进度？
+## 5. 如何实现一段长文本的分段朗读并追踪每段的朗读进度？
 
 长文本分段朗读的核心动机有两个：浏览器对单次朗读的文本长度有限制（超过 200 到 300 个字符可能被截断），以及需要在每段朗读完成时执行回调（如高亮当前段落、更新进度条）。
 
@@ -306,7 +306,7 @@ const keepAliveInterval = setInterval(() => {
 
 ---
 
-## 6. 🤔 SpeechRecognition 的 interimResults 设为 true 和 false 有什么行为差异？
+## 6. SpeechRecognition 的 interimResults 设为 true 和 false 有什么行为差异？
 
 `interimResults` 是 `SpeechRecognition` 的一个重要配置属性，控制是否返回中间识别结果（尚未确认的临时结果）。
 
@@ -379,7 +379,7 @@ for (let i = 0; i < event.results[resultIndex].length; i++) {
 
 ---
 
-## 7. 🤔 如何处理语音识别的 continuous 模式以实现持续监听？
+## 7. 如何处理语音识别的 continuous 模式以实现持续监听？
 
 `continuous` 属性控制语音识别是否在检测到语句结束后继续监听。默认值为 `false`，表示识别完一段话后自动停止。
 
@@ -479,7 +479,7 @@ function stopListening() {
 
 ---
 
-## 8. 🤔 语音识别结果中的 confidence 值代表什么，通常多高才算可靠？
+## 8. 语音识别结果中的 confidence 值代表什么，通常多高才算可靠？
 
 `confidence` 是语音识别引擎对当前转写结果的确信程度，取值范围为 0 到 1。1 表示引擎完全确信，0 表示完全不确信。
 
@@ -547,7 +547,7 @@ function handleRecognitionResult(transcript, confidence) {
 
 ---
 
-## 9. 🤔 在移动端浏览器上使用 Speech API 有哪些需要注意的限制和兼容性问题？
+## 9. 在移动端浏览器上使用 Speech API 有哪些需要注意的限制和兼容性问题？
 
 移动端的 Speech API 使用环境与桌面端有显著差异，涉及浏览器支持、权限管理、系统资源、网络依赖等多个层面。
 

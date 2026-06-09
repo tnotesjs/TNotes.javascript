@@ -2,24 +2,24 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 HTML5 为什么会扩展 DOM？](#3--html5-为什么会扩展-dom)
-- [4. 🤔 `getElementsByClassName()` 怎么用？](#4--getelementsbyclassname-怎么用)
-- [5. 🤔 `classList` 比 `className` 好在哪里？](#5--classlist-比-classname-好在哪里)
-- [6. 🤔 如何管理页面焦点？](#6--如何管理页面焦点)
-- [7. 🤔 `HTMLDocument` 有哪些常用扩展？](#7--htmldocument-有哪些常用扩展)
-- [8. 🤔 如何读取文档字符集？](#8--如何读取文档字符集)
-- [9. 🤔 自定义数据属性怎么用？](#9--自定义数据属性怎么用)
-- [10. 🤔 `innerHTML` 有什么特点？](#10--innerhtml-有什么特点)
-- [11. 🤔 `outerHTML` 和 `innerHTML` 有什么不同？](#11--outerhtml-和-innerhtml-有什么不同)
-- [12. 🤔 `insertAdjacentHTML()` 和 `insertAdjacentText()` 怎么用？](#12--insertadjacenthtml-和-insertadjacenttext-怎么用)
-- [13. 🤔 插入标记有哪些性能和内存注意点？](#13--插入标记有哪些性能和内存注意点)
-- [14. 🤔 `scrollIntoView()` 有什么用？](#14--scrollintoview-有什么用)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. HTML5 为什么会扩展 DOM？](#3-html5-为什么会扩展-dom)
+- [4. `getElementsByClassName()` 怎么用？](#4-getelementsbyclassname-怎么用)
+- [5. `classList` 比 `className` 好在哪里？](#5-classlist-比-classname-好在哪里)
+- [6. 如何管理页面焦点？](#6-如何管理页面焦点)
+- [7. `HTMLDocument` 有哪些常用扩展？](#7-htmldocument-有哪些常用扩展)
+- [8. 如何读取文档字符集？](#8-如何读取文档字符集)
+- [9. 自定义数据属性怎么用？](#9-自定义数据属性怎么用)
+- [10. `innerHTML` 有什么特点？](#10-innerhtml-有什么特点)
+- [11. `outerHTML` 和 `innerHTML` 有什么不同？](#11-outerhtml-和-innerhtml-有什么不同)
+- [12. `insertAdjacentHTML()` 和 `insertAdjacentText()` 怎么用？](#12-insertadjacenthtml-和-insertadjacenttext-怎么用)
+- [13. 插入标记有哪些性能和内存注意点？](#13-插入标记有哪些性能和内存注意点)
+- [14. `scrollIntoView()` 有什么用？](#14-scrollintoview-有什么用)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - HTML5 DOM 扩展概览
 - CSS 类扩展
@@ -31,11 +31,11 @@
 - `scrollIntoView()`
 - 安全、内存和性能注意点
 
-## 2. 🫧 评价
+## 2. 评价
 
 - HTML5 的 DOM 扩展把大量日常需求变成了标准能力。写现代 DOM 代码时，`classList`、`dataset`、`querySelector`、`scrollIntoView` 这类 API 往往比底层节点操作更贴近你的真实意图。
 
-## 3. 🤔 HTML5 为什么会扩展 DOM？
+## 3. HTML5 为什么会扩展 DOM？
 
 HTML5 不只定义标记，也定义了很多和页面开发相关的 JavaScript API。
 
@@ -43,7 +43,7 @@ HTML5 不只定义标记，也定义了很多和页面开发相关的 JavaScript
 
 很多能力在进入 HTML5 之前，已经是浏览器长期支持的事实标准。HTML5 的作用是把它们整理进更统一的规范里。
 
-## 4. 🤔 `getElementsByClassName()` 怎么用？
+## 4. `getElementsByClassName()` 怎么用？
 
 `getElementsByClassName()` 可以按类名查找元素。它可以在 `document` 上调用，也可以在元素上调用。
 
@@ -62,7 +62,7 @@ const activeCards = document.getElementsByClassName('card active')
 
 需要注意，它返回的是集合，不是单个元素。不同浏览器和场景下，这类集合通常具有实时集合特征，遍历时仍然要注意 DOM 修改带来的影响。
 
-## 5. 🤔 `classList` 比 `className` 好在哪里？
+## 5. `classList` 比 `className` 好在哪里？
 
 `className` 把全部类名当作一个字符串处理。添加、删除某个类名时，很容易写出重复类名或误删其他类名。
 
@@ -86,7 +86,7 @@ console.log(element.classList.contains('is-active'))
 
 如果只是局部增删类名，优先使用 `classList`。只有需要整体重写类名字符串时，才考虑直接设置 `className`。
 
-## 6. 🤔 如何管理页面焦点？
+## 6. 如何管理页面焦点？
 
 `document.activeElement` 指向当前拥有焦点的元素。
 
@@ -114,7 +114,7 @@ if (document.hasFocus()) {
 
 焦点管理对表单、弹窗、键盘操作和无障碍体验都很重要。
 
-## 7. 🤔 `HTMLDocument` 有哪些常用扩展？
+## 7. `HTMLDocument` 有哪些常用扩展？
 
 `document.readyState` 表示文档加载状态。
 
@@ -152,7 +152,7 @@ document.head.appendChild(document.createElement('meta'))
 
 它和 `document.body` 一样，是访问常用文档区域的快捷方式。
 
-## 8. 🤔 如何读取文档字符集？
+## 8. 如何读取文档字符集？
 
 现代浏览器通常使用 `document.characterSet` 读取文档实际字符集。
 
@@ -164,7 +164,7 @@ console.log(document.characterSet)
 
 在现代页面中，字符集通常由响应头或 `meta` 信息决定。实际开发里更常见的做法是确保文档统一使用 `UTF-8`，而不是在运行时频繁修改字符集。
 
-## 9. 🤔 自定义数据属性怎么用？
+## 9. 自定义数据属性怎么用？
 
 HTML5 允许使用 `data-*` 属性存放和页面元素相关的自定义数据。
 
@@ -187,7 +187,7 @@ button.dataset.state = 'loading'
 
 需要注意，`dataset` 中的值本质上是字符串。复杂对象不适合直接塞进属性里，更适合放在 JavaScript 状态或数据层中。
 
-## 10. 🤔 `innerHTML` 有什么特点？
+## 10. `innerHTML` 有什么特点？
 
 读取 `innerHTML` 时，会得到元素后代对应的 HTML 字符串。
 
@@ -216,7 +216,7 @@ container.innerHTML = '<p>新的内容</p>'
 
 :::
 
-## 11. 🤔 `outerHTML` 和 `innerHTML` 有什么不同？
+## 11. `outerHTML` 和 `innerHTML` 有什么不同？
 
 `innerHTML` 操作的是元素内部。
 
@@ -233,7 +233,7 @@ message.outerHTML = '<section class="message">已替换</section>'
 
 如果你还保存着原元素变量，它仍然引用旧对象，但这个旧对象已经不在页面中。
 
-## 12. 🤔 `insertAdjacentHTML()` 和 `insertAdjacentText()` 怎么用？
+## 12. `insertAdjacentHTML()` 和 `insertAdjacentText()` 怎么用？
 
 `insertAdjacentHTML()` 可以在相对于当前元素的指定位置插入 HTML。
 
@@ -258,7 +258,7 @@ container.insertAdjacentText('beforeend', '<p>这会作为文本出现</p>')
 
 如果你要插入的是用户可控内容，优先使用文本方式或先做严格净化。
 
-## 13. 🤔 插入标记有哪些性能和内存注意点？
+## 13. 插入标记有哪些性能和内存注意点？
 
 一次性设置 `innerHTML` 通常比循环创建大量节点更快，因为 HTML 解析器由浏览器底层实现。
 
@@ -284,7 +284,7 @@ for (const item of items) {
 
 如果被替换的 DOM 子树上绑定了事件或保存了外部引用，替换前要考虑清理，避免旧节点仍被引用。
 
-## 14. 🤔 `scrollIntoView()` 有什么用？
+## 14. `scrollIntoView()` 有什么用？
 
 `scrollIntoView()` 可以滚动页面或滚动容器，让目标元素进入可见区域。
 

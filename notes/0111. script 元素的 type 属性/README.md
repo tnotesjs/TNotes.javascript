@@ -2,15 +2,15 @@
 
 <!-- region:toc -->
 
-- [1. 📒 type 属性](#1--type-属性)
+- [1. type 属性](#1-type-属性)
 
 <!-- endregion:toc -->
 
-## 1. 📒 type 属性
+## 1. type 属性
 
 - `<script>` 标签的 `type` 属性用于指定加载或内嵌的脚本语言的 MIME 类型。
 - 在 HTML 中使用 `<script>` 标签时，这个属性可以帮助浏览器理解和处理正确的脚本类型。
-  
+
 以下是一些关于 `type` 属性的重要点和常见用法：
 
 - **标准用法 - `text/javascript`**: 这是最常用的值，用于 JavaScript 代码。根据 HTML5 的标准，如果不指定 `type` 属性，浏览器默认处理为 `text/javascript`。因此，在大多数现代网页中，你通常会看到省略 `type` 属性的 `<script>` 标签。
@@ -18,8 +18,8 @@
 
 ```html
 <script type="module">
-  import { functionName } from './module.js';
-  functionName();
+  import { functionName } from './module.js'
+  functionName()
 </script>
 ```
 

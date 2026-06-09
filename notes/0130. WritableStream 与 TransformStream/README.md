@@ -2,39 +2,39 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🔍 相关 API](#3--相关-api)
-- [4. 🤔 WritableStream 是什么？](#4--writablestream-是什么)
-- [5. 🤔 TransformStream 是什么？](#5--transformstream-是什么)
-- [6. 🤔 WritableStream 如何处理背压信号？](#6--writablestream-如何处理背压信号)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 相关 API](#3-相关-api)
+- [4. WritableStream 是什么？](#4-writablestream-是什么)
+- [5. TransformStream 是什么？](#5-transformstream-是什么)
+- [6. WritableStream 如何处理背压信号？](#6-writablestream-如何处理背压信号)
   - [6.1. 背压信号的产生](#61-背压信号的产生)
   - [6.2. 背压信号的响应](#62-背压信号的响应)
   - [6.3. 背压的传播路径](#63-背压的传播路径)
   - [6.4. 实际应用场景](#64-实际应用场景)
-- [7. 🤔 TransformStream 的 transform 和 flush 方法何时被调用？](#7--transformstream-的-transform-和-flush-方法何时被调用)
+- [7. TransformStream 的 transform 和 flush 方法何时被调用？](#7-transformstream-的-transform-和-flush-方法何时被调用)
   - [7.1. 调用时机演示](#71-调用时机演示)
   - [7.2. 方法对比](#72-方法对比)
   - [7.3. flush 的典型用法](#73-flush-的典型用法)
   - [7.4. 不需要 flush 的情况](#74-不需要-flush-的情况)
-- [8. 🤔 如何将多个 TransformStream 链接在一起？](#8--如何将多个-transformstream-链接在一起)
+- [8. 如何将多个 TransformStream 链接在一起？](#8-如何将多个-transformstream-链接在一起)
   - [8.1. 基本链接方式](#81-基本链接方式)
   - [8.2. 内置转换流的链接](#82-内置转换流的链接)
   - [8.3. 自定义管道组合](#83-自定义管道组合)
   - [8.4. 管道的优势](#84-管道的优势)
-- [9. 🤔 流处理过程中出现错误时如何正确清理资源？](#9--流处理过程中出现错误时如何正确清理资源)
+- [9. 流处理过程中出现错误时如何正确清理资源？](#9-流处理过程中出现错误时如何正确清理资源)
   - [9.1. 基本错误处理](#91-基本错误处理)
   - [9.2. 使用 AbortController 取消流](#92-使用-abortcontroller-取消流)
   - [9.3. TransformStream 中的错误处理](#93-transformstream-中的错误处理)
   - [9.4. 确保资源清理的模式](#94-确保资源清理的模式)
-- [10. 💻 demos.1 - 实现文本编码转换流](#10--demos1---实现文本编码转换流)
-- [11. 💻 demos.2 - 创建一个数据压缩流](#11--demos2---创建一个数据压缩流)
-- [12. 🆚 `close()` vs `abort()` vs `error()`（写入侧）](#12--close-vs-abort-vs-error写入侧)
-- [13. 🤔 `pipeTo` 的选项如何选择？](#13--pipeto-的选项如何选择)
+- [10. demos.1 - 实现文本编码转换流](#10-demos1---实现文本编码转换流)
+- [11. demos.2 - 创建一个数据压缩流](#11-demos2---创建一个数据压缩流)
+- [12. `close()` vs `abort()` vs `error()`（写入侧）](#12-close-vs-abort-vs-error写入侧)
+- [13. `pipeTo` 的选项如何选择？](#13-pipeto-的选项如何选择)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - WritableStreamDefaultWriter 写入器
 - 写入策略参数（queuingStrategy）
@@ -43,11 +43,11 @@
 - transform 和 flush 回调函数
 - 多个 TransformStream 的链接
 
-## 2. 🫧 评价
+## 2. 评价
 
 理解这两个接口（WritableStream 与 TransformStream）的关键在于掌握背压传播机制和错误处理流程。
 
-## 3. 🔍 相关 API
+## 3. 相关 API
 
 1. `WritableStream` 构造函数
 2. `writer` 写入器
@@ -63,7 +63,7 @@
 
 :::
 
-## 4. 🤔 WritableStream 是什么？
+## 4. WritableStream 是什么？
 
 WritableStream 是浏览器中用于将流式数据写入接收端（如文件、网络或其他流）的 Web Streams API。
 
@@ -89,7 +89,7 @@ try {
 }
 ```
 
-## 5. 🤔 TransformStream 是什么？
+## 5. TransformStream 是什么？
 
 TransformStream 是一种用于在数据流经时转换或修改数据的流式处理接口，它在可读和可写之间架起桥梁，实现数据转换。
 
@@ -99,7 +99,7 @@ TransformStream 构造函数与队列策略
 
 TransformStream 同时暴露 `readable` 与 `writable` 可作为管道中的中间处理环节 支持在末尾 `flush` 做收尾工作。
 
-## 6. 🤔 WritableStream 如何处理背压信号？
+## 6. WritableStream 如何处理背压信号？
 
 WritableStream 通过 `desiredSize` 属性和 `writer.ready` Promise 来处理背压。
 
@@ -112,7 +112,7 @@ const writable = new WritableStream(
       console.log('写入:', chunk)
     },
   },
-  new CountQueuingStrategy({ highWaterMark: 2 })
+  new CountQueuingStrategy({ highWaterMark: 2 }),
 ) // 队列最多容纳 2 个 chunk
 
 const writer = writable.getWriter()
@@ -184,7 +184,7 @@ async function uploadLargeFile(file) {
 
 关键：writer.ready Promise 确保写入速度不超过处理能力。
 
-## 7. 🤔 TransformStream 的 transform 和 flush 方法何时被调用？
+## 7. TransformStream 的 transform 和 flush 方法何时被调用？
 
 transform() 在每个数据块到达时调用，flush() 在流结束时调用一次。
 
@@ -215,7 +215,7 @@ await readable.pipeThrough(transform).pipeTo(
     write(chunk) {
       console.log('输出:', chunk)
     },
-  })
+  }),
 )
 
 // 输出顺序：
@@ -292,7 +292,7 @@ const upperCase = new TransformStream({
 
 transform 处理流中数据，flush 处理流末尾收尾工作。
 
-## 8. 🤔 如何将多个 TransformStream 链接在一起？
+## 8. 如何将多个 TransformStream 链接在一起？
 
 使用 pipeThrough() 方法串联多个 TransformStream，形成处理管道。
 
@@ -391,7 +391,7 @@ response.body
       write(obj) {
         updateUI(obj)
       },
-    })
+    }),
   )
 ```
 
@@ -407,7 +407,7 @@ response.body
 
 pipeThrough() 让数据像流水线一样经过多道工序，每个环节专注单一职责。
 
-## 9. 🤔 流处理过程中出现错误时如何正确清理资源？
+## 9. 流处理过程中出现错误时如何正确清理资源？
 
 使用 pipeTo() 的 signal 选项或在流的回调中处理错误，确保资源释放。
 
@@ -546,7 +546,7 @@ try {
 
 关键：在 cancel() 和 abort() 回调中释放资源，即使发生错误也能正确清理。
 
-## 10. 💻 demos.1 - 实现文本编码转换流
+## 10. demos.1 - 实现文本编码转换流
 
 ::: code-group
 
@@ -562,7 +562,7 @@ try {
 
 :::
 
-## 11. 💻 demos.2 - 创建一个数据压缩流
+## 11. demos.2 - 创建一个数据压缩流
 
 ::: code-group
 
@@ -578,7 +578,7 @@ try {
 
 :::
 
-## 12. 🆚 `close()` vs `abort()` vs `error()`（写入侧）
+## 12. `close()` vs `abort()` vs `error()`（写入侧）
 
 | 操作      | 触发方式         | 回调    | 语义                            |
 | --------- | ---------------- | ------- | ------------------------------- |
@@ -612,7 +612,7 @@ try {
 }
 ```
 
-## 13. 🤔 `pipeTo` 的选项如何选择？
+## 13. `pipeTo` 的选项如何选择？
 
 `pipeTo` 提供了几个常用选项 用于控制三端的关闭与取消传播 以及与外部取消信号配合。
 

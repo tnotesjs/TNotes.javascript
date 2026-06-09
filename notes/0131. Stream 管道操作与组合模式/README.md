@@ -2,42 +2,42 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 pipeTo 和 pipeThrough 方法的主要区别是什么？](#3--pipeto-和-pipethrough-方法的主要区别是什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. eTo 和 pipeThrough 方法的主要区别是什么？](#3-eto-和-pipethrough-方法的主要区别是什么)
   - [3.1. 基本用法对比](#31-基本用法对比)
   - [3.2. 返回值差异](#32-返回值差异)
   - [3.3. 对比表格](#33-对比表格)
   - [3.4. 链式调用示例](#34-链式调用示例)
   - [3.5. TransformStream 的结构](#35-transformstream-的结构)
   - [3.6. 实战：HTTP 响应处理](#36-实战http-响应处理)
-- [4. 🤔 如何将一个流的数据同时发送到多个目标？](#4--如何将一个流的数据同时发送到多个目标)
+- [4. 一个流的数据同时发送到多个目标？](#4-一个流的数据同时发送到多个目标)
   - [4.1. tee() 的基本用法](#41-tee-的基本用法)
   - [4.2. tee() 的特性](#42-tee-的特性)
   - [4.3. 实战：同时保存和显示](#43-实战同时保存和显示)
   - [4.4. 三个或更多目标](#44-三个或更多目标)
   - [4.5. 性能考虑](#45-性能考虑)
   - [4.6. 自定义广播流](#46-自定义广播流)
-- [5. 🤔 在管道操作中如何处理中间流的错误？](#5--在管道操作中如何处理中间流的错误)
+- [5. 操作中如何处理中间流的错误？](#5-操作中如何处理中间流的错误)
   - [5.1. 错误自动传播](#51-错误自动传播)
   - [5.2. 在 TransformStream 中处理错误](#52-在-transformstream-中处理错误)
   - [5.3. 管道选项控制错误传播](#53-管道选项控制错误传播)
   - [5.4. 完整错误处理示例](#54-完整错误处理示例)
   - [5.5. 使用 AbortController 取消管道](#55-使用-abortcontroller-取消管道)
   - [5.6. 分段错误处理](#56-分段错误处理)
-- [6. 🤔 如何实现多个流的并行处理和结果合并？](#6--如何实现多个流的并行处理和结果合并)
+- [6. 现多个流的并行处理和结果合并？](#6-现多个流的并行处理和结果合并)
   - [6.1. 并行处理多个独立流](#61-并行处理多个独立流)
   - [6.2. 合并多个流的输出](#62-合并多个流的输出)
   - [6.3. 实现流的 zip 操作](#63-实现流的-zip-操作)
   - [6.4. 竞态处理：最快的流获胜](#64-竞态处理最快的流获胜)
   - [6.5. 扇入模式：多个源合并到一个流](#65-扇入模式多个源合并到一个流)
   - [6.6. 实战：聚合多个 API 响应](#66-实战聚合多个-api-响应)
-- [7. 💻 demos.1 - 构建完整的 ETL 数据处理管道](#7--demos1---构建完整的-etl-数据处理管道)
-- [8. 💻 demos.2 - 实现流的扇出和扇入模式](#8--demos2---实现流的扇出和扇入模式)
+- [7. os.1 - 构建完整的 ETL 数据处理管道](#7-os1---构建完整的-etl-数据处理管道)
+- [8. os.2 - 实现流的扇出和扇入模式](#8-os2---实现流的扇出和扇入模式)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - pipeTo() 方法的用法与返回值
 - pipeThrough() 方法的用法与链式调用
@@ -46,11 +46,11 @@
 - 多流合并的实现策略
 - 管道中的错误传播机制
 
-## 2. 🫧 评价
+## 2. 评价
 
 管道操作是 Web Streams 的核心能力，pipeTo() 连接源与目标，pipeThrough() 串联转换流。tee() 方法实现流分支，支持扇出模式。理解管道选项（preventClose、preventAbort、preventCancel）对控制流生命周期至关重要。组合多个转换流可构建复杂数据处理管道，错误会自动沿管道传播，需在适当位置捕获处理。
 
-## 3. 🤔 pipeTo 和 pipeThrough 方法的主要区别是什么？
+## 3. eTo 和 pipeThrough 方法的主要区别是什么？
 
 pipeTo() 连接到终点并返回 Promise，pipeThrough() 通过转换流并返回新的 ReadableStream。
 
@@ -126,28 +126,28 @@ const result = await source
       transform(chunk, controller) {
         controller.enqueue(chunk.trim()) // 步骤 1：去空格
       },
-    })
+    }),
   )
   .pipeThrough(
     new TransformStream({
       transform(chunk, controller) {
         controller.enqueue(chunk.toUpperCase()) // 步骤 2：转大写
       },
-    })
+    }),
   )
   .pipeThrough(
     new TransformStream({
       transform(chunk, controller) {
         controller.enqueue(`[${chunk}]`) // 步骤 3：加括号
       },
-    })
+    }),
   )
   .pipeTo(
     new WritableStream({
       write(chunk) {
         console.log('最终结果:', chunk) // 步骤 4：输出
       },
-    })
+    }),
   )
 
 // 等价于嵌套写法（但可读性差）
@@ -159,7 +159,7 @@ await source.pipeTo(
       const step3 = `[${step2}]`
       console.log('最终结果:', step3)
     },
-  })
+  }),
 )
 ```
 
@@ -202,7 +202,7 @@ const processedStream = response.body
           controller.enqueue(json)
         }
       },
-    })
+    }),
   )
 
 // 最终写入
@@ -211,13 +211,13 @@ await processedStream.pipeTo(
     write(data) {
       updateUI(data)
     },
-  })
+  }),
 )
 ```
 
 核心区别：pipeTo 是终点，pipeThrough 是中继站。
 
-## 4. 🤔 如何将一个流的数据同时发送到多个目标？
+## 4. 一个流的数据同时发送到多个目标？
 
 使用 tee() 方法将流分成两个独立分支，然后各自处理。
 
@@ -242,7 +242,7 @@ stream1.pipeTo(
     write(chunk) {
       console.log('目标 1:', chunk)
     },
-  })
+  }),
 )
 
 stream2.pipeTo(
@@ -250,7 +250,7 @@ stream2.pipeTo(
     write(chunk) {
       console.log('目标 2:', chunk)
     },
-  })
+  }),
 )
 
 // 输出：
@@ -302,7 +302,7 @@ async function fetchAndProcess(url) {
       async write(chunk) {
         await saveToIndexedDB(chunk)
       },
-    })
+    }),
   )
 
   // 分支 2：实时显示
@@ -313,7 +313,7 @@ async function fetchAndProcess(url) {
         write(text) {
           appendToUI(text)
         },
-      })
+      }),
     )
 
   // 等待两个分支完成
@@ -358,7 +358,7 @@ fast.pipeTo(
     write(chunk) {
       console.log('快:', chunk)
     },
-  })
+  }),
 )
 
 // 慢速消费（会导致缓冲堆积）
@@ -368,7 +368,7 @@ slow.pipeTo(
       await sleep(1000)
       console.log('慢:', chunk)
     },
-  })
+  }),
 )
 
 // 解决方案：使用背压协调
@@ -407,7 +407,7 @@ const branch3 = broadcaster.addBranch()
 
 tee() 是扇出模式的核心，但需注意内存和背压问题。
 
-## 5. 🤔 在管道操作中如何处理中间流的错误？
+## 5. 操作中如何处理中间流的错误？
 
 错误会自动传播到管道末端，可在 pipeTo() 的 Promise 中捕获，或使用管道选项控制传播。
 
@@ -513,7 +513,7 @@ async function robustPipeline(sourceURL) {
             updateUI(chunk)
           }
         },
-      })
+      }),
     )
 
   try {
@@ -593,7 +593,7 @@ async function pipelineWithStageErrors() {
 
 错误处理的关键是在合适的位置捕获、记录或恢复，避免整个管道崩溃。
 
-## 6. 🤔 如何实现多个流的并行处理和结果合并？
+## 6. 现多个流的并行处理和结果合并？
 
 使用 Promise.all() 并行处理多个管道，自定义合并逻辑聚合结果。
 
@@ -610,7 +610,7 @@ async function processMultipleStreams(urls) {
         write(chunk) {
           results.push(chunk)
         },
-      })
+      }),
     )
 
     return results
@@ -636,8 +636,8 @@ async function mergeStreams(streams) {
         write(chunk) {
           results.push({ source: index, data: chunk })
         },
-      })
-    )
+      }),
+    ),
   )
 
   await Promise.all(consumers)
@@ -715,12 +715,12 @@ async function raceStreams(streams) {
               results.push({ source: index, data: chunk })
             }
           },
-        })
+        }),
       )
       .then(() => {
         finished = true
         return index
-      })
+      }),
   )
 
   const winner = await Promise.race(racers)
@@ -739,7 +739,7 @@ function combineStreams(streams) {
   return new ReadableStream({
     async pull(controller) {
       const reads = readers.map((reader, index) =>
-        reader.read().then((result) => ({ index, result }))
+        reader.read().then((result) => ({ index, result })),
       )
 
       const { index, result } = await Promise.race(reads)
@@ -765,7 +765,7 @@ await combined.pipeTo(
     write(chunk) {
       console.log(`来自流 ${chunk.source}:`, chunk.data)
     },
-  })
+  }),
 )
 ```
 
@@ -792,16 +792,16 @@ async function aggregateAPIs(endpoints) {
                 // 忽略错误
               }
             },
-          })
+          }),
         )
         .pipeTo(
           new WritableStream({
             write(data) {
               aggregated.push({ api: index, data })
             },
-          })
+          }),
         )
-    })
+    }),
   )
 
   return aggregated
@@ -810,6 +810,6 @@ async function aggregateAPIs(endpoints) {
 
 并行处理的关键是 Promise.all/race，合并策略根据业务需求自定义。
 
-## 7. 💻 demos.1 - 构建完整的 ETL 数据处理管道
+## 7. os.1 - 构建完整的 ETL 数据处理管道
 
-## 8. 💻 demos.2 - 实现流的扇出和扇入模式
+## 8. os.2 - 实现流的扇出和扇入模式

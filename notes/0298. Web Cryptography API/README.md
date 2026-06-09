@@ -2,19 +2,19 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 为什么不能用 `Math.random()` 做加密随机数？](#3--为什么不能用-mathrandom-做加密随机数)
-- [4. 🤔 `crypto.subtle` 是什么？](#4--cryptosubtle-是什么)
-- [5. 🤔 如何计算摘要？](#5--如何计算摘要)
-- [6. 🤔 `CryptoKey` 和 `keyUsages` 如何配合？](#6--cryptokey-和-keyusages-如何配合)
-- [7. 🤔 如何导入、导出和派生密钥？](#7--如何导入导出和派生密钥)
-- [8. 🤔 如何加密、解密、签名和验证？](#8--如何加密解密签名和验证)
-- [9. 🤔 包装和解包密钥是什么？](#9--包装和解包密钥是什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 为什么不能用 `Math.random()` 做加密随机数？](#3-为什么不能用-mathrandom-做加密随机数)
+- [4. `crypto.subtle` 是什么？](#4-cryptosubtle-是什么)
+- [5. 如何计算摘要？](#5-如何计算摘要)
+- [6. `CryptoKey` 和 `keyUsages` 如何配合？](#6-cryptokey-和-keyusages-如何配合)
+- [7. 如何导入、导出和派生密钥？](#7-如何导入导出和派生密钥)
+- [8. 如何加密、解密、签名和验证？](#8-如何加密解密签名和验证)
+- [9. 包装和解包密钥是什么？](#9-包装和解包密钥是什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - Web Crypto 的安全随机数能力
 - `crypto.getRandomValues()`
@@ -22,11 +22,11 @@
 - 摘要、密钥生成、导入和导出
 - 派生、签名、验证、加密、解密、包装和解包
 
-## 2. 🫧 评价
+## 2. 评价
 
 - Web Crypto 是浏览器里少数真正安全敏感的 API；它能做很多事，但前提是你理解算法参数、密钥用途和随机数边界。
 
-## 3. 🤔 为什么不能用 `Math.random()` 做加密随机数？
+## 3. 为什么不能用 `Math.random()` 做加密随机数？
 
 `Math.random()` 不是密码学安全随机数生成器。它适合普通随机效果，例如简单抽样或 UI 随机展示，但不适合生成密钥、令牌、nonce 或验证码。
 
@@ -42,7 +42,7 @@ console.log(randomBytes)
 
 它会把安全随机值写入你提供的整数定型数组。常用数组包括 `Uint8Array`、`Uint16Array`、`Uint32Array`。
 
-## 4. 🤔 `crypto.subtle` 是什么？
+## 4. `crypto.subtle` 是什么？
 
 `crypto.subtle` 暴露的是 `SubtleCrypto` 对象，提供摘要、加密、解密、签名、验证、密钥生成、密钥导入导出、密钥派生、密钥包装和解包等能力。
 
@@ -54,7 +54,7 @@ console.log(crypto.subtle)
 
 Web Crypto 的很多输入输出都是 `ArrayBuffer` 或定型数组，因此它经常和 Encoding API 配合使用。
 
-## 5. 🤔 如何计算摘要？
+## 5. 如何计算摘要？
 
 摘要会把任意长度数据转换成固定长度哈希值。常见算法包括 `SHA-256`、`SHA-384` 和 `SHA-512`。`SHA-1` 只适合历史说明，不建议用于新安全方案。
 
@@ -71,7 +71,7 @@ async function digestMessage(message) {
 
 摘要不是加密。摘要不能还原原文，主要用于完整性校验、指纹、签名输入等场景。
 
-## 6. 🤔 `CryptoKey` 和 `keyUsages` 如何配合？
+## 6. `CryptoKey` 和 `keyUsages` 如何配合？
 
 Web Crypto 使用 `CryptoKey` 表示密钥。生成密钥时，需要指定算法、是否可导出，以及密钥用途。
 
@@ -99,7 +99,7 @@ const key = await crypto.subtle.generateKey(
 
 密钥用途越窄越好。不要给一个密钥多余权限。
 
-## 7. 🤔 如何导入、导出和派生密钥？
+## 7. 如何导入、导出和派生密钥？
 
 如果密钥生成时 `extractable` 是 `true`，可以导出。
 
@@ -146,7 +146,7 @@ const derivedKey = await crypto.subtle.deriveKey(
 
 派生参数会直接影响安全性，不能随意降低迭代次数或复用盐值。
 
-## 8. 🤔 如何加密、解密、签名和验证？
+## 8. 如何加密、解密、签名和验证？
 
 加密和解密需要算法参数、密钥和数据。以 `AES-GCM` 为例，`iv` 或 nonce 必须保证同一密钥下唯一。
 
@@ -176,7 +176,7 @@ const signature = await crypto.subtle.sign('HMAC', key, data)
 const verified = await crypto.subtle.verify('HMAC', key, signature, data)
 ```
 
-## 9. 🤔 包装和解包密钥是什么？
+## 9. 包装和解包密钥是什么？
 
 包装密钥就是用一个密钥保护另一个密钥，常用于安全传输或存储密钥。
 

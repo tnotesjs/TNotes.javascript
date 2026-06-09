@@ -2,17 +2,17 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 JSON 为什么会流行起来？](#3--json-为什么会流行起来)
-- [4. 🤔 JSON 和 JavaScript 是什么关系？](#4--json-和-javascript-是什么关系)
-- [5. 🤔 JSON 可以表示哪些数据？](#5--json-可以表示哪些数据)
-- [6. 🤔 JavaScript 如何处理 JSON？](#6--javascript-如何处理-json)
-- [7. 🤔 本章小结要抓住哪些结论？](#7--本章小结要抓住哪些结论)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. JSON 为什么会流行起来？](#3-json-为什么会流行起来)
+- [4. JSON 和 JavaScript 是什么关系？](#4-json-和-javascript-是什么关系)
+- [5. JSON 可以表示哪些数据？](#5-json-可以表示哪些数据)
+- [6. JavaScript 如何处理 JSON？](#6-javascript-如何处理-json)
+- [7. 本章小结要抓住哪些结论？](#7-本章小结要抓住哪些结论)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - JSON 的历史定位和用途
 - JSON 与 JavaScript 的关系
@@ -20,13 +20,13 @@
 - JSON 解析和序列化的核心 API
 - 本章小结：为什么 JSON 成为 Web 数据交换常用格式
 
-## 2. 🫧 评价
+## 2. 评价
 
 - JSON 看起来像 JavaScript 对象字面量，但最重要的认知是：它是一种语言无关的数据格式，不是 JavaScript 代码。
 
 <N :ids="['0312', '0313']" />
 
-## 3. 🤔 JSON 为什么会流行起来？
+## 3. JSON 为什么会流行起来？
 
 XML 曾经是 Web 服务和系统间通信的事实标准，但它的标签结构比较冗长。对于只想传输结构化数据的场景来说，XML 往往显得啰嗦。
 
@@ -40,7 +40,7 @@ JSON 流行起来的关键原因包括：
 - 很多语言都提供 JSON 解析和序列化能力。
 - 适合 Web API、配置文件、日志、消息通信等场景。
 
-## 4. 🤔 JSON 和 JavaScript 是什么关系？
+## 4. JSON 和 JavaScript 是什么关系？
 
 JSON 借用了 JavaScript 的一部分语法，但它不是 JavaScript。
 
@@ -66,7 +66,7 @@ const user = {
 
 它们看起来相似，但语义不同。JavaScript 代码可以创建变量、执行表达式；JSON 只是文本数据，必须通过解析器变成 JavaScript 值。
 
-## 5. 🤔 JSON 可以表示哪些数据？
+## 5. JSON 可以表示哪些数据？
 
 JSON 支持三类结构：
 
@@ -87,7 +87,7 @@ JSON 支持三类结构：
 
 这些限制让 JSON 更像严格的数据交换格式，而不是脚本语言。
 
-## 6. 🤔 JavaScript 如何处理 JSON？
+## 6. JavaScript 如何处理 JSON？
 
 现代 JavaScript 使用全局 `JSON` 对象处理 JSON。
 
@@ -110,7 +110,7 @@ const bookCopy = JSON.parse(jsonText)
 
 早期有些代码会用 `eval()` 解析 JSON，因为 JSON 语法是 JavaScript 语法的子集。但这是危险做法。`eval()` 会执行代码，而不仅仅是解析数据。现代代码应该始终使用 `JSON.parse()`。
 
-## 7. 🤔 本章小结要抓住哪些结论？
+## 7. 本章小结要抓住哪些结论？
 
 JSON 是一种轻量级数据格式，用 JavaScript 语法子集表示对象、数组、字符串、数值、布尔值和 `null`。它比 XML 更简洁，也更容易被 JavaScript 使用，因此迅速成为 Web API 常用的数据交换格式。
 

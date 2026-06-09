@@ -2,18 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `Selectors API` 是什么？](#3--selectors-api-是什么)
-- [4. 🤔 `querySelector()` 怎么用？](#4--queryselector-怎么用)
-- [5. 🤔 `querySelectorAll()` 和 `querySelector()` 有什么区别？](#5--queryselectorall-和-queryselector-有什么区别)
-- [6. 🤔 `querySelectorAll()` 返回的是实时集合吗？](#6--queryselectorall-返回的是实时集合吗)
-- [7. 🤔 `matches()` 有什么用？](#7--matches-有什么用)
-- [8. 🤔 使用选择符查询时要注意什么？](#8--使用选择符查询时要注意什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `Selectors API` 是什么？](#3-selectors-api-是什么)
+- [4. `querySelector()` 怎么用？](#4-queryselector-怎么用)
+- [5. `querySelectorAll()` 和 `querySelector()` 有什么区别？](#5-queryselectorall-和-queryselector-有什么区别)
+- [6. `querySelectorAll()` 返回的是实时集合吗？](#6-queryselectorall-返回的是实时集合吗)
+- [7. `matches()` 有什么用？](#7-matches-有什么用)
+- [8. 使用选择符查询时要注意什么？](#8-使用选择符查询时要注意什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `Selectors API` 的作用
 - `querySelector()`
@@ -22,11 +22,11 @@
 - `matches()`
 - 选择符异常和使用边界
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `Selectors API` 的好处是把你在 CSS 里已经会写的选择符直接带进 DOM 查询。它让查找元素这件事更自然，但选择符仍然要写得清晰、可维护。
 
-## 3. 🤔 `Selectors API` 是什么？
+## 3. `Selectors API` 是什么？
 
 `Selectors API` 让浏览器可以用 CSS 选择符查询 DOM 元素。
 
@@ -41,7 +41,7 @@ const selectedItems = document.querySelectorAll('.item.is-selected')
 
 这套 API 的优势是表达力强，而且由浏览器原生实现。
 
-## 4. 🤔 `querySelector()` 怎么用？
+## 4. `querySelector()` 怎么用？
 
 `querySelector()` 接收一个 CSS 选择符字符串，返回匹配的第一个元素。如果没有匹配项，返回 `null`。
 
@@ -70,7 +70,7 @@ try {
 }
 ```
 
-## 5. 🤔 `querySelectorAll()` 和 `querySelector()` 有什么区别？
+## 5. `querySelectorAll()` 和 `querySelector()` 有什么区别？
 
 `querySelectorAll()` 返回所有匹配元素组成的 `NodeList`。如果没有匹配项，返回空集合，而不是 `null`。
 
@@ -98,7 +98,7 @@ console.log(buttons.item(0))
 
 和 `querySelector()` 一样，选择符无效时也会抛出异常。
 
-## 6. 🤔 `querySelectorAll()` 返回的是实时集合吗？
+## 6. `querySelectorAll()` 返回的是实时集合吗？
 
 不是。
 
@@ -119,7 +119,7 @@ console.log(items.length) // 仍然是查询时的数量
 
 静态快照在遍历时更稳定，因为你不用担心循环过程中 DOM 修改导致集合内容同步变化。
 
-## 7. 🤔 `matches()` 有什么用？
+## 7. `matches()` 有什么用？
 
 `matches()` 用于判断当前元素是否匹配某个 CSS 选择符。
 
@@ -145,7 +145,7 @@ document.addEventListener('click', (event) => {
 
 早期浏览器曾经需要带前缀的实现。现代浏览器通常直接支持标准的 `matches()`。
 
-## 8. 🤔 使用选择符查询时要注意什么？
+## 8. 使用选择符查询时要注意什么？
 
 选择符查询很好用，但也有几个边界。
 

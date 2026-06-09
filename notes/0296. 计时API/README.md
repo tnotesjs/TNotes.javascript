@@ -2,17 +2,17 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 为什么不用 `Date.now()` 做精确性能测量？](#3--为什么不用-datenow-做精确性能测量)
-- [4. 🤔 High Resolution Time API 提供了什么？](#4--high-resolution-time-api-提供了什么)
-- [5. 🤔 Performance Timeline API 是什么？](#5--performance-timeline-api-是什么)
-- [6. 🤔 `mark()` 和 `measure()` 怎么做自定义计时？](#6--mark-和-measure-怎么做自定义计时)
-- [7. 🤔 计时 API 适合用来做什么？](#7--计时-api-适合用来做什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 为什么不用 `Date.now()` 做精确性能测量？](#3-为什么不用-datenow-做精确性能测量)
+- [4. High Resolution Time API 提供了什么？](#4-high-resolution-time-api-提供了什么)
+- [5. Performance Timeline API 是什么？](#5-performance-timeline-api-是什么)
+- [6. `mark()` 和 `measure()` 怎么做自定义计时？](#6-mark-和-measure-怎么做自定义计时)
+- [7. 计时 API 适合用来做什么？](#7-计时-api-适合用来做什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `performance` 对象的定位
 - `performance.now()` 与 `timeOrigin`
@@ -20,11 +20,11 @@
 - Performance Timeline API
 - `mark()`、`measure()`、导航计时和资源计时
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 计时 API 的关键价值是让性能测量从“差不多”变成“有依据”；不过现代浏览器会为了安全降低精度，所以测量也要理解边界。
 
-## 3. 🤔 为什么不用 `Date.now()` 做精确性能测量？
+## 3. 为什么不用 `Date.now()` 做精确性能测量？
 
 `Date.now()` 返回的是系统时间戳。系统时间可能被用户或系统同步机制调整，因此不一定单调递增。性能测量更需要稳定、单调、相对页面生命周期的时间。
 
@@ -48,7 +48,7 @@ const absoluteTime = performance.timeOrigin + performance.now()
 
 需要注意，出于安全原因，现代浏览器可能会降低计时精度或加入扰动，以缓解侧信道攻击风险。
 
-## 4. 🤔 High Resolution Time API 提供了什么？
+## 4. High Resolution Time API 提供了什么？
 
 High Resolution Time API 的核心就是更适合性能测量的时间来源。
 
@@ -72,7 +72,7 @@ function measureTask(callback) {
 
 这类测量适合比较代码路径、定位慢操作或记录用户端性能数据。
 
-## 5. 🤔 Performance Timeline API 是什么？
+## 5. Performance Timeline API 是什么？
 
 Performance Timeline API 把性能事件抽象为 `PerformanceEntry`。每个条目通常有这些通用字段：
 
@@ -102,7 +102,7 @@ const resourceEntries = performance.getEntriesByType('resource')
 
 导航计时用于分析页面加载过程，资源计时用于分析脚本、样式、图片、请求等资源加载。
 
-## 6. 🤔 `mark()` 和 `measure()` 怎么做自定义计时？
+## 6. `mark()` 和 `measure()` 怎么做自定义计时？
 
 `performance.mark()` 可以创建自定义时间标记，`performance.measure()` 可以计算两个标记之间的耗时。
 
@@ -129,7 +129,7 @@ performance.clearMarks('render-end')
 performance.clearMeasures('render')
 ```
 
-## 7. 🤔 计时 API 适合用来做什么？
+## 7. 计时 API 适合用来做什么？
 
 常见用途包括：
 

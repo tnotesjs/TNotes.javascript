@@ -4,12 +4,12 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 为什么 AudioBufferSourceNode 是一次性的，播放结束后不能重新 start？](#3--为什么-audiobuffersourcenode-是一次性的播放结束后不能重新-start)
-- [4. 🤔 如何使用 fetch + decodeAudioData 加载并播放一个音频文件？](#4--如何使用-fetch--decodeaudiodata-加载并播放一个音频文件)
-- [5. 🤔 MediaElementAudioSourceNode 和 AudioBufferSourceNode 各适用于什么场景？](#5--mediaelementaudiosourcenode-和-audiobuffersourcenode-各适用于什么场景)
-- [6. 🤔 decodeAudioData 解码失败的常见原因有哪些？](#6--decodeaudiodata-解码失败的常见原因有哪些)
-- [7. 🤔 AudioBuffer 的 sampleRate 与 AudioContext 的 sampleRate 不一致会怎样？](#7--audiobuffer-的-samplerate-与-audiocontext-的-samplerate-不一致会怎样)
-- [8. 🤔 如何实现音频资源的预加载和缓存以提升播放体验？](#8--如何实现音频资源的预加载和缓存以提升播放体验)
+- [3. 为什么 AudioBufferSourceNode 是一次性的，播放结束后不能重新 start？](#3-为什么-audiobuffersourcenode-是一次性的播放结束后不能重新-start)
+- [4. 如何使用 fetch + decodeAudioData 加载并播放一个音频文件？](#4-如何使用-fetch--decodeaudiodata-加载并播放一个音频文件)
+- [5. MediaElementAudioSourceNode 和 AudioBufferSourceNode 各适用于什么场景？](#5-mediaelementaudiosourcenode-和-audiobuffersourcenode-各适用于什么场景)
+- [6. decodeAudioData 解码失败的常见原因有哪些？](#6-decodeaudiodata-解码失败的常见原因有哪些)
+- [7. AudioBuffer 的 sampleRate 与 AudioContext 的 sampleRate 不一致会怎样？](#7-audiobuffer-的-samplerate-与-audiocontext-的-samplerate-不一致会怎样)
+- [8. 如何实现音频资源的预加载和缓存以提升播放体验？](#8-如何实现音频资源的预加载和缓存以提升播放体验)
 
 <!-- endregion:toc -->
 
@@ -29,7 +29,7 @@
 
 - todo
 
-## 3. 🤔 为什么 AudioBufferSourceNode 是一次性的，播放结束后不能重新 start？
+## 3. 为什么 AudioBufferSourceNode 是一次性的，播放结束后不能重新 start？
 
 这是 Web Audio API 的设计决策，背后有两个核心原因。
 
@@ -81,7 +81,7 @@ source.addEventListener('ended', () => {
 
 ---
 
-## 4. 🤔 如何使用 fetch + decodeAudioData 加载并播放一个音频文件？
+## 4. 如何使用 fetch + decodeAudioData 加载并播放一个音频文件？
 
 `fetch` 负责从网络获取音频文件的二进制数据，`decodeAudioData` 负责将二进制数据解码为 AudioBuffer。两者配合构成了最常用的音频加载方式。
 
@@ -161,7 +161,7 @@ async function loadAudioWithProgress(url, onProgress) {
 
 ---
 
-## 5. 🤔 MediaElementAudioSourceNode 和 AudioBufferSourceNode 各适用于什么场景？
+## 5. MediaElementAudioSourceNode 和 AudioBufferSourceNode 各适用于什么场景？
 
 这两种节点虽然都能作为音频源接入 Web Audio API 的音频图，但底层机制和适用场景有明显差异。
 
@@ -212,7 +212,7 @@ analyser.connect(ctx.destination)
 
 ---
 
-## 6. 🤔 decodeAudioData 解码失败的常见原因有哪些？
+## 6. decodeAudioData 解码失败的常见原因有哪些？
 
 `decodeAudioData` 失败时 Promise 会被 reject，或者在回调风格中调用错误回调。以下是常见的失败原因：
 
@@ -269,7 +269,7 @@ async function safeDecode(arrayBuffer, ctx) {
 
 ---
 
-## 7. 🤔 AudioBuffer 的 sampleRate 与 AudioContext 的 sampleRate 不一致会怎样？
+## 7. AudioBuffer 的 sampleRate 与 AudioContext 的 sampleRate 不一致会怎样？
 
 当两者不一致时，浏览器会自动进行「重采样」（Resampling），将 AudioBuffer 的采样率转换为 AudioContext 的采样率后再进行处理。
 
@@ -323,7 +323,7 @@ async function resampleBuffer(buffer, targetSampleRate) {
 
 ---
 
-## 8. 🤔 如何实现音频资源的预加载和缓存以提升播放体验？
+## 8. 如何实现音频资源的预加载和缓存以提升播放体验？
 
 音频资源的预加载和缓存策略直接影响用户的播放体验。未经优化的实现会在用户点击播放后才开始下载和解码音频，导致明显的等待延迟。
 

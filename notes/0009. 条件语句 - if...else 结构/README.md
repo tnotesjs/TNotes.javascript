@@ -4,10 +4,10 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 📒 if...else 基本结构](#3--ifelse-基本结构)
-- [4. 💻 demos.2 - 认识基本的 if...else 结构](#4--demos2---认识基本的-ifelse-结构)
-- [5. 💻 demos.3 - 多个 if...else 的情况](#5--demos3---多个-ifelse-的情况)
-- [6. 💻 demos.1 - else 和最近的 if 配对](#6--demos1---else-和最近的-if-配对)
+- [3. if...else 基本结构](#3-ifelse-基本结构)
+- [4. demos.2 - 认识基本的 if...else 结构](#4-demos2---认识基本的-ifelse-结构)
+- [5. demos.3 - 多个 if...else 的情况](#5-demos3---多个-ifelse-的情况)
+- [6. demos.1 - else 和最近的 if 配对](#6-demos1---else-和最近的-if-配对)
 
 <!-- endregion:toc -->
 
@@ -20,7 +20,7 @@
 
 - if else 的配对规则不需要刻意去记，若按照规范来书写，配对关系是自然而然就能看出来的。
 
-## 3. 📒 if...else 基本结构
+## 3. if...else 基本结构
 
 - `if` 代码块后面，还可以跟一个 `else` 代码块，表示不满足条件时，所要执行的代码。
 - 对同一个变量进行多次判断时，多个 `if...else` 语句可以连写在一起。
@@ -49,7 +49,7 @@ if (x === 0) {
 
 :::
 
-## 4. 💻 demos.2 - 认识基本的 if...else 结构
+## 4. demos.2 - 认识基本的 if...else 结构
 
 ::: code-group
 
@@ -57,7 +57,7 @@ if (x === 0) {
 
 :::
 
-## 5. 💻 demos.3 - 多个 if...else 的情况
+## 5. demos.3 - 多个 if...else 的情况
 
 ::: code-group
 
@@ -65,7 +65,7 @@ if (x === 0) {
 
 :::
 
-## 6. 💻 demos.1 - else 和最近的 if 配对
+## 6. demos.1 - else 和最近的 if 配对
 
 ::: code-group
 

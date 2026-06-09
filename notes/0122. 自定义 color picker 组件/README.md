@@ -2,23 +2,23 @@
 
 <!-- region:toc -->
 
-- [1. 📝 概述](#1--概述)
-- [2. 📒 Spectrum](#2--spectrum)
-- [3. 💻 demos.1](#3--demos1)
+- [1. 概述](#1-概述)
+- [2. Spectrum](#2-spectrum)
+- [3. demos.1](#3-demos1)
 
 <!-- endregion:toc -->
 
-## 1. 📝 概述
+## 1. 概述
 
 - 记录一个自定义的 color picker 组件的实现。
 
-## 2. 📒 Spectrum
+## 2. Spectrum
 
 - js 颜色选择器 - Spectrum
 - https://bgrins.github.io/spectrum/#why
 - https://github.com/bgrins/spectrum
 
-## 3. 💻 demos.1
+## 3. demos.1
 
 ```html
 <!DOCTYPE html>
@@ -164,7 +164,7 @@
           const colorPicker = shadowRoot.getElementById('color-picker')
           const boardContainer = shadowRoot.getElementById('board-container')
           const colorSliderContainer = shadowRoot.getElementById(
-            'color-slider-container'
+            'color-slider-container',
           )
           const colorBoard = shadowRoot.getElementById('color-board')
           const colorSlider = shadowRoot.getElementById('color-slider')
@@ -173,7 +173,7 @@
           const hexInput = shadowRoot.getElementById('hex-input')
           const currentColor = shadowRoot.getElementById('current-color')
           const presetColorsContainer = shadowRoot.getElementById(
-            'preset-colors-container'
+            'preset-colors-container',
           )
 
           // 初始化 Canvas
@@ -221,22 +221,22 @@
             const t = v * (1 - (1 - f) * s)
             switch (i) {
               case 0:
-                ;(r = v), (g = t), (b = p)
+                ;((r = v), (g = t), (b = p))
                 break
               case 1:
-                ;(r = q), (g = v), (b = p)
+                ;((r = q), (g = v), (b = p))
                 break
               case 2:
-                ;(r = p), (g = v), (b = t)
+                ;((r = p), (g = v), (b = t))
                 break
               case 3:
-                ;(r = p), (g = q), (b = v)
+                ;((r = p), (g = q), (b = v))
                 break
               case 4:
-                ;(r = t), (g = p), (b = v)
+                ;((r = t), (g = p), (b = v))
                 break
               case 5:
-                ;(r = v), (g = p), (b = q)
+                ;((r = v), (g = p), (b = q))
                 break
             }
             return {
@@ -317,11 +317,11 @@
             const colorBoardRect = colorBoard.getBoundingClientRect()
             const x = Math.max(
               0,
-              Math.min(colorBoardRect.width, e.clientX - colorBoardRect.left)
+              Math.min(colorBoardRect.width, e.clientX - colorBoardRect.left),
             )
             const y = Math.max(
               0,
-              Math.min(colorBoardRect.height, e.clientY - colorBoardRect.top)
+              Math.min(colorBoardRect.height, e.clientY - colorBoardRect.top),
             )
             boardPoint.style.left = `${x}px`
             boardPoint.style.top = `${y}px`
@@ -330,7 +330,7 @@
             const rgb = hsvToRgb(
               sliderThumb.dataset.hue || 0,
               saturation,
-              brightness
+              brightness,
             )
             updateCurrentColor(rgb)
           }
@@ -339,7 +339,7 @@
             const colorSliderRect = colorSlider.getBoundingClientRect()
             const x = Math.max(
               0,
-              Math.min(colorSlider.width, e.clientX - colorSliderRect.left)
+              Math.min(colorSlider.width, e.clientX - colorSliderRect.left),
             )
             sliderThumb.style.left = `${x}px`
             const hue = (x / colorSlider.width) * 360
@@ -361,8 +361,8 @@
                 colorBoardRect.width,
                 boardPointRect.left +
                   boardPointRect.width / 2 -
-                  colorBoardRect.left
-              )
+                  colorBoardRect.left,
+              ),
             )
             const y2 = Math.max(
               0,
@@ -370,8 +370,8 @@
                 colorBoardRect.height,
                 boardPointRect.top +
                   boardPointRect.height / 2 -
-                  colorBoardRect.top
-              )
+                  colorBoardRect.top,
+              ),
             )
 
             const brightness = 1 - y2 / colorBoardRect.height
@@ -382,10 +382,10 @@
 
           hexInput.addEventListener(
             'focus',
-            () => (previousHexValue = hexInput.value)
+            () => (previousHexValue = hexInput.value),
           )
           hexInput.addEventListener('input', (e) =>
-            updateColorFromHex(e.target.value)
+            updateColorFromHex(e.target.value),
           )
           hexInput.addEventListener('blur', () => {
             const hex = hexInput.value
@@ -486,7 +486,7 @@
               colorBlock.className = 'color-block'
               colorBlock.style.backgroundColor = hex
               colorBlock.addEventListener('click', () =>
-                updateColorFromHex(hex)
+                updateColorFromHex(hex),
               )
               presetColorsContainer.appendChild(colorBlock)
             })

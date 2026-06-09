@@ -2,12 +2,12 @@
 
 <!-- region:toc -->
 
-- [1. 🔗 官方文档 > Configuration File](#1--官方文档--configuration-file)
-- [2. 📒 eslint 的配置文件名称的更多写法](#2--eslint-的配置文件名称的更多写法)
+- [1. 官方文档 > Configuration File](#1-官方文档--configuration-file)
+- [2. eslint 的配置文件名称的更多写法](#2-eslint-的配置文件名称的更多写法)
 
 <!-- endregion:toc -->
 
-## 1. 🔗 官方文档 > Configuration File
+## 1. 官方文档 > Configuration File
 
 - https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file
 
@@ -27,18 +27,18 @@ It should be placed in the root directory of your project and export an array of
 ```js
 // eslint.config.js
 export default [
-    {
-        rules: {
-            semi: "error",
-            "prefer-const": "error"
-        }
-    }
-];
+  {
+    rules: {
+      semi: 'error',
+      'prefer-const': 'error',
+    },
+  },
+]
 ```
 
 > 注意：官方文档罗列的这些名称，并非全部，eslint 的配置文件命名还有很多种写法。
 
-## 2. 📒 eslint 的配置文件名称的更多写法
+## 2. eslint 的配置文件名称的更多写法
 
 - eslint 的配置文件命名有多种写法，比如 eslint.config |.js|.mjs|.cjs|.ts|.mts|.cts 或者 .eslintrc |.js|.json|.yml|.cjs|.mjs 或者 package.json 等等。需要知道 eslint 配置文件的命名是非常灵活的，这决定了 eslint 配置信息应该书写在什么位置，我们需要知道在哪查看 eslint 的配置信息。
 - eslint 的配置文件可以有多种命名方式，而不仅仅是官方列出的那些。实际上，ESLint 支持多种配置文件格式和命名约定。

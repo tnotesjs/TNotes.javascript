@@ -4,13 +4,13 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 getUserMedia 请求麦克风权限时，如何设置只获取音频而不获取视频？](#3--getusermedia-请求麦克风权限时如何设置只获取音频而不获取视频)
-- [4. 🤔 echoCancellation、noiseSuppression、autoGainControl 这三个约束分别有什么作用？](#4--echocancellationnoisesuppressionautogaincontrol-这三个约束分别有什么作用)
-- [5. 🤔 如何将 getUserMedia 获取的麦克风流接入 Web Audio API 音频图中进行实时处理？](#5--如何将-getusermedia-获取的麦克风流接入-web-audio-api-音频图中进行实时处理)
-- [6. 🤔 MediaRecorder 的 mimeType 应如何指定，不同浏览器支持的编码格式有哪些差异？](#6--mediarecorder-的-mimetype-应如何指定不同浏览器支持的编码格式有哪些差异)
-- [7. 🤔 如何在录制过程中同时获取音频数据用于实时可视化？](#7--如何在录制过程中同时获取音频数据用于实时可视化)
-- [8. 🤔 MediaRecorder 的 timeslice 参数有什么作用，适用于什么场景？](#8--mediarecorder-的-timeslice-参数有什么作用适用于什么场景)
-- [9. 🤔 如何实现录音的暂停与恢复，并最终导出为可下载的音频文件？](#9--如何实现录音的暂停与恢复并最终导出为可下载的音频文件)
+- [3. getUserMedia 请求麦克风权限时，如何设置只获取音频而不获取视频？](#3-getusermedia-请求麦克风权限时如何设置只获取音频而不获取视频)
+- [4. echoCancellation、noiseSuppression、autoGainControl 这三个约束分别有什么作用？](#4-echocancellationnoisesuppressionautogaincontrol-这三个约束分别有什么作用)
+- [5. 如何将 getUserMedia 获取的麦克风流接入 Web Audio API 音频图中进行实时处理？](#5-如何将-getusermedia-获取的麦克风流接入-web-audio-api-音频图中进行实时处理)
+- [6. MediaRecorder 的 mimeType 应如何指定，不同浏览器支持的编码格式有哪些差异？](#6-mediarecorder-的-mimetype-应如何指定不同浏览器支持的编码格式有哪些差异)
+- [7. 如何在录制过程中同时获取音频数据用于实时可视化？](#7-如何在录制过程中同时获取音频数据用于实时可视化)
+- [8. MediaRecorder 的 timeslice 参数有什么作用，适用于什么场景？](#8-mediarecorder-的-timeslice-参数有什么作用适用于什么场景)
+- [9. 如何实现录音的暂停与恢复，并最终导出为可下载的音频文件？](#9-如何实现录音的暂停与恢复并最终导出为可下载的音频文件)
 
 <!-- endregion:toc -->
 
@@ -32,7 +32,7 @@
 
 - todo
 
-## 3. 🤔 getUserMedia 请求麦克风权限时，如何设置只获取音频而不获取视频？
+## 3. getUserMedia 请求麦克风权限时，如何设置只获取音频而不获取视频？
 
 `getUserMedia` 的第一个参数是一个 constraints（约束）对象，其中 `audio` 和 `video` 分别控制是否请求音频和视频轨道。只获取音频时，将 `video` 设为 `false` 即可：
 
@@ -104,7 +104,7 @@ stream.getTracks().forEach((track) => track.stop())
 
 ---
 
-## 4. 🤔 echoCancellation、noiseSuppression、autoGainControl 这三个约束分别有什么作用？
+## 4. echoCancellation、noiseSuppression、autoGainControl 这三个约束分别有什么作用？
 
 这三个约束控制浏览器对麦克风输入信号的实时预处理。它们由浏览器内置的音频处理管线实现，在信号进入 Web Audio API 之前就已经被处理过了。
 
@@ -166,7 +166,7 @@ console.log(settings.autoGainControl)
 
 ---
 
-## 5. 🤔 如何将 getUserMedia 获取的麦克风流接入 Web Audio API 音频图中进行实时处理？
+## 5. 如何将 getUserMedia 获取的麦克风流接入 Web Audio API 音频图中进行实时处理？
 
 将麦克风流接入 Web Audio API 需要使用 `createMediaStreamSource()` 方法。它接收一个 `MediaStream` 对象，返回一个 `MediaStreamAudioSourceNode`，之后就可以像其他音频节点一样连接到音频图中。
 
@@ -267,7 +267,7 @@ track.addEventListener('ended', () => {
 
 ---
 
-## 6. 🤔 MediaRecorder 的 mimeType 应如何指定，不同浏览器支持的编码格式有哪些差异？
+## 6. MediaRecorder 的 mimeType 应如何指定，不同浏览器支持的编码格式有哪些差异？
 
 `MediaRecorder` 构造函数接受一个可选的 `options` 参数，其中 `mimeType` 指定录制的编码格式和容器格式。格式表达为 MIME 类型字符串，如 `audio/webm;codecs=opus`。
 
@@ -343,7 +343,7 @@ const recorder = new MediaRecorder(stream, {
 
 ---
 
-## 7. 🤔 如何在录制过程中同时获取音频数据用于实时可视化？
+## 7. 如何在录制过程中同时获取音频数据用于实时可视化？
 
 录制和可视化的数据来源是同一个 `MediaStream`。两种操作互不冲突，可以同时进行。
 
@@ -468,7 +468,7 @@ function drawWaveform() {
 
 ---
 
-## 8. 🤔 MediaRecorder 的 timeslice 参数有什么作用，适用于什么场景？
+## 8. MediaRecorder 的 timeslice 参数有什么作用，适用于什么场景？
 
 `start()` 方法接受一个可选的 `timeslice` 参数（单位为毫秒），指定 `dataavailable` 事件的触发间隔。不传 timeslice 时，录制数据只在 `stop()` 时一次性返回。
 
@@ -543,7 +543,7 @@ timeslice 的值选择建议：
 
 ---
 
-## 9. 🤔 如何实现录音的暂停与恢复，并最终导出为可下载的音频文件？
+## 9. 如何实现录音的暂停与恢复，并最终导出为可下载的音频文件？
 
 `MediaRecorder` 提供了 `pause()` 和 `resume()` 方法来控制录制的暂停与恢复。
 

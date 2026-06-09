@@ -2,18 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `navigator` 对象是什么？](#3--navigator-对象是什么)
-- [4. 🤔 `navigator` 常见属性能说明什么？](#4--navigator-常见属性能说明什么)
-- [5. 🤔 如何检测插件？](#5--如何检测插件)
-- [6. 🤔 旧版 IE 为什么要用 ActiveX 检测插件？](#6--旧版-ie-为什么要用-activex-检测插件)
-- [7. 🤔 `registerProtocolHandler()` 有什么用？](#7--registerprotocolhandler-有什么用)
-- [8. 🤔 使用 `navigator` 时应该注意什么？](#8--使用-navigator-时应该注意什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `navigator` 对象是什么？](#3-navigator-对象是什么)
+- [4. `navigator` 常见属性能说明什么？](#4-navigator-常见属性能说明什么)
+- [5. 如何检测插件？](#5-如何检测插件)
+- [6. 旧版 IE 为什么要用 ActiveX 检测插件？](#6-旧版-ie-为什么要用-activex-检测插件)
+- [7. `registerProtocolHandler()` 有什么用？](#7-registerprotocolhandler-有什么用)
+- [8. 使用 `navigator` 时应该注意什么？](#8-使用-navigator-时应该注意什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `navigator` 对象的定位
 - 浏览器和设备信息属性
@@ -22,11 +22,11 @@
 - `registerProtocolHandler()`
 - 使用 `navigator` 的注意点
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `navigator` 适合了解运行环境，但不适合把业务逻辑死死绑在某个浏览器名字上。它提供的信息多、杂、还可能不准，真正可靠的判断通常还是能力检测。
 
-## 3. 🤔 `navigator` 对象是什么？
+## 3. `navigator` 对象是什么？
 
 `navigator` 最早来自 Netscape Navigator，现在已经成为浏览器环境中用于描述客户端信息的标准对象。
 
@@ -39,7 +39,7 @@ console.log(navigator.language)
 
 它提供的信息包括浏览器标识、语言、联网状态、硬件能力、媒体设备、插件、权限、服务工作者线程等。不同浏览器支持的属性和方法并不完全一样。
 
-## 4. 🤔 `navigator` 常见属性能说明什么？
+## 4. `navigator` 常见属性能说明什么？
 
 可以把常见属性按用途分成几类：
 
@@ -60,7 +60,7 @@ console.log(navigator.language)
 
 所以，不要只根据 `navigator.userAgent` 决定核心逻辑。能做能力检测时，通常应该优先检测能力。
 
-## 5. 🤔 如何检测插件？
+## 5. 如何检测插件？
 
 早期浏览器常通过 `navigator.plugins` 检测插件。
 
@@ -84,7 +84,7 @@ console.log(hasPlugin('Flash'))
 
 不过，插件体系已经明显退场。Flash 等传统插件被淘汰后，这类检测在现代 Web 开发中已经不再常用。
 
-## 6. 🤔 旧版 IE 为什么要用 ActiveX 检测插件？
+## 6. 旧版 IE 为什么要用 ActiveX 检测插件？
 
 IE10 及更早版本不支持 Netscape 式插件体系，很多插件以 ActiveX 控件形式存在。
 
@@ -105,7 +105,7 @@ function hasIEPlugin(name) {
 
 这部分主要用于理解历史代码。现代浏览器已经不再依赖 ActiveX，IE11 以后也逐渐支持 `plugins` 和 `mimeTypes` 一类属性。
 
-## 7. 🤔 `registerProtocolHandler()` 有什么用？
+## 7. `registerProtocolHandler()` 有什么用？
 
 `navigator.registerProtocolHandler()` 可以把 Web 应用注册为某种协议的处理程序。
 
@@ -121,7 +121,7 @@ navigator.registerProtocolHandler(
 
 这个能力让 Web 应用可以更像桌面应用一样参与系统级链接处理。不过它通常会受到浏览器权限、协议白名单和用户确认的限制。
 
-## 8. 🤔 使用 `navigator` 时应该注意什么？
+## 8. 使用 `navigator` 时应该注意什么？
 
 最重要的是不要过度依赖浏览器身份。
 

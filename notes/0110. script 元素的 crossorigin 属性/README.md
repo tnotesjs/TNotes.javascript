@@ -2,11 +2,11 @@
 
 <!-- region:toc -->
 
-- [1. 📒 crossorigin 属性](#1--crossorigin-属性)
+- [1. crossorigin 属性](#1-crossorigin-属性)
 
 <!-- endregion:toc -->
 
-## 1. 📒 crossorigin 属性
+## 1. crossorigin 属性
 
 **如果 script 标签引用的资源出现了问题，加上 crossorigin 属性可以让浏览器提供的错误报告更加详细，帮助开发者更好地调试问题。**
 

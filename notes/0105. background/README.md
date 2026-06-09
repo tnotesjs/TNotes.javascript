@@ -3,7 +3,7 @@
 <!-- region:toc -->
 
 - [1. 评价](#1-评价)
-- [2. 💻 demos.1 - 使用 background-image 设置背景](#2--demos1---使用-background-image-设置背景)
+- [2. demos.1 - 使用 background-image 设置背景](#2-demos1---使用-background-image-设置背景)
 
 <!-- endregion:toc -->
 
@@ -26,7 +26,7 @@
     - background-repeat
     - background-size
 
-## 2. 💻 demos.1 - 使用 background-image 设置背景
+## 2. demos.1 - 使用 background-image 设置背景
 
 ```html
 <!-- 

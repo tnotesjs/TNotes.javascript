@@ -2,49 +2,49 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 如何使用 TextEncoderStream 进行文本编码转换 ？](#3--如何使用-textencoderstream-进行文本编码转换-)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 如何使用 TextEncoderStream 进行文本编码转换 ？](#3-如何使用-textencoderstream-进行文本编码转换-)
   - [3.1. TextEncoderStream 基本用法](#31-textencoderstream-基本用法)
   - [3.2. TextDecoderStream 基本用法](#32-textdecoderstream-基本用法)
   - [3.3. 处理不完整的字节序列](#33-处理不完整的字节序列)
   - [3.4. 支持的编码格式](#34-支持的编码格式)
   - [3.5. 实际应用：流式下载文本文件](#35-实际应用流式下载文本文件)
-- [4. 🤔 CompressionStream 支持哪些压缩格式 ？](#4--compressionstream-支持哪些压缩格式-)
+- [4. CompressionStream 支持哪些压缩格式 ？](#4-compressionstream-支持哪些压缩格式-)
   - [4.1. gzip 压缩](#41-gzip-压缩)
   - [4.2. deflate 压缩](#42-deflate-压缩)
   - [4.3. deflate-raw 压缩](#43-deflate-raw-压缩)
   - [4.4. 压缩格式对比](#44-压缩格式对比)
   - [4.5. 实际应用：压缩上传文件](#45-实际应用压缩上传文件)
   - [4.6. 实际应用：解压下载的压缩文件](#46-实际应用解压下载的压缩文件)
-- [5. 🤔 如何将 Blob 转换为流或从流创建 Blob ？](#5--如何将-blob-转换为流或从流创建-blob-)
+- [5. 如何将 Blob 转换为流或从流创建 Blob ？](#5-如何将-blob-转换为流或从流创建-blob-)
   - [5.1. Blob 转换为流](#51-blob-转换为流)
   - [5.2. 流转换为 Blob](#52-流转换为-blob)
   - [5.3. 手动实现流转 Blob](#53-手动实现流转-blob)
   - [5.4. File 对象也支持流](#54-file-对象也支持流)
   - [5.5. 实际应用：分块上传文件](#55-实际应用分块上传文件)
   - [5.6. 实际应用：下载大文件并保存](#56-实际应用下载大文件并保存)
-- [6. 🤔 File System Access API 如何与流配合使用 ？](#6--file-system-access-api-如何与流配合使用-)
+- [6. File System Access API 如何与流配合使用 ？](#6-file-system-access-api-如何与流配合使用-)
   - [6.1. 流式读取文件](#61-流式读取文件)
   - [6.2. 流式写入文件](#62-流式写入文件)
   - [6.3. 追加写入文件](#63-追加写入文件)
   - [6.4. 实际应用：导出大型 JSON 数据](#64-实际应用导出大型-json-数据)
   - [6.5. 实际应用：日志文件追加](#65-实际应用日志文件追加)
   - [6.6. ⚠️ 注意事项](#66-️-注意事项)
-- [7. 🤔 如何实现一个完整的 JSON 流解析器 ？](#7--如何实现一个完整的-json-流解析器-)
+- [7. 如何实现一个完整的 JSON 流解析器 ？](#7-如何实现一个完整的-json-流解析器-)
   - [7.1. 基础实现](#71-基础实现)
   - [7.2. 创建 TransformStream](#72-创建-transformstream)
   - [7.3. 使用示例](#73-使用示例)
   - [7.4. 改进版：支持 JSON Lines 格式](#74-改进版支持-json-lines-格式)
   - [7.5. 实际应用：流式处理 API 响应](#75-实际应用流式处理-api-响应)
   - [7.6. 性能优化](#76-性能优化)
-- [8. 💻 demos.1 - 使用压缩流处理大文件](#8--demos1---使用压缩流处理大文件)
-- [9. 💻 demos.2 - 实现完整的 JSON 流解析器](#9--demos2---实现完整的-json-流解析器)
-- [10. 💻 demos.3 - 结合 File System Access API 的文件处理](#10--demos3---结合-file-system-access-api-的文件处理)
+- [8. demos.1 - 使用压缩流处理大文件](#8-demos1---使用压缩流处理大文件)
+- [9. demos.2 - 实现完整的 JSON 流解析器](#9-demos2---实现完整的-json-流解析器)
+- [10. demos.3 - 结合 File System Access API 的文件处理](#10-demos3---结合-file-system-access-api-的文件处理)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - TextEncoderStream 与 TextDecoderStream
 - CompressionStream 与 DecompressionStream
@@ -53,11 +53,11 @@
 - 完整的 JSON 流解析器实现
 - WebCodecs API 与流集成
 
-## 2. 🫧 评价
+## 2. 评价
 
 Web Streams 与浏览器其他 API 的集成能力强大且实用。TextEncoderStream 和 TextDecoderStream 简化了文本编码转换，CompressionStream 提供了原生压缩支持（gzip、deflate、deflate-raw）。Blob 与流的相互转换使得文件处理更加灵活。File System Access API 结合流可以实现大文件的增量读写。这些集成降低了开发复杂度，提升了性能，是现代 Web 应用处理数据流的标准方案。
 
-## 3. 🤔 如何使用 TextEncoderStream 进行文本编码转换 ？
+## 3. 如何使用 TextEncoderStream 进行文本编码转换 ？
 
 TextEncoderStream 和 TextDecoderStream 用于在流中进行文本编码和解码转换。
 
@@ -174,7 +174,7 @@ while (true) {
 
 TextEncoderStream 和 TextDecoderStream 简化了流中的文本处理，自动处理多字节字符的边界问题。
 
-## 4. 🤔 CompressionStream 支持哪些压缩格式 ？
+## 4. CompressionStream 支持哪些压缩格式 ？
 
 CompressionStream 支持 gzip、deflate、deflate-raw 三种压缩格式，DecompressionStream 用于解压。
 
@@ -204,7 +204,7 @@ while (true) {
 }
 
 console.log(
-  `压缩率: ${((1 - compressedSize / originalSize) * 100).toFixed(2)}%`
+  `压缩率: ${((1 - compressedSize / originalSize) * 100).toFixed(2)}%`,
 )
 ```
 
@@ -225,7 +225,7 @@ const compressed = await new Response(
       controller.enqueue(originalData)
       controller.close()
     },
-  }).pipeThrough(compressor)
+  }).pipeThrough(compressor),
 ).arrayBuffer()
 
 // 解压
@@ -235,7 +235,7 @@ const decompressed = await new Response(
       controller.enqueue(new Uint8Array(compressed))
       controller.close()
     },
-  }).pipeThrough(decompressor)
+  }).pipeThrough(decompressor),
 ).text()
 
 console.log(decompressed) // "测试数据"
@@ -290,7 +290,7 @@ async function uploadCompressed(file) {
 const response = await fetch('data.json.gz')
 
 const decompressedStream = response.body.pipeThrough(
-  new DecompressionStream('gzip')
+  new DecompressionStream('gzip'),
 )
 
 const data = await new Response(decompressedStream).json()
@@ -299,7 +299,7 @@ console.log(data)
 
 CompressionStream 提供了原生压缩能力，减小传输体积，提升性能。
 
-## 5. 🤔 如何将 Blob 转换为流或从流创建 Blob ？
+## 5. 如何将 Blob 转换为流或从流创建 Blob ？
 
 Blob 和 ReadableStream 可以相互转换，适用于文件处理场景。
 
@@ -435,7 +435,7 @@ async function downloadAndSave(url, filename) {
 
 Blob 与流的互转为文件处理提供了灵活性，适合处理大文件和需要增量处理的场景。
 
-## 6. 🤔 File System Access API 如何与流配合使用 ？
+## 6. File System Access API 如何与流配合使用 ？
 
 File System Access API 提供了读写本地文件的能力，结合流可以处理大文件。
 
@@ -607,7 +607,7 @@ try {
 
 File System Access API 结合流可以高效处理本地大文件，适合日志记录、数据导入导出等场景。
 
-## 7. 🤔 如何实现一个完整的 JSON 流解析器 ？
+## 7. 如何实现一个完整的 JSON 流解析器 ？
 
 实现一个能够处理大型 JSON 数组的流式解析器，逐个输出对象。
 
@@ -874,19 +874,19 @@ class OptimizedJSONStreamParser {
 
 JSON 流解析器适合处理大型 JSON 数据集，避免一次性加载到内存中。
 
-## 8. 💻 demos.1 - 使用压缩流处理大文件
+## 8. demos.1 - 使用压缩流处理大文件
 
 演示使用 CompressionStream 和 DecompressionStream 对文件进行压缩和解压。支持 gzip、deflate、deflate-raw 三种格式，实时显示压缩率和处理速度。
 
 [查看演示代码](./demos/1/)
 
-## 9. 💻 demos.2 - 实现完整的 JSON 流解析器
+## 9. demos.2 - 实现完整的 JSON 流解析器
 
 实现一个完整的 JSON 流解析器，可以处理大型 JSON 数组。支持生成测试数据、从 URL 加载、读取本地文件三种数据源，实时展示解析进度和结果。
 
 [查看演示代码](./demos/2/)
 
-## 10. 💻 demos.3 - 结合 File System Access API 的文件处理
+## 10. demos.3 - 结合 File System Access API 的文件处理
 
 演示 File System Access API 与流的结合使用。支持流式读取文件、保存新文件、追加内容到文件，实时显示操作日志和进度。
 

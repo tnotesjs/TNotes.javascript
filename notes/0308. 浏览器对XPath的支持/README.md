@@ -2,19 +2,19 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 XPath 解决什么问题？](#3--xpath-解决什么问题)
-- [4. 🤔 DOM Level 3 XPath 提供了哪些核心 API？](#4--dom-level-3-xpath-提供了哪些核心-api)
-- [5. 🤔 `XPathResult` 有哪些常见结果类型？](#5--xpathresult-有哪些常见结果类型)
-- [6. 🤔 如何读取节点迭代器结果？](#6--如何读取节点迭代器结果)
-- [7. 🤔 如何读取单个节点和简单类型结果？](#7--如何读取单个节点和简单类型结果)
-- [8. 🤔 `ANY_TYPE` 有什么用？](#8--any_type-有什么用)
-- [9. 🤔 带命名空间的 XML 如何使用 XPath？](#9--带命名空间的-xml-如何使用-xpath)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. XPath 解决什么问题？](#3-xpath-解决什么问题)
+- [4. DOM Level 3 XPath 提供了哪些核心 API？](#4-dom-level-3-xpath-提供了哪些核心-api)
+- [5. `XPathResult` 有哪些常见结果类型？](#5-xpathresult-有哪些常见结果类型)
+- [6. 如何读取节点迭代器结果？](#6-如何读取节点迭代器结果)
+- [7. 如何读取单个节点和简单类型结果？](#7-如何读取单个节点和简单类型结果)
+- [8. `ANY_TYPE` 有什么用？](#8-any_type-有什么用)
+- [9. 带命名空间的 XML 如何使用 XPath？](#9-带命名空间的-xml-如何使用-xpath)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - XPath 的用途
 - DOM Level 3 XPath
@@ -23,11 +23,11 @@
 - 节点迭代器、快照、单节点和简单类型结果
 - 命名空间解析器
 
-## 2. 🫧 评价
+## 2. 评价
 
 - XPath 的价值在于表达力：当 XML 结构层级较深、查询条件较复杂时，用路径表达式定位节点往往比手写 DOM 遍历清楚得多。
 
-## 3. 🤔 XPath 解决什么问题？
+## 3. XPath 解决什么问题？
 
 XPath 是一种在 XML 文档中定位节点和计算结果的表达式语言。它可以用路径、条件和函数描述你要找的内容。
 
@@ -35,7 +35,7 @@ XPath 是一种在 XML 文档中定位节点和计算结果的表达式语言。
 
 如果只用 DOM 方法，你可能需要多层 `getElementsByTagName()` 或手写遍历。XPath 则把查询逻辑集中到表达式里，尤其适合 XML 结构固定、查询路径清晰的场景。
 
-## 4. 🤔 DOM Level 3 XPath 提供了哪些核心 API？
+## 4. DOM Level 3 XPath 提供了哪些核心 API？
 
 DOM Level 3 XPath 标准化了在 DOM 中执行 XPath 查询的接口。现代浏览器通常可以直接在 `Document` 对象上调用 `evaluate()`。
 
@@ -61,7 +61,7 @@ const result = xmlDocument.evaluate(
 
 另外，`XPathEvaluator` 还定义了 `createExpression()` 和 `createNSResolver()`。前者适合编译重复执行的 XPath 表达式，后者适合根据文档节点创建命名空间解析器。
 
-## 5. 🤔 `XPathResult` 有哪些常见结果类型？
+## 5. `XPathResult` 有哪些常见结果类型？
 
 `evaluate()` 的第四个参数决定返回结果怎么读取。常见类型包括：
 
@@ -77,7 +77,7 @@ const result = xmlDocument.evaluate(
 
 结果类型选错时，读取属性和方法也会不对。因此，写 XPath 查询时要先明确自己需要的是节点集合、单个节点，还是简单值。
 
-## 6. 🤔 如何读取节点迭代器结果？
+## 6. 如何读取节点迭代器结果？
 
 节点迭代器适合按顺序读取所有匹配节点。
 
@@ -118,7 +118,7 @@ for (let index = 0; index < result.snapshotLength; index++) {
 
 快照会捕获查询当时的节点集合，后续文档修改不会改变这个快照。
 
-## 7. 🤔 如何读取单个节点和简单类型结果？
+## 7. 如何读取单个节点和简单类型结果？
 
 只需要第一个匹配节点时，可以使用 `FIRST_ORDERED_NODE_TYPE`。
 
@@ -174,7 +174,7 @@ console.log(firstName.stringValue)
 
 字符串结果通常取第一个匹配节点的文本内容。数值结果常配合 `count()` 等 XPath 函数使用。
 
-## 8. 🤔 `ANY_TYPE` 有什么用？
+## 8. `ANY_TYPE` 有什么用？
 
 `XPathResult.ANY_TYPE` 让浏览器根据 XPath 表达式自动选择合适的结果类型。
 
@@ -205,7 +205,7 @@ switch (result.resultType) {
 
 `ANY_TYPE` 写起来灵活，但读取结果时要多一层判断。业务代码里如果结果类型明确，通常直接指定具体类型更清楚。
 
-## 9. 🤔 带命名空间的 XML 如何使用 XPath？
+## 9. 带命名空间的 XML 如何使用 XPath？
 
 XML 使用命名空间时，XPath 表达式里的前缀必须能解析到对应 URI。否则，即使文档里确实有节点，查询也可能失败。
 

@@ -10,13 +10,13 @@
 :::
 
 - [1. 本节内容](#1-本节内容)
-- [2. 🫧 评论](#2--评论)
-- [3. 🤔 CMD 是什么？](#3--cmd-是什么)
+- [2. 评论](#2-评论)
+- [3. CMD 是什么？](#3-cmd-是什么)
   - [3.1. CMD](#31-cmd)
   - [3.2. Sea.js 简介](#32-seajs-简介)
   - [3.3. 基本用法](#33-基本用法)
   - [3.4. 🆚 AMD vs CMD](#34--amd-vs-cmd)
-- [4. 💻 demos.1 - Sea.js 的基本使用](#4--demos1---seajs-的基本使用)
+- [4. demos.1 - Sea.js 的基本使用](#4-demos1---seajs-的基本使用)
 - [5. 引用](#5-引用)
 
 <!-- endregion:toc -->
@@ -25,11 +25,11 @@
 
 - CMD 规范
 
-## 2. 🫧 评论
+## 2. 评论
 
 和 AMD 一样，CMD 也可以说几乎完全退出历史舞台了，很少场景会使用到它，简单了解一下它的导入导出写法，能读懂程序即可。
 
-## 3. 🤔 CMD 是什么？
+## 3. CMD 是什么？
 
 ### 3.1. CMD
 
@@ -93,7 +93,7 @@ define(function (require, exports, module) {
 - 后期发展：RequireJS 也支持了类 CommonJS 写法，差异缩小
 - 现状：两者都已被 ES Module 取代
 
-## 4. 💻 demos.1 - Sea.js 的基本使用
+## 4. demos.1 - Sea.js 的基本使用
 
 ::: code-group
 

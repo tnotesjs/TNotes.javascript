@@ -2,19 +2,19 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 为什么要把 Web Audio API 和其它技术集成？](#3--为什么要把-web-audio-api-和其它技术集成)
-- [4. 🤔 什么时候应该继续使用 `<audio>`？](#4--什么时候应该继续使用-audio)
-- [5. 🤔 如何把 `<audio>` 接入音频图？](#5--如何把-audio-接入音频图)
-- [6. 🤔 如何接入麦克风实时输入？](#6--如何接入麦克风实时输入)
-- [7. 🤔 WebRTC 音频流能和 Web Audio API 做什么组合？](#7--webrtc-音频流能和-web-audio-api-做什么组合)
-- [8. 🤔 Page Visibility API 为什么会影响音频？](#8--page-visibility-api-为什么会影响音频)
-- [9. 🤔 自动播放策略会带来哪些工程限制？](#9--自动播放策略会带来哪些工程限制)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 为什么要把 Web Audio API 和其它技术集成？](#3-为什么要把-web-audio-api-和其它技术集成)
+- [4. 什么时候应该继续使用 `<audio>`？](#4-什么时候应该继续使用-audio)
+- [5. 如何把 `<audio>` 接入音频图？](#5-如何把-audio-接入音频图)
+- [6. 如何接入麦克风实时输入？](#6-如何接入麦克风实时输入)
+- [7. WebRTC 音频流能和 Web Audio API 做什么组合？](#7-webrtc-音频流能和-web-audio-api-做什么组合)
+- [8. Page Visibility API 为什么会影响音频？](#8-page-visibility-api-为什么会影响音频)
+- [9. 自动播放策略会带来哪些工程限制？](#9-自动播放策略会带来哪些工程限制)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - 理解 Web Audio API 与其它 Web 平台能力的集成方式。
 - 掌握用 `MediaElementAudioSourceNode` 接入 `<audio>`，处理长音频和背景音乐。
@@ -24,11 +24,11 @@
 - 掌握 Page Visibility API 对音频播放状态管理的意义。
 - 理解现代浏览器自动播放策略和 `AudioContext.resume()` 的关系。
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 这一章很实用，因为真实项目里的音频往往不只来自音频文件。`<audio>`、麦克风、WebRTC、页面可见性和自动播放策略一起出现时，Web Audio API 才真正进入应用工程问题。
 
-## 3. 🤔 为什么要把 Web Audio API 和其它技术集成？
+## 3. 为什么要把 Web Audio API 和其它技术集成？
 
 Web Audio API 很强，但它不是孤立存在的。真实应用里的声音可能来自很多地方：
 
@@ -40,7 +40,7 @@ Web Audio API 很强，但它不是孤立存在的。真实应用里的声音可
 
 Web Audio API 的价值在于：这些不同来源的声音一旦进入音频图，就可以继续使用同一套节点处理，例如增益、滤波、分析、混响、空间化和压缩。
 
-## 4. 🤔 什么时候应该继续使用 `<audio>`？
+## 4. 什么时候应该继续使用 `<audio>`？
 
 `<audio>` 不适合复杂实时音频处理，但它非常适合长音频和流式播放。例如背景音乐、播客、长音频课程、网络电台，通常不应该先完整下载并解码成一个巨大的 `AudioBuffer`。
 
@@ -53,7 +53,7 @@ Web Audio API 的价值在于：这些不同来源的声音一旦进入音频图
 
 如果你只是播放一首背景音乐，`<audio>` 本身就够了。如果你还想对它加滤波、分析、混响或接入统一混音总线，就可以把它接入 Web Audio API。
 
-## 5. 🤔 如何把 `<audio>` 接入音频图？
+## 5. 如何把 `<audio>` 接入音频图？
 
 可以使用 `createMediaElementSource()` 把一个媒体元素包装成 `MediaElementAudioSourceNode`。
 
@@ -83,7 +83,7 @@ playButton.addEventListener('click', async () => {
 - 媒体元素接入音频图后，输出路径会变成 Web Audio API 的图结构，要确保最终连接到 `context.destination`。
 - 现代浏览器限制自动播放，首次播放通常需要用户手势。
 
-## 6. 🤔 如何接入麦克风实时输入？
+## 6. 如何接入麦克风实时输入？
 
 麦克风输入通过 `navigator.mediaDevices.getUserMedia()` 获取。拿到 `MediaStream` 后，可以用 `createMediaStreamSource()` 把它接入音频图。
 
@@ -123,7 +123,7 @@ function stopStream(stream) {
 }
 ```
 
-## 7. 🤔 WebRTC 音频流能和 Web Audio API 做什么组合？
+## 7. WebRTC 音频流能和 Web Audio API 做什么组合？
 
 WebRTC 可以建立浏览器之间的实时音视频通信。它得到的远端音频流同样可以进入 Web Audio API。
 
@@ -153,7 +153,7 @@ function connectRemoteStream(remoteStream) {
 
 实际 WebRTC 项目会更复杂，因为还涉及回声消除、自动增益、噪声抑制、设备切换和网络延迟。Web Audio API 主要负责本地音频图处理。
 
-## 8. 🤔 Page Visibility API 为什么会影响音频？
+## 8. Page Visibility API 为什么会影响音频？
 
 如果一个网页切到后台后继续播放声音，用户可能很难找到声音来自哪个标签页。对音乐播放器来说，后台继续播放是合理的；对游戏、互动演示和练习工具来说，切后台时暂停通常更符合预期。
 
@@ -181,7 +181,7 @@ document.addEventListener('visibilitychange', () => {
 | 音频编辑器 | 视当前播放状态和用户设置决定。               |
 | 实时会议   | 通常不能直接暂停，需要更细的静音或降噪策略。 |
 
-## 9. 🤔 自动播放策略会带来哪些工程限制？
+## 9. 自动播放策略会带来哪些工程限制？
 
 书中的很多旧示例会在页面加载后直接创建上下文并播放声音。现代浏览器为了避免网页自动发声，通常要求音频播放由用户手势触发。
 

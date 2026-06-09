@@ -3,10 +3,10 @@
 <!-- region:toc -->
 
 - [1. 本节内容](#1-本节内容)
-- [2. 📒 while 循环](#2--while-循环)
-- [3. 💻 demos.1 - while 循环的基本使用](#3--demos1---while-循环的基本使用)
-- [4. 💻 demos.3 - 使用 break 跳出循环体](#4--demos3---使用-break-跳出循环体)
-- [5. 💻 demos.2 - 死循环](#5--demos2---死循环)
+- [2. while 循环](#2-while-循环)
+- [3. demos.1 - while 循环的基本使用](#3-demos1---while-循环的基本使用)
+- [4. demos.3 - 使用 break 跳出循环体](#4-demos3---使用-break-跳出循环体)
+- [5. demos.2 - 死循环](#5-demos2---死循环)
 
 <!-- endregion:toc -->
 
@@ -14,7 +14,7 @@
 
 - 掌握 while 循环的基本使用
 
-## 2. 📒 while 循环
+## 2. while 循环
 
 - **while 循环：**
   - `while` 语句包括一个循环条件和一段代码块，只要条件为真，就不断循环执行代码块。
@@ -34,7 +34,7 @@ st((开始))-->条件{条件}
 条件--false-->ed((结束))
 ```
 
-## 3. 💻 demos.1 - while 循环的基本使用
+## 3. demos.1 - while 循环的基本使用
 
 ::: code-group
 
@@ -42,7 +42,7 @@ st((开始))-->条件{条件}
 
 :::
 
-## 4. 💻 demos.3 - 使用 break 跳出循环体
+## 4. demos.3 - 使用 break 跳出循环体
 
 ::: code-group
 
@@ -50,7 +50,7 @@ st((开始))-->条件{条件}
 
 :::
 
-## 5. 💻 demos.2 - 死循环
+## 5. demos.2 - 死循环
 
 ::: code-group
 

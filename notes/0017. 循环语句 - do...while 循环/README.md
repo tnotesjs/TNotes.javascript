@@ -4,9 +4,9 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 📒 do...while 循环](#3--dowhile-循环)
-- [4. 💻 demos.1 - 理解 do...while 循环的执行流程](#4--demos1---理解-dowhile-循环的执行流程)
-- [5. 💻 demos.2 - 对比 do...while 和 while 之间的差异](#5--demos2---对比-dowhile-和-while-之间的差异)
+- [3. do...while 循环](#3-dowhile-循环)
+- [4. demos.1 - 理解 do...while 循环的执行流程](#4-demos1---理解-dowhile-循环的执行流程)
+- [5. demos.2 - 对比 do...while 和 while 之间的差异](#5-demos2---对比-dowhile-和-while-之间的差异)
 
 <!-- endregion:toc -->
 
@@ -18,7 +18,7 @@
 
 - do...while 循环不常用，快速过有个印象，确保能读懂程序即可。
 
-## 3. 📒 do...while 循环
+## 3. do...while 循环
 
 - 在大多数代码库和开发者社区中，for 和 while 循环更为常见，do...while 循环很少会见到。
 - `do...while` 循环与 `while` 循环类似，唯一的区别就是先运行一次循环体，然后判断循环条件。
@@ -48,7 +48,7 @@ st((开始))-->循环体
 
 - 不管条件是否为真，`do...while` 循环至少运行一次，这是这种结构最大的特点。另外需要注意不要省略 `while` 语句后面的分号。
 
-## 4. 💻 demos.1 - 理解 do...while 循环的执行流程
+## 4. demos.1 - 理解 do...while 循环的执行流程
 
 ::: code-group
 
@@ -56,7 +56,7 @@ st((开始))-->循环体
 
 :::
 
-## 5. 💻 demos.2 - 对比 do...while 和 while 之间的差异
+## 5. demos.2 - 对比 do...while 和 while 之间的差异
 
 ::: code-group
 

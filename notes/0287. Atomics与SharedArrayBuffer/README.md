@@ -2,18 +2,18 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 为什么共享内存会带来资源争用？](#3--为什么共享内存会带来资源争用)
-- [4. 🤔 `Atomics` 如何避免丢失更新？](#4--atomics-如何避免丢失更新)
-- [5. 🤔 `load()` 和 `store()` 为什么像读写屏障？](#5--load-和-store-为什么像读写屏障)
-- [6. 🤔 `exchange()` 和 `compareExchange()` 适合什么场景？](#6--exchange-和-compareexchange-适合什么场景)
-- [7. 🤔 `wait()` 和 `notify()` 如何协调执行？](#7--wait-和-notify-如何协调执行)
-- [8. 🤔 使用这组 API 时要注意什么？](#8--使用这组-api-时要注意什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. 为什么共享内存会带来资源争用？](#3-为什么共享内存会带来资源争用)
+- [4. `Atomics` 如何避免丢失更新？](#4-atomics-如何避免丢失更新)
+- [5. `load()` 和 `store()` 为什么像读写屏障？](#5-load-和-store-为什么像读写屏障)
+- [6. `exchange()` 和 `compareExchange()` 适合什么场景？](#6-exchange-和-compareexchange-适合什么场景)
+- [7. `wait()` 和 `notify()` 如何协调执行？](#7-wait-和-notify-如何协调执行)
+- [8. 使用这组 API 时要注意什么？](#8-使用这组-api-时要注意什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `SharedArrayBuffer` 与 `ArrayBuffer` 的区别
 - 多执行上下文共享内存的资源争用问题
@@ -21,11 +21,11 @@
 - `load()`、`store()`、`exchange()`、`compareExchange()`
 - `wait()` 和 `notify()` 的线程协调语义
 
-## 2. 🫧 评价
+## 2. 评价
 
 - 这组 API 很底层，平时用得不多，但它揭示了浏览器并发编程中最硬核的问题：共享内存一旦出现，就必须认真处理同步。
 
-## 3. 🤔 为什么共享内存会带来资源争用？
+## 3. 为什么共享内存会带来资源争用？
 
 普通 `ArrayBuffer` 可以在线程或 Worker 之间转移，但转移后原上下文就不能继续使用那块内存。`SharedArrayBuffer` 不同，它允许多个执行上下文同时引用同一块内存。
 
@@ -46,7 +46,7 @@ sharedView[0] = 0
 
 :::
 
-## 4. 🤔 `Atomics` 如何避免丢失更新？
+## 4. `Atomics` 如何避免丢失更新？
 
 `Atomics` 提供了一组原子操作。所谓原子操作，就是操作在共享内存上不可再拆分，中间不会被其他线程观察到半完成状态。
 
@@ -74,7 +74,7 @@ Atomics.add(sharedView, 0, 1)
 
 这些方法适用于整数定型数组，例如 `Int32Array`、`Uint32Array`。共享内存通常要先用 `SharedArrayBuffer` 创建，再包一层定型数组视图。
 
-## 5. 🤔 `load()` 和 `store()` 为什么像读写屏障？
+## 5. `load()` 和 `store()` 为什么像读写屏障？
 
 `Atomics.load()` 和 `Atomics.store()` 用于原子读取和原子写入。
 
@@ -88,7 +88,7 @@ Atomics.store(sharedView, 0, currentValue + 1)
 
 不过，如果读和写之间还有计算，`load()` 加 `store()` 并不能自动保证整个计算过程不可打断。计数这种场景仍然应该使用 `Atomics.add()` 这类读改写方法。
 
-## 6. 🤔 `exchange()` 和 `compareExchange()` 适合什么场景？
+## 6. `exchange()` 和 `compareExchange()` 适合什么场景？
 
 `Atomics.exchange()` 会把指定位置设置为新值，并返回旧值。
 
@@ -108,7 +108,7 @@ if (oldValue === 0) {
 
 这种模式常用于实现锁、状态机或只允许一个线程抢到任务的场景。
 
-## 7. 🤔 `wait()` 和 `notify()` 如何协调执行？
+## 7. `wait()` 和 `notify()` 如何协调执行？
 
 `Atomics.wait()` 可以让线程在某个位置的值仍然等于预期值时进入等待。`Atomics.notify()` 则可以唤醒等待在该位置上的线程。
 
@@ -126,7 +126,7 @@ Atomics.notify(sharedState, 0, 1)
 
 `wait()` 只能用于 `Int32Array` 或 `BigInt64Array` 这类允许等待的共享定型数组视图。它会阻塞当前执行线程，因此不能随便在主线程中使用。实际项目中，这类 API 更适合 Worker 内部的高性能并发协调。
 
-## 8. 🤔 使用这组 API 时要注意什么？
+## 8. 使用这组 API 时要注意什么？
 
 第一，只有共享内存才需要 `Atomics`。普通对象、普通数组和非共享 `ArrayBuffer` 不适用。
 

@@ -4,13 +4,13 @@
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 🤔 使用 `<audio>` 都有哪些局限性？为什么还需要 Web Audio API？](#3--使用-audio-都有哪些局限性为什么还需要-web-audio-api)
+- [3. 使用 `<audio>` 都有哪些局限性？为什么还需要 Web Audio API？](#3-使用-audio-都有哪些局限性为什么还需要-web-audio-api)
   - [3.1. 历史背景](#31-历史背景)
   - [3.2. `<audio>` 的本质](#32-audio-的本质)
   - [3.3. Web Audio API 做了什么？](#33-web-audio-api-做了什么)
   - [3.4. 什么时候用 `<audio>` 就够了？](#34-什么时候用-audio-就够了)
   - [3.5. 小结](#35-小结)
-- [4. 🤔 `AudioContext` 是什么？](#4--audiocontext-是什么)
+- [4. `AudioContext` 是什么？](#4-audiocontext-是什么)
   - [4.1. 如何创建音频上下文？](#41-如何创建音频上下文)
   - [4.2. `AudioContext` 都具备哪些功能？](#42-audiocontext-都具备哪些功能)
     - [管理音频硬件](#管理音频硬件)
@@ -19,19 +19,19 @@
     - [管理解码和加载](#管理解码和加载)
   - [4.3. 注意：浏览器的自动播放策略](#43-注意浏览器的自动播放策略)
   - [4.4. 小结](#44-小结)
-- [5. 🤔 Web Audio API 中有哪些节点？](#5--web-audio-api-中有哪些节点)
+- [5. Web Audio API 中有哪些节点？](#5-web-audio-api-中有哪些节点)
   - [5.1. 源节点（Source）](#51-源节点source)
   - [5.2. 效果/处理节点（Effect）](#52-效果处理节点effect)
   - [5.3. 分析节点（Analysis）](#53-分析节点analysis)
   - [5.4. 路由/工具节点（Utility）](#54-路由工具节点utility)
   - [5.5. 终点节点（Destination）](#55-终点节点destination)
-- [6. 🤔 节点之间如何连接与断开？](#6--节点之间如何连接与断开)
-- [7. 🤔 `OfflineAudioContext` 是什么？](#7--offlineaudiocontext-是什么)
+- [6. 节点之间如何连接与断开？](#6-节点之间如何连接与断开)
+- [7. `OfflineAudioContext` 是什么？](#7-offlineaudiocontext-是什么)
   - [7.1. 它是什么](#71-它是什么)
   - [7.2. 为什么需要它](#72-为什么需要它)
   - [7.3. 怎么用](#73-怎么用)
   - [7.4. 总结](#74-总结)
-- [8. 🤔 数字音频需要理解哪些基础概念？](#8--数字音频需要理解哪些基础概念)
+- [8. 数字音频需要理解哪些基础概念？](#8-数字音频需要理解哪些基础概念)
   - [8.1. 采样率（Sample Rate）](#81-采样率sample-rate)
   - [8.2. 采样（Sample）](#82-采样sample)
   - [8.3. 采样数（Sample Count / Frame Count）](#83-采样数sample-count--frame-count)
@@ -40,10 +40,10 @@
   - [8.6. AudioBuffer 对象](#86-audiobuffer-对象)
   - [8.7. 这些概念之间的关系](#87-这些概念之间的关系)
   - [8.8. 总结](#88-总结)
-- [9. 🤔 如何加载并播放一段声音？](#9--如何加载并播放一段声音)
+- [9. 如何加载并播放一段声音？](#9-如何加载并播放一段声音)
   - [9.1. `AudioBuffer` 和 `AudioBufferSourceNode`](#91-audiobuffer-和-audiobuffersourcenode)
   - [9.2. 小结](#92-小结)
-- [10. 🤔 为什么要用模块化路由组织声音？](#10--为什么要用模块化路由组织声音)
+- [10. 为什么要用模块化路由组织声音？](#10-为什么要用模块化路由组织声音)
 - [11. 引用](#11-引用)
 
 <!-- endregion:toc -->
@@ -62,7 +62,7 @@
 
 这是 Web Audio API 的入口章节，重点不是记 API 名称，而是建立“音频图”的思维方式。只要理解声音会从源节点一路流向目标节点，后面的滤波、混音、分析和空间化都会顺很多。同时也要注意一些基础的数字音频概念，这些是理解 Web Audio API 基本使用所必要的前置知识。
 
-## 3. 🤔 使用 `<audio>` 都有哪些局限性？为什么还需要 Web Audio API？
+## 3. 使用 `<audio>` 都有哪些局限性？为什么还需要 Web Audio API？
 
 ### 3.1. 历史背景
 
@@ -136,7 +136,7 @@ Web Audio API 的价值在于：让你更细粒度地控制音频，这些能力
 
 :::
 
-## 4. 🤔 `AudioContext` 是什么？
+## 4. `AudioContext` 是什么？
 
 `AudioContext` 是 Web Audio API 的核心容器。所有音频操作都必须在一个 `AudioContext` 内进行 => 它管理着整个音频图的生命周期、时间基准和音频硬件的连接。你可以把它理解为一个音频工作台：里面包含一张有向的音频图，声音从源节点流出，经过一个或多个处理节点，最后到达目标节点。
 
@@ -222,7 +222,7 @@ document.getElementById('play').addEventListener('click', () => {
 - 它负责管理音频硬件连接、提供精确时间基准、创建和调度音频节点
 - 通常一个页面只需要一个 `AudioContext`，大多数场景下不需要创建多个
 
-## 5. 🤔 Web Audio API 中有哪些节点？
+## 5. Web Audio API 中有哪些节点？
 
 创建完 `AudioContext`，下一步就是往里面添加节点、连接节点图了。
 
@@ -559,7 +559,7 @@ recorder.start()
 
 :::
 
-## 6. 🤔 节点之间如何连接与断开？
+## 6. 节点之间如何连接与断开？
 
 这些节点通过 `connect()` 连接，通过 `disconnect()` 断开。
 
@@ -645,7 +645,7 @@ source.connect(audioContext.destination)
 
 这种“可重新布线”的模型，就是 Web Audio API 比 `<audio>` 灵活得多的关键。
 
-## 7. 🤔 `OfflineAudioContext` 是什么？
+## 7. `OfflineAudioContext` 是什么？
 
 `OfflineAudioContext` 是一个特殊的 `AudioContext`。
 
@@ -693,7 +693,7 @@ console.log(buffer) // AudioBuffer，包含处理后的音频数据
 - 它内部可以使用和普通 `AudioContext` 完全相同的节点
 - 输出的是 `AudioBuffer`，而不是实时音频流
 
-## 8. 🤔 数字音频需要理解哪些基础概念？
+## 8. 数字音频需要理解哪些基础概念？
 
 真实世界中的声音是空气中的压力波。麦克风会把这种压力变化转换成电信号，计算机再把连续变化的模拟信号采样成一串数字。
 
@@ -859,7 +859,7 @@ console.log(channelData[0]) // 第一个采样值，范围 -1.0 ~ 1.0
 
 理解了这些，后面看到 `decodeAudioData`、`AudioBuffer`、`AnalyserNode` 返回的数据时，就知道它们到底在给你什么东西了。
 
-## 9. 🤔 如何加载并播放一段声音？
+## 9. 如何加载并播放一段声音？
 
 ### 9.1. `AudioBuffer` 和 `AudioBufferSourceNode`
 
@@ -937,7 +937,7 @@ source.start()                开始播放
 播放结束                    -> AudioBufferSourceNode 销毁，AudioBuffer 仍在
 ```
 
-## 10. 🤔 为什么要用模块化路由组织声音？
+## 10. 为什么要用模块化路由组织声音？
 
 Web Audio API 的设计借鉴了硬件音频设备的理念。想象一下音乐工作室里那些实体设备：
 

@@ -2,19 +2,19 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 Web Storage 解决了什么问题？](#3--web-storage-解决了什么问题)
-- [4. 🤔 `Storage` 类型提供哪些 API？](#4--storage-类型提供哪些-api)
-- [5. 🤔 Web Storage 为什么只能算字符串存储？](#5--web-storage-为什么只能算字符串存储)
-- [6. 🤔 `sessionStorage` 适合保存什么？](#6--sessionstorage-适合保存什么)
-- [7. 🤔 `localStorage` 适合保存什么？](#7--localstorage-适合保存什么)
-- [8. 🤔 `storage` 事件有什么用？](#8--storage-事件有什么用)
-- [9. 🤔 Web Storage 有哪些限制？](#9--web-storage-有哪些限制)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. Web Storage 解决了什么问题？](#3-web-storage-解决了什么问题)
+- [4. `Storage` 类型提供哪些 API？](#4-storage-类型提供哪些-api)
+- [5. Web Storage 为什么只能算字符串存储？](#5-web-storage-为什么只能算字符串存储)
+- [6. `sessionStorage` 适合保存什么？](#6-sessionstorage-适合保存什么)
+- [7. `localStorage` 适合保存什么？](#7-localstorage-适合保存什么)
+- [8. `storage` 事件有什么用？](#8-storage-事件有什么用)
+- [9. Web Storage 有哪些限制？](#9-web-storage-有哪些限制)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - Web Storage 的设计目标
 - `Storage` 类型的 API
@@ -23,11 +23,11 @@
 - `storage` 事件
 - Web Storage 的容量和安全限制
 
-## 2. 🫧 评价
+## 2. 评价
 
 - Web Storage 的好处是简单直接，坏处也是简单直接：同步、字符串、容量有限，所以它适合小型状态，不适合当数据库用。
 
-## 3. 🤔 Web Storage 解决了什么问题？
+## 3. Web Storage 解决了什么问题？
 
 Web Storage 的目标，是为浏览器提供一套不依赖 `cookie` 的本地名值存储机制。
 
@@ -40,7 +40,7 @@ Web Storage 包含两个主要对象：
 
 早期规范中出现过 `globalStorage`，现在已经废弃，实际开发中不再使用。
 
-## 4. 🤔 `Storage` 类型提供哪些 API？
+## 4. `Storage` 类型提供哪些 API？
 
 `sessionStorage` 和 `localStorage` 都是 `Storage` 类型的实例。常用属性和方法包括：
 
@@ -72,7 +72,7 @@ console.log(localStorage.theme)
 
 但更推荐使用 `setItem()`、`getItem()` 和 `removeItem()`，这样可以避免和已有属性或方法名冲突。
 
-## 5. 🤔 Web Storage 为什么只能算字符串存储？
+## 5. Web Storage 为什么只能算字符串存储？
 
 `Storage` 只能保存字符串。非字符串值会在保存时被转换为字符串。
 
@@ -97,7 +97,7 @@ const savedSettings = JSON.parse(localStorage.getItem('settings'))
 
 如果读取结果可能为空，要先判断再解析，避免 `JSON.parse(null)` 造成逻辑误判。
 
-## 6. 🤔 `sessionStorage` 适合保存什么？
+## 6. `sessionStorage` 适合保存什么？
 
 `sessionStorage` 保存的是当前页面会话的数据。刷新页面不会清除它，但关闭标签页或浏览器会话结束后，它通常会消失。
 
@@ -119,7 +119,7 @@ const title = sessionStorage.getItem('draft:title')
 sessionStorage.removeItem('draft:title')
 ```
 
-## 7. 🤔 `localStorage` 适合保存什么？
+## 7. `localStorage` 适合保存什么？
 
 `localStorage` 保存的数据会持续存在，直到脚本删除、用户清除站点数据，或浏览器因策略回收数据。
 
@@ -140,7 +140,7 @@ const theme = localStorage.getItem('ui.theme') ?? 'light'
 
 `localStorage` 是同步 API。读写数据会阻塞主线程，因此不适合保存大量数据或频繁写入。大量结构化数据应考虑 IndexedDB。
 
-## 8. 🤔 `storage` 事件有什么用？
+## 8. `storage` 事件有什么用？
 
 当同源页面中的 Web Storage 发生变化时，其他相关文档可以收到 `storage` 事件。常见用途是让多个标签页同步状态。
 
@@ -162,7 +162,7 @@ window.addEventListener('storage', (event) => {
 
 触发修改的当前页面通常不会收到自己的 `storage` 事件。也就是说，它更适合跨标签页通知，不适合替代当前页面内部状态管理。
 
-## 9. 🤔 Web Storage 有哪些限制？
+## 9. Web Storage 有哪些限制？
 
 Web Storage 的限制主要有三类。
 

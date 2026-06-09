@@ -2,20 +2,20 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `history` 对象是什么？](#3--history-对象是什么)
-- [4. 🤔 如何用 `history` 前进和后退？](#4--如何用-history-前进和后退)
-- [5. 🤔 `history.length` 表示什么？](#5--historylength-表示什么)
-- [6. 🤔 URL 散列为什么会影响历史记录？](#6--url-散列为什么会影响历史记录)
-- [7. 🤔 `pushState()` 如何修改历史记录？](#7--pushstate-如何修改历史记录)
-- [8. 🤔 `popstate` 事件什么时候触发？](#8--popstate-事件什么时候触发)
-- [9. 🤔 `replaceState()` 和 `pushState()` 有什么区别？](#9--replacestate-和-pushstate-有什么区别)
-- [10. 🤔 使用历史状态管理要注意什么？](#10--使用历史状态管理要注意什么)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `history` 对象是什么？](#3-history-对象是什么)
+- [4. 如何用 `history` 前进和后退？](#4-如何用-history-前进和后退)
+- [5. `history.length` 表示什么？](#5-historylength-表示什么)
+- [6. URL 散列为什么会影响历史记录？](#6-url-散列为什么会影响历史记录)
+- [7. `pushState()` 如何修改历史记录？](#7-pushstate-如何修改历史记录)
+- [8. `popstate` 事件什么时候触发？](#8-popstate-事件什么时候触发)
+- [9. `replaceState()` 和 `pushState()` 有什么区别？](#9-replacestate-和-pushstate-有什么区别)
+- [10. 使用历史状态管理要注意什么？](#10-使用历史状态管理要注意什么)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `history` 对象的定位
 - `go()`、`back()`、`forward()` 导航
@@ -25,11 +25,11 @@
 - `popstate` 事件
 - 单页应用中的历史状态管理
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `history` 的关键不是让你窥探用户访问过哪些页面，而是在不暴露具体 URL 的前提下，给当前窗口提供受控的前进、后退和状态管理能力。
 
-## 3. 🤔 `history` 对象是什么？
+## 3. `history` 对象是什么？
 
 `history` 表示当前窗口从打开以来的会话历史记录。
 
@@ -39,7 +39,7 @@ console.log(window.history === history) // true
 
 出于安全考虑，浏览器不会让脚本读取历史记录里的具体 URL。你不能遍历用户访问过哪些地址，但可以让浏览器前进、后退，或向当前会话历史中加入状态。
 
-## 4. 🤔 如何用 `history` 前进和后退？
+## 4. 如何用 `history` 前进和后退？
 
 `go()` 可以沿历史记录前进或后退。
 
@@ -60,7 +60,7 @@ history.forward()
 
 这些方法相当于用户点击浏览器的后退和前进按钮，但能否真的跳转取决于当前历史记录中是否存在对应条目。
 
-## 5. 🤔 `history.length` 表示什么？
+## 5. `history.length` 表示什么？
 
 `history.length` 表示当前会话历史记录中的条目数量。
 
@@ -78,7 +78,7 @@ if (history.length === 1) {
 
 它只能告诉你条目数量，不能告诉你每条记录对应的 URL。
 
-## 6. 🤔 URL 散列为什么会影响历史记录？
+## 6. URL 散列为什么会影响历史记录？
 
 在现代浏览器中，修改 URL 的散列值通常会增加一条历史记录。
 
@@ -92,7 +92,7 @@ location.hash = '#section1'
 
 后来 HTML5 的历史状态管理 API 提供了更灵活的方案。
 
-## 7. 🤔 `pushState()` 如何修改历史记录？
+## 7. `pushState()` 如何修改历史记录？
 
 `history.pushState()` 可以新增一条历史记录，并改变地址栏显示的 URL，但不会立即向服务器请求新页面。
 
@@ -114,7 +114,7 @@ history.pushState(state, '', '/detail/1')
 
 这正是单页应用路由的基础能力之一。
 
-## 8. 🤔 `popstate` 事件什么时候触发？
+## 8. `popstate` 事件什么时候触发？
 
 用户点击后退或前进按钮，切换到由 `pushState()` 创建的状态时，会触发 `popstate` 事件。
 
@@ -128,7 +128,7 @@ window.addEventListener('popstate', (event) => {
 
 浏览器只负责切换历史条目和触发事件，不会自动帮你恢复页面内容。你需要根据 `event.state` 自己重新渲染对应状态。
 
-## 9. 🤔 `replaceState()` 和 `pushState()` 有什么区别？
+## 9. `replaceState()` 和 `pushState()` 有什么区别？
 
 `replaceState()` 会替换当前历史记录的状态，而不是新增一条记录。
 
@@ -145,7 +145,7 @@ history.replaceState({ page: 'list' }, '', '/list')
 
 如果你希望用户能后退到上一个状态，用 `pushState()`；如果只是更新当前状态，用 `replaceState()`。
 
-## 10. 🤔 使用历史状态管理要注意什么？
+## 10. 使用历史状态管理要注意什么？
 
 传给 `pushState()` 和 `replaceState()` 的 `state` 对象应该只包含可序列化信息，不适合放 DOM 元素、函数或大量复杂对象。
 

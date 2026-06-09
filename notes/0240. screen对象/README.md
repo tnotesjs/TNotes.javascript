@@ -2,17 +2,17 @@
 
 <!-- region:toc -->
 
-- [1. 🎯 本节内容](#1--本节内容)
-- [2. 🫧 评价](#2--评价)
-- [3. 🤔 `screen` 对象是什么？](#3--screen-对象是什么)
-- [4. 🤔 `screen` 有哪些常见属性？](#4--screen-有哪些常见属性)
-- [5. 🤔 `screen` 和视口尺寸有什么区别？](#5--screen-和视口尺寸有什么区别)
-- [6. 🤔 `screen.orientation` 能做什么？](#6--screenorientation-能做什么)
-- [7. 🤔 什么时候会用到 `screen`？](#7--什么时候会用到-screen)
+- [1. 本节内容](#1-本节内容)
+- [2. 评价](#2-评价)
+- [3. `screen` 对象是什么？](#3-screen-对象是什么)
+- [4. `screen` 有哪些常见属性？](#4-screen-有哪些常见属性)
+- [5. `screen` 和视口尺寸有什么区别？](#5-screen-和视口尺寸有什么区别)
+- [6. `screen.orientation` 能做什么？](#6-screenorientation-能做什么)
+- [7. 什么时候会用到 `screen`？](#7-什么时候会用到-screen)
 
 <!-- endregion:toc -->
 
-## 1. 🎯 本节内容
+## 1. 本节内容
 
 - `screen` 对象的定位
 - 屏幕尺寸和可用区域
@@ -20,11 +20,11 @@
 - 屏幕方向
 - `screen` 对象的使用边界
 
-## 2. 🫧 评价
+## 2. 评价
 
 - `screen` 是 BOM 里存在感比较低的对象。它能告诉你显示器层面的信息，但真正做布局时，视口尺寸和 CSS 响应式能力通常更重要。
 
-## 3. 🤔 `screen` 对象是什么？
+## 3. `screen` 对象是什么？
 
 `screen` 是 `window` 的属性，用于描述浏览器窗口之外的客户端显示器信息。
 
@@ -34,7 +34,7 @@ console.log(window.screen === screen) // true
 
 它保存的是屏幕层面的信息，而不是页面视口信息。也就是说，`screen.width` 描述的是屏幕宽度，`window.innerWidth` 描述的是当前浏览器视口宽度。
 
-## 4. 🤔 `screen` 有哪些常见属性？
+## 4. `screen` 有哪些常见属性？
 
 常见属性可以分成几类：
 
@@ -56,7 +56,7 @@ console.log(screen.availHeight)
 
 这些属性通常是只读信息，不能通过它们直接改变用户屏幕。
 
-## 5. 🤔 `screen` 和视口尺寸有什么区别？
+## 5. `screen` 和视口尺寸有什么区别？
 
 `screen` 关注显示器，`window` 的视口属性关注当前页面可见区域。
 
@@ -69,7 +69,7 @@ console.log(window.innerWidth) // 当前视口宽度
 
 因此，如果你要做页面布局，通常不应该优先用 `screen.width` 判断，而应该使用 CSS 媒体查询或视口相关属性。
 
-## 6. 🤔 `screen.orientation` 能做什么？
+## 6. `screen.orientation` 能做什么？
 
 `screen.orientation` 可以返回屏幕方向相关信息，不同浏览器支持程度可能不同。
 
@@ -84,7 +84,7 @@ if (screen.orientation) {
 
 不过实际项目中，很多横竖屏布局问题仍然更适合通过 CSS 媒体查询和响应式布局处理。
 
-## 7. 🤔 什么时候会用到 `screen`？
+## 7. 什么时候会用到 `screen`？
 
 `screen` 常见用途包括：
 
