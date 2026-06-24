@@ -1,4 +1,4 @@
-# [0156. 什么是JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0156.%20%E4%BB%80%E4%B9%88%E6%98%AFJavaScript)
+# [0156. 什么是 JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0156.%20%E4%BB%80%E4%B9%88%E6%98%AF%20JavaScript)
 
 <!-- region:toc -->
 
@@ -8,7 +8,7 @@
 - [4. 为什么 JavaScript 后来不只是表单验证脚本？](#4-为什么-javascript-后来不只是表单验证脚本)
 - [5. JavaScript 和宿主环境是什么关系？](#5-javascript-和宿主环境是什么关系)
 - [6. 学习 JavaScript 为什么要先理解它的边界？](#6-学习-javascript-为什么要先理解它的边界)
-- [7. 这一章的笔记主要介绍什么内容？](#7-这一章的笔记主要介绍什么内容)
+- [7. 本章内容概览](#7-本章内容概览)
 
 <!-- endregion:toc -->
 
@@ -98,7 +98,7 @@ JavaScript 的学习容易混在一起：语法、浏览器 API、工程工具�
 
 这个问题看似简单，但它能帮助你更准确地理解兼容性、标准来源和运行环境差异。
 
-## 7. 这一章的笔记主要介绍什么内容？
+## 7. 本章内容概览
 
 这一章可以压缩成一句话：JavaScript 是从浏览器客户端脚本发展而来的语言，它的完整浏览器实现由 ECMAScript、DOM 和 BOM 共同构成。
 

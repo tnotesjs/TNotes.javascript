@@ -1,4 +1,4 @@
-# html-css-js
+# javascript
 
 <!-- region:toc -->
 
@@ -59,14 +59,14 @@
 
 ## 2. 什么是JavaScript
 
-- [x] [0156. 什么是JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0156.%20%E4%BB%80%E4%B9%88%E6%98%AFJavaScript/README.md)
+- [x] [0156. 什么是 JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0156.%20%E4%BB%80%E4%B9%88%E6%98%AF%20JavaScript/README.md)
 - [x] [0157. 简短的历史回顾](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0157.%20%E7%AE%80%E7%9F%AD%E7%9A%84%E5%8E%86%E5%8F%B2%E5%9B%9E%E9%A1%BE/README.md)
 - [x] [0158. JavaScript实现](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0158.%20JavaScript%E5%AE%9E%E7%8E%B0/README.md)
 - [x] [0159. JavaScript版本](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0159.%20JavaScript%E7%89%88%E6%9C%AC/README.md)
 
 ## 3. HTML中的JavaScript
 
-- [x] [0161. HTML中的JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0161.%20HTML%E4%B8%AD%E7%9A%84JavaScript/README.md)
+- [x] [0161. HTML 中的 JavaScript](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0161.%20HTML%20%E4%B8%AD%E7%9A%84%20JavaScript/README.md)
 - [x] [0162. script元素](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0162.%20script%E5%85%83%E7%B4%A0/README.md)
 - [x] [0163. 行内代码与外部文件](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0163.%20%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81%E4%B8%8E%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6/README.md)
 - [x] [0164. 文档模式](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0164.%20%E6%96%87%E6%A1%A3%E6%A8%A1%E5%BC%8F/README.md)
