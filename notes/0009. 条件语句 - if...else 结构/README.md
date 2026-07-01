@@ -5,9 +5,9 @@
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
 - [3. if...else 基本结构](#3-ifelse-基本结构)
-- [4. demos.2 - 认识基本的 if...else 结构](#4-demos2---认识基本的-ifelse-结构)
-- [5. demos.3 - 多个 if...else 的情况](#5-demos3---多个-ifelse-的情况)
-- [6. demos.1 - else 和最近的 if 配对](#6-demos1---else-和最近的-if-配对)
+- [4. 示例：认识基本的 if...else 结构](#4-示例认识基本的-ifelse-结构)
+- [5. 示例：多个 if...else 的情况](#5-示例多个-ifelse-的情况)
+- [6. 示例：else 和最近的 if 配对](#6-示例else-和最近的-if-配对)
 
 <!-- endregion:toc -->
 
@@ -49,28 +49,97 @@ if (x === 0) {
 
 :::
 
-## 4. demos.2 - 认识基本的 if...else 结构
+## 4. 示例：认识基本的 if...else 结构
 
 ::: code-group
 
-<<< ./demos/2/1.js {}
+```js
+const x1 = 1,
+  x2 = 2
+
+if (x1 === 1) {
+  console.log('x1 is 1')
+} else {
+  console.log('x1 is not 1')
+}
+
+if (x2 === 1) {
+  console.log('x2 is 1')
+} else {
+  console.log('x2 is not 1')
+}
+
+// 最终输出结果：
+// x1 is 1
+// x2 is not 1
+```
 
 :::
 
-## 5. demos.3 - 多个 if...else 的情况
+## 5. 示例：多个 if...else 的情况
 
 ::: code-group
 
-<<< ./demos/3/1.js {}
+```js
+const x = 0
+
+if (x > 0) {
+  console.log('x 是正数')
+} else if (x < 0) {
+  console.log('x 是负数')
+} else {
+  console.log('x 是 0')
+}
+
+// 最终输出结果：
+// x 是 0
+```
 
 :::
 
-## 6. demos.1 - else 和最近的 if 配对
+## 6. 示例：else 和最近的 if 配对
 
 ::: code-group
 
-<<< ./demos/1/1.js {}
+```js [1]
+const x1 = 1
+const x2 = 2
 
-<<< ./demos/1/2.js {}
+// 写法 1【不推荐】
+if (x1 !== 1)
+  if (x2 === 2) console.log('hello')
+  else console.log('world')
+
+// 写法 2【推荐】
+// if (x1 !== 1) {
+//   if (x2 === 2) {
+//     console.log('hello')
+//   } else {
+//     console.log('world')
+//   }
+// }
+
+// 最终将不会有任何输出
+// 写法 1 和写法 2 是等效的
+// else 和最近的 if 配对
+// 建议在写 if...else 结构时，使用 {} 包裹代码块，以提高代码可读性。
+```
+
+```js [2]
+const x1 = 1
+const x2 = 2
+
+if (x1 !== 1) {
+}
+
+if (x2 === 2) {
+  console.log('hello')
+} else {
+  console.log('world')
+}
+
+// 最终将输出：
+// hello
+```
 
 :::

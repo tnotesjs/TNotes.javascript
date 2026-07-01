@@ -5,9 +5,9 @@
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
 - [3. switch 基本结构](#3-switch-基本结构)
-- [4. demos.1 - switch 中的 break 语句](#4-demos1---switch-中的-break-语句)
-- [5. demos.2 - 使用表达式](#5-demos2---使用表达式)
-- [6. demos.3 - 匹配规则是严格相等](#6-demos3---匹配规则是严格相等)
+- [4. 示例：switch 中的 break 语句](#4-示例switch-中的-break-语句)
+- [5. 示例：使用表达式](#5-示例使用表达式)
+- [6. 示例：匹配规则是严格相等](#6-示例匹配规则是严格相等)
 
 <!-- endregion:toc -->
 
@@ -51,33 +51,103 @@ switch (fruit) {
 
 :::
 
-## 4. demos.1 - switch 中的 break 语句
+## 4. 示例：switch 中的 break 语句
 
 ::: code-group
 
-<<< ./demos/1/1.js {}
+```js [1]
+const x = 1
 
-<<< ./demos/1/2.js {}
+switch (x) {
+  case 1:
+    console.log('x 等于1')
+  case 2:
+    console.log('x 等于2')
+  default:
+    console.log('x 等于其他值')
+}
+
+// 在该 demo 中，case 代码块之中没有 break 语句，
+// 这将会导致程序不会跳出 switch 结构，而会一直执行下去。
+
+// 最终输出结果：
+// x 等于1
+// x 等于2
+// x 等于其他值
+```
+
+```js [2]
+const x = 1
+
+switch (x) {
+  case 1:
+    console.log('x 等于1')
+    break // 加上 break 语句
+  case 2:
+    console.log('x 等于2')
+    break // 加上 break 语句
+  default:
+    console.log('x 等于其他值')
+}
+
+// 正确写法应该是在每个 case 代码块末尾加上 break 语句。
+
+// 最终输出结果：
+// x 等于1
+```
 
 :::
 
-- `1.js`
-  - 在没有 break 语句的情况下得到的结果，很可能并不是你想要的。
-- `2.js`
-  - 正确写法应该是在每个 case 代码块末尾加上 break 语句。
+- `1.js` => 在没有 break 语句的情况下得到的结果，很可能并不是你想要的。
+- `2.js` => 正确写法应该是在每个 case 代码块末尾加上 break 语句。
 
-## 5. demos.2 - 使用表达式
+## 5. 示例：使用表达式
 
 ::: code-group
 
-<<< ./demos/2/1.js {}
+```js
+switch (1 + 3) {
+  case 2 + 2:
+    console.log('运行了 case 2 + 2')
+    break
+  default:
+    console.log('运行了 default')
+}
+
+// switch 语句部分和 case 语句部分，都可以使用表达式。
+
+// 最终输出结果：
+// 运行了 case 2 + 2
+```
 
 :::
 
-## 6. demos.3 - 匹配规则是严格相等
+## 6. 示例：匹配规则是严格相等
 
 ::: code-group
 
-<<< ./demos/3/1.js {}
+```js
+const x = 1
+
+switch (x) {
+  case true: // x === true 不成立
+    console.log('x 发生类型转换')
+    break
+  default:
+    console.log('x 没有发生类型转换')
+}
+
+// 这部分是隐式类型转换的相关知识。
+console.log(1 == true) // => true
+console.log(1 === true) // => false
+
+// 由于变量 x 没有发生类型转换，所以不会执行 case true 的情况。
+// 这表明，switch 语句内部采用的是“严格相等运算符”。
+
+// 最终结果：
+// x 没有发生类型转换
+// true
+// false
+```
 
 :::
