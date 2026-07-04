@@ -1,27 +1,28 @@
-# [0169. 保留字、关键字、未来保留字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97%E3%80%81%E6%9C%AA%E6%9D%A5%E4%BF%9D%E7%95%99%E5%AD%97)
+# [0169. 保留字、关键字](https://github.com/tnotesjs/TNotes.javascript/tree/main/notes/0169.%20%E4%BF%9D%E7%95%99%E5%AD%97%E3%80%81%E5%85%B3%E9%94%AE%E5%AD%97)
 
 <!-- region:toc -->
 
 - [1. 本节内容](#1-本节内容)
 - [2. 评价](#2-评价)
-- [3. 保留字、关键字、未来保留字，这些术语的官方定义是？](#3-保留字关键字未来保留字这些术语的官方定义是)
+- [3. “保留字”、“关键字” 之间的关系](#3-保留字关键字-之间的关系)
   - [3.1. 保留字 `Reserved Words` 的定义](#31-保留字-reserved-words-的定义)
   - [3.2. 关键字 `Keywords` 的定义](#32-关键字-keywords-的定义)
   - [3.3. 未来保留字 `Future Reserved Words` 的定义](#33-未来保留字-future-reserved-words-的定义)
-  - [3.4. 关键字和保留字之间的关系是？](#34-关键字和保留字之间的关系是)
-    - [保留字（38 个）](#保留字38-个)
-    - [既是关键字，又是保留字（37 个）](#既是关键字又是保留字37-个)
-    - [是保留字，但不是关键字（1 个）](#是保留字但不是关键字1-个)
-    - [既不是关键字也不是保留字，但在严格模式下是未来保留字（6 个）](#既不是关键字也不是保留字但在严格模式下是未来保留字6-个)
-    - [是关键字，但不是保留字（10 个）](#是关键字但不是保留字10-个)
+  - [3.4. “关键字”和“保留字”之间的关系是？](#34-关键字和保留字之间的关系是)
   - [3.5. 小结](#35-小结)
-- [4. 常见的关键字具体都有哪些？关键字不能用作标识符吗？](#4-常见的关键字具体都有哪些关键字不能用作标识符吗)
-  - [4.1. 关键字和标识符](#41-关键字和标识符)
-  - [4.2. 常见的关键字](#42-常见的关键字)
-  - [4.3. 细节补充：关于 `await` 和 `yield`](#43-细节补充关于-await-和-yield)
-  - [4.4. 细节补充：关于上下文关键字](#44-细节补充关于上下文关键字)
-  - [4.5. 细节验证](#45-细节验证)
-- [5. 引用](#5-引用)
+- [4. “保留字”、“关键字” 分别有哪些？](#4-保留字关键字-分别有哪些)
+  - [4.1. 保留字（38 个）](#41-保留字38-个)
+  - [4.2. 既是关键字，又是保留字（37 个）](#42-既是关键字又是保留字37-个)
+  - [4.3. 是保留字，但不是关键字（1 个）](#43-是保留字但不是关键字1-个)
+  - [4.4. 既不是关键字也不是保留字，但在严格模式下是未来保留字（6 个）](#44-既不是关键字也不是保留字但在严格模式下是未来保留字6-个)
+  - [4.5. 是关键字，但不是保留字（10 个）](#45-是关键字但不是保留字10-个)
+- [5. 关键字不能用作标识符吗？](#5-关键字不能用作标识符吗)
+  - [5.1. 评价](#51-评价)
+  - [5.2. 关键字和标识符](#52-关键字和标识符)
+  - [5.3. 细节补充：关于 `await` 和 `yield`](#53-细节补充关于-await-和-yield)
+  - [5.4. 细节补充：关于上下文关键字](#54-细节补充关于上下文关键字)
+  - [5.5. 细节验证](#55-细节验证)
+- [6. 引用](#6-引用)
 
 <!-- endregion:toc -->
 
@@ -37,31 +38,42 @@
 
 如果单论对开发的实际影响的话，我们其实只需要知道有些比较特殊的词不要用来命名就完事儿了，没必要深究这些术语的定义和它们之间的关系。
 
-## 3. 保留字、关键字、未来保留字，这些术语的官方定义是？
-
-::: tip
+## 3. “保留字”、“关键字” 之间的关系
 
 保留字、关键字、未来保留字，这些术语在很多教程中都有提到，在介绍它们概念的时候往往会混淆不清，甚至直接把它们等同起来了。为了彻底理清它们的关系，我们需要回到 ECMAScript 规范的原文来看看它们的官方定义。
 
 以下提到的官方原文，是目前（2026.05.27）从 ECMAScript 官方规范原文中 `12.7.2 Keywords and Reserved Words` 章节下的内容。
 
-:::
-
 ### 3.1. 保留字 `Reserved Words` 的定义
 
-官方原话：A reserved word is an `IdentifierName` that cannot be used as an identifier.
+::: tip 💡 官方原话
 
-规范在这里非常严谨地定义了 `Reserved Word` 与 `Identifier` 的互斥关系。它明确指出，如果一个词被定性为保留字，它的唯一特征就是丧失了作为标识符（即变量名、函数名等）的资格。
+A reserved word is an `IdentifierName` that cannot be used as an identifier.
+
+:::
+
+- 规范在这里非常严谨地定义了 `Reserved Word` 与 `Identifier` 的互斥关系。
+- 规范明确指出，如果一个词被定性为保留字，它的唯一特征就是丧失了作为标识符（即变量名、函数名等）的资格。
 
 ### 3.2. 关键字 `Keywords` 的定义
 
-官方原话：A keyword is a token that matches `IdentifierName`, but also has a syntactic use; that is, it appears literally, in a fixed width font, in some syntactic production.
+::: tip 💡 官方原话
 
-这里的重点在于 syntactic use（语法用途）。规范认为，只要这个词在代码的“语法产生式”（Syntactic Production）里出现了，它就是一个关键字。它强调的是这个词在 JS 解析引擎眼中的“功能性”，而不是它能不能被命名。
+A keyword is a token that matches `IdentifierName`, but also has a syntactic use; that is, it appears literally, in a fixed width font, in some syntactic production.
+
+:::
+
+- 这里的重点在于 syntactic use（语法用途）。
+- 规范认为，只要这个词在代码的“语法产生式”（Syntactic Production）里出现了，它就是一个关键字。
+- 规范强调的是这个词在 JS 解析引擎眼中的“功能性”，而不是它能不能被命名。
 
 ### 3.3. 未来保留字 `Future Reserved Words` 的定义
 
-官方原话：`enum` is not currently used as a keyword in this specification. It is a future reserved word, set aside for use as a keyword in future language extensions.
+::: tip 💡 官方原话
+
+`enum` is not currently used as a keyword in this specification. It is a future reserved word, set aside for use as a keyword in future language extensions.
+
+:::
 
 规范通过对 `enum` 的注释说明了“未来保留字”的本质：
 
@@ -71,15 +83,27 @@
 
 注意：未来保留字 ≠ 保留字
 
-### 3.4. 关键字和保留字之间的关系是？
+### 3.4. “关键字”和“保留字”之间的关系是？
 
-官方原话：Many keywords are reserved words, but some are not, and some are reserved only in certain contexts.
+::: tip 💡 官方原话
 
-它们的关系不是简单的子集关系，而是一个有交叉的集合关系：
+Many keywords are reserved words, but some are not, and some are reserved only in certain contexts.
+
+:::
+
+它们的关系不是简单的子集关系，而是一个有交叉的集合关系。
+
+### 3.5. 小结
+
+- 如果 x 是保留字，那么 x 不能用作标识符
+- 如果 x 是关键字，那么 x 在某些语法结构中有特殊用途
+- 如果 x 是未来保留字，那么 x 在严格模式下不能用作标识符（`enum` 除外，它在任何模式下都不能用作标识符，因为它在 `ReservedWord` 列表中）
+
+## 4. “保留字”、“关键字” 分别有哪些？
 
 ![svg](./assets/1.svg)
 
-#### 保留字（38 个）
+### 4.1. 保留字（38 个）
 
 1. `await`
 2. `break`
@@ -93,7 +117,7 @@
 10. `delete`
 11. `do`
 12. `else`
-13. `enum`
+13. `enum`（非关键字）
 14. `export`
 15. `extends`
 16. `false`
@@ -120,7 +144,7 @@
 37. `with`
 38. `yield`
 
-#### 既是关键字，又是保留字（37 个）
+### 4.2. 既是关键字，又是保留字（37 个）
 
 除了上述的 `enum` 之外的 37 个都是。
 
@@ -129,15 +153,19 @@
 - 无条件既是关键字又是保留字：35 个
 - 有条件既是关键字又是保留字：`await`、`yield` 2 个
 
-官方原话：All tokens in the ReservedWord list below, except for await and yield, are unconditionally reserved.
+::: tip 💡 官方原话
 
-它们只在特定上下文中受限制（`async` 函数/模块中 `await` 受限，生成器函数中 `yield` 受限），其余情况可用作标识符。
+All tokens in the ReservedWord list below, except for await and yield, are unconditionally reserved.
 
-#### 是保留字，但不是关键字（1 个）
+:::
+
+`await`、`yield` 只在特定上下文中受限制（`async` 函数/模块中 `await` 受限，生成器函数中 `yield` 受限），其余情况可用作标识符。
+
+### 4.3. 是保留字，但不是关键字（1 个）
 
 `enum` 是唯一的无条件的未来保留字。
 
-#### 既不是关键字也不是保留字，但在严格模式下是未来保留字（6 个）
+### 4.4. 既不是关键字也不是保留字，但在严格模式下是未来保留字（6 个）
 
 1. `implements`
 2. `interface`
@@ -146,7 +174,7 @@
 5. `protected`
 6. `public`
 
-#### 是关键字，但不是保留字（10 个）
+### 4.5. 是关键字，但不是保留字（10 个）
 
 1. `as`
 2. `async`
@@ -159,23 +187,15 @@
 9. `let`
 10. `static`
 
-### 3.5. 小结
+## 5. 关键字不能用作标识符吗？
 
-- 如果 x 是保留字，那么 x 不能用作标识符
-- 如果 x 是关键字，那么 x 在某些语法结构中有特殊用途
-- 如果 x 是未来保留字，那么 x 在严格模式下不能用作标识符（`enum` 除外，它在任何模式下都不能用作标识符，因为它在 `ReservedWord` 列表中）
-
-## 4. 常见的关键字具体都有哪些？关键字不能用作标识符吗？
-
-::: tip
+### 5.1. 评价
 
 本节的“细节补充”内容不重要，你可以选择性阅读，甚至完全跳过。
 
 “关键字不能被用作标识符”，这句话本身是错误的。如果你想要了解一些相关细节，倒是可以看看“细节补充”部分。
 
-:::
-
-### 4.1. 关键字和标识符
+### 5.2. 关键字和标识符
 
 关键字是 ECMAScript 语法已经占用的词。它们有明确用途，常用于控制流程、声明变量、定义类、导入导出模块或执行特定操作。
 
@@ -194,7 +214,7 @@ const as = 1
 
 如果一个词已经被语言语法占用，你就应该把它看作“不能拿来命名”的词。
 
-### 4.2. 常见的关键字
+开发中常见的关键字：
 
 | Keyword      | 描述                                                     |
 | ------------ | -------------------------------------------------------- |
@@ -234,7 +254,7 @@ const as = 1
 | `with`       | 扩展当前作用域链（已弃用，严格模式下禁用）               |
 | `yield`      | 暂停生成器函数并返回一个值                               |
 
-### 4.3. 细节补充：关于 `await` 和 `yield`
+### 5.3. 细节补充：关于 `await` 和 `yield`
 
 `await` 和 `yield` 是正式的 `Keywords`，但规范在特定场景之外允许它们作为标识符：
 
@@ -243,11 +263,11 @@ const as = 1
 
 这些例外非常依赖上下文，实际开发中绝对不要把它们当作变量名使用。
 
-### 4.4. 细节补充：关于上下文关键字
+### 5.4. 细节补充：关于上下文关键字
 
 像 `async`、`get`、`set`、`of`、`from` 等词不属于严格意义上的关键字或未来保留字。它们只在特定语法结构中有特殊含义（如 `async function`、`get prop()`、`for...of`），在其他地方完全可以合法用作变量名（例如 `const async = 1`）。
 
-### 4.5. 细节验证
+### 5.5. 细节验证
 
 你可以在浏览器控制台直接执行以下程序加以验证：
 
@@ -293,7 +313,7 @@ console.log(async, get, set, of, from, yield)
 
 ![img](https://cdn.jsdelivr.net/gh/tnotesjs/imgs-2026@main/2026-05-27-08-31-09.png)
 
-## 5. 引用
+## 6. 引用
 
 - [ECMAScript - Lexical Grammar - Names and Keywords][1]
 
