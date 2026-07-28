@@ -1,9 +1,7 @@
 {
   "author": "tnotesjs",
   "repoName": "TNotes.javascript",
-  "keywords": [
-    "TNotes.javascript"
-  ],
+  "keywords": ["TNotes.javascript"],
   "ignore_dirs": [
     ".vscode",
     "0000",
@@ -13,7 +11,7 @@
     "demos",
     "assets"
   ],
-  "port": 9379,
+  "port": 10102,
   "rootSidebarDir": "../TNotes/sidebars",
   "root_item": {
     "icon": {
