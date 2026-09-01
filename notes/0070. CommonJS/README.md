@@ -59,7 +59,7 @@ cjs loader 的核心原理封装在了 NodeJS 的 [lib/internal/modules/cjs/load
 
 ## 3. 思维导图
 
-```markmap
+```mindmap
 
 <<< ./assets/1.md
 
