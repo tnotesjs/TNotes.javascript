@@ -1,0 +1,37 @@
+{
+  "title": "javascript",
+  "name": "TNotes.javascript",
+  "description": "前端三件套及跟前端相关的其它内容",
+  "icon": {
+    "src": "https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/assets/icon--javascript.svg"
+  },
+  "repositoryUrl": "https://github.com/tnotesjs/TNotes.javascript",
+  "port": 10102,
+  "pageUrl": "https://tnotesjs.github.io/TNotes.javascript/",
+  "base": "/TNotes.javascript/",
+  "stats": {
+    "enabled": true,
+    "completedNotesCount": {
+      "25.03": 29,
+      "25.04": 29,
+      "25.05": 30,
+      "25.06": 30,
+      "25.07": 30,
+      "25.08": 30,
+      "25.09": 43,
+      "25.10": 43,
+      "25.11": 43,
+      "25.12": 43,
+      "26.01": 43,
+      "26.02": 43,
+      "26.03": 43,
+      "26.04": 43,
+      "26.05": 43,
+      "26.06": 49,
+      "26.07": 51,
+      "26.08": 51,
+      "26.09": 51
+    }
+  },
+  "discussions": true
+}

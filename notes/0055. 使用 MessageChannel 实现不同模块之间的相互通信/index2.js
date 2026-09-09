@@ -1,1 +1,0 @@
-channel.port2.postMessage('Hello ~\nI\'m index2.js')
