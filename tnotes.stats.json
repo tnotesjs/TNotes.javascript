@@ -1,0 +1,660 @@
+{
+  "version": 2,
+  "sourceCommit": "3322737f64ec5b80b4bcc5eb246ad8864e2cfc1f",
+  "byYear": {
+    "2025": {
+      "10": {
+        "12": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "04": {
+          "delta": 0,
+          "total": 0,
+          "commits": 5
+        }
+      },
+      "11": {
+        "10": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "11": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "14": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "16": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "18": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "29": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "03": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "04": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "05": {
+          "delta": 0,
+          "total": 0,
+          "commits": 6
+        },
+        "06": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "07": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "09": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        }
+      },
+      "12": {
+        "14": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "16": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "17": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "18": {
+          "delta": 0,
+          "total": 0,
+          "commits": 6
+        },
+        "19": {
+          "delta": 0,
+          "total": 0,
+          "commits": 5
+        },
+        "20": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "02": {
+          "delta": 0,
+          "total": 0,
+          "commits": 5
+        },
+        "04": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "07": {
+          "delta": 0,
+          "total": 0,
+          "commits": 8
+        },
+        "08": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "09": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "03": {
+        "16": {
+          "delta": 0,
+          "total": 0,
+          "commits": 7
+        },
+        "17": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "02": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "04": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        }
+      },
+      "04": {
+        "10": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "29": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "30": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "04": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "06": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        }
+      },
+      "05": {
+        "10": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "13": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "24": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "25": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "27": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "28": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "29": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "31": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "02": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "03": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "06": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "09": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        }
+      },
+      "06": {
+        "15": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "16": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "26": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        },
+        "02": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "03": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "04": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "07": {
+        "12": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "22": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "26": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "27": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "28": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "31": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "08": {
+        "10": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "11": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "12": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "16": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        },
+        "19": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "20": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "21": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "02": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "05": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "06": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "09": {
+        "11": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "13": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "14": {
+          "delta": 0,
+          "total": 0,
+          "commits": 3
+        },
+        "18": {
+          "delta": 0,
+          "total": 0,
+          "commits": 10
+        },
+        "19": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "20": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "22": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "26": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "06": {
+          "delta": 0,
+          "total": 0,
+          "commits": 7
+        },
+        "07": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        },
+        "08": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "09": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      }
+    },
+    "2026": {
+      "10": {
+        "04": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "05": {
+          "delta": 0,
+          "total": 51,
+          "commits": 2
+        }
+      },
+      "01": {
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "02": {
+        "10": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "20": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "21": {
+          "delta": 0,
+          "total": 0,
+          "commits": 5
+        },
+        "23": {
+          "delta": 0,
+          "total": 0,
+          "commits": 5
+        },
+        "24": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "03": {
+        "28": {
+          "delta": 0,
+          "total": 0,
+          "commits": 2
+        },
+        "31": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "04": {
+        "01": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "05": {
+        "22": {
+          "delta": 0,
+          "total": 0,
+          "commits": 6
+        },
+        "23": {
+          "delta": 0,
+          "total": 0,
+          "commits": 6
+        },
+        "24": {
+          "delta": 0,
+          "total": 0,
+          "commits": 11
+        },
+        "25": {
+          "delta": 0,
+          "total": 0,
+          "commits": 6
+        },
+        "26": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        },
+        "27": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        },
+        "28": {
+          "delta": 0,
+          "total": 0,
+          "commits": 5
+        }
+      },
+      "06": {
+        "24": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "29": {
+          "delta": 49,
+          "total": 49,
+          "commits": 1
+        },
+        "02": {
+          "delta": 0,
+          "total": 0,
+          "commits": 4
+        },
+        "08": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        },
+        "09": {
+          "delta": 0,
+          "total": 0,
+          "commits": 1
+        }
+      },
+      "07": {
+        "21": {
+          "delta": 2,
+          "total": 51,
+          "commits": 2
+        },
+        "27": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "28": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "01": {
+          "delta": 0,
+          "total": 49,
+          "commits": 1
+        },
+        "04": {
+          "delta": 0,
+          "total": 49,
+          "commits": 2
+        },
+        "05": {
+          "delta": 0,
+          "total": 49,
+          "commits": 1
+        }
+      },
+      "08": {
+        "07": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        }
+      },
+      "09": {
+        "10": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "12": {
+          "delta": 0,
+          "total": 51,
+          "commits": 2
+        },
+        "15": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "16": {
+          "delta": 0,
+          "total": 51,
+          "commits": 4
+        },
+        "17": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "01": {
+          "delta": 0,
+          "total": 51,
+          "commits": 1
+        },
+        "09": {
+          "delta": 0,
+          "total": 51,
+          "commits": 2
+        }
+      }
+    }
+  }
+}
