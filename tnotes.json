@@ -3,7 +3,7 @@
   "name": "TNotes.javascript",
   "description": "前端三件套及跟前端相关的其它内容",
   "icon": {
-    "src": "https://cdn.jsdelivr.net/gh/tnotesjs/imgs@main/assets/icon--javascript.svg"
+    "src": "../assets/kb-icon.svg"
   },
   "repositoryUrl": "https://github.com/tnotesjs/TNotes.javascript",
   "port": 10102,
